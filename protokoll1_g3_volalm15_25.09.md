@@ -45,7 +45,7 @@ ___
 
 Weil die direkte Kommunikation mit dem Betriebssystem-Kern für einen Benutzer viel zu komplex wäre, ist eine vereinfachte Benutzer-Schnittstelle erforderlich. Neben einer grafischen Schnittstelle wie dem X Window System wird diese Leistung vor allem von einer Shell bereitgestellt. Der englische Ausdruck **Shell**, zu Deutsch etwa **Schale** oder **Ummantelung**, drückt diesen Sachverhalt bereits aus. Die Übersetzung oder Symbolisierung als **Muschel** hat dabei wohl mehr mit Spieltrieb und Anschaulichkeit als mit einem echten technischen Hintergrund zu tun. Jedenfalls lässt sich eine Shell als eine Schicht zwischen Betriebssystem und Benutzer verstehen.
 
-![enter image description here](https://image.ibb.co/h7S79K/unspecified.png)
+![enter image description here](https://image.ibb.co/h7S79K/unspecified.png)  
 Während Benutzer, die noch nicht häufig mit Shells in Berührung gekommen sind, den wartenden Eingabeprompt einer Shell als trist und abweisend, ja sogar als Hindernis empfinden mögen, wurden Shells doch mit der gegenteiligen Absicht entwickelt: Sie sollten die tägliche Arbeit vereinfachen und erleichtern.
 
 ## [2] Terminal

@@ -127,10 +127,10 @@ Der Pipe-Operator leitet die Ausgabe eines Befehls direkt an einen anderen Befeh
 
 **Kompilierungsvorgang:**
 
-`gcc main.c **-E** ` |-Preprozessieren
-`gcc main.c **-S** ` |-Kompilieren
-`gcc main.c **-c** ` |-Assemblieren     --- `objdump--dissasemble-all main.c`
-`gcc main.c **-o**`  |-Object Datei erstellen  
-![enter image description here](https://image.ibb.co/hjjOGz/8YD.png)  
-  *`avr-gcc` Wird nur für Mikrocontroller verwendet*
+`gcc main.c **-E** ` |-Preprozessieren  
+`gcc main.c **-S** ` |-Kompilieren  
+`gcc main.c **-c** ` |-Assemblieren     --- `objdump--dissasemble-all main.c`  
+`gcc main.c **-o**`  |-Object Datei erstellen    
+![enter image description here](https://image.ibb.co/hjjOGz/8YD.png)    
+   *`avr-gcc` Wird nur für Mikrocontroller verwendet*
 

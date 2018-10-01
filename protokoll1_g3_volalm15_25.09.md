@@ -131,6 +131,6 @@ Der Pipe-Operator leitet die Ausgabe eines Befehls direkt an einen anderen Befeh
 `gcc main.c **-S** ` |-Kompilieren
 `gcc main.c **-c** ` |-Assemblieren     --- `objdump--dissasemble-all main.c`
 `gcc main.c **-o**`  |-Object Datei erstellen  
-![enter image description here](https://uc153cb6760669f7397bf4b0e47d.previews.dropboxusercontent.com/p/orig/AAPEgsoMYVP69iQLwHZhj-Q9tU_pnuvFJ68moBEDmasuCBkdLVyK5TBcfi61c6T8kUvJg6ljPfSNSXHl-NkI0wDgkAS88qii95bCbPz4QolX5Ozte69YSV7Jurgq7LMe74gJC5DjYeKbRz8Gg5GS-cx-3Wt8yuScSXdI2AHU1sUcaAgSAjTngWT0rkZJNh7yRtyPeoghytzdliFvWyQITQY-S4AjprOS-PaZkTvqDXeIUAyM4ji7EDsgq60Gvnz-wk4sLtU_bUtA8M5ktuwN2E9D/p.svg?size=1600x1200&size_mode=3)  
+![enter image description here](https://previews.dropbox.com/p/orig/AAPWcz16EOy_7cC9q1dpx-aMVHgNgGhNB5kNXb48z9bVSuLbKHv7_xh_4eq-y_d5uhz75Ehz4QGYBdGzT_aW-qdciB7r8ECLvifjqf0gZhLueJbEPApYbTqZYLtOhprhD5fAV9ikNjasvc5zKYcJpvOxVAzQxmpO-5P8xXK9P0HV2B-8jl1gGNFt20GiRPqC28gPnM9VVOOOEPGT3Cag2oP_/p.svg?size=1600x1200&size_mode=3)  
   *`avr-gcc` Wird nur für Mikrocontroller verwendet*
 

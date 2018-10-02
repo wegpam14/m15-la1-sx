@@ -13,15 +13,15 @@ Anwesenheit:
 
 ___
 ### Themen-Übersicht
- - **[1]**-Terminal Grundbefehle
-	 - [1.1] - *Grundbegriffe* 
+ - **[1]**-Kompilierung
+	 - [1.1] - *Grundbegriffe der Kompilierung* 
  - **[2]** - Terminal
 	 - [2.1] - *Commands und deren Erklärung* 
  - **[3]** - Manuelles Kompilieren mithilfe der Konsole
 	  
 
-## [1] Übersetzungsvorgang von C-Programmen
-[1.1] - **Grundbegriffe** 
+## [1] Kompilierung
+[1.1] - **Grundbegriffe der Kompilierung** 
 
 **Was ist ein Compiler?**  
 Ein **Compiler** ist ein Programm, das in einer höheren Programmiersprache wie z.B. Java verfassten **Quellcode in maschinenlesbare Sprache**, den sogenannten Objektcode, Zielsprache oder auch Assemblersprache übersetzt. Man könnte einen Compiler demnach auch als Übersetzer bezeichnen, doch seine Aufgaben sind weitreichender, denn beim Compilen ermittelt das Programm zusätzlich Fehler beim Auslesen des Codes.

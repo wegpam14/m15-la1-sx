@@ -48,6 +48,10 @@ Weil die direkte Kommunikation mit dem Betriebssystem-Kern für einen Benutzer v
 ![enter image description here](https://image.ibb.co/h7S79K/unspecified.png)  
 Während Benutzer, die noch nicht häufig mit Shells in Berührung gekommen sind, den wartenden Eingabeprompt einer Shell als trist und abweisend, ja sogar als Hindernis empfinden mögen, wurden Shells doch mit der gegenteiligen Absicht entwickelt: Sie sollten die tägliche Arbeit vereinfachen und erleichtern.
 
+**Was ist eine Bibliothek?**
+
+Bibliotheken Die C-Standard-Bibliothek (englisch C standard library) ist die Standardbibliothek der Programmiersprache C. In jeder standardkonformen betriebssystemgestützten Implementierung (hosted environment) von C muss die C-Standard-Bibliothek in vollem Umfang vorhanden sein. Hingegen müssen freistehende Umgebungen (freestanding environment), wie man sie beispielsweise im Embedded-Bereich häufig antrifft, nur eine festgelegte Untermenge der Standardbibliothek anbieten, um standardkonform zu sein.
+
 ## [2] Terminal
 [2.1] - **Grundbefehle und deren Erklärung** 
 

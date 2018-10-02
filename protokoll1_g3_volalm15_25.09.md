@@ -135,6 +135,10 @@ return 0;
 }
 ```
 
+Strg + o Datei wird gespeichert
+Strg + x Editor wird beendet
+
+
 `hexdump -C ("DATEINAME")` |-Anzeigen des Codes auf der Konsole in Hexadezimal 
 
 **Kompilierungsvorgang:**

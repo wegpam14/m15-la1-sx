@@ -126,6 +126,14 @@ Der Pipe-Operator leitet die Ausgabe eines Befehls direkt an einen anderen Befeh
 ## [2] Manuelles Kompilieren mithilfe der Konsole
 
 `nano main.c` | - Öffnet die main.c mithilfe des **nano** Editors -> Programm schreiben
+```
+#incude <stdio.h>
+int main()
+{
+printf("Hallo, Guten Morgen\n");
+return 0;
+}
+```
 
 `hexdump -C ("DATEINAME")` |-Anzeigen des Codes auf der Konsole in Hexadezimal 
 

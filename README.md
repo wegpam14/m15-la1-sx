@@ -1,4 +1,4 @@
-# Labor 4AHME SX (2018/19)
+# Labor 4AHME Kahr Markus (2018/19)
 
 Protokolle sind hier im eigenen Branch hochzuladen. Die README.md im eigenen Branch ist als Inhaltsverzeichnis mit Links zu den einzelnen Protokollen zu führen.
 
@@ -11,3 +11,4 @@ Die Felder sind wie folgt zu ersetzen:
 * `<htlid>` für die 8 stellige eigene HTL-ID
 * `<datum>` für das Übungsdatum im Format JJJJ-MM-DD also zB `2018-09-24`
   
+Protkoll 1 (2018-10-09)

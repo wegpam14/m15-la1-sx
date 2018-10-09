@@ -12,4 +12,4 @@ Die Felder sind wie folgt zu ersetzen:
 * `<datum>` für das Übungsdatum im Format JJJJ-MM-DD also zB `2018-09-24`
   
   1. Protokoll 
-    [Protokoll 1] (www.
+    [Protokoll 1] (https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/protokoll_g1_hoestm15_09.10.2018)

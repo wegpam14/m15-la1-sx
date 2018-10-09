@@ -12,4 +12,4 @@ Die Felder sind wie folgt zu ersetzen:
 * `<datum>` für das Übungsdatum im Format JJJJ-MM-DD also zB `2018-09-24`
   
 1. Protokoll (09.10.2018):
-  [Protokoll]()
+  [Protokoll](protokoll_g1_hoflam15_09.10.2018.md)

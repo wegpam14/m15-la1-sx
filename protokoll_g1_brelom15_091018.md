@@ -12,6 +12,7 @@ Gruppe: 1
 **1. Versionenverwaltung**  
 **2. GitHub**  
     *2.1. Markdown*  
+    *2.2. Erstellen einer Repository*  
 **3. Umgang it dem Linux terminal**  
     *3.1. Linux Terminal*  
     *3.2. Git speziefische Befehle*  
@@ -40,7 +41,11 @@ Git ist Heutzutage das meist verwendetste System.
 
 Zur leichteren Bedienung kann man das Sogenannte [Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) verwenden in welchem alle abkürzungen aufgelistet sind.
 
+### 2.2. Erstellen eriner Repository
 
+Um eine neue Repository zu erstellen muss man auf der GitHub Homepage einfach nur auf "Neue Repository erstellen" drücken. Hirbei hat man ein paar Optionen zur Verfügung. Als erstes kann man wählen ob man eine publice oder private Repository erwünscht. Anschließend kann man eine "README.me" Datei erstellen lassen um sein Projekt zu beschreiben. Zum Abschluss kann man noch eie "LICENCE" hinzufügen um sich rechtlich abzusichern und eine ".gitignore" Datei erstellen mit welcher nicht relevante Dateien von der Remote-Repository ignoriert werden. 
+
+In unserem Übungsbeispiel habe wir ein öffentliches Projekt mit einer README.md Datei, einer einfachen LICENCE und einer auf C-Programme zugeschnittenen .gitignore Datei erstellt. 
 
 ## 3.1 Umgang mit dem Linux Terminal
 

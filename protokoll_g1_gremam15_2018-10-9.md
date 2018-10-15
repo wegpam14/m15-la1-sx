@@ -39,3 +39,9 @@ Knr: **3**
 			* `git commit` um vom index ins local reopsitory zu kommen
 			* `git push` damit alle änderungen hochgeladen werden
 			* `git pull` um alle änderungen vom remote repository in den workspace zu transverrieren
+			
+			
+[cvs_link]: https://savannah.nongnu.org/project/memberlist.php?detailed=1&group=cvs
+[svn_link]: https://subversion.apache.org/
+[git_link]: https://github.com/
+[markdown_link]: https://de.wikipedia.org/wiki/Markdown

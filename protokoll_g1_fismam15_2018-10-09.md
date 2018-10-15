@@ -89,15 +89,15 @@ ___
 `git push` - läd veränderte daten vom lokalen repository auf das remote repository hoch  
 
 
-[vcs]: https://en.wikipedia.org/wiki/Version_control"
-[git]: https://git-scm.com/"
-[github]: https://github.com/"
-[subversion]: https://de.wikipedia.org/wiki/Subversion"
-[mercurial]: https://de.wikipedia.org/wiki/Mercurial"
-[cvs]: https://de.wikipedia.org/wiki/Concurrent_Versions_System"
-[cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
-[markdown]: https://de.wikipedia.org/wiki/Markdown"
-[linus]: https://de.wikipedia.org/wiki/Linus_Torvalds"
-[alias]: https://wiki.ubuntuusers.de/alias/"
+[vcs]: https://en.wikipedia.org/wiki/Version_control
+[git]: https://git-scm.com/
+[github]: https://github.com/
+[subversion]: https://de.wikipedia.org/wiki/Subversion
+[mercurial]: https://de.wikipedia.org/wiki/Mercurial
+[cvs]: https://de.wikipedia.org/wiki/Concurrent_Versions_System
+[cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+[markdown]: https://de.wikipedia.org/wiki/Markdown
+[linus]: https://de.wikipedia.org/wiki/Linus_Torvalds
+[alias]: https://wiki.ubuntuusers.de/alias/
 [vcspopularity]: https://rhodecode.com/insights/version-control-systems-2016
 [gitdataflow]: https://i.stack.imgur.com/MgaV9.png "Git data flow"

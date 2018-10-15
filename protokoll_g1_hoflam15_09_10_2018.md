@@ -17,7 +17,7 @@
 
  - Eine Versionsverwaltung soll uns helfen, dass die Historie der Arbeit nicht verloren geht. Weiters sollte sie unterschiedliche Software- / Applikationsversionen verwalten. 
  
-	 In der Softwaretechnik ist eine Versionsverwaltung Standard, Git ist heute einer der meist verbreiteten Versionsverwaltungen. Entwickelt wurde es einst von Linus Thornwald, aus jenem Grund, dass es ihn nervte dass er nicht im Flugzeut mit dem damaligen System arbeiten konnte. Grund dafür war das fehlende Netzwerk. Somit entwickelte er Git, welches eine Remote Repository besitzt, welche wiederum offline die Daten speichert. Ist man wieder im Netzwerk kann man alles wieder auf die Lokale Repository laden. Noch dazu schützt es vom Absturz des Systems, stürzt mein System ab, sind die Daten noch gesichert.
+	 In der Softwaretechnik ist eine Versionsverwaltung Standard, Git ist heute einer der meist verbreiteten Versionsverwaltungen. Entwickelt wurde es einst von Linus Thornwald, aus jenem Grund, dass es ihn nervte, dass er nicht im Flugzeut mit dem damaligen System arbeiten konnte. Grund dafür war das fehlende Netzwerk. Somit entwickelte er Git, welches eine Remote Repository besitzt, welche wiederum offline die Daten speichert. Ist man wieder im Netzwerk kann man alles wieder auf die Lokale Repository laden. Noch dazu schützt es vom Absturz des Systems, stürzt mein System ab, sind die Daten noch gesichert.
 
 #### Allgemeines
  - Beispiele:

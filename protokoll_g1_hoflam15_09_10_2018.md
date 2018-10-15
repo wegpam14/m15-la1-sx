@@ -21,10 +21,10 @@
 
 #### Allgemeines
  - Beispiele:
- - Git
- - CVS
- - SVN
- - Mercury
+ 1. Git
+ 1. CVS
+ 1. SVN
+ 1. Mercury
  ## GitHub
  
 #### Was ist GitHub?

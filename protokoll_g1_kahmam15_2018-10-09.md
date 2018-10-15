@@ -6,7 +6,7 @@ Gruppe: 1
 
 ## Inhalte:  
 
-* **1. Versionswerwaltungssysteme**  
+* **1. Versionswerwaltung**  
 * *1.1 Definition*
 * *1.2 Systeme*
 * **2. Git**

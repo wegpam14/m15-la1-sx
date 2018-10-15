@@ -21,30 +21,44 @@
 
 #### Allgemeines
  - Beispiele:
- 1. Git
- 2. CVS
- 3. SVN
- 4. Mercury
+ - Git
+ - CVS
+ - SVN
+ - Mercury
  ## GitHub
  
 #### Was ist GitHub?
  - [GitHub](https://github.com/) ist webbasierend auf Git. Es ist ein Open Source Programm im Internet, wo jederzeit öffentlich zugegriffen werden kann. GitHub hat ein umfassendes Workflow-System und funtioniert über einem *workspace*, einer *local repository* und einer *remote repository* [folgendes Bild].
- - ![enter image description here](https://www.htl-mechatronik.at/e-books/sx/html/git/images/git-cheat1.png)
-#### Wie ist GitHub aufgebaut?
- - ...
+ - ![Git](https://www.htl-mechatronik.at/e-books/sx/html/git/images/git-cheat1.png)
+ - 
  #### Allgemeines
 
- - ...
+ - 
  - ...
 #### Markdown
- - ...
+ -[Markdown](https://guides.github.com/features/mastering-markdown/) unterstützt uns bei der Formatierung unserer Arbeit in GitHub. Somit kann man **Überschriften**, *kursive Texte* oder auch 
+
+ - Aufzählungen
+
+ 
+
+ 1. und vieles mehr
+ ~~ausgeben. ~~
+
 #### Einführung in GitHub und die erste Repository
- - ...
+ - Gibt man im Internet den Link von [GitHub](https://github.com/) ein gelangt man auf die Startseite wo man sich registrieren kann. Ist man dann registriert kann man mit jeweils einem weiteren Slash und seinem Namen auf seine Seite und deren anderen zugreifen [[hoflam15](https://github.com/hoflam15)]. Auf der Seite ist ein Register mit dem Namen *Repositories*, welches man anklicken soll und somit kann man auf dieser Seite sein erstes Repository schreiben.
+ 
+ Weiters wurden wir in den [HTL-Mechatronics](https://github.com/htlmechatronics) Kurs eingeladen wo die Schüler der Mechatronik öffentlich zugreifen können.
 ## Linux Terminal
 #### Erklärung wichtiger Befehle
- - ...
- - ...
- - ...
+ - cd -> chang directory
+ - ls -a -l
+ - git clone
+ - git status
+ - git add
+ - git push
+ - git commit -m "..."
+ 
 
  
 

@@ -1,1 +1,41 @@
+### 1. Protokoll
+Name: **Grebien Markus**
+Klasse: **4AHME**
+Knr: **3**
 
+
+**Inhaltsverzeichnis**
+ 1. Versionsverwaltungssysteme
+	 * Systeme
+	 * Aufbau
+	 * Wichtige Befehle
+ 2. Markdown Dateien
+---
+
+1. **Versionsverwaltungssysteme**
+	1. Systeme:
+		1. [CVS](cvs_link)
+			* Gehöhrt zu den ersten Versionsverwaltungssystemen
+			* Wurde 1963 gegründed und die aktuellste version wurde 2008 veröffentlicht.
+		2. [SVN](svn_link)
+			* Wurde 2004 veröffentlicht
+			* Ist immer noch ein aktives Versionsverwaltungssystem
+		3. [Git](git_link)
+			* Wurde 2005 von Linus Torvalds entwickelt.
+			* Er hat als erstes auch ein Lokales Repository hinzugefügt, damit man auch ohne Internetverbindung arbeiten konnte
+	
+	2. Aufbau
+		1. Es gibt vier Hauptbetsantteile:
+			* Workspace
+				* Hier befinded sich die IDE mit dem Programmcode.
+			* index
+				* Die geänderten Dateien befinden sich nach dem "adden" hier.
+			* local repository
+				* Um sie bereit zu machen, bringt man sie danach einmal hier her
+			* remote repository
+				* Ist der Server, der Weltweit erreichbr ist.
+		2. Die wichtigsten befehle:
+			* `git add` um vom workspace in den index zu kommen
+			* `git commit` um vom index ins local reopsitory zu kommen
+			* `git push` damit alle änderungen hochgeladen werden
+			* `git pull` um alle änderungen vom remote repository in den workspace zu transverrieren

@@ -15,6 +15,8 @@ ___
 ___
 ## **1** Versionsverwaltung
 
+Ein Versionsverwaltungs-system wird genutzt um zu einem späteren Zeitpunkt auf alte Versionen des selben Produktes zurückgreifen zu können. 
+
 ### **1.1** VCS-Historie
 
 Vor [Git][git] gab es einige andere [VCS][vcs] *(Version Control System)*, zu diesen gehören unteranderem:
@@ -24,12 +26,18 @@ Vor [Git][git] gab es einige andere [VCS][vcs] *(Version Control System)*, zu di
 - [Mercurial][mercurial]
 
 [Linus Torvalds][linus], der ursprüngliche Entwickler von [Git][git] sah hinter den *alten* Systemen ein Problem:
-> Die lokalen Verzeichnisse haben nur mit aktiver netzwerkverbindung funktioniert, somit war das arbeiten an einem Projekt offline nur eingeschränkt möglich.
+> Die lokalen Verzeichnisse haben nur mit aktiver Netzwerkverbindung funktioniert, somit war das Arbeiten an einem Projekt offline nur eingeschränkt möglich.
 
-Dieses Problem löste [Linus][linus] mit [Git][git] indem er zu den bereits existierendem System (lokales Verzeichnis und remote Repository) ein weiteres Repository - das lokale Repository - zwischenschaltete.
+Dieses Problem löste [Linus][linus] mit [Git][git] indem er zu den bereits existierendem System (bestehend aus: lokalesm Verzeichnis und remote Repository) ein weiteres Repository - **das lokale Repository** - zwischenschaltete.
 
 ### **1.2** Git
 
+Git ist das [meist genutzte][vcs-popularity] VCS derzeit. Es wurde 2005 von [Linus Torvalds][linus] initiiert.
+
+Die Hauptmerkmale von Git sind:
+- dezentraler Server
+- nicht-lineare Entwicklung *(umgesetzt mithilfe von branches)*
+- kryptographische sicherheit der projektgeschichte
 
 Eine gute Übersicht über die bedeutesten Git-Befehlen gibt folgende Grafik, in welcher auch der Datenstrom zu erkennen ist:
 
@@ -45,13 +53,12 @@ ___
 
 Es ist hilfreich sich das [Cheatsheet][cheatsheet] anzusehen, in welchem verschiedenste Formattierungsoptionen erklärt werden. 
 
-Interessant ist vorallem syntax highlighting für code segmente. Als Beispiel:
+Interessant ist vorallem Syntax-Highlighting für Quelltexte. Als Beispiel:
 ```java
 public static void demoSyntaxHighlighting(String s, int x){
     System.out.println("string: " + s + " integer: " + x);
 }
 ```
-
 ___
 ### **3** Wichtige Konsolenbefehle
 
@@ -67,7 +74,7 @@ ___
 
 `ls -la` - zeigt mehr informationen zu den listeneinträgen  
 
-`ll` - alias für 'ls -la' unter ubuntu 
+`ll` - [alias][alias] für 'ls -la' unter ubuntu 
 
 #### Git
 
@@ -91,5 +98,7 @@ ___
 [cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
 [markdown]: https://de.wikipedia.org/wiki/Markdown"
 [linus]: https://de.wikipedia.org/wiki/Linus_Torvalds"
+[alias]: https://wiki.ubuntuusers.de/alias/"
+[vcs-popularity]: https://rhodecode.com/insights/version-control-systems-2016"
 
 [gitdataflow]: https://i.stack.imgur.com/MgaV9.png "Git data flow"

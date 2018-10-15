@@ -32,7 +32,7 @@ Dieses Problem löste [Linus][linus] mit [Git][git] indem er zu den bereits exis
 
 ### **1.2** Git
 
-Git ist das [meist genutzte][vcs-popularity] VCS derzeit. Es wurde 2005 von [Linus Torvalds][linus] initiiert.
+Git ist das [meist genutzte][vcspopularity] VCS derzeit. Es wurde 2005 von [Linus Torvalds][linus] initiiert.
 
 Die Hauptmerkmale von Git sind:
 - dezentraler Server
@@ -99,6 +99,5 @@ ___
 [markdown]: https://de.wikipedia.org/wiki/Markdown"
 [linus]: https://de.wikipedia.org/wiki/Linus_Torvalds"
 [alias]: https://wiki.ubuntuusers.de/alias/"
-[vcs-popularity]: https://rhodecode.com/insights/version-control-systems-2016"
-
+[vcspopularity]: https://rhodecode.com/insights/version-control-systems-2016
 [gitdataflow]: https://i.stack.imgur.com/MgaV9.png "Git data flow"

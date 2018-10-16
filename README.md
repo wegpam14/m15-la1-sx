@@ -11,5 +11,5 @@ Die Felder sind wie folgt zu ersetzen:
 * `<htlid>` für die 8 stellige eigene HTL-ID
 * `<datum>` für das Übungsdatum im Format JJJJ-MM-DD also zB `2018-09-24`
   
-[Protkoll 1 2018-10-09](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2018-10-09.md)
+[Protkoll 1 2018-10-09](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2018-10-09.md)  
 [Protkoll 2 2018-10-16](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2018-10-16.md)

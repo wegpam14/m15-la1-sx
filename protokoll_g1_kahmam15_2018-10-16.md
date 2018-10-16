@@ -16,5 +16,5 @@ konvertierung in Maschinen lesbares Programm
 ->Linker (adressen übergeben)  
 -->ausführbares Programm  
 
-Gnu Compiler  
+Gnu Compiler  (Entwickler??)
 Visual C/C++ compiler  

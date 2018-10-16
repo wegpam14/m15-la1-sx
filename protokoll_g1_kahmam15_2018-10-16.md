@@ -19,9 +19,9 @@ konvertierung in Maschinen lesbares Programm
 Gnu Compiler  (Entwickler??)  
 Visual C/C++ compiler  
 . erstes verz  
-.. 2.  
+.. 2. verz  
 (Shell)bash  
-ls inhalt eines verzeichnisses anzeigen  
+ls - inhalt eines verzeichnisses anzeigen  
 endezeichen: $ = benutzer # = admin  
 ~ bedeutet Homeverzeichnis  
 whoiam befehl wer bin ich  
@@ -38,7 +38,7 @@ benutzer - gruppe dateigröße datum eig name
 editoren: nano, gedit, vi  
 mit cat oder less(viewer) (main.c) sichtbar machen
 hexdump zeigt bytes der datei
-hexdump -C  mit textinhalt  
+hexdump -C  - mit textinhalt  
 gcc main.c
 ./a.out zum ausführen  
 >  verwendung?

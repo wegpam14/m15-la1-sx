@@ -15,7 +15,7 @@
 Ein [Compiler](https://de.wikipedia.org/wiki/Compiler) ist ein Programm, das den Quellcode einer gewissen Programmiersprache (z.B. [C](https://de.wikipedia.org/wiki/C_(Programmiersprache)), [C++](https://de.wikipedia.org/wiki/C%2B%2B), [Java](https://de.wikipedia.org/wiki/Java_(Programmiersprache)))  so übersetzt, dass der Computer diese direkt ausführen kann.
 
 
-__2.2 Aufbau eines Compilern
+__1.2 Aufbau eines Compilers__
 
 Das bauen oder auch programmieren eines Compilers ist in der Informatik ein eigener Fachbereich. Der Bau eines Compilers kann in zwei Bereiche gegliedert werden:
 
@@ -34,13 +34,33 @@ Das bauen oder auch programmieren eines Compilers ist in der Informatik ein eige
 		 - __Zwischencodeerzeugung__
 			 - Moderne Compiler erzeugen durch den Syntaxbaum einen [Zwischencode](https://de.wikipedia.org/wiki/Zwischencode), dieser Zwischencode ist bereits relativ maschinennah, dies hat den Vorteil, das der Übersetzungsprozess einfacher wird und das die Software unter anderem auch Plattformunabhängig sein kann. 
 		 - __Programmoptimierung__
-				 - Bei der Programmoptimierung versuch der Compiler oder die CPU das Programm, bzw. den Code einfacher zu machen, indem sie unnötige oder falsche Befehle weglässt. Beispiel: 
+				
+			 -  Bei der Programmoptimierung versuch der Compiler oder die CPU das Programm, bzw. den Code einfacher zu machen, indem sie unnötige oder falsche Befehle weglässt. Beispiel: 
 ![Programmieroptimierung](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/TabelleCompilerZoomed.png)
 
+		 - __Codegenerierung__
+			 - Die [Codegenerierung](https://de.wikipedia.org/wiki/Codegenerator) kann direkt aus dem Syntaxbaum oder auch über den Zwischencode erzeugt werden. Falls die Zielsprache der Generierung die Maschinensprache ist, kann das Ergebnis direkt das ausführbare Programm sein.
+
+__1.3 Verschiedene Compiler__ 
+
+ - [GNU Compiler](https://gcc.gnu.org/)
+ - [MatLab Compiler](https://www.mathworks.com/products/compiler.html)
+ - [Fortran Compiler](http://www.fortran.de/)
+
+__1.4 GNU Compiler__
+Der GNU Compiler ist eine Sammlung für Compiler verschiedener Programmiersprachen, darunter sind [C](https://de.wikipedia.org/wiki/C_(Programmiersprache)), [C++](https://de.wikipedia.org/wiki/C%2B%2B), [Objective-C](https://de.wikipedia.org/wiki/Objective-C), [Fortran](https://de.wikipedia.org/wiki/Fortran), [Ada](https://de.wikipedia.org/wiki/Ada_(Programmiersprache)), und [Go](https://de.wikipedia.org/wiki/Go_(Programmiersprache)).
+Die erste Version wurde von [Richard Stallman](https://de.wikipedia.org/wiki/Richard_Stallman) am 22. März 1987 veröffentlicht, bis heute ist der GNU Compiler einer der meist genutzten Compiler. ![GNU Logoo](https://de.wikipedia.org/wiki/GNU_Compiler_Collection#/media/File:GNU_Compiler_Collection_logo.svg)
+
+ _
+
+## 2. Shell
+
+__2.1 Definition__
+ Eine [Shell](https://de.wikipedia.org/wiki/Unix-Shell) ermöglicht die text- bzw. kommandobasierte Benutzung des Computersystems und ist vor allem auf unixoiden Systemen anzutreffen. Die Kombinierbarkeit von kleinen, aber leistungsfähigen und flexiblen Kommandozeilenprogrammen ist ein wichtiger Eckpfeiler der Unix-Philosophie. Dies verhilft der Shell, eigentlich ein Programm wie jedes andere, zu einem prominenten Status vor allem bei fortgeschrittenen Anwendern, die mit ihr Routinen automatisieren und permanent ein oder mehrere Instanzen einer Shell für den schnellen Zugriff offen halten. [Quelle](https://wiki.ubuntuusers.de/Shell/)
+__2.2 __
 
 
+##  3. Linux Terminal-Befehle
+__4.1 Befehlsliste__
 
-
-
-
- 
+   

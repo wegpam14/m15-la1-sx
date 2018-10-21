@@ -13,7 +13,7 @@ Gruppe: 1
 * *1.2 Konvertierung in Maschinen lesbares Programm*
 * **2. Compiler**
  * *2.1 Versionen*  
- * *2.2. Arbeitsvorgang GNU Compiler* 
+ * *2.2. Arbeitsvorgang des GNU Compiler* 
 * **3. Linux-Befehle**
   
 ### 1. Übersetzungsvorgang in C
@@ -22,26 +22,26 @@ Gruppe: 1
   
   Zu Beginn eines Programms wird ein [Quelltext] benötigt (gewöhnliche Textdatei).
   In diesem Quelltext werden Programmieranweisungen geschrieben, welche den Aufgaben des Programms entsprechen.
-   
+  Durch Syntaxhervorhebung werden Teile des Quelltextes entsprechend ihrer Funktionalität farblich hervorgehoben, was die Lesbarkeit
+  verbessert. Ebenfalls zur Verbesserung der Lesbarkeit halten sich Programmierer meist an eine bestimmte Quelltextformatierung
+  (z. B. Einrückung von Unterabschnitten, Groß-/Kleinschreibung …). 
 
 #### 1.2 Konvertierung in Maschinen lesbares Programm
 
-Vor dem Git-System gab es auch einige andere **VCS (Version Control Systems)** ,
-jedoch hat sich Git, entwickelt von [Linus Torvalds], stark durchgesetzt da er mit diesem
-System ein großes Problem behob. Er fügte zwischen dem lokalen Verzeichnis und dem remote repository
-ein lokales repository hinzu. Somit gab es keine weiteren Probleme beim sichern der Daten ohne Internetverbindung.
+* Präprozzesor (#include, #define, #...) - erzeugt einen präprozzesierten Quelltext  
+* Compiler - übersetzt in Assembler (Maschinensprache)  
+* Assembler - erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
+* Linker - übergibt die Adressen damit das Programm ausgeführt werden kann
 
-### 2. Git
+### 2. Compiler
 
-#### 2.1 Git-Befehle
-
-**git add** - fügt Dateien zum Index hinzu  
-**git commit** - schreibt die Datei aus dem Index in das lokale Repository  
-**git push** - schreibt die Datei aus dem lokalen Repository in das remote Repository  
-**git status** - zeigt den aktuellen Zustand der Datei im lokalen Repository
+#### 2.1 Versionen
 
 
-#### 2.2 Markdown
+
+
+
+#### 2.2 Arbeitsvorgang des GNU Compiler
 
 [Markdown] ist eine Möglichkeit, Text im Web zu formatieren. 
 Es steuert die Anzeige eines Dokuments; Formatieren von Wörtern wie Fett oder Kursiv,
@@ -51,12 +51,19 @@ Eine Markdown-Datei ist durch die Dateiendung **```.md```** oder **```.markdown`
 
 ### 3. Linux-Befehle
 
-* **```cd```** - Pfad wechseln
-* **```ls```** - Liste aller Dateien im aktuellen Verzeichnis
-* **```ls -a```** - listet auch verdeckte Dateien (z.B.: .gitignore)
-* **```ls -la```** - zeigt weitere Informationen aus der Liste
-* **```ll```** - Codewort für **```ls -la```** in Ubuntu
+* **```whoami```** - Zeigt dir welcher Benutzer du bist
+* **```pwd```** - Zeigt dir in welchem Verzeichniss du dich befindest
+* **```man```** - Ruft das Manual/die Mainpages auf (z.B.: **```man 3 printf```**)
+* **```mkdir <name>```** - Erstellt ein neues Verzeichniss
+* **```history```** - Zeigt dir deine Befehls-History an  
+* **```reset```** - Setzt die Shell zurück
+* **```ls -l```** - Zeigt die Rechte auf die Dateien (Ersten 3 = Rechte der Eigentümer, Zweiten 3 = Rechte der Gruppen,  
+Ersten 3 = Rechte aller Benutzer)  
+* **```hexdump```** - Zeigt Bytes der Datei  
+* **```hexdump -C```** - Zeigt Bytes der Datei mit Textinhalt  
+* **```gcc```** - ..  
+* **```./a.out```** - Führt Programm im Terminal aus  
+* **```gcc -E```** - Reprozessiert die Datei  
 
 [Quelltext]: https://de.wikipedia.org/wiki/Quelltext
-[Linus Torvalds]: https://de.wikipedia.org/wiki/Linus_Torvalds
-[Markdown]: https://guides.github.com/features/mastering-markdown/
+

@@ -1,45 +1,62 @@
-markdown HTML gerendert
+![HTBLA Kaindorf](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/HTL_Kaindorf_Logo.svg/1200px-HTL_Kaindorf_Logo.svg.png)
 
-Übersetzungvorgang in C:  
+# 2. Protokoll (16.10.2018)
+Name: Kahr Markus  
+Klasse: 4AHME  
+KNr.: 6  
+Gruppe: 1  
 
--Quelltext erstellen ...Sourcode (main.c)  
-  -gewöhnliche Textdatei  
-  -schreiben von Programmieranweisungen  
+## Inhalte:  
+
+* **1. Übersetzungsvorgang in C**  
+* *1.1 Sourcecode erstellen*
+* *1.2 Konvertierung in Maschinen lesbares Programm*
+* **2. Compiler**
+ * *2.1 Versionen*  
+ * *2.2. Arbeitsvorgang GNU Compiler* 
+* **3. Linux-Befehle**
   
-konvertierung in Maschinen lesbares Programm  
-->Pre prozessor (#include, #define)  
--->preprozessierter Quelltext  
-->compiler - übersetzt  in Assembler (Maschinensprache) 
--->Assembler Quelltextdatei  
-->Assembler  
--->Objektdatei, Objectcode  
-->Linker (adressen übergeben)  
--->ausführbares Programm  
+### 1. Übersetzungsvorgang in C
 
-Gnu Compiler  (Entwickler??)  
-Visual C/C++ compiler  
-. erstes verz  
-.. 2. verz  
-(Shell)bash  
-ls - inhalt eines verzeichnisses anzeigen  
-endezeichen: $ = benutzer # = admin  
-~ bedeutet Homeverzeichnis  
-whoiam befehl wer bin ich  
-pwd welches verzeichniss bin ich  
-ls --all
-man(manual/mainpages) ls  
-man 3 printf  
-mkdir ue1 verzeichniss erstellen  
-history mit pfeil taste oben/unten oder befehl histroy  
-reset setzt shell zurück  
-ls -l  Rechte der datei 1.3 eigentümer 2.3 gruppen 3.3 alle benutzer
-d am anfang = directory  
-benutzer - gruppe dateigröße datum eig name  
-editoren: nano, gedit, vi  
-mit cat oder less(viewer) (main.c) sichtbar machen
-hexdump zeigt bytes der datei
-hexdump -C  - mit textinhalt  
-gcc main.c
-./a.out zum ausführen  
->  verwendung?
-gcc -E =reprozessieren
+#### 1.1 Sourcecode erstellen
+  
+  Zu Beginn eines Programms wird ein [Quelltext] benötigt (gewöhnliche Textdatei).
+  In diesem Quelltext werden Programmieranweisungen geschrieben, welche den Aufgaben des Programms entsprechen.
+   
+
+#### 1.2 Konvertierung in Maschinen lesbares Programm
+
+Vor dem Git-System gab es auch einige andere **VCS (Version Control Systems)** ,
+jedoch hat sich Git, entwickelt von [Linus Torvalds], stark durchgesetzt da er mit diesem
+System ein großes Problem behob. Er fügte zwischen dem lokalen Verzeichnis und dem remote repository
+ein lokales repository hinzu. Somit gab es keine weiteren Probleme beim sichern der Daten ohne Internetverbindung.
+
+### 2. Git
+
+#### 2.1 Git-Befehle
+
+**git add** - fügt Dateien zum Index hinzu  
+**git commit** - schreibt die Datei aus dem Index in das lokale Repository  
+**git push** - schreibt die Datei aus dem lokalen Repository in das remote Repository  
+**git status** - zeigt den aktuellen Zustand der Datei im lokalen Repository
+
+
+#### 2.2 Markdown
+
+[Markdown] ist eine Möglichkeit, Text im Web zu formatieren. 
+Es steuert die Anzeige eines Dokuments; Formatieren von Wörtern wie Fett oder Kursiv,
+Hinzufügen von Bildern und Erstellen von Listen sind nur einige der Dinge, 
+die man mit Markdown machen kann. Meistens ist Markdown nur normaler Text mit ein paar nicht-alphabetischen Zeichen wie # oder *.
+Eine Markdown-Datei ist durch die Dateiendung **```.md```** oder **```.markdown```** gekennzeichnet.
+
+### 3. Linux-Befehle
+
+* **```cd```** - Pfad wechseln
+* **```ls```** - Liste aller Dateien im aktuellen Verzeichnis
+* **```ls -a```** - listet auch verdeckte Dateien (z.B.: .gitignore)
+* **```ls -la```** - zeigt weitere Informationen aus der Liste
+* **```ll```** - Codewort für **```ls -la```** in Ubuntu
+
+[Quelltext]: https://de.wikipedia.org/wiki/Quelltext
+[Linus Torvalds]: https://de.wikipedia.org/wiki/Linus_Torvalds
+[Markdown]: https://guides.github.com/features/mastering-markdown/

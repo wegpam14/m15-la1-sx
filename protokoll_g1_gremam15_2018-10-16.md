@@ -31,15 +31,13 @@ Knr: **3**
 		+ `gcc -S main.c` bekommt man den Assebler Quelltext [main.s][main.s_ue1]
 		+ `gcc -c main.c`Als letzten Schritt auch noch die Objektdatei, welche für den Menschen nicht mehr gut lesbar ist [main.o][main.o_ue1] 
 
-1. Wichtige Terminalbefehle
-`whoami` = name des Benutzers
-`mkdir` = erstellen eines neuen Ordners
-`cat` = Fügt alle Dateien zusammen und gibt sie am Bildschirm aus
-`pwd` = Aktueller Pfadname
-`reset` = 
+1. Wichtige Terminalbefehle  
+`whoami` = name des Benutzers  
+`mkdir` = erstellen eines neuen Ordners  
+`cat` = Fügt alle Dateien zusammen und gibt sie am Bildschirm aus  
+`pwd` = Aktueller Pfadname  
 `ll` => `ls -l` = ausführliches Inhaltsverzeichnis
-	+ d rwx rwx rwx d: dirctory, first group: user, second group: group, third group: all user  
-    
+	+ d rwx rwx rwx d: dirctory, first group: user, second group: group, third group: all user    
 editors: nano, gedit, VI
 
 

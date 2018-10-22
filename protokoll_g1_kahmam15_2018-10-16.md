@@ -5,6 +5,7 @@ Name: Kahr Markus
 Klasse: 4AHME  
 KNr.: 6  
 Gruppe: 1  
+___
 
 ## Inhalte:  
 
@@ -18,6 +19,8 @@ Gruppe: 1
 * **4. Linux**
  * *4.1 Linux-Befehle* 
  * *4.2 Linux-Zugriffsrechte* 
+ 
+ ___
   
 ### 1. Übersetzungsvorgang in C
 
@@ -36,6 +39,8 @@ Gruppe: 1
 * [Assembler] - erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
 * [Linker] - übergibt die Adressen damit das Programm ausgeführt werden kann
 
+___
+
 ### 2. Compiler
 
 #### 2.1 Verschiedene Compiler
@@ -48,6 +53,8 @@ Gruppe: 1
 
 ![GCC Schema](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/GCC_Schema.svg/600px-GCC_Schema.svg.png)
 
+___
+
 ### 3. Bash-Shell
 
 **[Bash]** (für **B**ourne-**a**gain **sh**ell) ist eine freie [Unix-Shell] und Teil des GNU-Projekts. Sie ist heute auf vielen [unixoiden] Systemen die **Standard-Shell**. Viewer/Editoren für die Unix-Shell sind z.B.: nano, less.
@@ -55,6 +62,8 @@ Gruppe: 1
 Informationen aus der Bash-Shell:
 * Die Tilde **```~```** zeigt mir, dass ich mich im Home-Verzeichnis befinde  
 * Das Endzeichen kann ein **```$```** (=Benutzer) oder ein **```#```** (=Admin) sein  
+
+___
 
 ### 4. Linux
 

@@ -12,9 +12,12 @@ Gruppe: 1
 * *1.1 Sourcecode erstellen*
 * *1.2 Konvertierung in Maschinen lesbares Programm*
 * **2. Compiler**
- * *2.1 Versionen*  
- * *2.2. Arbeitsvorgang des GNU Compiler* 
-* **3. Linux-Befehle**
+ * *2.1 Verschiedene Compiler*  
+ * *2.2 Arbeitsvorgang des GNU Compiler* 
+* **3. Bash-Shell**
+* **4. Linux**
+ * *4.1 Linux-Befehle* 
+ * *4.2 Linux-Zugriffsrechte* 
   
 ### 1. Übersetzungsvorgang in C
 
@@ -28,32 +31,39 @@ Gruppe: 1
 
 #### 1.2 Konvertierung in Maschinen lesbares Programm
 
-* Präprozzesor (#include, #define, #...) - erzeugt einen präprozzesierten Quelltext  
-* Compiler - übersetzt in Assembler (Maschinensprache)  
-* Assembler - erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
-* Linker - übergibt die Adressen damit das Programm ausgeführt werden kann
+* [Präprozessor] (#include, #define, #...) - erzeugt einen präprozzesierten Quelltext  
+* [Compiler] - übersetzt in Assembler (Maschinensprache)  
+* [Assembler] - erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
+* [Linker] - übergibt die Adressen damit das Programm ausgeführt werden kann
 
 ### 2. Compiler
 
-#### 2.1 Versionen
+#### 2.1 Verschiedene Compiler
 
-
-
+* [GNU Compiler]  
+* [Visual C/C++ Compiler]  
 
 
 #### 2.2 Arbeitsvorgang des GNU Compiler
 
-[Markdown] ist eine Möglichkeit, Text im Web zu formatieren. 
-Es steuert die Anzeige eines Dokuments; Formatieren von Wörtern wie Fett oder Kursiv,
-Hinzufügen von Bildern und Erstellen von Listen sind nur einige der Dinge, 
-die man mit Markdown machen kann. Meistens ist Markdown nur normaler Text mit ein paar nicht-alphabetischen Zeichen wie # oder *.
-Eine Markdown-Datei ist durch die Dateiendung **```.md```** oder **```.markdown```** gekennzeichnet.
+![GCC Schema](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/GCC_Schema.svg/600px-GCC_Schema.svg.png)
 
-### 3. Linux-Befehle
+### 3. Bash-Shell
+
+**[Bash]** (für **B**ourne-**a**gain **sh**ell) ist eine freie [Unix-Shell] und Teil des GNU-Projekts. Sie ist heute auf vielen [unixoiden] Systemen die **Standard-Shell**. Viewer/Editoren für die Unix-Shell sind z.B.: nano, less.
+![Leere Bash](https://hosting.1und1.de/digitalguide/fileadmin/DigitalGuide/Screenshots/ubuntu-bash.png)  
+Informationen aus der Bash-Shell:
+* Die Tilde **```~```** zeigt mir, dass ich mich im Home-Verzeichnis befinde  
+* Das Endzeichen kann ein **```$```** (=Benutzer) oder ein **```#```** (=Admin) sein  
+
+### 4. Linux
+
+#### 4.1 Linux-Befehle
 
 * **```whoami```** - Zeigt dir welcher Benutzer du bist
 * **```pwd```** - Zeigt dir in welchem Verzeichniss du dich befindest
 * **```man```** - Ruft das Manual/die Mainpages auf (z.B.: **```man 3 printf```**)
+* **```cat```** - Gibt eine Textdatei in der Konsole aus
 * **```mkdir <name>```** - Erstellt ein neues Verzeichniss
 * **```history```** - Zeigt dir deine Befehls-History an  
 * **```reset```** - Setzt die Shell zurück
@@ -61,9 +71,25 @@ Eine Markdown-Datei ist durch die Dateiendung **```.md```** oder **```.markdown`
 Ersten 3 = Rechte aller Benutzer)  
 * **```hexdump```** - Zeigt Bytes der Datei  
 * **```hexdump -C```** - Zeigt Bytes der Datei mit Textinhalt  
-* **```gcc```** - ..  
+* **```gcc <main.c>```** - Compeliert eine Datei  
+* **```gcc -E <main.c>```** - Reprozessiert die Datei -> **```main.pp```**  
+* **```gcc -S <main.c>```** - Codiert in Assembler-Quelltext -> **```main.s```**
+* **```gcc -c <main.c>```** - Erstellt Objektdatei -> **```main.o```**
 * **```./a.out```** - Führt Programm im Terminal aus  
-* **```gcc -E```** - Reprozessiert die Datei  
+
+#### 4.2 Linux-Zugriffsrechte
+
+![Zugrifssrechte](http://www.easylinux.de/Artikel/ausgabe/2003/09/071-guru-chmod/rwx-grafix_s.jpg)
+
 
 [Quelltext]: https://de.wikipedia.org/wiki/Quelltext
-
+[GNU Compiler]: https://de.wikipedia.org/wiki/GNU_Compiler_Collection
+[Visual C/C++ Compiler]: https://de.wikipedia.org/wiki/Visual_C%2B%2B
+[Bash]: https://de.wikipedia.org/wiki/Bash_(Shell)
+[Unix-Shell]: https://de.wikipedia.org/wiki/Unix-Shell
+[GNU-Projekts]: https://de.wikipedia.org/wiki/GNU-Projekt
+[unixoiden]: https://de.wikipedia.org/wiki/Unixoides_System
+[Präprozessor]: https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor
+[Compiler]: https://de.wikipedia.org/wiki/Compiler
+[Assembler]: https://de.wikipedia.org/wiki/Assembler_(Informatik)
+[Linker]: https://de.wikipedia.org/wiki/Linker_(Computerprogramm)

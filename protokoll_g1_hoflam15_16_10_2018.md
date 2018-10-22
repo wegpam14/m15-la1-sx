@@ -61,36 +61,35 @@ Der englische Ausdruck **Shell**, zu Deutsch etwa **Schale** oder **Ummantelung*
 - Diese Shell kann alles andere was die anderen auch können und noch dazu ermöglicht sie, jedem Benutzer eigene Einstellungen, wie eine individuelle Gestaltung der Eingabeaufforderung (Prompt), sitzungsübergreifend zu gestalten.
 ## Linux Terminal
 #### Erklärung wichtiger Befehle
- - **cd  ("change directory")**
+ - `cd  ("change directory")`
 *Wechsel des Arbeitsverzeichnisses*
- - **ls -a -l	("list")**
+ - `ls -a -l	("list")`
  *Zeigt den Inhalt eines Verzeichnisses an; 
  "-a" bedeutet: listet auch [versteckte Dateien](https://wiki.ubuntuusers.de/Versteckte_Dateien/) und Verzeichniseinträge wie .. und .. auf;
  "-l" bedeutet: gibt die Datei-Informationen in Langform aus*
- - **git clone**
+ - `git clone`
  *clont das Repository, um auf einer eigenen Kopie arbeiten zu können*
- - **git add** 
+ - `git add` 
  *alle Dateien werden im Index aufgenommen*
- - **git push**
+ - `git push`
  *zum Einfügen vom lokalen Repository in die remote*
- - **git commit -m "..."** 
+ - `git commit -m "..."`
 *Dateien kommen vom Index in das lokale Repository
  Mit den 3 Befehlen wird nachdem es geklont wurde initialisiert*
- - **sudo apt update; sudo apt install build-essential;...**
- *apt... Paketmanagement-System*
- - **whoami**
+ - `sudo apt update; sudo apt install build-essential;...`
+ *Paketmanagement-System*
+ - `whoami`
  *"Wer bin ich?" -> gibt mir meinen Namen aus*
- - **man ls**
+ - `man ls`
  *Man steht für manual.*
- - **mkdir**
+ - `mkdir`
  *Somit kommt man ins Verzeichnis.*
- - **cat**
+ - `cat`
  *Kann man die Syntax angeben*
- - **./a.out**
+ - `./a.out`
  Zur Ausführung des Programmes.
-- **hexdump "Dateiname"**
+- `hexdump "Dateiname"`
 *Inhalt der Datei wird in Bytes ausgegeben*
-
  
 
 

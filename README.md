@@ -12,4 +12,4 @@ Die Felder sind wie folgt zu ersetzen:
 * `<datum>` für das Übungsdatum im Format JJJJ-MM-DD also zB `2018-09-24`
   
 1. [Protokoll 1 (9. Oktober)](https://github.com/HTLMechatronics/m15-la1-sx/blob/gremam15/protokoll_g1_gremam15_2018-10-9.md)
-1. [Protokoll 1 (9. Oktober)](https://github.com/HTLMechatronics/m15-la1-sx/blob/gremam15/protokoll_g1_gremam15_2018-10-16.md)
+1. [Protokoll 2 (16. Oktober)](https://github.com/HTLMechatronics/m15-la1-sx/blob/gremam15/protokoll_g1_gremam15_2018-10-16.md)

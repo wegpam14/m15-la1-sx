@@ -12,7 +12,7 @@ ___
 1. Linux als Betriebssystem
     1. Zugriffsrechte des Systems
     1. Texteditoren /-viewer
-    1. Shell
+    1. [Shell][unixshell]
 1. Wichtige Konsolenbefehle 
 
 ___
@@ -20,9 +20,9 @@ ___
 
 ### **1.1** Compiler
 
-C-Compiler waren vor dem GCC und ähnlichen Projekten kostenspielige Software. Die Lizensen für Compiler musste mit viel Geld erworben werden.
+C-Compiler waren vor dem [GCC][gcc] und ähnlichen Projekten kostenspielige Software. Die Lizensen für Compiler musste mit viel Geld erworben werden.
 
-[Richard Stallman](https://de.wikipedia.org/wiki/Richard_Stallman) entwickelte daher um die 1990 den GNU C Compiler.
+[Richard Stallman][richardstallman] entwickelte daher um die 1990 den GNU C Compiler.
 Dieser ist ein freier Compiler unter der GPL Lizenz.
 
 Der GCC ist heutezutage ein sehr guter Compile und daher auch der Meistgenutzte.
@@ -36,10 +36,10 @@ Eine Quelldatei, der sogenante *Sourcecode*, also das eigentliche C-Programm in 
 Der Präprozessor löst Präprozessorbefehle in der Quelldatei auf und ersetzt diese durch die jeweilige Funktionalität.
 
 **Compiler**:
-
+Der Compiler übersetzt die Bitketten zu Assembler.
 
 **Assembler**:
-
+Der Assembler erzeugt danach eine Objektdatei - auch Objectcode genannt.
 
 **Linker**:
 Ersetzt im Objectcode die Adressen, sodass das Programm danach ausgeführt werden kann.
@@ -75,9 +75,9 @@ Ein einfach zu bedienenter freier Texteditor mit wenig, aber genügendem Funktio
 - GEDIT (editor)
 - LESS (viewer)
 
-### **2.3** Unix-Shell
+### **2.3** [Unix-Shell][unixshell]
 
-Im fall von Ubuntu ist die Bash (Bourne-again shell) die Standartshell.
+Im fall von Ubuntu ist die [Bash][bash] (Bourne-again shell) die Standartshell.
 Mithilfe der Shell kann der Benutzer durch eingeben verschiedenster Befehle mit dem Betriebssystem kommunizieren.
 
 Mithilfe der Bash kann ein Programm mithilfe des folgenden Befehls ausgeführt werden:
@@ -110,15 +110,9 @@ Wir lernten weitere Konsolenbefehle unter Linux, gleich wie in der Woche davor. 
 
 `chmod <permissions> <file>` - erteilen von rechten
 
-[vcs]: https://en.wikipedia.org/wiki/Version_control
-[git]: https://git-scm.com/
-[github]: https://github.com/
-[subversion]: https://de.wikipedia.org/wiki/Subversion
-[mercurial]: https://de.wikipedia.org/wiki/Mercurial
-[cvs]: https://de.wikipedia.org/wiki/Concurrent_Versions_System
-[cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[markdown]: https://de.wikipedia.org/wiki/Markdown
-[linus]: https://de.wikipedia.org/wiki/Linus_Torvalds
-[alias]: https://wiki.ubuntuusers.de/alias/
-[vcspopularity]: https://rhodecode.com/insights/version-control-systems-2016
-[gitdataflow]: https://i.stack.imgur.com/MgaV9.png "Git data flow"
+[richardstallman]: https://de.wikipedia.org/wiki/Richard_Stallman
+[gcc]: https://de.wikipedia.org/wiki/GNU_Compiler_Collection
+[unixshell]: https://de.wikipedia.org/wiki/Unix-Shell
+[bash]: https://de.wikipedia.org/wiki/Bash_(Shell)
+
+

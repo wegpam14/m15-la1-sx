@@ -47,7 +47,7 @@ Ersetzt im Objectcode die Adressen, sodass das Programm danach ausgeführt werde
 ![Bild: Übersicht eines Übersetzungsvorganges](http://nerdyelectronics.com/wp-content/uploads/2017/07/GCC_CompilationProcess.png)
 
 ___
-### **2** Linux als Betriebssystem
+## **2** Linux als Betriebssystem
 
 ### **2.1** Zugriffsrechte des Systems
 
@@ -84,7 +84,7 @@ Mithilfe der Bash kann ein Programm mithilfe des folgenden Befehls ausgeführt w
 `./programm`
 
 ___
-### **3** Wichtige Konsolenbefehle
+## **3** Wichtige Konsolenbefehle
 
 Wir lernten weitere Konsolenbefehle unter Linux, gleich wie in der Woche davor. Die Befehle letzter Woche können im [alten Protokoll] angesehen werden.
 

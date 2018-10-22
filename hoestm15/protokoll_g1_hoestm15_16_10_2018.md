@@ -40,6 +40,8 @@ Das bauen oder auch programmieren eines Compilers ist in der Informatik ein eige
 
 		 - __Codegenerierung__
 			 - Die [Codegenerierung](https://de.wikipedia.org/wiki/Codegenerator) kann direkt aus dem Syntaxbaum oder auch über den Zwischencode erzeugt werden. Falls die Zielsprache der Generierung die Maschinensprache ist, kann das Ergebnis direkt das ausführbare Programm sein.
+![Aufbau eines Compilers
+](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Aufbau+eines+einfachen+Compilers.jpg)
 
 __1.3 Verschiedene Compiler__ 
 
@@ -49,7 +51,7 @@ __1.3 Verschiedene Compiler__
 
 __1.4 GNU Compiler__
 Der GNU Compiler ist eine Sammlung für Compiler verschiedener Programmiersprachen, darunter sind [C](https://de.wikipedia.org/wiki/C_(Programmiersprache)), [C++](https://de.wikipedia.org/wiki/C%2B%2B), [Objective-C](https://de.wikipedia.org/wiki/Objective-C), [Fortran](https://de.wikipedia.org/wiki/Fortran), [Ada](https://de.wikipedia.org/wiki/Ada_(Programmiersprache)), und [Go](https://de.wikipedia.org/wiki/Go_(Programmiersprache)).
-Die erste Version wurde von [Richard Stallman](https://de.wikipedia.org/wiki/Richard_Stallman) am 22. März 1987 veröffentlicht, bis heute ist der GNU Compiler einer der meist genutzten Compiler. ![GNU Logoo](https://de.wikipedia.org/wiki/GNU_Compiler_Collection#/media/File:GNU_Compiler_Collection_logo.svg)
+Die erste Version wurde von [Richard Stallman](https://de.wikipedia.org/wiki/Richard_Stallman) am 22. März 1987 veröffentlicht, bis heute ist der GNU Compiler einer der meist genutzten Compiler. ![GNU Logo](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/gnu-gcc.png)
 
  _
 

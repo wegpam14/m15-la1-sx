@@ -1,15 +1,9 @@
  # Protokoll der 2. Einheit (16.10.2018)
   Name: 		Hörmann
-  
-  Gegenstand: Labor 
-  
-  Lehrer: SX 
-  
-  
-  Klasse: 4AHME 
-  
-  Gruppe: 1 
-  
+  Gegenstand: Labor
+  Lehrer: SX
+  Klasse: 4AHME
+  Gruppe: 1
   ## Inhaltsverzeichnis
 
  1. Compiler
@@ -63,10 +57,48 @@ Die erste Version wurde von [Richard Stallman](https://de.wikipedia.org/wiki/Ric
 
 __2.1 Definition__
  Eine [Shell](https://de.wikipedia.org/wiki/Unix-Shell) ermöglicht die text- bzw. kommandobasierte Benutzung des Computersystems und ist vor allem auf unixoiden Systemen anzutreffen. Die Kombinierbarkeit von kleinen, aber leistungsfähigen und flexiblen Kommandozeilenprogrammen ist ein wichtiger Eckpfeiler der Unix-Philosophie. Dies verhilft der Shell, eigentlich ein Programm wie jedes andere, zu einem prominenten Status vor allem bei fortgeschrittenen Anwendern, die mit ihr Routinen automatisieren und permanent ein oder mehrere Instanzen einer Shell für den schnellen Zugriff offen halten. [Quelle](https://wiki.ubuntuusers.de/Shell/)
-__2.2 __
-
+ 
+__2.2 Bash (Unix Shell)__
+[Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (Kurz für **B**ourne-**a**gain **sh**ell) ist eine Unix Shell und eine commando basierte Sprache erstellt von [Brian Fox](https://en.wikipedia.org/wiki/Brian_Fox_(computer_programmer)) für das GNU Projekt als freie Software alternative für die Bourne Shell. Sie wurde am 8. Juni 1989 veröffentlicht.
 
 ##  3. Linux Terminal-Befehle
 __4.1 Befehlsliste__
+ 
+	 gcc --version
+Version Überprüfen
 
-   
+	cd..
+Auf Übergeordnetes Verzeichnis wechseln 
+
+	whoami
+Benutzer abfragen
+
+	man ls
+Handbuch für ls Befehle wird geöffnet
+
+	pwd
+Fragt aktuelles Verzeichnis ab
+
+	cat/etc/hostname
+Hostname abfragen
+
+	man man
+Handbuch für "man" Befehle öffnen
+
+	mkdir "Verzeichnisname"
+Verzeichnis erstellen
+
+	mv "Verzeichnisname" "Zielverzeichnis"
+Verzeichnis in Zielverzeichnis verschieben
+
+	history 
+alle Befehle der Vergangenheit abrufen#
+
+	 reset
+löschen des Shell Inhalts
+
+	cat "Dateiname"
+Inhalt der Datei wird im Terminal ausgegeben
+
+	hexdump "Dateiname"
+Inhalt der Datei wird in Bytes ausgegeben

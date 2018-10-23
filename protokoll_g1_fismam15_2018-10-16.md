@@ -90,17 +90,17 @@ Wir lernten weitere Konsolenbefehle unter Linux, gleich wie in der Woche davor. 
 
 #### Linux
 
-`whoami` - steht für 'change directory', wechselt das aktuelle arbeitsverzeichnis zum home-verzeichnis des benutzers  
+`whoami` - gibt den aktuellen benutzer aus 
 
-`mkdir <name>` - wechselt das aktuelle arbeitsverzeichnis zum angegebenen pfad  
+`mkdir <name>` - erstellt ein verzeichnis  
 
 `mv <file> <target>` - verschiebt eine datei oder einen ordner an eine andere stelle 
 
 `man <expression>` - ruft das manual auf  
 
-`cat` - listet alle datein im aktuellen arbeitsverzeichnis auf  
+`cat` - gibt den text einer oder mehrerer datein aus  
 
-`pwd` - listet auch versteckte datein  
+`pwd` - gibt aktuelle working directory aus 
 
 `reset` - setzt die shell auf den anfangszustand zurück  
 

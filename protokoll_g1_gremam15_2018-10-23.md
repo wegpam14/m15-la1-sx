@@ -8,41 +8,42 @@ Knr: **3**
 
 1. CPU (**C**entral **P**rocessing **U**nit)
 	1. Programm Counter
-	2. Multiplexer
-	3. Befehls-Register
-	4. Befehls-Decoder
-	5. Status Register
-	6. Stack Pointer
-	7. CPU-Register
-	8. ALU
-	9. Speicherverwaltung
-2. Speicher
+	1. Multiplexer
+	1. Befehls-Register
+	1. Befehls-Decoder
+	1. Status Register
+	1. Stack Pointer
+	1. CPU-Register
+	1. ALU
+	1. Speicherverwaltung
+1. Speicher
 	1. Flash
-	2. SRAM
-	3. EEPROM
-3. Maschinenbefehle
+	1. SRAM
+	1. EEPROM
+1. Atmel Studio
+1. Maschinenbefehle
 ---
 ### CPU
 1. Programm Counter
 	* Beinhaltet die Position des nächsten Befehls.
-2. Multiplexer
+1. Multiplexer
 	* Kann man sich wie einen Schalter vostellen. Entweder wird es um eins erhöht oder ein Befehl sagt, dass er um einen speziellen wert steigen oder fallen soll. 
-3. Befehls-Register
+1. Befehls-Register
 	* Empfängt die Programmbefehle und speichert sie wärend des Ablaufs
-4. Befehls-Decoder
+1. Befehls-Decoder
 	* Wandelt den Befehl um in assemblersprache und gibt diesen mithilfe von Steuersignalen weiter.
-5. Status Register
+1. Status Register
 	* Beinhaltet spezielle flags. Zum Beispiel: Overflow-Flag, Carry-Flag, Zero-Flag....
-6. Stack Pointer
+1. Stack Pointer
 	* Beinhaltet die letzte Speicheradresse des SRAM
-7. CPU-Register
+1. CPU-Register
 	* Das CPU-Register nimmt auf Befehl des befehls-Decoder Daten aus der Speicherverwaltung und übergibt sie der ALU. Er besitzt 32 Register, wobei es 3 ausnahmen gibt: 
 		* X (R26 und R27)
 		* Y (R28 und R29)
 		* Z (R30 und R31)
-8. ALU
+1. ALU
 	* Ist das rechenwerk für mathematische und Logische Operationen. 
-9. Speicherverwaltung
+1. Speicherverwaltung
 	*  Beinhaltet die Befehle für den CPU, die vom Programm Counter in das befehlsregister kommen
 
 ### Speicher
@@ -52,6 +53,23 @@ Knr: **3**
 	* gehört zur Familie der flüchtigen Speicher und verliert alle gespeicherten inhalte wemm die Betriebsspannung ausgeschaltet wird. 
 3. EEPROM
 	* Ist ein nicht flüchtiger Speicher, bei dem einzelne Bits angesprohen werden. 
+
+### Atmel Studio
+Ist eine IDE, mit dem man Mikroprozessoren simulieren kann. Und unter dem Menüpunkt Debug, kann man sich auch den Assemblerquelltext anzeigen lassen. 
+In unserer Übungseinheit haben wir einen ATmega 328P simuliert mit folgendem Programm:
+```C
+#include <avr/io.h>
+
+
+int main(void)
+{
+    volatile unsigned char a = 0x10;
+    volatile unsigned char b = 0x20;
+    return a+b;
+}
+```
+
+Diese programm haben wir dann als Assemblersprache ausgeben lassen und die wichtigsten Befehle durchgesprochen.
 
 ### Assemblerbefehle
 
@@ -66,3 +84,7 @@ POP ---> Holt sich ein Byte vom Stack.
 RJMP ---> Spring relativ vom jetztigen standpunkt.  
 CPI ---> Vergleicht und ändert nur die Statusflags.  
 
+Liste aller Assemblerbefehle [hier][code_list]
+
+
+[code_list]: https://www.microchip.com/webdoc/avrassembler/avrassembler.wb_CPI.html

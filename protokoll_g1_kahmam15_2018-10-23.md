@@ -27,7 +27,7 @@ ___
 * **4. Assembler-Befehle**
 
  
- ___
+___
   
 ### 1. Struktur einer CPU
 
@@ -64,7 +64,19 @@ ___
 ___
 ### 3. Atmel Studio
 
-https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Atmel.PNG
+Atmel Studio 7 ist eine integrierte Entwicklungsplattform (IDP) für die Entwicklung und das Debugging aller AVR®- und SAM-Mikrocontroller-Anwendungen. In unserer Laboreinheit haben wir einen ATmega328P mit folgenden Programm simuliert:  
+```C
+#include <avr/io.h>
+
+int main(void)
+{
+
+ volatile unsigned char a = 0x10;
+ volatile unsigned char b = 0x20;  
+	
+ return a + b;
+}
+```
 
 ___
 ### 4. [Assembler-Befehle]

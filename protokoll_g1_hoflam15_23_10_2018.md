@@ -8,11 +8,11 @@
 ## Inhaltsangabe
 
  1. Allgemeines zum Atmel Studio
- 	1.1 Struktur einer CPU
-	1.2 Beschreibung des Blockdiagramms
+  1.1 Struktur einer CPU
+  1.2 Beschreibung des Blockdiagramms
  2. Benutzung des Atmel Studios
- 	2.1 Erklärung
-	2.2 wichtige Begriffe
+  2.1 Erklärung
+  2.2 wichtige Begriffe
 
 ## Atmel Studio
 #### Was ist das Atmel Studio?
@@ -20,7 +20,7 @@ Das **Atmel Studio** (vor Version 6: "**AVR Studio**") ist eine kostenlose Entwi
 Mit dem Atmel Studio kann in [Assembler](https://www.mikrocontroller.net/articles/Assembler "Assembler") sowie in [C](https://www.mikrocontroller.net/articles/C "C")/[C++](https://www.mikrocontroller.net/articles/C-Plusplus "C-Plusplus") programmiert werden.
 #### Struktur einer CPU
 ![Blockdiagramm CPU](https://screenshotscdn.firefoxusercontent.com/images/ceda06ce-9a71-4fdb-980c-8f7ba00734cd.png)
-#### Beschreibung des Blockdiagramms
+#### Erklärung des Blockdiagramms
 *Program Counter:* Er enthält die Adresse des nächsten Befehls.
 *Befehls-Register:* Er speichert das Befehlsmuster.
 *Befehls-Decoder:*  Im Befehls-Decoder befinden sich Logische Funktion, abhängig vom Befehlsmuster.
@@ -136,5 +136,4 @@ Springe wenn Z-Flag = 0.
  
 
  
-
 

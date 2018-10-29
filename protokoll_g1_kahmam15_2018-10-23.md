@@ -110,7 +110,7 @@ ___
 [Flash]: https://de.wikipedia.org/wiki/Flash-Speicher
 [EE-PROM]: https://de.wikipedia.org/wiki/Electrically_Erasable_Programmable_Read-Only_Memory
 [SRAM]: https://de.wikipedia.org/wiki/Static_random-access_memory
-[Atmel Studio 7]: (https://www.microchip.com/mplab/avr-support/atmel-studio-7)
+[Atmel Studio 7]: https://www.microchip.com/mplab/avr-support/atmel-studio-7
 [ATmega328P]: http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Summary.pdf
 [mega Avr]: https://en.wikichip.org/wiki/MegaAVR
 [Assembler-Befehle]: https://www.microchip.com/webdoc/avrassembler/avrassembler.wb_LDI.html

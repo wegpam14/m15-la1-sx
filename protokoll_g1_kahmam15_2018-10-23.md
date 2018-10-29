@@ -11,8 +11,8 @@ ___
 * **1. Struktur einer CPU**  
   * *1.1 Schema*
   * *1.2 Funktionsweise*
-* **2. [AVR]**
-   * *2.1 AVR mega AVR μC Speicher*  
+* **2. AVR**
+   * *2.1 mega AVR μC Speicher*  
 * **3. Assembler-Befehle**
 
  
@@ -43,12 +43,13 @@ ___
 
 ### 2. AVR
 
-#### 2.1 AVR mega AVR μC Speicher
+#### 2.1 [mega AVR] μC Speicher
 
-* Flash (Segmente werden angesprochen)
-  * Floating-Gate-Transistor um den [Tunneleffekt] zu verwenden ![FGT](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FGMOS_Symbol.svg/330px-FGMOS_Symbol.svg.png)
-* EE-PROM (Einzelne Bits werden angesprochen)
-* SRAM (Flüchtiger Speicher)
+* [Flash] (Segmente werden angesprochen)
+  * [Floating-Gate-Transistor] um den [Tunneleffekt] zu verwenden  
+  ![FGT](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FGMOS_Symbol.svg/330px-FGMOS_Symbol.svg.png)
+*  (Einzelne Bits werden angesprochen)
+*  (Flüchtiger Speicher)
 ___
 
 ### 3. Assembler-Befehle
@@ -74,3 +75,8 @@ Ersten 3 = Rechte aller Benutzer)
 
 [AVR]: https://de.wikipedia.org/wiki/Microchip_AVR#cite_note-ATmega640-3
 [Tunneleffekt]: https://de.wikipedia.org/wiki/Tunneleffekt#Flash-Speicher
+[Floating-Gate-Transistor]: https://de.wikipedia.org/wiki/Floating-Gate-Transistor
+[Flash]: https://de.wikipedia.org/wiki/Flash-Speicher
+[EE-PROM]: https://de.wikipedia.org/wiki/Electrically_Erasable_Programmable_Read-Only_Memory
+[SRAM]: https://de.wikipedia.org/wiki/Static_random-access_memory
+[mega Avr]: https://en.wikichip.org/wiki/MegaAVR

@@ -8,11 +8,16 @@
 ## Inhaltsangabe
 
  1. Allgemeines zum Atmel Studio
-  1.1 Struktur einer CPU
-  1.2 Beschreibung des Blockdiagramms
+ 
+  	1.1 Struktur einer CPU
+  
+ 	 1.2 Beschreibung des Blockdiagramms
+  
  2. Benutzung des Atmel Studios
-  2.1 Erklärung
-  2.2 wichtige Begriffe
+ 
+  	2.1 Erklärung
+  
+ 	 2.2 wichtige Begriffe
 
 ## Atmel Studio
 #### Was ist das Atmel Studio?

@@ -53,19 +53,19 @@ ___
 
 ### 2. AVR
 
-#### 2.1 [mega AVR] μC Speicher
+#### 2.1 [mega AVR] μC Speicher ([ATmega328P])
 
 * [Flash] (Segmente werden angesprochen)
   * [Floating-Gate-Transistor] um den [Tunneleffekt] zu verwenden  
   ![FGT](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FGMOS_Symbol.svg/330px-FGMOS_Symbol.svg.png)
-*  EE-PROM(Einzelne Bits werden angesprochen)
-*  SRAM(Flüchtiger Speicher)
+*  [EE-PROM](Einzelne Bits werden angesprochen)
+*  [SRAM](Flüchtiger Speicher)
 ___
 
 ### 3. Assembler-Befehle
 
 
-* **```whoami```** - Zeigt dir welcher Benutzer du bist
+* **```CLR```** - Alle Werte werden auf 0 gesetzt
 * **```pwd```** - Zeigt dir in welchem Verzeichniss du dich befindest
 * **```man```** - Ruft das Manual/die Mainpages auf (z.B.: **```man 3 printf```**)
 * **```cat```** - Gibt eine Textdatei in der Konsole aus
@@ -89,4 +89,5 @@ Ersten 3 = Rechte aller Benutzer)
 [Flash]: https://de.wikipedia.org/wiki/Flash-Speicher
 [EE-PROM]: https://de.wikipedia.org/wiki/Electrically_Erasable_Programmable_Read-Only_Memory
 [SRAM]: https://de.wikipedia.org/wiki/Static_random-access_memory
+[ATmega328P]: http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Summary.pdf
 [mega Avr]: https://en.wikichip.org/wiki/MegaAVR

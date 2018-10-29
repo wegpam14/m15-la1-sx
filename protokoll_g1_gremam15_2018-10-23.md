@@ -69,7 +69,7 @@ int main(void)
 }
 ```
 
-Diese programm haben wir dann als Assemblersprache ausgeben lassen und die wichtigsten Befehle durchgesprochen.
+Diese Programm haben wir dann als Assemblersprache ausgeben lassen und die wichtigsten Befehle durchgesprochen.
 
 ### Assemblerbefehle
 

@@ -13,11 +13,8 @@ ___
   * *1.2 Funktionsweise*
 * **2. [AVR]**
    * *2.1 AVR mega AVR μC Speicher*  
-   * *2.2 Simulation mit Atmel Studio* 
-* **3. Bash-Shell**
-* **4. Linux**
-   * *4.1 Linux-Befehle* 
-   * *4.2 Linux-Zugriffsrechte* 
+* **3. Assembler-Befehle**
+
  
  ___
   
@@ -49,30 +46,13 @@ ___
 #### 2.1 AVR mega AVR μC Speicher
 
 * Flash (Segmente werden angesprochen)
-  * [Tunneleffekt]
+  * Floating-Gate-Transistor um den [Tunneleffekt] zu verwenden ![FGT](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FGMOS_Symbol.svg/330px-FGMOS_Symbol.svg.png)
 * EE-PROM (Einzelne Bits werden angesprochen)
 * SRAM (Flüchtiger Speicher)
-
-
-#### 2.2 Simulation mit Atmel Studio
-
-
-
 ___
 
-### 3. Bash-Shell
+### 3. Assembler-Befehle
 
-**[Bash]** (für **B**ourne-**a**gain **sh**ell) ist eine freie [Unix-Shell] und Teil des GNU-Projekts. Sie ist heute auf vielen [unixoiden] Systemen die **Standard-Shell**. Viewer/Editoren für die Unix-Shell sind z.B.: nano, less.
-![Leere Bash](https://hosting.1und1.de/digitalguide/fileadmin/DigitalGuide/Screenshots/ubuntu-bash.png)  
-Informationen aus der Bash-Shell:
-* Die Tilde **```~```** zeigt mir, dass ich mich im Home-Verzeichnis befinde  
-* Das Endzeichen kann ein **```$```** (=Benutzer) oder ein **```#```** (=Admin) sein  
-
-___
-
-### 4. Linux
-
-#### 4.1 Linux-Befehle
 
 * **```whoami```** - Zeigt dir welcher Benutzer du bist
 * **```pwd```** - Zeigt dir in welchem Verzeichniss du dich befindest
@@ -91,18 +71,6 @@ Ersten 3 = Rechte aller Benutzer)
 * **```gcc -c <main.c>```** - Erstellt Objektdatei -> **```main.o```**
 * **```./a.out```** - Führt Programm im Terminal aus  
 
-#### 4.2 Linux-Zugriffsrechte
-
-![Zugrifssrechte](http://www.easylinux.de/Artikel/ausgabe/2003/09/071-guru-chmod/rwx-grafix_s.jpg)
-
 
 [AVR]: https://de.wikipedia.org/wiki/Microchip_AVR#cite_note-ATmega640-3
 [Tunneleffekt]: https://de.wikipedia.org/wiki/Tunneleffekt#Flash-Speicher
-[Bash]: https://de.wikipedia.org/wiki/Bash_(Shell)
-[Unix-Shell]: https://de.wikipedia.org/wiki/Unix-Shell
-[GNU-Projekts]: https://de.wikipedia.org/wiki/GNU-Projekt
-[unixoiden]: https://de.wikipedia.org/wiki/Unixoides_System
-[Präprozessor]: https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor
-[Compiler]: https://de.wikipedia.org/wiki/Compiler
-[Assembler]: https://de.wikipedia.org/wiki/Assembler_(Informatik)
-[Linker]: https://de.wikipedia.org/wiki/Linker_(Computerprogramm)

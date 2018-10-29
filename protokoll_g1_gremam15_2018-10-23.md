@@ -22,6 +22,7 @@ Knr: **3**
 	1. EEPROM
 1. Atmel Studio
 1. Maschinenbefehle
+1. Wichtiges
 ---
 ### CPU
 1. Programm Counter
@@ -73,18 +74,21 @@ Diese Programm haben wir dann als Assemblersprache ausgeben lassen und die wicht
 
 ### Assemblerbefehle
 
-PUSH ---> Speicher daten in den Stack.  
-IN ---> Holt sich Werte von einem I/O Register.  
-OUT ---> Speichert Werte in ein I/O Register.  
-STD ---> Es wird eine lokale Variable erzeugt.  
-LDD ---> Laded Daten vom Stack ins register.  
-ADD ---> Addiereon ohne Carry.  
-ADC ---> Addieren mit Carry.  
-POP ---> Holt sich ein Byte vom Stack.  
-RJMP ---> Spring relativ vom jetztigen standpunkt.  
-CPI ---> Vergleicht und ändert nur die Statusflags.  
+`PUSH` ---> Speicher daten in den Stack.  
+`IN` ---> Holt sich Werte von einem I/O Register.  
+`OUT` ---> Speichert Werte in ein I/O Register.  
+`STD` ---> Es wird eine lokale Variable erzeugt.  
+`LDD` ---> Laded Daten vom Stack ins register.  
+`ADD` ---> Addiereon ohne Carry.  
+`ADC` ---> Addieren mit Carry.  
+`POP` ---> Holt sich ein Byte vom Stack.  
+`RJMP` ---> Spring relativ vom jetztigen standpunkt.  
+`CPI` ---> Vergleicht und ändert nur die Statusflags.  
 
 Liste aller Assemblerbefehle [hier][code_list]
 
+### Wichtiges
+
+Bei einem Mikroprozessor können globale variablen vorteile bringen, weil sie einen fixen Platz im Stack bekommen. Aber solange man keine Platz oder Zeitprobleme hat, sollte man bei den lokalen variablen bleiben.
 
 [code_list]: https://www.microchip.com/webdoc/avrassembler/avrassembler.wb_CPI.html

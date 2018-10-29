@@ -62,14 +62,14 @@ ___
 *  [SRAM](Flüchtiger Speicher)
 ___
 
-### 3. Assembler-Befehle
+### 3. [Assembler-Befehle]
 
 
-* **```CLR```** - Alle Werte werden auf 0 gesetzt
-* **```pwd```** - Zeigt dir in welchem Verzeichniss du dich befindest
-* **```man```** - Ruft das Manual/die Mainpages auf (z.B.: **```man 3 printf```**)
-* **```cat```** - Gibt eine Textdatei in der Konsole aus
-* **```mkdir <name>```** - Erstellt ein neues Verzeichniss
+* **```CLR <Rd>```** - Alle Werte im Register werden auf 0 gesetzt
+* **```OUT <A,Rr>```** - Speichert Daten in das I/O-Register
+* **```SER <Rd>```** - Alle Werte im Register werden auf 1 gesetzt
+* **```LDI <Rd,K>```** - Ladet eine 8 Bit Konstante in das Register
+* **```RCALL <k>```** - Speichert in den Stack
 * **```history```** - Zeigt dir deine Befehls-History an  
 * **```reset```** - Setzt die Shell zurück
 * **```ls -l```** - Zeigt die Rechte auf die Dateien (Ersten 3 = Rechte der Eigentümer, Zweiten 3 = Rechte der Gruppen,  
@@ -91,3 +91,4 @@ Ersten 3 = Rechte aller Benutzer)
 [SRAM]: https://de.wikipedia.org/wiki/Static_random-access_memory
 [ATmega328P]: http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Summary.pdf
 [mega Avr]: https://en.wikichip.org/wiki/MegaAVR
+[Assembler-Befehle]: https://www.microchip.com/webdoc/avrassembler/avrassembler.wb_LDI.html

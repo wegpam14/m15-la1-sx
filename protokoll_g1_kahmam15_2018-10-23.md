@@ -11,6 +11,16 @@ ___
 * **1. Struktur einer CPU**  
   * *1.1 Schema*
   * *1.2 Funktionsweise*
+    * *1.2.1 Reset*
+    * *1.2.2 Speicherverwaltung*
+    * *1.2.3 Befehls-Register*
+    * *1.2.4 Befehls-Decoder*
+    * *1.2.5 CPU-Register*
+    * *1.2.6 ALU*
+    * *1.2.7 Status-Register*
+    * *1.2.8 Stack-Pointer*
+    * *1.2.9 Multiplexer*
+    * *1.2.10 Program-Counter*
 * **2. AVR**
    * *2.1 mega AVR μC Speicher*  
 * **3. Assembler-Befehle**
@@ -27,18 +37,18 @@ ___
 
 #### 1.2 Funktionsweise
 
-* Reset - Bringt den CPU auf einen definierten Ausgangszustand
-* Speicherverwaltung - Enthält die Adressen der Maschinenbefehle  
-* Befehls-Register - Speichert die Adresse der Befehle mithilfe von Taktflankengesteuerten D-Flip-Flops zwischen  
-* Befehls-Decoder - Decodiert die Maschinenbefehle in Assembler und gibt diese als Steuersignale weiter  
-* CPU-Register - Nimmt auf Befehl Daten aus der Speicherverwaltung  
+* 1.2.1 Reset - Bringt den CPU auf einen definierten Ausgangszustand
+* 1.2.2 Speicherverwaltung - Enthält die Adressen der Maschinenbefehle  
+* 1.2.3 Befehls-Register - Speichert die Adresse der Befehle mithilfe von Taktflankengesteuerten D-Flip-Flops zwischen  
+* 1.2.4 Befehls-Decoder - Decodiert die Maschinenbefehle in Assembler und gibt diese als Steuersignale weiter  
+* 1.2.5 CPU-Register - Nimmt auf Befehl Daten aus der Speicherverwaltung  
   * 32 Bit Speicher (R00... R31)  
   * X (R26, R27); Y (R28, R29); Z (R30, R31)  
-* ALU (Arithmetic Logic Unit) - Verarbeitet die Befehle mithilfe von logischen und arithmetischen Operationen  
-* Status-Register - Beinhaltet Status-Flags (Z-Flag, C-Flag, O-Flag, ...)  
-* Stack-Pointer - Enthält die letzte Speicheradresse des SRAMs  
-* Multiplexer - Signalweiche für einen Programmsprung  
-* Program-Counter - Speichert des nächsten Befehls
+* 1.2.6 ALU (Arithmetic Logic Unit) - Verarbeitet die Befehle mithilfe von logischen und arithmetischen Operationen  
+* 1.2.7 Status-Register - Beinhaltet Status-Flags (Z-Flag, C-Flag, O-Flag, ...)  
+* 1.2.8 Stack-Pointer - Enthält die letzte Speicheradresse des SRAMs  
+* 1.2.9 Multiplexer - Signalweiche für einen Programmsprung  
+* 1.2.10 Program-Counter - Speichert die Adresse des nächsten Befehls
 ___
 
 ### 2. AVR

@@ -1,4 +1,4 @@
-### 3. Protokoll
+## 3. Protokoll
 Name: **Grebien Markus**  
 Klasse: **4AHME**  
 Knr: **3**
@@ -17,9 +17,11 @@ Knr: **3**
 	8. ALU
 	9. Speicherverwaltung
 2. Speicher
-1. Maschinenbefehle
- ---
-
+	1. Flash
+	2. SRAM
+	3. EEPROM
+3. Maschinenbefehle
+---
 ### CPU
 1. Programm Counter
 	* Beinhaltet die Position des nächsten Befehls.
@@ -44,7 +46,12 @@ Knr: **3**
 	*  Beinhaltet die Befehle für den CPU, die vom Programm Counter in das befehlsregister kommen
 
 ### Speicher
-
+1. Flash
+	* Wist ein nicht-flüchtiger Speicher, welcher mithilfe des Tunneleffekts beschriben wird.
+2. SRAM(IRAM) 
+	* gehört zur Familie der flüchtigen Speicher und verliert alle gespeicherten inhalte wemm die Betriebsspannung ausgeschaltet wird. 
+3. EEPROM
+	* Ist ein nicht flüchtiger Speicher, bei dem einzelne Bits angesprohen werden. 
 
 ### Assemblerbefehle
 

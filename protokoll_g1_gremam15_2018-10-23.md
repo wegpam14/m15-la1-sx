@@ -16,9 +16,8 @@ Knr: **3**
 	7. CPU-Register
 	8. ALU
 	9. Speicherverwaltung
-2. Simulation mithilfe von Atmel Studio
-	3. 
-
+2. Speicher
+1. Maschinenbefehle
  ---
 
 ### CPU
@@ -29,7 +28,7 @@ Knr: **3**
 3. Befehls-Register
 	* Empfängt die Programmbefehle und speichert sie wärend des Ablaufs
 4. Befehls-Decoder
-	* Wandelt die Maschienenbefehle in einzelne mathematische Anweisungen um.
+	* Wandelt den Befehl um in assemblersprache und gibt diesen mithilfe von Steuersignalen weiter.
 5. Status Register
 	* Beinhaltet spezielle flags. Zum Beispiel: Overflow-Flag, Carry-Flag, Zero-Flag....
 6. Stack Pointer
@@ -43,3 +42,20 @@ Knr: **3**
 	* Ist das rechenwerk für mathematische und Logische Operationen. 
 9. Speicherverwaltung
 	*  Beinhaltet die Befehle für den CPU, die vom Programm Counter in das befehlsregister kommen
+
+### Speicher
+
+
+### Maschienenbefehle
+
+PUSH ---> Speicher daten in den Stack
+IN ---> Holt sich Werte von einem I/O Register.
+OUT ---> Speichert Werte in ein I/O Register.
+STD ---> Es wird eine lokale Variable erzeugt
+LDD ---> Laded Daten vom Stack ins register
+ADD ---> Addiereon ohne Carry
+ADC ---> Addieren mit Carry
+POP ---> Holt sich ein Byte vom Stack
+RJMP ---> Spring relativ vom jetztigen standpunkt.
+CPI ---> Vergleicht und ändert nur die Statusflags
+

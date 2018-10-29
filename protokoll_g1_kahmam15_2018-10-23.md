@@ -48,8 +48,8 @@ ___
 * [Flash] (Segmente werden angesprochen)
   * [Floating-Gate-Transistor] um den [Tunneleffekt] zu verwenden  
   ![FGT](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FGMOS_Symbol.svg/330px-FGMOS_Symbol.svg.png)
-*  (Einzelne Bits werden angesprochen)
-*  (Flüchtiger Speicher)
+*  EE-PROM(Einzelne Bits werden angesprochen)
+*  SRAM(Flüchtiger Speicher)
 ___
 
 ### 3. Assembler-Befehle

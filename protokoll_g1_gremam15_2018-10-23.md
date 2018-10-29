@@ -1,6 +1,6 @@
 ### 3. Protokoll
-Name: **Grebien Markus**
-Klasse: **4AHME**
+Name: **Grebien Markus**  
+Klasse: **4AHME**  
 Knr: **3**
 
 
@@ -46,16 +46,16 @@ Knr: **3**
 ### Speicher
 
 
-### Maschienenbefehle
+### Assemblerbefehle
 
-PUSH ---> Speicher daten in den Stack
-IN ---> Holt sich Werte von einem I/O Register.
-OUT ---> Speichert Werte in ein I/O Register.
-STD ---> Es wird eine lokale Variable erzeugt
-LDD ---> Laded Daten vom Stack ins register
-ADD ---> Addiereon ohne Carry
-ADC ---> Addieren mit Carry
-POP ---> Holt sich ein Byte vom Stack
-RJMP ---> Spring relativ vom jetztigen standpunkt.
-CPI ---> Vergleicht und ändert nur die Statusflags
+PUSH ---> Speicher daten in den Stack.  
+IN ---> Holt sich Werte von einem I/O Register.  
+OUT ---> Speichert Werte in ein I/O Register.  
+STD ---> Es wird eine lokale Variable erzeugt.  
+LDD ---> Laded Daten vom Stack ins register.  
+ADD ---> Addiereon ohne Carry.  
+ADC ---> Addieren mit Carry.  
+POP ---> Holt sich ein Byte vom Stack.  
+RJMP ---> Spring relativ vom jetztigen standpunkt.  
+CPI ---> Vergleicht und ändert nur die Statusflags.  
 

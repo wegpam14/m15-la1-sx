@@ -82,22 +82,26 @@ ___
 ### 4. [Assembler-Befehle]
 
 
-* **```CLR <Rd>```** - Alle Werte im Register werden auf 0 gesetzt
-* **```OUT <A,Rr>```** - Speichert Daten in das I/O-Register
-* **```SER <Rd>```** - Alle Werte im Register werden auf 1 gesetzt
-* **```LDI <Rd,K>```** - Ladet eine 8 Bit Konstante in das Register
+* **```CLR <R>```** - Alle Werte im Register werden auf 0 gesetzt
+* **```OUT <A,R>```** - Speichert Daten in das I/O-Register
+* **```IN <R,A>```** - Holt Daten aus dem I/O-Register
+* **```SER <R>```** - Alle Werte im Register werden auf 1 gesetzt
+* **```LDI <R,K>```** - Ladet eine 8 Bit Konstante in das Register
 * **```RCALL <k>```** - Speichert in den Stack
-* **```history```** - Zeigt dir deine Befehls-History an  
-* **```reset```** - Setzt die Shell zurück
-* **```ls -l```** - Zeigt die Rechte auf die Dateien (Ersten 3 = Rechte der Eigentümer, Zweiten 3 = Rechte der Gruppen,  
-Ersten 3 = Rechte aller Benutzer)  
-* **```hexdump```** - Zeigt Bytes der Datei  
-* **```hexdump -C```** - Zeigt Bytes der Datei mit Textinhalt  
-* **```gcc <main.c>```** - Compeliert eine Datei  
-* **```gcc -E <main.c>```** - Reprozessiert die Datei -> **```main.pp```**  
-* **```gcc -S <main.c>```** - Codiert in Assembler-Quelltext -> **```main.s```**
-* **```gcc -c <main.c>```** - Erstellt Objektdatei -> **```main.o```**
-* **```./a.out```** - Führt Programm im Terminal aus  
+* **```RET```** - Holt Wert aus dem Stack und speichert diesen im Programm Counter
+* **```CLI```** - Löscht das I-Flag
+* **```RJMP <k>```** -  Springt in eine Adresse (z.B.: **```RJMP PC-0x0000```** => Endlose Schleife)
+* **```PUSH <R>```** - Speichert das Register in den Stack
+* **```POP <R>```** - Gibt Variable aus dem Stack frei  
+* **```STD```** - Speichert Daten aus den Registern **X**, **Y** oder **Z**
+* **```LDD```** - Holt Daten aus den Registern **Y** oder **Z**
+* **```LDS <R,k>```** - Holt Daten aus dem SRAM
+* **```ADC <R>```** - Addiert mit C-Flag
+* **```ADD <R>```** - Addiert ohne C-Flag
+* **```MOV <R,R>```** - Kopiert in ein Register (Source-Register unverändert)
+* **```CPI <R,K>```** - Vergleicht ein Register mit einer Konstanten
+* **```STS <k,R>```** - Speichert direkt Daten aus einem Register
+* **```BRNE <R>```** - Spingt wenn kein Z-Flag gesetzt is (else)
 
 
 [AVR]: https://de.wikipedia.org/wiki/Microchip_AVR#cite_note-ATmega640-3

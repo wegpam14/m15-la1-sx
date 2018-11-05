@@ -74,4 +74,4 @@ POP —> Holt den Wert vor dem return wilder aus dem Stack
 IN —> holt werte aus dem IO register  
 STD —> erzeugt eine lokale Variable
 
-Liste aller Assembler Befehle (hier)[data/Assemblerbefehle.pdf].
+Liste aller Assembler Befehle [hier](data/Assemblerbefehle.pdf).

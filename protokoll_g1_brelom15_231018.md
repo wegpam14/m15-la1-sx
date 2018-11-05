@@ -8,7 +8,7 @@ Gruppe: 1
 ---
 ## Inhalte
 
-**1. Simulationen in Atmet Studio** 
+**1. Simulationen in Atmet Studio**  
 **2. Arten von Speichern**  
 **3. Ablauf der Übungseinheit**  
 **4. Assambler Befehle**  
@@ -33,7 +33,7 @@ _Inhalt:_
  - Frequenz
  - Stop watch (zeig die verstrichene Zeit an)
 
-Möchte man nun sein geschriebenes Programm analysieren, muss man es erst compelieren und anschließend lässt sich mit der Funktion "Disassambly"  des Assembler Quelltext einlesen. Mit Hilfe des Debuggers kann man nun Schritt für Schritt durch sein Programm gehen und beobachten wie die einzelnen Befähle die Register, Flags usw. verändern. 
+Möchte man nun sein geschriebenes Programm analysieren, muss man es erst compelieren und anschließend lässt sich mit der Funktion "Disassambly"  des Assembler Quelltext generrieren und einlesen. Mit Hilfe des Debuggers kann man nun Schritt für Schritt durch sein Programm gehen und beobachten wie die einzelnen Befähle die Register, Flags usw. verändern. 
 
 ## 2. Arten von Speichern
 
@@ -73,3 +73,5 @@ PUSH —> Speichert Register im Stack zwischen (bsp.: PUSH R28)
 POP —> Holt den Wert vor dem return wilder aus dem Stack  
 IN —> holt werte aus dem IO register  
 STD —> erzeugt eine lokale Variable
+
+Liste aller Assembler Befehle (hier)[].

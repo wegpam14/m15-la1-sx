@@ -1,4 +1,4 @@
-# Labor 4AHME SX (2018/19)
+# Labor 4AHME Jonas Skof (2018/19)
 
 Protokolle sind hier im eigenen Branch hochzuladen. Die README.md im eigenen Branch ist als Inhaltsverzeichnis mit Links zu den einzelnen Protokollen zu führen.
 

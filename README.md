@@ -1,4 +1,4 @@
-# Labor 4AHME Simon Szapacs (2018/19)
+# Labor 4AHME Szapacs (2018/19)
 
 
   

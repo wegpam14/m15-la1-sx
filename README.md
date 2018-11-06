@@ -1,13 +1,5 @@
-# Labor 4AHME SX (2018/19)
+# Labor 4AHME Murko(2018/2019)
 
-Protokolle sind hier im eigenen Branch hochzuladen. Die README.md im eigenen Branch ist als Inhaltsverzeichnis mit Links zu den einzelnen Protokollen zu führen.
+1) Einheit 06.11.2018: 
 
-Wer fehlt muss kein Protokoll hochladen, dafür aber in der nächsten Stunde eine Wiederholung ablegen.
-
-Die Protokolldateien sollen den Namen `protokoll_<gx>_<htlid>_<datum>.md` tragen.  
-Die Felder sind wie folgt zu ersetzen:
-
-* `<gx>` für Gruppe g1, g2 oder g3
-* `<htlid>` für die 8 stellige eigene HTL-ID
-* `<datum>` für das Übungsdatum im Format JJJJ-MM-DD also zB `2018-09-24`
   

@@ -29,3 +29,18 @@ Git ist ein beliebtes Versionsverwaltungssystem welches sehr oft verwendet wird.
 
 ### 3.Aufbau von Git
 Das Git ist wie folgt in 5 Ebenen aufgebaut:
+* *workspace*               | Arbeitsbereich  
+* *stash*                    | Rücksicherung der Daten aus dem Workspace  
+* *index*                    | Zwischenspeicher, wenn manche Daten noch nicht für alle freigegeben werden sollen  
+* *local repository*         | lokale Datenverwaltung am eigenen PC  
+* *remote repository*        | gemeinsame Datenverwaltung, die sich mit den lokalen Datenverwaltungen abgleicht  
+
+siehe ![5 Ebenen](https://www.htl-mechatronik.at/e-books/sx/html/git/images/git-cheat1.png)  
+
+### 4.wichtige Befehle
+* *git add* | Dateien werden vom Workspace nach Index bewegt.  
+* *git commit* | Dateien werden vom Index ins lokal repository bewegt.  
+* *git push* | Dateien vom lokal repository auf Git-Server geladen.  
+* *git clone* | Das gesamte Repository wird geklont.  
+* *git pull* | Dateien werden vom Git-Server heruntergeladen.  
+* *git status* | Alle Änderungen werden angezeigt  

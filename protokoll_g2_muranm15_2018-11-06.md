@@ -29,7 +29,7 @@ Git ist ein beliebtes Versionsverwaltungssystem welches sehr oft verwendet wird.
 
 ### 3.Aufbau von Git
 Das Git ist wie folgt in 5 Ebenen aufgebaut:
-* *workspace*               | Arbeitsbereich  
+* *workspace*                | Arbeitsbereich  
 * *stash*                    | Rücksicherung der Daten aus dem Workspace  
 * *index*                    | Zwischenspeicher, wenn manche Daten noch nicht für alle freigegeben werden sollen  
 * *local repository*         | lokale Datenverwaltung am eigenen PC  
@@ -47,3 +47,23 @@ siehe ![5 Ebenen](https://www.htl-mechatronik.at/e-books/sx/html/git/images/git-
 
 ### 5.Branches
 Branches werden auch Verzweigungen genannt. Damit ist es möglich Funktionen getrennt voneinander zu entwickeln. Bei dem Erstellen
+eines neuen Repositorys wird der "Master Branch" erstellt. In diesem Brunch sollten nur funktionsfähige Programme gespeichert werden. 
+
+### 6.Git Hub
+Damit können kostenlose Git-Systeme erstellt werden, bei denen jeder über Leserechte verfügt. Schreibrecht hat nur der Benutzer.
+Private repositorys können mit Geld erworben werden.  
+Bei dem Erstellen einer repository ist auf folgendes zu achten:  
+* Es ist empfehlenswert eine der vorgefertigten open source Lizenzen auszuwählen.
+* Es sollte die Programmiersprache ausgewählt werden, welche gewisse Datein ignoriert werden.
+
+Mit *readme's* können Informationen an den Nutzer weiter gegeben werden.
+Link zur Website: 
+[GitHub](https://github.com/)
+
+### 7.Markdown
+Markdown ist ein Format, welches ein Textfile in eine HTML-Datei(PDF,...) umwandeln kann.
+GitHub verwendet Markdown.
+
+[Syntax Guide](https://guides.github.com/features/mastering-markdown/)
+
+### 8.SSH und GitHub

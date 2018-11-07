@@ -15,6 +15,5 @@ abwesend: -
 **5.Branches**  
 **6.GitHub**  
 **7.Markdown**  
-**8.SSH und GitHu**
+**8.SSH und GitHub**  
 
-### Git

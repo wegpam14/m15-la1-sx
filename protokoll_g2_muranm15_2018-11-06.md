@@ -35,7 +35,7 @@ Das Git ist wie folgt in 5 Ebenen aufgebaut:
 * *local repository*         | lokale Datenverwaltung am eigenen PC  
 * *remote repository*        | gemeinsame Datenverwaltung, die sich mit den lokalen Datenverwaltungen abgleicht  
 
-siehe ![5 Ebenen](https://www.htl-mechatronik.at/e-books/sx/html/git/images/git-cheat1.png)  
+![5 Ebenen](https://camo.githubusercontent.com/6101a2b0f170b0a22db8b1077bfa2c6d7fb172bf/68747470733a2f2f692e737461636b2e696d6775722e636f6d2f4d676156392e706e67)  
 
 ### 4.wichtige Befehle
 * *git add* | Dateien werden vom Workspace nach Index bewegt.  

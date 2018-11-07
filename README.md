@@ -1,3 +1,3 @@
 # Labor 4AHME Korrenn (2018/19)
 
-**Einheit 1** 06.11.2018
+[**Protokoll (06.11.2018)**](https://github.com/HTLMechatronics/m15-la1-sx/blob/kormam15/protokoll_g2_kormam15_2018-11-07.md)

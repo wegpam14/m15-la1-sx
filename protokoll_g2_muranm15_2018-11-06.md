@@ -15,8 +15,7 @@ abwesend: -
 **4.wichtige Befehle**  
 **5.Branches**  
 **6.GitHub**  
-**7.Markdown**  
-**8.SSH und GitHub**  
+**7.Markdown**   
 
 ### 1.Git  
 Git ist ein beliebtes Versionsverwaltungssystem welches sehr oft verwendet wird. Mit diesem System können mehrere Personen, die an einem Projekt arbeiten, auf die gemeinsamen Daten zugreifen, aber auch für den privaten Einzelzweck ist Git sehr praktisch. Dieses System wurde von Linus Torvald entwickelt, der mit den anderen Systemen nicht zufrieden war. (z.B.:SVN,CVS,Clearcase)  
@@ -67,4 +66,3 @@ GitHub verwendet Markdown. Markdown wurde 2004 entwickelt.
 
 [Syntax Guide](https://guides.github.com/features/mastering-markdown/)
 
-### 8.SSH und GitHub

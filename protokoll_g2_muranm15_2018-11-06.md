@@ -19,7 +19,8 @@ abwesend: -
 **8.SSH und GitHub**  
 
 ### 1.Git  
-Git ist ein beliebtes Versionsverwaltungssystem welches sehr oft verwendet wird. Mit diesem System können mehrere Personen, die an einem Projekt arbeiten, auf die gemeinsamen Daten zugreifen, aber auch für den privaten Einzelzweck ist Git sehr praktisch. Dieses System wurde von Linus Torvald entwickelt, der mit den anderen Systemen nicht zufrieden war. (z.B.:SVN,CVS,Clearcase)
+Git ist ein beliebtes Versionsverwaltungssystem welches sehr oft verwendet wird. Mit diesem System können mehrere Personen, die an einem Projekt arbeiten, auf die gemeinsamen Daten zugreifen, aber auch für den privaten Einzelzweck ist Git sehr praktisch. Dieses System wurde von Linus Torvald entwickelt, der mit den anderen Systemen nicht zufrieden war. (z.B.:SVN,CVS,Clearcase)  
+> Die lokalen Verzeichnisse haben nur mit aktiver Netzwerkverbindung funktioniert, somit war das Arbeiten an einem Projekt offline nur eingeschränkt möglich.
 
 ### 2.Vorteile von Git
 * Das Verschmelzen von Entwicklungszweigen wird unterstützt.

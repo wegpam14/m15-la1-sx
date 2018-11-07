@@ -43,4 +43,7 @@ siehe ![5 Ebenen](https://www.htl-mechatronik.at/e-books/sx/html/git/images/git-
 * *git push* | Dateien vom lokal repository auf Git-Server geladen.  
 * *git clone* | Das gesamte Repository wird geklont.  
 * *git pull* | Dateien werden vom Git-Server heruntergeladen.  
-* *git status* | Alle Änderungen werden angezeigt  
+* *git status* | Alle Änderungen werden angezeigt 
+
+### 5.Branches
+Branches werden auch Verzweigungen genannt. Damit ist es möglich Funktionen getrennt voneinander zu entwickeln. Bei dem Erstellen

@@ -62,8 +62,8 @@ Link zur Website:
 [GitHub](https://github.com/)
 
 ### 7.Markdown
-Markdown ist ein Format, welches ein Textfile in eine HTML-Datei(PDF,...) umwandeln kann.
-GitHub verwendet Markdown.
+Markdown ist ein Format, welches ein Textfile in eine HTML-Datei(PDF,...) umwandeln kann. Das Ziel war es, einen Text einfach formatieren zu können und ihn trotzdem schön lesbar zu halten.
+GitHub verwendet Markdown. Markdown wurde 2004 entwickelt.
 
 [Syntax Guide](https://guides.github.com/features/mastering-markdown/)
 

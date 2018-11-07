@@ -1,4 +1,4 @@
-# Labor 5AHME (2018/19) - SX
+# Labor 4AHME (2018/19) - SX
 
 Protokolle sind hier im eigenen Branch hochzuladen. Die README.md im eigenen Branch ist als Inhaltsverzeichnis mit Links zu den einzelnen Protokollen zu führen.
 

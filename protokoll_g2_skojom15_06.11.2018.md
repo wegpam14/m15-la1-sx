@@ -30,7 +30,7 @@ Git ist heutzutage das **meist** verwendetste System.
 **Geschichte:** Linus Thorwald war mit seinem damaligem System nicht zufrieden, da es keine offline Arbeit, welch er bei verschiedensten Geschäftsreisen im Flugzeug allerdings benötigte, zuließ. Also entwickelte er Git so weiter, dass eine zusätzliche lokale Repository erstellt wurde, mit welcher er offline arbeiten konnte. Bei wieder verbindung mit dem Internet konnte er dann seine Änderungen auf die Remote Repository wieder hochladen.  
 
 # 2.Github #
-
+![Github](index.png)
 GitHub ist einer der größten remote repository anbieter weltweit.Allerdings werden nur Öffentliche Repositorys kostenlos zur verfügung gestellt. Dennoch ist die freie Version von Github mehr als ausreichnend um sich mit anderen Menschen auszutauschen. 
 Die .gitignore gibt an welche Dateien oder Verzeichnise nicht verwaltet werden sollen.
 

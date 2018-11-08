@@ -27,13 +27,13 @@ Produkte: Git, CVS, SVN, Mecury, Clearcase;
 
 Git ist heutzutage das **meist** verwendetste System.
 
-**Geschichte:** Linus Thorwald war mit seinem damaligem System nicht zufrieden, da es keine offline Arbeit, welch er bei verschiedensten Geschäftsreisen im Flugzeug allerdings benötigte, zuließ. Also entwickelte er Git so weiter, dass eine zusätzliche lokale Repository erstellt wurde, mit welcher er offline arbeiten konnte. Bei wieder verbindung mit dem Internet konnte er dann seine Änderungen auf die Remote Repository wieder hochladen.  
+**Geschichte:** [Linus Torvald](https://de.wikipedia.org/wiki/Linus_Torvalds) war mit seinem damaligem System nicht zufrieden, da es keine offline Arbeit, welch er bei verschiedensten Geschäftsreisen im Flugzeug allerdings benötigte, zuließ. Also entwickelte er Git so weiter, dass eine zusätzliche lokale [Repository](https://de.wikipedia.org/wiki/Repository) erstellt wurde, mit welcher er offline arbeiten konnte. Bei wieder verbindung mit dem Internet konnte er dann seine Änderungen auf die Remote [Repository](https://de.wikipedia.org/wiki/Repository) wieder hochladen.  
 
 # 2.Github #
 
 ![Github](index.png)  
   
-GitHub ist einer der größten remote repository anbieter weltweit.Allerdings werden nur Öffentliche Repositorys kostenlos zur verfügung gestellt. Dennoch ist die freie Version von Github mehr als ausreichnend um sich mit anderen Menschen auszutauschen. 
+GitHub ist einer der größten Remote [Repository](https://de.wikipedia.org/wiki/Repository) Anbieter weltweit. Allerdings werden nur Öffentliche [Repositorys](https://de.wikipedia.org/wiki/Repository) kostenlos zur verfügung gestellt. Dennoch ist die freie Version von Github mehr als ausreichnend um sich mit anderen Menschen auszutauschen. 
 Die .gitignore gibt an welche Dateien oder Verzeichnise nicht verwaltet werden sollen.
 
 Eine gute Übersicht über die bedeutesten Git-Befehlen gibt folgende Grafik, in welcher auch der Datenstrom zu erkennen ist:
@@ -65,7 +65,7 @@ Hier sieht man die verschiedenen Markdown Befehle um z.b eine Text *Kursiv* zu m
 ✗    ** FETT **  
 ✗    ~~Durchgestrichen~~  
 ✗   ```  syntax highlighting   ```  
-✗    >  Zitat  
+✗    >Zitat  
 ✗  Link einfügen: [name] (link)  
 ✗  Bild einfügen: ![name] (Dateiname)
 

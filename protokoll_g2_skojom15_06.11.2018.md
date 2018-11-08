@@ -66,11 +66,14 @@ Hier sieht man die verschiedenen Markdown Befehle um z.b eine Text *Kursiv* zu m
 ✗  Link einfügen: [name] (link)  
 ✗  Bild einfügen: ![name] (Dateiname)
 
-
-
-
 # 4. Git spezifische Befehle #
 
+> git clone <domain der Repository> --> Clont die Remote-Repository vom Server auf den Privatrechner. 
+> git pull  --> aktualisiert die lokale repository mit der remote repository . 
+> git add  <Hinzuzufügende Datei> --> Fügt die Änderungen din den Index ein.  
+> git commit  -m "Commit Nachricht" --> Verschiebt die Veränderungen mit der zusäzlich angegebenen Nachricht in die Lokale -Repository.   
+> git push  --> Lädt alle commits aus der Lokalen Repository in die Remote-Repository.  
+  
 
 
 

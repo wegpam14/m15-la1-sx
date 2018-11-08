@@ -16,8 +16,9 @@ Gruppe: 2
 # 1.Versionsverwaltung #
 
 Eine Versionverwaltung verwaltet verschiedene Abläufe zu bestimmten Zeitpunkten während eines Projektes.
+Ein Versionsverwaltungs-system wird genutzt um zu einem späteren Zeitpunkt auf alte Versionen des selben Produktes zurückgreifen zu können.
 
-Produkte: Git, CVS, SVN, Mecury;
+Produkte: Git, CVS, SVN, Mecury, Clearcase;
 
 Git ist heutzutage das meist verwendetste System.
 

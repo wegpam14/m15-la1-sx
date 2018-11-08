@@ -38,7 +38,7 @@ Die .gitignore gibt an welche Dateien oder Verzeichnise nicht verwaltet werden s
 
 Eine gute Übersicht über die bedeutesten Git-Befehlen gibt folgende Grafik, in welcher auch der Datenstrom zu erkennen ist:
 
-![Git Data Transport Commands](Git Data Transport Commandsa.png)  
+![GitDataTransportCommands](GitDataTransportCommands.png)  
 
 # 3. Markdown #
 

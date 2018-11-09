@@ -38,3 +38,6 @@ Die Hauptmerkmale von Git sind:
 * commit: vom index ins lokal repository
 * push: vom lokal repository ins remote repository schieben
 * pull: um etwas aus dem remote repository zu ziehen
+
+## Markdown  
+[Markdown](https://de.wikipedia.org/wiki/Markdown) ist eine [Auszeichnungssprache](https://de.wikipedia.org/wiki/Auszeichnungssprache#Vereinfachte_Auszeichnungssprachen)(Machinenlesbare Sprache für Gliederung und Formatierung von Texten), die von John Gruber entwickelt wurde. Am häufigsten wird Markdown auf der Plattform GitHub benutzt. Sie wird auch häufig bei README-Dateien verwendet.

@@ -40,4 +40,9 @@ Die Hauptmerkmale von Git sind:
 * pull: um etwas aus dem remote repository zu ziehen
 
 ## Markdown  
-[Markdown](https://de.wikipedia.org/wiki/Markdown) ist eine [Auszeichnungssprache](https://de.wikipedia.org/wiki/Auszeichnungssprache#Vereinfachte_Auszeichnungssprachen)(Machinenlesbare Sprache für Gliederung und Formatierung von Texten), die von John Gruber entwickelt wurde. Am häufigsten wird Markdown auf der Plattform GitHub benutzt. Sie wird auch häufig bei README-Dateien verwendet.
+[Markdown](https://de.wikipedia.org/wiki/Markdown) ist eine [Auszeichnungssprache](https://de.wikipedia.org/wiki/Auszeichnungssprache#Vereinfachte_Auszeichnungssprachen)(Machinenlesbare Sprache für Gliederung und Formatierung von Texten), die von John Gruber entwickelt wurde. Am häufigsten wird Markdown auf der Plattform GitHub benutzt. Sie wird auch häufig bei README-Dateien verwendet.  
+**Um folgenden Zieltext zu erreichen muss der Ausgangstext verändert werden:**  
+* Absatz: Leerzeile
+* Umbruch: Zwei Leerzeilen
+* Kursiv: '*...*
+* Fett: '**...**

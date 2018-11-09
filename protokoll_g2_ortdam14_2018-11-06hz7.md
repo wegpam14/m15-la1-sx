@@ -13,7 +13,7 @@ Gruppe: 2
 1. Markdown
 
 ## Versionsververwaltung 
-Die Versionsverwaltung dient zur Erfassung von Änderungen an Dateien. Alle Versionen dieser Datei werden gespeichert und können (falls nötig) für Rollbacks verwendet werden. Weitere Vorteile von Versionsverwaltung sind, dass sie einen praktisch vor sich selbst schützt (im Fall des aus Versehen löschens) und das der Austausch der Daten innerhalb des Teams erleichtert wird.
+Die **Versionsverwaltung** dient zur Erfassung von Änderungen an Dateien. Alle Versionen dieser Datei werden gespeichert und können (falls nötig) für Rollbacks verwendet werden. Weitere Vorteile von Versionsverwaltung sind, dass sie einen praktisch vor sich selbst schützt (im Fall des aus Versehen löschens) und das der Austausch der Daten innerhalb des Teams erleichtert wird.
 
 ## Geschichte
 Vor [Git](https://de.wikipedia.org/wiki/Git) gab es andere Versionen von Versionsverwaltung. Dazu gehören:  
@@ -41,5 +41,5 @@ Die Hauptmerkmale von Git sind:
 
 ## Markdown  
 [Markdown](https://de.wikipedia.org/wiki/Markdown) ist eine [Auszeichnungssprache](https://de.wikipedia.org/wiki/Auszeichnungssprache#Vereinfachte_Auszeichnungssprachen)(Machinenlesbare Sprache für Gliederung und Formatierung von Texten), die von John Gruber entwickelt wurde. Am häufigsten wird Markdown auf der Plattform GitHub benutzt. Sie wird auch häufig bei README-Dateien verwendet.  
-**Um folgenden Zieltext zu erreichen muss der Ausgangstext verändert werden:**  
-[Übersicht](https://static.guides.co/uploads/222/images/Screen%20Shot%202013-10-22%20at%209.38.00%20PM.png)
+**Um Zieltext zu erreichen muss der Ausgangstext verändert werden:**  
+![Übersicht](https://static.guides.co/uploads/222/images/Screen%20Shot%202013-10-22%20at%209.38.00%20PM.png)

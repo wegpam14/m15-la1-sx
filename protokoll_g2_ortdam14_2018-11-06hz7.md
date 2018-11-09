@@ -1,8 +1,8 @@
 # Protokoll 1 (6.11.2018) 
-Name: Orthofer
-KNR: 8
-Klasse: 4AHME
-Gruppe: 2 
+Name: Orthofer  
+KNR: 8  
+Klasse: 4AHME  
+Gruppe: 2   
 ## Verzeichnis 
 1. Versionsverwaltung 
 * Allgemein

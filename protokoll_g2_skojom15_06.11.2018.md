@@ -6,10 +6,11 @@ Gruppe: 2
 
 ## Inhalte ##
 
-**1. Versionsverwaltung**  
-**2. GitHub**   
-**3. Markdown**     
-**4. Git spezifische Befehle**  
+**1. Versionsverwaltung**   
+**2. Git**  
+**3. GitHub**     
+**4. Markdown**       
+**5. Git spezifische Befehle**    
 
 
 # 1.Versionsverwaltung #
@@ -29,7 +30,17 @@ Git ist heutzutage das **meist** verwendetste System.
 
 **Geschichte:** [Linus Torvald](https://de.wikipedia.org/wiki/Linus_Torvalds) war mit seinem damaligem System nicht zufrieden, da es keine offline Arbeit, welch er bei verschiedensten Geschäftsreisen im Flugzeug allerdings benötigte, zuließ. Also entwickelte er Git so weiter, dass eine zusätzliche lokale [Repository](https://de.wikipedia.org/wiki/Repository) erstellt wurde, mit welcher er offline arbeiten konnte. Bei wieder verbindung mit dem Internet konnte er dann seine Änderungen auf die Remote [Repository](https://de.wikipedia.org/wiki/Repository) wieder hochladen.  
 
-# 2.Github #
+# 2.Git #
+
+GitHub ist einer der größten remote repository anbieter weltweit.Allerdings werden nur Öffentliche Repositorys kostenlos zur verfügung gestellt.  
+
+Die Hauptmerkmale von Git sind:  
+
+--> dezentraler Server  
+--> nicht-lineare Entwicklung (umgesetzt mithilfe von branches)  
+-->  kryptographische sicherheit der projektgeschichte  
+
+# 3.Github #
 
 ![Github](index.png)  
   
@@ -40,7 +51,7 @@ Eine gute Übersicht über die bedeutesten Git-Befehlen gibt folgende Grafik, in
 
 ![GitDataTransportCommands](GitDataTransportCommands.png)  
 
-# 3. Markdown #
+# 4. Markdown #
 
 Markdown ist eine vereinfachte Auszeichnungssprache, welche es sich zum Ziel gesetzt hat, dass schon die Ausgangsform ohne weitere Konvertierung leicht lesbar ist.
 
@@ -69,7 +80,7 @@ Hier sieht man die verschiedenen Markdown Befehle um z.b eine Text *Kursiv* zu m
 ✗  Link einfügen: [name] (link)  
 ✗  Bild einfügen: ![name] (Dateiname)
 
-# 4. Git spezifische Befehle #
+# 5. Git spezifische Befehle #
 
  git clone <repo> - > Klont die Remote-Repository vom Server auf den Privatrechner
 

@@ -14,7 +14,7 @@ Gruppe: 2
   1. Markdown 
   1. Befehle  
   
-  # Versionsverwaltungssteme 
+  ## Versionsverwaltungssteme 
   Ein Versionsverwaltunssystem sammelt Informationen an und verwaltet unterschiedliche Dateien zu unterschiedlichen Zeiten.  
   
     
@@ -27,6 +27,9 @@ Gruppe: 2
       
  Vor Github hat es auch schon Versionsverwaltungssysteme geben wie zum Beispiel:  
  *clearcase, csv, svm, mercury...*  
+ ---  
+ 
+ # Git 
  
    
      

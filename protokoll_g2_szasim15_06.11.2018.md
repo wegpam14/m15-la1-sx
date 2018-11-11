@@ -39,7 +39,24 @@ Gruppe: 2
  ---  
  # GitHub  
  GitHub ist einer der größsten remote repository Anbieter weltweit. Öffentliche Repositorys werden aber kostenlos zu kostenlos zur verfügung gestellt.  
- ![Bild](git-cheat1.png)
+ **Befehle für Git**  
+ 
+ index--> hineinlegen was bald publiziert wird
+ 
+ # Mark Down  
+Markdown ist eine vereinfachte Auszeichnungssprache entwickelt von John Gruber und Aaron Swartz . Ihr zweck ist es, auch ohne Konvertierung leicht lesbar zu sein und somit verständlich sein soll.  
+Mark Down Befehle:  
+- ** **fett** **  
+- #Überschrift
+- ##Unterüberschrift  
+
+---  
+
+
+
+
+ 
+
  
  
  

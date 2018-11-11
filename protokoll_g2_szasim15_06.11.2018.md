@@ -39,6 +39,9 @@ Gruppe: 2
  ---  
  # GitHub  
  GitHub ist einer der größsten remote repository Anbieter weltweit. Öffentliche Repositorys werden aber kostenlos zu kostenlos zur verfügung gestellt.  
+ ![git-cheat1.pn]
+ 
+ 
  
  
  

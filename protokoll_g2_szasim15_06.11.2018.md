@@ -10,7 +10,7 @@ Gruppe: 2
   
   1. Versoinsverwaltungssyteme
   1. Git
-  1. Github
+  1. GitHub
   1. Markdown 
   1. Befehle  
   
@@ -34,6 +34,13 @@ Gruppe: 2
  
  ---  
  # Git  
+ Git ist eine freihe Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.  
+ 
+ ---  
+ # GitHub  
+ GitHub ist einer der größsten remote repository Anbieter weltweit. Öffentliche Repositorys werden aber kostenlos zu kostenlos zur verfügung gestellt.  
+ 
+ 
  
  
  

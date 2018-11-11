@@ -27,9 +27,10 @@ Gruppe: 2
       
  Vor Github hat es auch schon Versionsverwaltungssysteme geben wie zum Beispiel:  
  *clearcase, csv, svm, mercury...*  
- ---  
  
- # Git 
+ ---  
+ # Git  
+ 
  
    
      

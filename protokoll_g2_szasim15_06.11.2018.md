@@ -34,7 +34,8 @@ Gruppe: 2
  
  ---  
  # Git  
- Git ist eine freihe Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.  
+ Git ist eine freihe Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.    
+ ![](git-cheat1.png)
  
  **Befehle für Git**  
  index--> hineinlegen was bald publiziert wird  

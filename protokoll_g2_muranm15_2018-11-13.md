@@ -25,8 +25,8 @@ Die Freie-Software-Bewegung ist eine soziale Bewegung mit den Zielen, Freie Soft
 
 ### 2.Übersetzungsvorgang-Ablauf
 
-![Übersetzungsvorgang Grafik](http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg)
-[Link zum Bild](http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg)
+![Übersetzungsvorgang Grafik](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)
+[Link zum Bild](https://books.google.at/books?id=oB0pBAAAQBAJ&pg=PA22&lpg=PA22&dq=%C3%BCbersetzungsvorgang+c-quellcode&source=bl&ots=8boxsovb99&sig=gwpyd02OwmRP4ewChDTzRp9vyqI&hl=de&sa=X&ved=2ahUKEwjx85H8jdLeAhVKsKQKHX-6CDIQ6AEwCXoECAUQAQ#v=onepage&q=%C3%BCbersetzungsvorgang%20c-quellcode&f=false)
 
 
 ### 3.Linux-Befehle

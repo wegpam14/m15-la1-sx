@@ -16,17 +16,17 @@ abwesend: Skof Jonas
 ### 1.Historie
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Richard_Stallman_speaking_at_Wikimania_2005-08-07.jpg/220px-Richard_Stallman_speaking_at_Wikimania_2005-08-07.jpg)
 
-*Richard Stallman, Gründer des GNU-Projekts und der Freien-Software-Bewegung*  
-Die Freie-Software-Bewegung ist eine soziale Bewegung mit den Zielen, Freie Software zu propagieren und damit bestimmte Freiheiten für Benutzer von Software zu erreichen oder diese zu wahren: Die Freiheit, die Software auszuführen, zu studieren und zu ändern sowie Kopien der Software mit oder ohne Änderungen verteilen zu können. Obwohl er sich auf Traditionen und Philosophien unter Mitgliedern der 1970er Hackerkultur und Akademia stützte, gründete Richard Stallman formell die Bewegung im Jahr 1983 durch die Gründung des GNU-Projekts. Im Jahr 1985 gründete er auch die Free Software Foundation (FSF), um die Bewegung zu unterstützen.
+**Richard Stallman**, *Gründer des GNU-Projekts und der Freien-Software-Bewegung*  
+Die **Freie-Software-Bewegung** ist eine soziale Bewegung mit den Zielen, Freie Software zu propagieren und damit bestimmte Freiheiten für Benutzer von Software zu erreichen oder diese zu wahren: Die Freiheit, die Software auszuführen, zu studieren und zu ändern sowie Kopien der Software mit oder ohne Änderungen verteilen zu können. Obwohl er sich auf Traditionen und Philosophien unter Mitgliedern der 1970er Hackerkultur und Akademia stützte, gründete Richard Stallman formell die *Bewegung im Jahr 1983 durch die Gründung des GNU-Projekts*. Im Jahr 1985 gründete er auch die **Free Software Foundation (FSF)**, um die Bewegung zu unterstützen.
 
 [Quelle](https://en.wikiquote.org/wiki/Richard_Stallman)
 
 
 
 ### 2.Übersetzungsvorgang  
-Ein Projekt kann aus mehreren Quelltextdateien bestehen. Wird der Übersetzungsvorgang gestartet, muss für jede Quelltextdatei die   gesamte Sequenz durchlaufen werden. Die punktierten Linien in der Grafik bezeichnen Positionen innerhalb der Sequenz, für die der Ablauf abgebrochen und einen entsprechende Ausgabedatei geschrieben werden kann.   
-Der Präprozessor ist ein simpler Textersetzer, der zu Beginn der Sequenz gestartet wird. Er durchsucht den Quelltext nach Anweisungen,   die für ihn bestimmt sind - sogenannten Präprozessoranweisungen - und führt diese Befehle im Text aus.   
-Der Text wird durch den  Präprozessor also modifiziert, bevor er zum Compiler weitergereicht wird. 
+Ein Projekt kann aus mehreren Quelltextdateien bestehen. Wird der Übersetzungsvorgang gestartet, muss für jede Quelltextdatei die   gesamte *Sequenz* durchlaufen werden. Die punktierten Linien in der Grafik bezeichnen Positionen innerhalb der *Sequenz*, für die der Ablauf abgebrochen und einen entsprechende Ausgabedatei geschrieben werden kann.   
+Der *Präprozessor* ist ein simpler Textersetzer, der zu Beginn der *Sequenz* gestartet wird. Er durchsucht den Quelltext nach Anweisungen,   die für ihn bestimmt sind - sogenannten  *Präprozessoranweisungen* - und führt diese Befehle im Text aus.   
+Der Text wird durch den  *Präprozessor* also modifiziert, bevor er zum *Compiler* weitergereicht wird. 
 Im Anschluss daran findet eine Syntaxüberprüfung statt. Es wird überprüft, ob der Text den formalen Regeln der Programmiersprache C folgt. Der Quelltext wird auch nach -einfachen- häufigen Fehlern untersucht.
 
 ![Übersetzungsvorgang Grafik](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)

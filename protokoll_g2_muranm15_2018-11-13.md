@@ -29,8 +29,10 @@ Der *Präprozessor* ist ein simpler Textersetzer, der zu Beginn der *Sequenz* ge
 Der Text wird durch den  *Präprozessor* also modifiziert, bevor er zum *Compiler* weitergereicht wird. 
 Im Anschluss daran findet eine Syntaxüberprüfung statt. Es wird überprüft, ob der Text den formalen Regeln der Programmiersprache C folgt. Der Quelltext wird auch nach -einfachen- häufigen Fehlern untersucht.
 
-![Übersetzungsvorgang Grafik](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)
+![**Übersetzungsvorgang Grafik**](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)
 [Link](https://books.google.at/books?id=oB0pBAAAQBAJ&pg=PA22&lpg=PA22&dq=%C3%BCbersetzungsvorgang+c-quellcode&source=bl&ots=8boxsovb99&sig=gwpyd02OwmRP4ewChDTzRp9vyqI&hl=de&sa=X&ved=2ahUKEwjx85H8jdLeAhVKsKQKHX-6CDIQ6AEwCXoECAUQAQ#v=onepage&q=%C3%BCbersetzungsvorgang%20c-quellcode&f=false)
+
+![**Linkvorgang**](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/Linker.GIF)
 
 
 ### 3.Linux-Befehle

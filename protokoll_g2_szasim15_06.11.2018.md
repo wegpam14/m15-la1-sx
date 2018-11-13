@@ -14,6 +14,8 @@ Gruppe: 2
   1. Markdown 
   1. Befehle  
   
+  ---
+  
   ## Versionsverwaltungssteme 
   Ein Versionsverwaltunssystem sammelt Informationen an und verwaltet unterschiedliche Dateien zu unterschiedlichen Zeiten.  
   

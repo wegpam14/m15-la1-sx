@@ -24,10 +24,17 @@ Die **Freie-Software-Bewegung** ist eine soziale Bewegung mit den Zielen, Freie 
 
 
 ### 2.Übersetzungsvorgang  
-Ein Projekt kann aus mehreren Quelltextdateien bestehen. Wird der Übersetzungsvorgang gestartet, muss für jede Quelltextdatei die   gesamte *Sequenz* durchlaufen werden. Die punktierten Linien in der Grafik bezeichnen Positionen innerhalb der *Sequenz*, für die der Ablauf abgebrochen und einen entsprechende Ausgabedatei geschrieben werden kann.   
-Der *Präprozessor* ist ein simpler Textersetzer, der zu Beginn der *Sequenz* gestartet wird. Er durchsucht den Quelltext nach Anweisungen,   die für ihn bestimmt sind - sogenannten  *Präprozessoranweisungen* - und führt diese Befehle im Text aus.   
-Der Text wird durch den  *Präprozessor* also modifiziert, bevor er zum *Compiler* weitergereicht wird. 
-Im Anschluss daran findet eine Syntaxüberprüfung statt. Es wird überprüft, ob der Text den formalen Regeln der Programmiersprache C folgt. Der Quelltext wird auch nach -einfachen- häufigen Fehlern untersucht.
+Ein Projekt kann aus mehreren Quelltextdateien bestehen. Wird der Übersetzungsvorgang gestartet, muss für jede Quelltextdatei die   gesamte **Sequenz** durchlaufen werden. Die punktierten Linien in der Grafik bezeichnen Positionen innerhalb der **Sequenz**, für die der Ablauf abgebrochen und einen entsprechende Ausgabedatei geschrieben werden kann.   
+Der **Präprozessor** ist ein simpler Textersetzer, der zu Beginn der **Sequenz** gestartet wird. Er durchsucht den Quelltext nach Anweisungen,   die für ihn bestimmt sind - sogenannten  **Präprozessoranweisungen** - und führt diese Befehle im Text aus.   
+Der Text wird durch den  **Präprozessor** also modifiziert, bevor er zum **Compiler** weitergereicht wird. 
+Im Anschluss daran findet eine **Syntaxüberprüfung** statt. Es wird überprüft, ob der Text den formalen Regeln der Programmiersprache C folgt. Der Quelltext wird auch nach -einfachen- häufigen Fehlern untersucht.
+
+Erst dann wir der eigentliche **Compiler** gestartet und die Befehle in Assemblersprache übersetzt.Durch diesen Zwischenschritt ist es möglich, verschiedene **Assemblierer** zu verwenden. Mit einer Option an den Compiler kann die **Sequenz** hier unterbrochen und eine Textdatei in **Assembelerformat** geschrieben werden.
+Anschließend wird das Programm durch den **Assemblierer** assembliert, das heißt in Maschinensprache umgewandelt. Er schreibt schreibt die Objektdatei,die in Maschinensprache übersetzte Quelltextdatei.
+Zwischen **Compiler und Assemblierer** kann noch ein **Optimierungsschritt** eingefügt werden. Der **Optimierer** optimiert den **Assemblercode** nach ihm bekannten Richtlinien. Es gibt verschiedene Arten der **Optimierung**: Optimierung nach Laufzeit, beziehungsweise nach der Codegröße. **Optimierer** nimmt Änderungen im **Assemblercode** vor. 
+Für jede Quelltextdatei wird eine Objektdatei erzeugt.
+
+Um ein ausführbares Programm zu erhalten, müssen alle Objektdateien, die je ein Modul des Gesamtprogrammes darstellen, kombiniert werden. 
 
 ![**Übersetzungsvorgang Grafik**](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)
 [Link](https://books.google.at/books?id=oB0pBAAAQBAJ&pg=PA22&lpg=PA22&dq=%C3%BCbersetzungsvorgang+c-quellcode&source=bl&ots=8boxsovb99&sig=gwpyd02OwmRP4ewChDTzRp9vyqI&hl=de&sa=X&ved=2ahUKEwjx85H8jdLeAhVKsKQKHX-6CDIQ6AEwCXoECAUQAQ#v=onepage&q=%C3%BCbersetzungsvorgang%20c-quellcode&f=false)

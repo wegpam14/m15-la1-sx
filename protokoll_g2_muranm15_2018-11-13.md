@@ -34,7 +34,7 @@ Die Freie-Software-Bewegung ist eine soziale Bewegung mit den Zielen, Freie Soft
 |Befehle            |Beschreibung   |
 | ----------------- |:-------------:|
 |alias		    |Legt alias-Namen für Kommandos an|
-|-a**			|kurze Option|
+|-a		|kurze Option|
 |--all		|lange Option|
 |batch		|Einmaliges ausführen eines Befehles wenn das System nicht ausgelastet ist|
 |-c			|Kompiliert die Quelldateien, verknüpft sie aber nicht|

@@ -36,10 +36,9 @@ Für jede Quelltextdatei wird eine Objektdatei erzeugt.
 
 Um ein ausführbares Programm zu erhalten, müssen alle Objektdateien, die je ein Modul des Gesamtprogrammes darstellen, kombiniert werden. 
 
-![**Übersetzungsvorgang Grafik**](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)
-[Link](https://books.google.at/books?id=oB0pBAAAQBAJ&pg=PA22&lpg=PA22&dq=%C3%BCbersetzungsvorgang+c-quellcode&source=bl&ots=8boxsovb99&sig=gwpyd02OwmRP4ewChDTzRp9vyqI&hl=de&sa=X&ved=2ahUKEwjx85H8jdLeAhVKsKQKHX-6CDIQ6AEwCXoECAUQAQ#v=onepage&q=%C3%BCbersetzungsvorgang%20c-quellcode&f=false)
+![Übersetzungsvorgang Grafik](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)![Linkvorgang](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/Linker.GIF)  
+l.Übersetzungsvorgang-r.Linkvorgang
 
-![**Linkvorgang**](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/Linker.GIF)
 
 
 ### 3.Linux-Befehle

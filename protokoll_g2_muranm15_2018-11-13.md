@@ -14,15 +14,19 @@ abwesend: Skof Jonas
 **3.Linux-Befehle**  
 
 ### 1.Historie
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Richard_Stallman_speaking_at_Wikimania_2005-08-07.jpg/220px-Richard_Stallman_speaking_at_Wikimania_2005-08-07.jpg)
 
+*Richard Stallman, Gründer des GNU-Projekts und der Freien-Software-Bewegung*  
+Die Freie-Software-Bewegung ist eine soziale Bewegung mit den Zielen, Freie Software zu propagieren und damit bestimmte Freiheiten für Benutzer von Software zu erreichen oder diese zu wahren: Die Freiheit, die Software auszuführen, zu studieren und zu ändern sowie Kopien der Software mit oder ohne Änderungen verteilen zu können. Obwohl er sich auf Traditionen und Philosophien unter Mitgliedern der 1970er Hackerkultur und Akademia stützte, gründete Richard Stallman formell die Bewegung im Jahr 1983 durch die Gründung des GNU-Projekts. Im Jahr 1985 gründete er auch die Free Software Foundation (FSF), um die Bewegung zu unterstützen.
 
+[Quelle](https://en.wikiquote.org/wiki/Richard_Stallman)
 
 
 
 ### 2.Übersetzungsvorgang-Ablauf
 
 ![Übersetzungsvorgang Grafik](http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg)
-
+[Link zum Bild](http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg)
 
 
 ### 3.Linux-Befehle
@@ -30,7 +34,7 @@ abwesend: Skof Jonas
 |Befehle            |Beschreibung   |
 | ----------------- |:-------------:|
 |alias		    |Legt alias-Namen für Kommandos an|
-|-a			|kurze Option|
+|-a**			|kurze Option|
 |--all		|lange Option|
 |batch		|Einmaliges ausführen eines Befehles wenn das System nicht ausgelastet ist|
 |-c			|Kompiliert die Quelldateien, verknüpft sie aber nicht|
@@ -53,7 +57,6 @@ abwesend: Skof Jonas
 |echo		|Gibt einen Text auf der Konsole aus|
 |env		|Gibt alle Umgebungsvariablen aus|
 |file		|Zeigt den Dateitypen einer Datei an|
-|find		|Umfangreiches Suchtool|
 |find		|Durchsucht den Verzeichnisbaum, ausgehend vom aktuellen Verzeichnis, nach einer Datei|
 |free		|Zeigt die Speicherauslastung des Systems an. Geteilt in RAM und SWAP-Space|
 |ftp		|Öffnet eine FTP-Session zum angegebenen Rechner |
@@ -121,3 +124,5 @@ abwesend: Skof Jonas
 |which		|Gibt den ersten gefunden Pfad eines Programmes im Pfad an|
 |who		|Gibt die Login-Namen der momentan eingelogten User aus|
 |whoami		|Gibt den eigenen Login-Namen aus|
+
+**[Quelle](https://wiki.ubuntuusers.de/Shell/Befehls%C3%BCbersicht/)**

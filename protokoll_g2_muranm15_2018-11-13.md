@@ -39,7 +39,7 @@ Um ein ausführbares Programm zu erhalten, müssen alle Objektdateien, die je ei
 ![Übersetzungsvorgang Grafik](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/%C3%9Cbersetzungsvorgang.GIF)![Linkvorgang](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/Linker.GIF)  
 l.Übersetzungsvorgang-r.Linkvorgang
 
-
+[Quelle](https://books.google.at/books?id=oB0pBAAAQBAJ&pg=PA22&lpg=PA22&dq=%C3%BCbersetzungsvorgang+c-quellcode&source=bl&ots=8boxsovb99&sig=gwpyd02OwmRP4ewChDTzRp9vyqI&hl=de&sa=X&ved=2ahUKEwjx85H8jdLeAhVKsKQKHX-6CDIQ6AEwCXoECAUQAQ#v=onepage&q=%C3%BCbersetzungsvorgang%20c-quellcode&f=false)
 
 ### 3.Linux-Befehle
 

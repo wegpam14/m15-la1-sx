@@ -4,7 +4,7 @@ Simon Szapacs
 Gruppe 2  
 Knr: 12  
 
-**Thema: Überstzungsvorgang**  
+**Thema: Übersetzungsvorgang**  
  
 ## Inhalt  
 
@@ -101,41 +101,9 @@ Convertieren in die Maschinensprache:
 |mv			|Verschiebt Dateien und Verzeichnisse |
 |\n			|Man kommt zur nächsten Position|
 |nano main.c|Man wechselt in den Editor, wo man ein C-Programm schreiben kann|
-|netdate	|Zeitsynchronisation mit einem entferntem Rechner|
-|netstat	|Gibt Informationen über Netzwerkverbindungen, Routingtabellen aus|
-|newgrp		|Ändern der aktuellen Gruppe|
-|nice		|Setzt die Priorität eines Prozesses|
-|nl			|Nummeriert die Zeilen der Ausgabe|
-|nohup		|Startet ein Programm immun gegen SIGHUPs|
-|pidof		|Gibt die PID(s) des Prozesses mit dem uebergebenen Namen aus|
-|pstree		|Zeigt alle Prozesse in einer Baumdarstellung an|
-|pwd		|Zeigt das aktuelle Verzeichnis an|
-|q			|Verlassen des Handbuchs|
-|rcp		|Remote Copy. Kopierfunktion auf einem entfernten Rechner.|
-|rev		|Zeichenfolge umkehren|
-|rm -rf 	|Löscht Dateien und Verzeichnisse unterhalb|
-|rmdir		|Löscht ein Verzeichnis|
-|route		|statische Routen anlegen|
-|-S			|Stoppt nach der eigentlichen Kompilierungsstufe. Das Programm wird jedoch nicht zusammengebaut|
-|Shift+n	|1 Position zurück hüpfen|
-|Strg+o		|Datei speichern|
-|Strg+x		|Editor beenden|
-|Strg+r		|Datei öffnen|
-|sort		|Sortiert die Ausgabe von Programmen, bzw Dateien|
-|su			|Neue Session mit anderem Account aufmachen|
-|sudo		|Befehl als root ausführen.|
-|sum		|Ermittelt Dateilänge und Prüfsumme einer Datei|
-|tail		|Die letzten Zeilen einer Daei lassen sich anzeigen, wird nicht angegeben wie viele Zeilen es sein sollen, dann 10|
-|telnet		|öffnet eine Telnet-Session zum angegebenen Rechner |
-|touch		|Ändert den Zeitstempel von Dateien. Wenn eine Datei nicht existiert, wird sie mit einer Grösse von 0 Byte angelegt|
-|tty		|Zeigt das device an, über das man angemeldet ist|
-|type		|Zeigt den Typen einer Datei und die Interpretation des Dateinamens als Parameter an|
-|updatedb	|Erstellt einen Suchindex ueber das gesammte Dateisystem fuer locate|
-|uptime		|Zeigt die Uptime der Maschine an. Die Uptime ist die Zeit seit dem letzten Reboot.|
-|whereis 	|Sucht das Binary (ausfuehrbare Datei), den Quellcode und die man-Page eines Programmes|
-|which		|Gibt den ersten gefunden Pfad eines Programmes im Pfad an|
-|who		|Gibt die Login-Namen der momentan eingelogten User aus|
-|whoami		|Gibt den eigenen Login-Namen aus|
+
+
+
 
 
 

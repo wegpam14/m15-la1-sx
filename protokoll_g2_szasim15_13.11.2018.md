@@ -10,7 +10,7 @@ Knr: 12
 
 1. Geschichte  
 1. Übersetzungsvorgang  
-1.1 *Theoretische Grundlagen*
+2.1 *Theoretische Grundlagen*
 1. Linux- Befehle  
 
 ## 1. Geschichte  

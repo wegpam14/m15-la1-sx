@@ -39,6 +39,7 @@ Convertieren in die Maschinensprache:
 1. Preprozessing (der C-Quelltext wird in Prozessoranweisungen umgeschrieben)  
 2. Compiler (Erzeugt eine Assembler Quelltext Datei)  
 3. Assembler (erzeugt aus dem Assembler Quelltext eine Objectdatei)  
-4. Linker (weißt die Adressen zu und das Programm ist ausführbar)
+4. Linker (weißt die Adressen zu und das Programm ist ausführbar)  
+![](http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg)
 
 

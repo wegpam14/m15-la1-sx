@@ -34,9 +34,9 @@ sicherstellt, als Freiheits-Rechte, die zusammen mit dem Empfang der Software mi
 Die Übersetzung des in C programmiertem Quelltext in eine von der CPU lesbaren sprache ist in mehrere Schritte unterteilt.
 
 Convertieren in die Maschinensprache:  
-1.Preprozessing (der C-Quelltext wird in Prozessoranweisungen umgeschrieben)
-1.Compiler (Erzeugt eine Assembler Quelltext Datei)
-1.Assembler (erzeugt aus dem Assembler Quelltext eine Objectdatei)
+1.Preprozessing (der C-Quelltext wird in Prozessoranweisungen umgeschrieben)  
+1.Compiler (Erzeugt eine Assembler Quelltext Datei)  
+1.Assembler (erzeugt aus dem Assembler Quelltext eine Objectdatei)  
 1.Linker (weißt die Adressen zu und das Programm ist ausführbar)
 
 

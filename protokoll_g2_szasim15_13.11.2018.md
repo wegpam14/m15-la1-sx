@@ -44,14 +44,14 @@ Convertieren in die Maschinensprache:
 
 ## Linux Befehle  
 |Befehle            |Beschreibung   |
-| ----------------- |:-------------:|
+| ----------------- |:-------------:|  
+|cd			|wechselt in das Home-Verzeichnis des Benutzers|  
 |alias		    |Legt alias-Namen für Kommandos an|
 |-a		|kurze Option|
 |--all		|lange Option|
 |batch		|Einmaliges ausführen eines Befehles wenn das System nicht ausgelastet ist|
 |-c			|Kompiliert die Quelldateien, verknüpft sie aber nicht|
 |cat		|Verbindet mehrere Dateien und gibt das Ergebnis aus|
-|cd			|wechselt in das Home-Verzeichnis des Benutzers|
 |cd -		|wechselt in das vorherige Verzeichnis|
 |cd ..		|wechselt in das übergeordnete Verzeichnis|
 |cd /		|wechselt in das Hauptverzeichnis|
@@ -65,14 +65,7 @@ Convertieren in die Maschinensprache:
 |df			|Zeigt die Speicherauslastung der Partitionen des Systems an,|
 |dirname	|Gibt nur den Pfad zu einer Datei aus|
 |du			|Zeigt den Speicherverbrauch einzelner Verzeichnisse an |
-|-E			|Stoppt nach den Präprozessorbefehlen|
-|echo		|Gibt einen Text auf der Konsole aus|
-|env		|Gibt alle Umgebungsvariablen aus|
-|file		|Zeigt den Dateitypen einer Datei an|
-|find		|Durchsucht den Verzeichnisbaum, ausgehend vom aktuellen Verzeichnis, nach einer Datei|
-|free		|Zeigt die Speicherauslastung des Systems an. Geteilt in RAM und SWAP-Space|
-|ftp		|Öffnet eine FTP-Session zum angegebenen Rechner |
-|G			|Damit kommt man zum Ende einer Seite|
+|-E			|Stoppt nach den Präprozessorbefehlen|  
 |g			|Damit kommt man zum Anfang einer Seite|
 |gcc main.c	|Main "ausführen"|
 |grep		|Sucht nach einer Zeichenfolge in einer Datei, oder einer umgeleiteten Ausgabe |
@@ -82,7 +75,14 @@ Convertieren in die Maschinensprache:
 |groups		|Zeigt die Gruppenzugehörigkeit eines Users|
 |halt		|Runterfahren des Systems|
 |history	|Gibt die Einträge im History-File des Users nummeriert aus|
-|hostname	|Zeigt den Namen des Rechners an|
+|hostname	|Zeigt den Namen des Rechners an|  
+|echo		|Gibt einen Text auf der Konsole aus|
+|env		|Gibt alle Umgebungsvariablen aus|
+|file		|Zeigt den Dateitypen einer Datei an|
+|find		|Durchsucht den Verzeichnisbaum, ausgehend vom aktuellen Verzeichnis, nach einer Datei|
+|free		|Zeigt die Speicherauslastung des Systems an. Geteilt in RAM und SWAP-Space|
+|ftp		|Öffnet eine FTP-Session zum angegebenen Rechner |
+|G			|Damit kommt man zum Ende einer Seite|
 |hexdump -C	|Codierung wird ausgegeben|
 |ifconfig	|zeigt die aktuelle IP-Adresse |
 |ipchains	|Tool zur Konfiguration der Kernel-Firewall|

@@ -22,7 +22,7 @@ Der Linker "verbindet" nach erfolgreichem kompilieren die Object Files zu einer 
 **Statistisches Linken:** Hier wird das gesamte Projekt einmalig zu einer ausführbaren Datei gelinked. Werden Änderungen vorgenommen muss dieser Vorgang wiederholt werden.    
 **Dynamisches Linken:** Im Gegensatz zum Statistischen Linken werden die Object Files auf flexiblere weise verbunden. Nachteil ist, dass das Programm nicht mehr portabel ist, da DLL-Dateien, die bei jedem Programmstart neu eingebunden werden, schon am System sein müssen.  
 ![Linker](https://github.com/ortdam14/labor/blob/master/Linker.PNG) 
-![Ablauf](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/GCC_Sche)
+![Ablauf](https://github.com/ortdam14/labor/blob/master/Ablauf.png)
 [Quelle](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/GCC_Schema.svg/2000px-GCC_Schema.svg.png)  
 *Stellt den gesamten Ablauf dar*  
 ## Linux Befehle 

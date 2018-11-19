@@ -21,7 +21,10 @@ Der C-Compiler erhält den vom Präprozessor aufbereiteten Quellcode und überse
 Der Linker "verbindet" nach erfolgreichem kompilieren die Object Files zu einer zentral ausführbaren Datei. Es wird zwischen den statistischen- und dynamischen Linken unterschieden.    
 **Statistisches Linken:** Hier wird das gesamte Projekt einmalig zu einer ausführbaren Datei gelinked. Werden Änderungen vorgenommen muss dieser Vorgang wiederholt werden.    
 **Dynamisches Linken:** Im Gegensatz zum Statistischen Linken werden die Object Files auf flexiblere weise verbunden. Nachteil ist, dass das Programm nicht mehr portabel ist, da DLL-Dateien, die bei jedem Programmstart neu eingebunden werden, schon am System sein müssen.  
-![Linker](https://github.com/ortdam14/labor/blob/master/Linker.PNG)  
+![Linker](https://github.com/ortdam14/labor/blob/master/Linker.PNG) 
+![Ablauf](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/GCC_Sche)
+[Quelle](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/GCC_Sche)  
+*Stellt den gesamten Ablauf dar*  
 ## Linux Befehle 
 ### Shell  
 Unter einer [Shell](https://de.wikipedia.org/wiki/Shell_(Betriebssystem)) versteht man eine Software mit der ein Benutzer mit dem Betriebssystem interagieren kann, auch "Mensch-Maschine-Schnittstelle" genannt. Der [Kernel](https://de.wikipedia.org/wiki/Kernel_(Betriebssystem)) stellt den "Kern" eines Betriebssystems dar, währendessen die Shell die "äußerste Schicht" darstellt. Textshells liefern meist ihre eigene Skriptsprache mit. Hier wären einige der wichtigsten Befehle unter Linux:  

@@ -22,7 +22,10 @@ Der Linker "verbindet" nach erfolgreichem kompilieren die Object Files zu einer 
 **Statistisches Linken:** Hier wird das gesamte Projekt einmalig zu einer ausführbaren Datei gelinked. Werden Änderungen vorgenommen muss dieser Vorgang wiederholt werden.    
 **Dynamisches Linken:** Im Gegensatz zum Statistischen Linken werden die Object Files auf flexiblere weise verbunden. Nachteil ist, dass das Programm nicht mehr portabel ist, da DLL-Dateien, die bei jedem Programmstart neu eingebunden werden, schon am System sein müssen.  
 ![Linker](https://github.com/ortdam14/labor/blob/master/Linker.PNG)  
-## Linux Befehle  
+## Linux Befehle 
+### Shell  
+Unter einer [Shell](https://de.wikipedia.org/wiki/Shell_(Betriebssystem)) versteht man eine Software mit der ein Benutzer mit dem Betriebssystem interagieren kann, auch "Mensch-Maschine-Schnittstelle" genannt. Der [Kernel](https://de.wikipedia.org/wiki/Kernel_(Betriebssystem)) stellt den "Kern" eines Betriebssystems dar, währendessen die Shell die "äußerste Schicht" darstellt. Textshells liefern meist ihre eigene Skriptsprache mit. Hier wären einige der wichtigsten Befehle unter Linux:  
+
 |Befehle            |Beschreibung   |
 | ----------------- |:-------------:|
 |whoami		|Gibt den eigenen Login-Namen aus|
@@ -83,10 +86,10 @@ Der Linker "verbindet" nach erfolgreichem kompilieren die Object Files zu einer 
 |rm -rf 	|Löscht Dateien und Verzeichnisse unterhalb|
 |rmdir		|Löscht ein Verzeichnis|
 |-S			|Stoppt nach der eigentlichen Kompilierungsstufe. Das Programm wird jedoch nicht zusammengebaut|
-|Shift+n	|1 Position zurück hüpfen|
+|Shift+n	|Eine Position zurück|
 |Strg+o		|Datei speichern|
 |Strg+x		|Editor beenden|
 |Strg+r		|Datei öffnen|
 |sort		|Sortiert die Ausgabe von Programmen, bzw Dateien|
 |sum		|Ermittelt Dateilänge und Prüfsumme einer Datei|
-|tty		|Zeigt das device an, über das man angemeldet ist|
+|tty		|Zeigt das Gerät an, über das man angemeldet ist|

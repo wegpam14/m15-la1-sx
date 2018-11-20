@@ -17,7 +17,7 @@ ___
  	- **1.1)** - Wichtige APT Commands  
  - **2)** - Atmega16 C-Programm  
  	- **2.1)** - Programm und dessen Commands   
-	- **2.2)** - Probleme bei Inbetriebnahme  
+	- **2.2)** - Probleme bei der Inbetriebnahme  
 	- **2.3)** - Intelhex  
  - **3)** - Inbetriebnahme
  
@@ -80,7 +80,7 @@ int main()
 | `_delay_ms(300);` | um das blinkende Licht visuell mit dem Auge erfassen zu können |  
 
 
-### **2.2) - Probleme bei Inbetriebnahme -**  
+### **2.2) - Probleme bei der Inbetriebnahme -**  
 -> Programm läuft nicht am PC, da Befehlstypen ähnlich sind, jedoch die Befehlsmuster anders  
 -> nur für **den einen** Prozessor geeignet, für den es geschrieben wurde 
 

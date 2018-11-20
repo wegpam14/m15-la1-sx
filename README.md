@@ -2,4 +2,4 @@
 
 1) Einheit 1 06.11.2018 [1.Protokoll](https://github.com/pernim15/protokoll_G2_pernim15_06.11.2018)
 2) Einheit 2 13.11.2018 [2.Protokoll](https://github.com/pernim15/protokoll_G2_pernim15_13.11.2018)
-3) Einheit 3 20.11.2018 [3.Protokoll]()
+3) Einheit 3 20.11.2018 [3.Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/pernim15/protokoll_G2_20.11.2018.md)

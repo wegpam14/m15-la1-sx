@@ -24,14 +24,14 @@ abwesend: Skof Jonas
 **ii.Programmausführung**  
 
 
-## i.Compiliervorgang
+## :point_right: __Compiliervorgang:__ 
 Im ersten Schritt wird die Datei `main.c` zur Objektdatei `main.o` übersetzt. In diesem Vorgang werden vom *Preprozessor* alle Header-Dateien eingebunden. Beim *Compilen* wird der Quelltext dann in Assemblerbefehle übersetzt. Beim *Assemblieren* wird der Assemblerquelltext dann in binäre Maschinenbefehle übersetzt.
 
 Im zweiten Schritt wird die Objektdatei `main.o` zur ausführbaren (*executable*) Datei `main.elf` übersetzt. Dieser Vorgang wird *Linken* genannt. Hier werden alle tatsächlichen Adressen eingetragen, wodurch das Programm ausgeführt werden kann.
 
 Der dritte Schritt wird nur benötigt, wenn das System die `main.elf` nicht ausführen kann. Die Datei `main.elf` wird zur Hex-Datei `main.hex` übersetzt. Dieser Vorgang wird *Konvertieren* genannt.
 
-## i.Advanced Packaging Tool
+## :point_right: __Advanced Packaging Tool:__ 
 Das Advanced Packaging Tool ist ein Paketverwaltungssystem, das im Bereich des Betriebssystems Debian entstanden ist und dpkg zur eigentlichen Paketverwaltung benutzt. Ziel ist es, eine einfache Möglichkeit zur Suche, Installation und Aktualisierung von Programmpaketen zur Verfügung zu stellen.  
 APT besteht aus einer Programmbibliothek und mehreren diese Bibliothek nutzenden Kommandozeilen-Programmen.  
 
@@ -50,12 +50,12 @@ APT setzt auf dpkg auf. APT beschäftigt sich in erster Linie mit der Beschaffun
 •	apt-cache search suchwort sucht nach Programmen.  
 •	zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden    
 
-## i.Debian Package
+## :point_right: __Debian Package:__ 
 dpkg ist die Basis der Paketverwaltung des Betriebssystems Debian und das grundlegende Programm zum Installieren und Manipulieren von Debian-Binärpaketen.
 Der Name dpkg ist eine Abkürzung für Debian Package. Das Debian-Software-Paket-Format wurde im Debian-Projekt entwickelt, allerdings wird dieses Paketformat und das Paketverwaltungsprogramm dpkg auch von anderen Software-Distributionen verwendet. Beispielsweise verwenden neben Debian auch das Fink-Projekt, welches Open-Source-Pakete für Mac OS X zur Verfügung stellt, und die OpenSolaris-Distribution Nexenta OS dpkg.
 
 
-## i.Atmega16 / C-Programm
+## :point_right: __Atmega16 / C-Programm:__ 
 Soll ein Programm für einen µC der Atmega Reihe geschrieben werden, muss das Programm mithilfe einer anderen Compiler Suite übersetzt werden. Dafür verwenden wir den AVR-GCC Kompiler.  
 Die Befehle für die einzelnen Schritte sind im Prinzip die Selben. Statt _gcc_ starten die Befehle nun mit avr-gcc. Außerdem muss der Kompiler wissen, um welchen Atmega Prozessor es sich handelt und welche Taktfrequenc dieser hat.  
 Der __Prozessortyp__ wird mit dem Attribut _-mmcu=type_ festgelegt, die __Taktfrequenz__ mit dem Attribut _-DF_CPU=frequencyL_ (L für Datentyp long). Außerdem kann man mit dem Attribut _-Os_ dafpr sorgen dass der __Speicherplatz__ optimal genutzt wird.  
@@ -331,7 +331,7 @@ drwxr-xr-x 29 anna anna  4096 Nov 20 10:06  ../
 
 ```
 
-## i.Intelhex
+## :point_right: __Intelhex:__ 
 Das Intel HEX-Format ist ein Datenformat zur Speicherung und Übertragung von binären Daten. Es wird heute hauptsächlich verwendet, um Programmierdaten für Mikrocontroller bzw. Mikroprozessoren, EPROMs und ähnliche Bausteine zu speichern. Es kann aber auch zur Speicherung von Lademodulen verwendet werden. Das HEX-Format ist das älteste Datenformat seiner Art und seit den 1970er Jahren in Gebrauch. Spätere Erweiterungen unterstützen speziell die segmentierte Adressierung der Intel-80x86-Prozessoren.
 
 Eine Intel HEX-Datei liegt im ASCII-Format vor. Die Bytes der kodierten Binärdaten werden jeweils als Hexadezimalzahl aus zwei ASCII-Zeichen dargestellt. HEX-Dateien können mit einem Texteditor geöffnet und modifiziert werden. Die HEX-Datei ist in etwa doppelt so groß wie die enthaltenen Binärdaten, da die Darstellung eines Bytes mit zwei Bytes in hexadezimaler Schreibweise erfolgt. Die Datensätze sind mit einer Prüfsumme versehen, so dass Übertragungsfehler erkannt werden können.
@@ -349,7 +349,7 @@ Es gibt 6 Datensatztypen:
 
 ![Bild](https://camo.githubusercontent.com/f1d9bbfc7b436e45ab52150b7153f45e4c6399c7/68747470733a2f2f7261772e6769746875622e636f6d2f4d61726b44696e672f48544d4c355f554152545f424c2f6d61737465722f696d616765732f696d6167653033342e706e67)
 
-## i.StartupCode
+## :point_right: __StartupCode:__ 
 Der Compiler benötigt einen Startup-Code.
 Er ist ein Bestandteil des Binearys, das
 der C, Pascal  oder Basic - Compiler erstellt.
@@ -357,7 +357,7 @@ In ihm werden die Grundinitialisierungen des Prozessors ausgeführt,
 etwa die Zeitgeber - Initialisierung, festlegen des Stackbereiches
 und andere Dinge.
 
-## i.Programmausführung
+## :point_right: __Programmausführung:__ 
 ### ii. **`avr-gcc -mmcu=atmega16 -Os -S main.c` - Präprozessieren zum Preprozessorquelltext**  
 *Ausschnitte:*  
 

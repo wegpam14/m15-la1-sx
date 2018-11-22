@@ -9,6 +9,6 @@ abwesend: Skof Jonas
   Definition: *Beschreibt wie ein C-Quellcode für den yC in ein ausführbares Programm übersetzt wird.*  
 
 ## Inhalt 
-**1.Historie**  
-**2.Übersetzungsvorgang-Ablauf**  
-**3.Linux-Befehle**  
+**1.**  
+**2.**  
+**3.**  

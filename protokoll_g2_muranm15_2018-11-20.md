@@ -17,7 +17,8 @@ abwesend: Skof Jonas
 **:point_right: __           Beispiel aus dem Unterrricht__**   
 **:point_right: __           Terminalauszug__**   
 **:point_right: __Intelhex__**   
-**:point_right: __Startup-Code__**   
+**:point_right: __Startup-Code__**  
+**:point_right: __Implizite Deklaration/explizite Deklaration
 **:point_right: __Programmausführung__**   
 **:point_right: __           Präprozessieren zum Präprozessorquelltext__**   
 **:point_right: __           Kompilieren zum Assemblerquelltext__**   
@@ -357,8 +358,12 @@ In ihm werden die Grundinitialisierungen des Prozessors ausgeführt,
 etwa die Zeitgeber - Initialisierung, festlegen des Stackbereiches
 und andere Dinge.
 
+## :point_right: __Implizite Deklaration/explizite Deklaration__
+Neben der expliziten Deklaration gibt es in einigen Programmiersprachen auch die Möglichkeit einer impliziten Deklaration von Variablen: In diesem Fall führt das erste Auftreten einer Variablen zu einer automatischen Typzuordnung.
+
 ## :point_right: __Programmausführung:__ 
-:zap: mögliche Probleme: 
+:zap: mögliche Probleme: Programm könnte nicht ausgeführt werden, weil Befehlstypen ähnlich sind, Befehlsmuster aber anders und dadurch nur für den Prozessor geeignet, für den es geschrieben wurde. `a out <elf-Datei>`
+
 ### :point_right: __Präprozessieren zum Preprozessorquelltext:__ . ** - `avr-gcc -mmcu=atmega16 -Os -S main.c`   
 
 *Ausschnitte:*  
@@ -465,5 +470,3 @@ int main()
 }
 ```
 
-:thought_balloon:
-:no_entry_sign:

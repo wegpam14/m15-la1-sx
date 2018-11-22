@@ -11,17 +11,17 @@ abwesend: Skof Jonas
 ## Inhalt 
 **:point_right: __Compiliervorgang__**  
 **:point_right: __Advanced Packaging Tool__**  
-**:point_right: __Kommandos__**  
+**:point_right: __           Kommandos__**  
 **:point_right: __Debian Package__**   
 **:point_right: __Atmega 16/ C-Programm__**   
-**:point_right: __Beispiel aus dem Unterrricht__**   
-**:point_right: __Terminalauszug__**   
+**:point_right: __           Beispiel aus dem Unterrricht__**   
+**:point_right: __           Terminalauszug__**   
 **:point_right: __Intelhex__**   
 **:point_right: __Startup-Code__**   
 **:point_right: __Programmausführung__**   
-**:point_right: __Präprozessieren zum Präprozessorquelltext__**   
-**:point_right: __Kompilieren zum Assemblerquelltext__**   
-**:point_right: __Programmausführung__**   
+**:point_right: __           Präprozessieren zum Präprozessorquelltext__**   
+**:point_right: __           Kompilieren zum Assemblerquelltext__**   
+**:point_right: __           Programmausführung__**   
  
 
 ## :point_right: __Compiliervorgang:__ 

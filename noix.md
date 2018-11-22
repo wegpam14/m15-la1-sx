@@ -1,18 +1,18 @@
 ## Der Compiliervorgang-Wiederholung
-Im ersten Schritt wird die Datei `main.c` zur Objektdatei `main.o` übersetzt. In diesem Vorgang werden vom *Preprozessor* alle Header-Dateien eingebunden. Beim *Compilen* wird der Quelltext dann in [Assemblerbefehle](https://de.wikipedia.org/wiki/Assembler_(Informatik)) übersetzt. Beim *Assemblieren* wird der Assemblerquelltext dann in binäre Maschinenbefehle übersetzt.
+Im ersten Schritt wird die Datei `main.c` zur Objektdatei `main.o` übersetzt. In diesem Vorgang werden vom *Preprozessor* alle Header-Dateien eingebunden. Beim *Compilen* wird der Quelltext dann in Assemblerbefehle übersetzt. Beim *Assemblieren* wird der Assemblerquelltext dann in binäre Maschinenbefehle übersetzt.
 
 Im zweiten Schritt wird die Objektdatei `main.o` zur ausführbaren (*executable*) Datei `main.elf` übersetzt. Dieser Vorgang wird *Linken* genannt. Hier werden alle tatsächlichen Adressen eingetragen, wodurch das Programm ausgeführt werden kann.
 
 Der dritte Schritt wird nur benötigt, wenn das System die `main.elf` nicht ausführen kann. Die Datei `main.elf` wird zur Hex-Datei `main.hex` übersetzt. Dieser Vorgang wird *Konvertieren* genannt.
 
 ## Advanced Packaging Tool
-Das Advanced Packaging Tool (APT) ist ein Paketverwaltungssystem, das im Bereich des Betriebssystems Debian entstanden ist und dpkg zur eigentlichen Paketverwaltung benutzt. Ziel ist es, eine einfache Möglichkeit zur Suche, Installation und Aktualisierung von Programmpaketen zur Verfügung zu stellen. APT besteht aus einer Programmbibliothek und mehreren diese Bibliothek nutzenden Kommandozeilen-Programmen, von denen apt-get und apt-cache zentral sind. Seit Debian 3.1 wird die Benutzung von Aptitude als konsolenbasiertes APT-Frontend empfohlen.
-In der Datei /etc/apt/sources.list stehen die sogenannten Repositories, also Quellen für Pakete. Dies können entweder CDs oder DVDs, Verzeichnisse auf der Festplatte oder, öfter, Verzeichnisse auf HTTP- oder FTP-Servern sein. Befindet sich das gesuchte Paket auf einem Server (oder einem lokalen Datenträger), so wird dieses automatisch heruntergeladen und installiert.
-Die Pakete liegen im Debian-Paketformat (.deb) vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert.
+Das Advanced Packaging Tool ist ein Paketverwaltungssystem, das im Bereich des Betriebssystems Debian entstanden ist und dpkg zur eigentlichen Paketverwaltung benutzt. Ziel ist es, eine einfache Möglichkeit zur Suche, Installation und Aktualisierung von Programmpaketen zur Verfügung zu stellen. APT besteht aus einer Programmbibliothek und mehreren diese Bibliothek nutzenden Kommandozeilen-Programmen.. Seit Debian 3.1 wird die Benutzung von Aptitude als konsolenbasiertes APT-Frontend empfohlen.
+In der Datei /etc/apt/sources.list stehen die sogenannten Repositories, also Quellen für Pakete. Dies können entweder CDs oder DVDs, Verzeichnisse auf der Festplatte oder Verzeichnisse auf HTTP- oder FTP-Servern sein. Befindet sich das gesuchte Paket auf einem Server, so wird dieses automatisch heruntergeladen und installiert.
+Die Pakete liegen im Debian-Paketformat vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert.
 APT setzt auf dpkg auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
 
 ### Befehle
-•	apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete (engl. recommends).  
+•	apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
 •	apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
 •	apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
 •	apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
@@ -72,7 +72,236 @@ int main()
 | `_delay_ms(300);` | um das blinkende Licht visuell mit dem Auge erfassen zu können |  
 
 
-###wichtige Ausschnitte
+### Terminalauszug:
+```C
+anna@anna-VirtualBox:~$ mkdir ueneu
+anna@anna-VirtualBox:~$ cd ueneu
+anna@anna-VirtualBox:~/ueneu$
+anna@anna-VirtualBox:~/ueneu$ nano main.c
+anna@anna-VirtualBox:~/ueneu$ cat main.c
+int main() {
+printf("Guten Morgen\n");
+return 0;
+}
+
+anna@anna-VirtualBox:~/ueneu$
+anna@anna-VirtualBox:~/ueneu$ nano main.c
+anna@anna-VirtualBox:~/ueneu$ avr-gcc --version
+avr-gcc (GCC) 5.4.0
+Copyright (C) 2015 Free Software Foundation, Inc.
+Dies ist freie Software; die Kopierbedingungen stehen in den Quellen. Es
+gibt KEINE Garantie; auch nicht für MARKTGÄNGIGKEIT oder FÜR SPEZIELLE ZWECKE.
+
+anna@anna-VirtualBox:~/ueneu$ less /etc/apt/sources.list
+anna@anna-VirtualBox:~/ueneu$ ll
+insgesamt 12
+drwxr-xr-x  2 anna anna 4096 Nov 20 08:39 ./
+drwxr-xr-x 24 anna anna 4096 Nov 20 08:32 ../
+-rw-r--r--  1 anna anna  134 Nov 20 08:39 main.c
+anna@anna-VirtualBox:~/ueneu$ ll ^C
+anna@anna-VirtualBox:~/ueneu$ less /etc/apt/sources.list.d
+/etc/apt/sources.list.d is a directory
+anna@anna-VirtualBox:~/ueneu$ apt update
+Paketlisten werden gelesen... Fertig
+...
+anna@anna-VirtualBox:~/ueneu$ sudo -i
+
+[sudo] Passwort für anna:
+root@anna-VirtualBox:~# apt update
+Fehl:1 http://www.geogebra.net/linux stable InRelease
+  »www.geogebra.net« konnte nicht aufgelöst werden.
+...
+
+root@anna-VirtualBox:~# apt upgrade
+Paketlisten werden gelesen... Fertig
+...
+Abbruch.
+
+root@anna-VirtualBox:~# exit
+Abgemeldet
+
+anna@anna-VirtualBox:~/ueneu$ dpkg --list | wc -l
+1895
+anna@anna-VirtualBox:~/ueneu$ ll
+insgesamt 12
+drwxr-xr-x  2 anna anna 4096 Nov 20 08:39 ./
+drwxr-xr-x 24 anna anna 4096 Nov 20 08:32 ../
+-rw-r--r--  1 anna anna  134 Nov 20 08:39 main.c
+anna@anna-VirtualBox:~/ueneu$ avr-gcc --versionb
+avr-gcc: Fehler: unbekannte Kommandozeilenoption »--versionb«
+
+anna@anna-VirtualBox:~/ueneu$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+...
+
+anna@anna-VirtualBox:~/ueneu$ avr-gcc main.c
+In file included from main.c:1:0:
+/usr/lib/avr/include/avr/io.h:623:6: Warnung: #warning "device type not defined" [-Wcpp]
+ #    warning "device type not defined"
+      ^
+main.c: In Funktion »main«:
+main.c:5:5: Fehler: »DDRA« nicht deklariert (erste Verwendung in dieser Funktion)
+     DDRA = 0x01;
+     ^
+main.c:5:5: Anmerkung: jeder nicht deklarierte Bezeichner wird nur einmal für jede Funktion, in der er vorkommt, gemeldet
+main.c:7:8: Fehler: »PORT« nicht deklariert (erste Verwendung in dieser Funktion)
+        PORT ^=0x01;
+        ^
+main.c:8:8: Warnung: Implizite Deklaration der Funktion »_delay_ms« [-Wimplicit-function-declaration]
+        _delay_ms(300);
+        ^
+anna@anna-VirtualBox:~/ueneu$ nano main.c
+anna@anna-VirtualBox:~/ueneu$ avr-gcc main.c
+In file included from main.c:1:0:
+/usr/lib/avr/include/avr/io.h:623:6: Warnung: #warning "device type not defined" [-Wcpp]
+ #    warning "device type not defined"
+      ^
+In file included from main.c:2:0:
+/usr/lib/avr/include/util/delay.h:92:3: Warnung: #warning "F_CPU not defined for <util/delay.h>" [-Wcpp]
+ # warning "F_CPU not defined for <util/delay.h>"
+   ^
+/usr/lib/avr/include/util/delay.h:112:3: Warnung: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+ # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+   ^
+main.c: In Funktion »main«:
+main.c:6:5: Fehler: »DDRA« nicht deklariert (erste Verwendung in dieser Funktion)
+     DDRA = 0x01;
+     ^
+main.c:6:5: Anmerkung: jeder nicht deklarierte Bezeichner wird nur einmal für jede Funktion, in der er vorkommt, gemeldet
+main.c:8:8: Fehler: »PORT« nicht deklariert (erste Verwendung in dieser Funktion)
+        PORT ^=0x01;
+        ^
+anna@anna-VirtualBox:~/ueneu$ nano main.c
+anna@anna-VirtualBox:~/ueneu$ man avr-gcc
+Kein Handbucheintrag für avr-gcc vorhanden
+Siehe auch »man 7 undocumented« für Hilfe, wenn Handbuchseiten nicht verfügbar sind.
+anna@anna-VirtualBox:~/ueneu$ avr-gcc --help
+....
+anna@anna-VirtualBox:~/ueneu$ avr-gcc --help | less -S
+anna@anna-VirtualBox:~/ueneu$ avr-gcc --target-help | less -S
+anna@anna-VirtualBox:~/ueneu$
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 main.c
+In file included from main.c:2:0:
+/usr/lib/avr/include/util/delay.h:92:3: Warnung: #warning "F_CPU not defined for <util/delay.h>" [-Wcpp]
+ # warning "F_CPU not defined for <util/delay.h>"
+   ^
+/usr/lib/avr/include/util/delay.h:112:3: Warnung: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+ # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+   ^
+main.c: In Funktion »main«:
+main.c:8:8: Fehler: »PORT« nicht deklariert (erste Verwendung in dieser Funktion)
+        PORT ^=0x01;
+        ^
+main.c:8:8: Anmerkung: jeder nicht deklarierte Bezeichner wird nur einmal für jede Funktion, in der er vorkommt, gemeldet
+anna@anna-VirtualBox:~/ueneu$ avr-gxx -mcu=atmega16 main.c
+avr-gxx: Befehl nicht gefunden.
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mcu=atmega16 main.c
+avr-gcc: Fehler: unbekannte Kommandozeilenoption »-mcu=atmega16«
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 main.c
+In file included from main.c:2:0:
+/usr/lib/avr/include/util/delay.h:92:3: Warnung: #warning "F_CPU not defined for <util/delay.h>" [-Wcpp]
+ # warning "F_CPU not defined for <util/delay.h>"
+   ^
+/usr/lib/avr/include/util/delay.h:112:3: Warnung: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed" [-Wcpp]
+ # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+   ^
+main.c: In Funktion »main«:
+main.c:8:8: Fehler: »PORT« nicht deklariert (erste Verwendung in dieser Funktion)
+        PORT ^=0x01;
+        ^
+main.c:8:8: Anmerkung: jeder nicht deklarierte Bezeichner wird nur einmal für jede Funktion, in der er vorkommt, gemeldet
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 -Os main.c
+In file included from main.c:2:0:
+/usr/lib/avr/include/util/delay.h:92:3: Warnung: #warning "F_CPU not defined for <util/delay.h>" [-Wcpp]
+ # warning "F_CPU not defined for <util/delay.h>"
+   ^
+main.c: In Funktion »main«:
+main.c:8:8: Fehler: »PORT« nicht deklariert (erste Verwendung in dieser Funktion)
+        PORT ^=0x01;
+        ^
+main.c:8:8: Anmerkung: jeder nicht deklarierte Bezeichner wird nur einmal für jede Funktion, in der er vorkommt, gemeldet
+anna@anna-VirtualBox:~/ueneu$ nano main.c
+anna@anna-VirtualBox:~/ueneu$ LL
+LL: Befehl nicht gefunden.
+anna@anna-VirtualBox:~/ueneu$ ll
+insgesamt 12
+drwxr-xr-x  2 anna anna 4096 Nov 20 09:38 ./
+drwxr-xr-x 24 anna anna 4096 Nov 20 08:32 ../
+-rw-r--r--  1 anna anna  182 Nov 20 09:38 main.c
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 -Os main.c
+main.c: In Funktion »main«:
+main.c:9:8: Fehler: »PORT« nicht deklariert (erste Verwendung in dieser Funktion)
+        PORT ^=0x01;
+        ^
+main.c:9:8: Anmerkung: jeder nicht deklarierte Bezeichner wird nur einmal für jede Funktion, in der er vorkommt, gemeldet
+anna@anna-VirtualBox:~/ueneu$ nano main.c
+anna@anna-VirtualBox:~/ueneu$ nano main.x
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 -Os main.c
+anna@anna-VirtualBox:~/ueneu$ ll
+insgesamt 20
+drwxr-xr-x  2 anna anna 4096 Nov 20 09:41 ./
+drwxr-xr-x 24 anna anna 4096 Nov 20 08:32 ../
+-rwxr-xr-x  1 anna anna 5748 Nov 20 09:41 a.out*
+-rw-r--r--  1 anna anna  183 Nov 20 09:40 main.c
+anna@anna-VirtualBox:~/ueneu$ avr-objcopy --help | less -S
+anna@anna-VirtualBox:~/ueneu$ avr-objcopy -0 ihex a.out a.hex
+...
+anna@anna-VirtualBox:~/ueneu$ avr-objcopy -O  ihex a.out a.hex
+anna@anna-VirtualBox:~/ueneu$ less a.hex
+anna@anna-VirtualBox:~/ueneu$ avr-gcc ^C
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 -Os -E main.c | less -S
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 -Os -S main.c
+anna@anna-VirtualBox:~/ueneu$ ll
+insgesamt 60
+drwxr-xr-x  2 anna anna  4096 Nov 20 10:20  ./
+....
+-rw-rw-r--  1 anna anna 27779 Nov 20 10:01 'Unbenannt 1.odt'
+anna@anna-VirtualBox:~/ueneu$ avr-objdump -d main.o
+
+main.o:     Dateiformat elf32-avr
+
+
+Disassembly of section .text.startup:
+
+00000000 <main>:
+   0:	81 e0       	ldi	r24, 0x01	; 1
+   2:	8a bb       	out	0x1a, r24	; 26
+   4:	91 e0       	ldi	r25, 0x01	; 1
+   6:	8b b3       	in	r24, 0x1b	; 27
+   8:	89 27       	eor	r24, r25
+   a:	8b bb       	out	0x1b, r24	; 27
+   c:	2f e7       	ldi	r18, 0x7F	; 127
+   e:	3c ef       	ldi	r19, 0xFC	; 252
+  10:	8a e0       	ldi	r24, 0x0A	; 10
+  12:	21 50       	subi	r18, 0x01	; 1
+  14:	30 40       	sbci	r19, 0x00	; 0
+  16:	80 40       	sbci	r24, 0x00	; 0
+  18:	01 f4       	brne	.+0      	; 0x1a <main+0x1a>
+  1a:	00 c0       	rjmp	.+0      	; 0x1c <main+0x1c>
+  1c:	00 00       	nop
+  1e:	00 c0       	rjmp	.+0      	; 0x20 <__zero_reg__+0x1f>
+anna@anna-VirtualBox:~/ueneu$ avr-gcc -mmcu=atmega16 -Os main.o
+
+anna@anna-VirtualBox:~/ueneu$ avr-objdump -d a.out
+a.out:     Dateiformat elf32-avr
+...
+0000008e <__stop_program>:
+  8e:	ff cf       	rjmp	.-2      	; 0x8e <__stop_program>
+anna@anna-VirtualBox:~/ueneu$
+anna@anna-VirtualBox:~/ueneu$ ll
+insgesamt 64
+drwxr-xr-x  2 anna anna  4096 Nov 20 10:23  ./
+drwxr-xr-x 29 anna anna  4096 Nov 20 10:06  ../
+-rw-r--r--  1 anna anna   418 Nov 20 09:54  a.hex
+-rwxr-xr-x  1 anna anna  5748 Nov 20 10:23  a.out*
+-rw-rw-r--  1 anna anna    79 Nov 20 10:01 '.~lock.Unbenannt 1.odt#'
+-rw-r--r--  1 anna anna   183 Nov 20 09:40  main.c
+-rw-r--r--  1 anna anna   888 Nov 20 10:21  main.o
+-rw-r--r--  1 anna anna   537 Nov 20 10:20  main.s
+-rw-rw-r--  1 anna anna 27779 Nov 20 10:01 'Unbenannt 1.odt'
+
+```
 
 ## Intelhex
 Das Intel HEX-Format ist ein Datenformat zur Speicherung und Übertragung von binären Daten. Es wird heute hauptsächlich verwendet, um Programmierdaten für Mikrocontroller bzw. Mikroprozessoren, EPROMs und ähnliche Bausteine zu speichern. Es kann aber auch zur Speicherung von Lademodulen verwendet werden. Das HEX-Format ist das älteste Datenformat seiner Art und seit den 1970er Jahren in Gebrauch. Spätere Erweiterungen unterstützen speziell die segmentierte Adressierung der Intel-80x86-Prozessoren.

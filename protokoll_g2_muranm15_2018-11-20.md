@@ -374,7 +374,7 @@ Neben der expliziten Deklaration gibt es in einigen Programmiersprachen auch die
 ## :point_right: __Programmausführung__ 
 :zap: mögliche Probleme: Programm könnte nicht ausgeführt werden, weil Befehlstypen ähnlich sind, Befehlsmuster aber anders und dadurch nur für den Prozessor geeignet, für den es geschrieben wurde. `a out <elf-Datei>`
 
-### :point_right: __Präprozessieren zum Preprozessorquelltext__ . ** - `avr-gcc -mmcu=atmega16 -Os -S main.c`   
+### :point_right: __Präprozessieren zum Preprozessorquelltext__ - `avr-gcc -mmcu=atmega16 -Os -S main.c`   
 
 *Ausschnitte:*  
 
@@ -420,7 +420,7 @@ int main()
 
 ___
 
-#### ** :point_right: __Kompilieren zum Assemblerquelltext__ -  `avr-gcc -mmcu=atmega16 -Os -c main.s`      
+### :point_right: __Kompilieren zum Assemblerquelltext__ -  `avr-gcc -mmcu=atmega16 -Os -c main.s`      
 
 ```C
 .file	"main.c"
@@ -459,7 +459,7 @@ main:
 ```
 ___
 
-#### ** :point_right: __Programmausführung__ - `avr-gcc -mmcu=atmega16 -Os main.o` 
+### :point_right: __Programmausführung__ - `avr-gcc -mmcu=atmega16 -Os main.o` 
 
 ```C
 #include <avr/io.h>

@@ -18,7 +18,7 @@ abwesend: Skof Jonas
 **:point_right: __           Terminalauszug__**   
 **:point_right: __Intelhex__**   
 **:point_right: __Startup-Code__**  
-**:point_right: __Implizite Deklaration/explizite Deklaration__**
+**:point_right: __Implizite Deklaration/explizite Deklaration__**  
 **:point_right: __Programmausführung__**   
 **:point_right: __           Präprozessieren zum Präprozessorquelltext__**   
 **:point_right: __           Kompilieren zum Assemblerquelltext__**   
@@ -31,6 +31,7 @@ Im ersten Schritt wird die Datei `main.c` zur Objektdatei `main.o` übersetzt. I
 Im zweiten Schritt wird die Objektdatei `main.o` zur ausführbaren (*executable*) Datei `main.elf` übersetzt. Dieser Vorgang wird *Linken* genannt. Hier werden alle tatsächlichen Adressen eingetragen, wodurch das Programm ausgeführt werden kann.
 
 Der dritte Schritt wird nur benötigt, wenn das System die `main.elf` nicht ausführen kann. Die Datei `main.elf` wird zur Hex-Datei `main.hex` übersetzt. Dieser Vorgang wird *Konvertieren* genannt.
+[:paperclip:]()
 
 ## :point_right: __Advanced Packaging Tool:__ 
 Das Advanced Packaging Tool ist ein Paketverwaltungssystem, das im Bereich des Betriebssystems Debian entstanden ist und dpkg zur eigentlichen Paketverwaltung benutzt. Ziel ist es, eine einfache Möglichkeit zur Suche, Installation und Aktualisierung von Programmpaketen zur Verfügung zu stellen.  
@@ -39,21 +40,24 @@ APT besteht aus einer Programmbibliothek und mehreren diese Bibliothek nutzenden
 In der Datei /etc/apt/sources.list stehen die sogenannten Repositories, also Quellen für Pakete. Dies können entweder CDs oder DVDs, Verzeichnisse auf der Festplatte oder Verzeichnisse auf HTTP- oder FTP-Servern sein. Befindet sich das gesuchte Paket auf einem Server, so wird dieses automatisch heruntergeladen und installiert.
 Die Pakete liegen im Debian-Paketformat vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert.
 APT setzt auf dpkg auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
+[:paperclip:]()
 
 ### :point_right: __Kommandos:__ 
-°apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
-°apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
-°apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
-°apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
+* apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
+* apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
+* apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
+* apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
 °apt-get dist-upgrade bringt alle Pakete auf den neuesten Stand und installiert bei Bedarf neue Pakete oder entfernt Pakete, die mit den zu installierenden Paketen in Konflikt stehen.  
-°apt-get update holt die neuesten Informationen über Pakete vom Debian-Server.  
-°apt-get source paketname holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
-°apt-cache search suchwort sucht nach Programmen.  
-°zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden    
+* apt-get update holt die neuesten Informationen über Pakete vom Debian-Server.  
+* apt-get source paketname holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
+* apt-cache search suchwort sucht nach Programmen.  
+* zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden    
+[:paperclip:]()
 
 ## :point_right: __Debian Package:__ 
 dpkg ist die Basis der Paketverwaltung des Betriebssystems Debian und das grundlegende Programm zum Installieren und Manipulieren von Debian-Binärpaketen.
 Der Name dpkg ist eine Abkürzung für Debian Package. Das Debian-Software-Paket-Format wurde im Debian-Projekt entwickelt, allerdings wird dieses Paketformat und das Paketverwaltungsprogramm dpkg auch von anderen Software-Distributionen verwendet. Beispielsweise verwenden neben Debian auch das Fink-Projekt, welches Open-Source-Pakete für Mac OS X zur Verfügung stellt, und die OpenSolaris-Distribution Nexenta OS dpkg.
+[:paperclip:]()
 
 
 ## :point_right: __Atmega16 / C-Programm:__ 
@@ -63,16 +67,19 @@ Der __Prozessortyp__ wird mit dem Attribut _-mmcu=type_ festgelegt, die __Taktfr
 
 Daten für die Atmega Prozessoren, die für unseren Laborunterricht relevant sind:  
 
-Board | Sure Electronics DEM1 | Arduino NANO
------ | --------------------- | ------------
-Prozessortyp | atmega16 | atmega328p
-Frequenz | 12000000 | 16000000
+Board | Sure Electronics DEM1 | Arduino NANO|
+----- | --------------------- | ------------|
+Prozessortyp | atmega16 | atmega328p|
+Frequenz | 12000000 | 16000000|  
 
+[:paperclip:]()
+ 
 Der schrittweise Kompiliervorgang bis zur main.elf, mithilfe der Shell, sieht dann wie folgt aus (verwendet wird der Arduino Nano):  
   1. __Preprozessor__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000L -E main.c  
   2. __Compiler__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -S main.c  
   3. __Assembler__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -c main.s  
   4. __Linker__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -o main.elf main.o
+ 
 
 ### :point_right: __Beispiel aus dem Unterricht:__ 
 ```C
@@ -349,6 +356,7 @@ Es gibt 6 Datensatztypen:
 | 05 | Start Linear Address Record | Lineare Startadresse |  
 
 ![Bild](https://camo.githubusercontent.com/f1d9bbfc7b436e45ab52150b7153f45e4c6399c7/68747470733a2f2f7261772e6769746875622e636f6d2f4d61726b44696e672f48544d4c355f554152545f424c2f6d61737465722f696d616765732f696d6167653033342e706e67)
+[:paperclip:]()
 
 ## :point_right: __StartupCode:__ 
 Der Compiler benötigt einen Startup-Code.
@@ -357,9 +365,11 @@ der C, Pascal  oder Basic - Compiler erstellt.
 In ihm werden die Grundinitialisierungen des Prozessors ausgeführt,
 etwa die Zeitgeber - Initialisierung, festlegen des Stackbereiches
 und andere Dinge.
+[:paperclip:]()
 
 ## :point_right: __Implizite Deklaration/explizite Deklaration__
 Neben der expliziten Deklaration gibt es in einigen Programmiersprachen auch die Möglichkeit einer impliziten Deklaration von Variablen: In diesem Fall führt das erste Auftreten einer Variablen zu einer automatischen Typzuordnung.
+[:paperclip:]()
 
 ## :point_right: __Programmausführung:__ 
 :zap: mögliche Probleme: Programm könnte nicht ausgeführt werden, weil Befehlstypen ähnlich sind, Befehlsmuster aber anders und dadurch nur für den Prozessor geeignet, für den es geschrieben wurde. `a out <elf-Datei>`

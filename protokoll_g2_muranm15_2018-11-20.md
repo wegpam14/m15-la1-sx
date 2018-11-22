@@ -39,7 +39,7 @@ In der Datei /etc/apt/sources.list stehen die sogenannten Repositories, also Que
 Die Pakete liegen im Debian-Paketformat vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert.
 APT setzt auf dpkg auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
 
-### ii.Kommandos
+### :point_right: __Kommandos:__ 
 •	apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
 •	apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
 •	apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
@@ -73,7 +73,7 @@ Der schrittweise Kompiliervorgang bis zur main.elf, mithilfe der Shell, sieht da
   3. __Assembler__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -c main.s  
   4. __Linker__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -o main.elf main.o
 
-### ii.Beispiel aus dem Unterricht:
+### :point_right: __Beispiel aus dem Unterricht:__ 
 ```C
 #include <avr/io.h>
 #define F_CPU 12000000L
@@ -100,7 +100,7 @@ int main()
 | `_delay_ms(300);` | um das blinkende Licht visuell mit dem Auge erfassen zu können |  
 
 
-### ii.Terminalauszug:
+### :point_right: __Terminalauszug:__ :
 ```C
 anna@anna-VirtualBox:~$ mkdir ueneu
 anna@anna-VirtualBox:~$ cd ueneu
@@ -358,7 +358,8 @@ etwa die Zeitgeber - Initialisierung, festlegen des Stackbereiches
 und andere Dinge.
 
 ## :point_right: __Programmausführung:__ 
-### ii. **`avr-gcc -mmcu=atmega16 -Os -S main.c` - Präprozessieren zum Preprozessorquelltext**  
+### :point_right: __Präprozessieren zum Preprozessorquelltext:__ . ** - `avr-gcc -mmcu=atmega16 -Os -S main.c`   
+
 *Ausschnitte:*  
 
 ```C
@@ -403,7 +404,7 @@ int main()
 
 ___
 
-#### ** ii.`avr-gcc -mmcu=atmega16 -Os -c main.s` - Kompilieren zum Assemblerquelltext**    
+#### ** :point_right: __Kompilieren zum Assemblerquelltext:__ -  `avr-gcc -mmcu=atmega16 -Os -c main.s`      
 
 ```C
 .file	"main.c"
@@ -442,7 +443,7 @@ main:
 ```
 ___
 
-#### ** ii.`avr-gcc -mmcu=atmega16 -Os main.o` - Programmausführung**
+#### ** :point_right: __Programmausführung:__ - `avr-gcc -mmcu=atmega16 -Os main.o` 
 
 ```C
 #include <avr/io.h>

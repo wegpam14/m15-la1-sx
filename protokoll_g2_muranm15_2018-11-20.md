@@ -358,6 +358,7 @@ etwa die Zeitgeber - Initialisierung, festlegen des Stackbereiches
 und andere Dinge.
 
 ## :point_right: __Programmausführung:__ 
+:zap: mögliche Probleme: 
 ### :point_right: __Präprozessieren zum Preprozessorquelltext:__ . ** - `avr-gcc -mmcu=atmega16 -Os -S main.c`   
 
 *Ausschnitte:*  

@@ -9,20 +9,20 @@ abwesend: Skof Jonas
   Definition: *Beschreibt wie ein C-Quellcode für den yC in ein ausführbares Programm übersetzt wird.*  
 
 ## Inhalt 
-**i. Compiliervorgang**  
-**i. Advanced Packaging Tool**  
-**ii.Kommandos**  
-**i. Debian Package**  
-**i. Atmega 16/ C-Programm**  
-**ii.Beispiel aus dem Unterrricht**  
-**ii.Terminalauszug**  
-**i. Intelhex**  
-**i. Startup-Code**  
-**i. Programmausführung**  
-**ii.Präprozessieren zum Präprozessorquelltext**  
-**ii.Kompilieren zum Assemblerquelltext**  
-**ii.Programmausführung**  
-
+**:point_right: __Compiliervorgang:__ **  
+**:point_right: __Advanced Packaging Tool:__ **  
+**:point_right: __Kommandos:__**  
+**:point_right: __Debian Package:__**   
+**:point_right: __Atmega 16/ C-Programm:__**   
+**:point_right: __Beispiel aus dem Unterrricht:__**   
+**:point_right: __Terminalauszug:__**   
+**:point_right: __Intelhex:__**   
+**:point_right: __Startup-Code:__**   
+**:point_right: __Programmausführung:__**   
+**:point_right: __Präprozessieren zum Präprozessorquelltext:__**   
+**:point_right: __Kompilieren zum Assemblerquelltext:__**   
+**:point_right: __Programmausführung:__**   
+ 
 
 ## :point_right: __Compiliervorgang:__ 
 Im ersten Schritt wird die Datei `main.c` zur Objektdatei `main.o` übersetzt. In diesem Vorgang werden vom *Preprozessor* alle Header-Dateien eingebunden. Beim *Compilen* wird der Quelltext dann in Assemblerbefehle übersetzt. Beim *Assemblieren* wird der Assemblerquelltext dann in binäre Maschinenbefehle übersetzt.

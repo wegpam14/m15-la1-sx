@@ -12,15 +12,15 @@ Die Pakete liegen im Debian-Paketformat (.deb) vor, in dem auch die jeweiligen A
 APT setzt auf dpkg auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
 
 ### Befehle
-•	apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete (engl. recommends).
-•	apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.
-•	apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.
-•	apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)
-•	apt-get dist-upgrade bringt alle Pakete auf den neuesten Stand und installiert bei Bedarf neue Pakete oder entfernt Pakete, die mit den zu installierenden Paketen in Konflikt stehen.
-•	apt-get update holt die neuesten Informationen über Pakete vom Debian-Server.
-•	apt-get source paketname holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.
-•	apt-cache search suchwort sucht nach Programmen.
-•	zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden  
+•	apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete (engl. recommends).  
+•	apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
+•	apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
+•	apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
+•	apt-get dist-upgrade bringt alle Pakete auf den neuesten Stand und installiert bei Bedarf neue Pakete oder entfernt Pakete, die mit den zu installierenden Paketen in Konflikt stehen.  
+•	apt-get update holt die neuesten Informationen über Pakete vom Debian-Server.  
+•	apt-get source paketname holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
+•	apt-cache search suchwort sucht nach Programmen.  
+•	zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden    
 
 ## dpkg
 dpkg ist die Basis der Paketverwaltung des Betriebssystems Debian und das grundlegende Programm zum Installieren und Manipulieren von Debian-Binärpaketen.
@@ -63,6 +63,13 @@ int main()
 }
 ```
 
+| Command | Definition |  
+| --------------------------------------- | ------ |  
+| `#include <avr/io.h>` | enthält E/A-Definitionen für das Gerät, die vom Befehlszeilenschalter -mmcu = des Compilers angegeben wurden. |  
+| `#define F_CPU 12000000` | Frequenz der CPU bekannt geben |  
+| `#include <util/delay.h>` | Komfortfunktion, bei denen die tatsächlichen Zeitwerte angegeben werden können |  
+| `PORTA ^= 0x01;` | PORTA soll als Ausgang verwenden werden: man muss das Register konfigurieren: Setzten -> eine logische 1 (5 Volt) |    
+| `_delay_ms(300);` | um das blinkende Licht visuell mit dem Auge erfassen zu können |  
 
 
 ###wichtige Ausschnitte
@@ -71,6 +78,16 @@ int main()
 Das Intel HEX-Format ist ein Datenformat zur Speicherung und Übertragung von binären Daten. Es wird heute hauptsächlich verwendet, um Programmierdaten für Mikrocontroller bzw. Mikroprozessoren, EPROMs und ähnliche Bausteine zu speichern. Es kann aber auch zur Speicherung von Lademodulen verwendet werden. Das HEX-Format ist das älteste Datenformat seiner Art und seit den 1970er Jahren in Gebrauch. Spätere Erweiterungen unterstützen speziell die segmentierte Adressierung der Intel-80x86-Prozessoren.
 
 Eine Intel HEX-Datei liegt im ASCII-Format vor. Die Bytes der kodierten Binärdaten werden jeweils als Hexadezimalzahl aus zwei ASCII-Zeichen dargestellt. HEX-Dateien können mit einem Texteditor geöffnet und modifiziert werden. Die HEX-Datei ist in etwa doppelt so groß wie die enthaltenen Binärdaten, da die Darstellung eines Bytes mit zwei Bytes in hexadezimaler Schreibweise erfolgt. Die Datensätze sind mit einer Prüfsumme versehen, so dass Übertragungsfehler erkannt werden können.
+
+| Typ | Bezeichnung | Verwendung |  
+| --- | ----------- | ---------- |  
+| 00 | Data Record | Nutzdaten |  
+| 01 | End of File Record | Dateiende (sowie Startadresse bei 8-Bit-Daten) |  
+| 02 | Extended Segment Address Record | Erweitere Segmentadresse für nachfolgende Nutzdaten |  
+| 03 | Start Segment Address Record  | Startsegmentadresse |  
+| 04 | Extended Linear Address Record | Erweiterte lineare Adresse, höherwertige 16 Bit der Adresse für nachfolgende Nutzdaten |  
+| 05 | Start Linear Address Record | Lineare Startadresse |  
+
 ![Bild](https://camo.githubusercontent.com/f1d9bbfc7b436e45ab52150b7153f45e4c6399c7/68747470733a2f2f7261772e6769746875622e636f6d2f4d61726b44696e672f48544d4c355f554152545f424c2f6d61737465722f696d616765732f696d6167653033342e706e67)
 
 ## StartupCode

@@ -18,7 +18,7 @@ abwesend: Skof Jonas
 **:point_right: __           Terminalauszug__**   
 **:point_right: __Intelhex__**   
 **:point_right: __Startup-Code__**  
-**:point_right: __Implizite Deklaration/explizite Deklaration
+**:point_right: __Implizite Deklaration/explizite Deklaration__**
 **:point_right: __Programmausführung__**   
 **:point_right: __           Präprozessieren zum Präprozessorquelltext__**   
 **:point_right: __           Kompilieren zum Assemblerquelltext__**   
@@ -41,15 +41,15 @@ Die Pakete liegen im Debian-Paketformat vor, in dem auch die jeweiligen Abhängi
 APT setzt auf dpkg auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
 
 ### :point_right: __Kommandos:__ 
-.)apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
-.)apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
-.)apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
-.)apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
-.)apt-get dist-upgrade bringt alle Pakete auf den neuesten Stand und installiert bei Bedarf neue Pakete oder entfernt Pakete, die mit den zu installierenden Paketen in Konflikt stehen.  
-.)apt-get update holt die neuesten Informationen über Pakete vom Debian-Server.  
-.)apt-get source paketname holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
-.)apt-cache search suchwort sucht nach Programmen.  
-.)zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden    
+°apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
+°apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
+°apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
+°apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
+°apt-get dist-upgrade bringt alle Pakete auf den neuesten Stand und installiert bei Bedarf neue Pakete oder entfernt Pakete, die mit den zu installierenden Paketen in Konflikt stehen.  
+°apt-get update holt die neuesten Informationen über Pakete vom Debian-Server.  
+°apt-get source paketname holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
+°apt-cache search suchwort sucht nach Programmen.  
+°zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden    
 
 ## :point_right: __Debian Package:__ 
 dpkg ist die Basis der Paketverwaltung des Betriebssystems Debian und das grundlegende Programm zum Installieren und Manipulieren von Debian-Binärpaketen.

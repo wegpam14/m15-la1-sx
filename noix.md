@@ -99,4 +99,109 @@ etwa die Zeitgeber - Initialisierung, festlegen des Stackbereiches
 und andere Dinge.
 
 ## Programmausführung
+#### **`avr-gcc -mmcu=atmega16 -Os -S main.c` - Präprozessieren zum Preprozessorquelltext**  
+*Ausschnitte:*  
+
+```C
+ uint32_t __ticks_dc;
+ extern void __builtin_avr_delay_cycles(unsigned long);
+ __tmp = ((
+# 263 "/usr/lib/avr/include/util/delay.h"
+          12000000L
+# 263 "/usr/lib/avr/include/util/delay.h" 3
+               ) / 1e6) * __us;
+# 273 "/usr/lib/avr/include/util/delay.h" 3
+  __ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+
+
+ __builtin_avr_delay_cycles(__ticks_dc);
+# 299 "/usr/lib/avr/include/util/delay.h" 3
+}
+# 6 "main.c" 2
+
+
+# 7 "main.c"
+int main()
+{
+  
+# 9 "main.c" 3
+ (*(volatile uint8_t *)((0x1A) + 0x20)) 
+# 9 "main.c"
+      = 0x01;
+  while(1)
+  {
+    
+# 12 "main.c" 3
+   (*(volatile uint8_t *)((0x1B) + 0x20)) 
+# 12 "main.c"
+         ^= 0x01;
+    _delay_ms(300);
+  }
+  return 0;
+}
+
+```
+
+___
+
+#### **`avr-gcc -mmcu=atmega16 -Os -c main.s` - Kompilieren zum Assemblerquelltext**    
+
+```C
+.file	"main.c"
+__SP_H__ = 0x3e
+__SP_L__ = 0x3d
+__SREG__ = 0x3f
+__tmp_reg__ = 0
+__zero_reg__ = 1
+	.section	.text.startup,"ax",@progbits
+.global	main
+	.type	main, @function
+main:
+/* prologue: function */
+/* frame size = 0 */
+/* stack size = 0 */
+.L__stack_usage = 0
+	ldi r24,lo8(1)
+	out 0x1a,r24
+	ldi r25,lo8(1)
+.L2:
+	in r24,0x1b
+	eor r24,r25
+	out 0x1b,r24
+	ldi r18,lo8(719999)
+	ldi r19,hi8(719999)
+	ldi r24,hlo8(719999)
+1:	subi r18,1
+	sbci r19,0
+	sbci r24,0
+	brne 1b
+	rjmp .
+	nop
+	rjmp .L2
+	.size	main, .-main
+	.ident	"GCC: (GNU) 5.4.0"
+```
+___
+
+#### **`avr-gcc -mmcu=atmega16 -Os main.o` - Programmausführung**
+
+```C
+#include <avr/io.h>
+
+#define F_CPU 12000000L
+
+#include <util/delay.h>
+
+int main()
+{
+  DDRA = 0x01;
+  while(1)
+  {
+    PORTA ^= 0x01;
+    _delay_ms(300);
+  }	
+  return 0;
+}
+```
+
 

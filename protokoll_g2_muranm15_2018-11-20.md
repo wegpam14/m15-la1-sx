@@ -17,7 +17,7 @@ abwesend: Skof Jonas
 **ii.Beispiel aus dem Unterrricht**  
 **ii.Terminalauszug**  
 **i. Intelhex**  
-**i. Startup-Cod**  
+**i. Startup-Code**  
 **i. Programmausführung**  
 **ii.Präprozessieren zum Präprozessorquelltext**  
 **ii.Kompilieren zum Assemblerquelltext**  

@@ -37,32 +37,32 @@ Der dritte Schritt wird nur benötigt, wenn das System die `main.elf` nicht ausf
 Das Advanced Packaging Tool ist ein Paketverwaltungssystem, das im Bereich des Betriebssystems Debian entstanden ist und dpkg zur eigentlichen Paketverwaltung benutzt. Ziel ist es, eine einfache Möglichkeit zur Suche, Installation und Aktualisierung von Programmpaketen zur Verfügung zu stellen.  
 APT besteht aus einer Programmbibliothek und mehreren diese Bibliothek nutzenden Kommandozeilen-Programmen.  
 
-In der Datei /etc/apt/sources.list stehen die sogenannten Repositories, also Quellen für Pakete. Dies können entweder CDs oder DVDs, Verzeichnisse auf der Festplatte oder Verzeichnisse auf HTTP- oder FTP-Servern sein. Befindet sich das gesuchte Paket auf einem Server, so wird dieses automatisch heruntergeladen und installiert.
-Die Pakete liegen im Debian-Paketformat vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert.
-APT setzt auf dpkg auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
+In der Datei /etc/apt/sources.list stehen die sogenannten **Repositories**, also Quellen für Pakete. Dies können entweder CDs oder DVDs, Verzeichnisse auf der Festplatte oder Verzeichnisse auf HTTP- oder FTP-Servern sein. Befindet sich das gesuchte Paket auf einem Server, so wird dieses automatisch heruntergeladen und installiert.
+Die Pakete liegen im **Debian-Paketformat** vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert.
+APT setzt auf **dpkg** auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
 [:paperclip:](https://www.2daygeek.com/apt-command-examples-manage-packages-debian-ubuntu-systems/)
 
 ### :point_right: __Kommandos__ 
-* apt-get install paketname installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
-* apt-get remove paketname entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
-* apt-get --purge remove paketname entfernt ein Paket und die Konfigurationsdateien.  
-* apt-get upgrade bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
-°apt-get dist-upgrade bringt alle Pakete auf den neuesten Stand und installiert bei Bedarf neue Pakete oder entfernt Pakete, die mit den zu installierenden Paketen in Konflikt stehen.  
-* apt-get update holt die neuesten Informationen über Pakete vom Debian-Server.  
-* apt-get source paketname holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
-* apt-cache search suchwort sucht nach Programmen.  
-* zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool apt-file oder auch dpkg -L verwendet werden    
+* **apt-get install paketname** installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
+* **apt-get remove paketname** entfernt ein vorhandenes Paket und die Pakete, die von diesem abhängen. Abhängigkeiten dieser Pakete oder Konfigurationsdateien werden jedoch nicht entfernt.  
+* **apt-get --purge remove paketname** entfernt ein Paket und die Konfigurationsdateien.  
+* **apt-get upgrade** bringt, sofern möglich, alle Pakete auf den neuesten Stand, installiert jedoch keine neuen Pakete (was evtl. nötig ist, um das System aktuell zu halten, falls sich Abhängigkeiten geändert haben)  
+* **apt-get dist-upgrade** bringt alle Pakete auf den neuesten Stand und installiert bei Bedarf neue Pakete oder entfernt Pakete, die mit den zu installierenden Paketen in Konflikt stehen.  
+* **apt-get update** holt die neuesten Informationen über Pakete vom Debian-Server.  
+* **apt-get source paketname** holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
+* **apt-cache search suchwort** sucht nach Programmen.  
+* zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool **apt-file** oder auch **dpkg -L** verwendet werden    
 [:paperclip:](https://wiki.ubuntuusers.de/apt/apt-Kommandos/)
 
 ## :point_right: __Debian Package__ 
-dpkg ist die Basis der Paketverwaltung des Betriebssystems Debian und das grundlegende Programm zum Installieren und Manipulieren von Debian-Binärpaketen.
+dpkg ist die **Basis der Paketverwaltung** des Betriebssystems Debian und das grundlegende Programm zum Installieren und Manipulieren von **Debian-Binärpaketen**.
 Der Name dpkg ist eine Abkürzung für Debian Package. Das Debian-Software-Paket-Format wurde im Debian-Projekt entwickelt, allerdings wird dieses Paketformat und das Paketverwaltungsprogramm dpkg auch von anderen Software-Distributionen verwendet. Beispielsweise verwenden neben Debian auch das Fink-Projekt, welches Open-Source-Pakete für Mac OS X zur Verfügung stellt, und die OpenSolaris-Distribution Nexenta OS dpkg.
 [:paperclip:](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.de.html)
 
 
 ## :point_right: __Atmega16 / C-Programm__ 
 Soll ein Programm für einen µC der Atmega Reihe geschrieben werden, muss das Programm mithilfe einer anderen Compiler Suite übersetzt werden. Dafür verwenden wir den AVR-GCC Kompiler.  
-Die Befehle für die einzelnen Schritte sind im Prinzip die Selben. Statt _gcc_ starten die Befehle nun mit avr-gcc. Außerdem muss der Kompiler wissen, um welchen Atmega Prozessor es sich handelt und welche Taktfrequenc dieser hat.  
+Die Befehle für die einzelnen Schritte sind im Prinzip die Selben. Statt _gcc_ starten die Befehle nun mit **avr-gcc**. Außerdem muss der Kompiler wissen, um welchen Atmega Prozessor es sich handelt und welche Taktfrequenc dieser hat.  
 Der __Prozessortyp__ wird mit dem Attribut _-mmcu=type_ festgelegt, die __Taktfrequenz__ mit dem Attribut _-DF_CPU=frequencyL_ (L für Datentyp long). Außerdem kann man mit dem Attribut _-Os_ dafpr sorgen dass der __Speicherplatz__ optimal genutzt wird.  
 
 Daten für die Atmega Prozessoren, die für unseren Laborunterricht relevant sind:  
@@ -74,7 +74,7 @@ Frequenz | 12000000 | 16000000|
 
 [:paperclip:](https://www.mikrocontroller.net/articles/AVR-GCC-Tutorial)
  
-Der schrittweise Kompiliervorgang bis zur main.elf, mithilfe der Shell, sieht dann wie folgt aus (verwendet wird der Arduino Nano):  
+Der schrittweise Kompiliervorgang bis zur main.elf, mithilfe der **Shell**, sieht dann wie folgt aus (verwendet wird der Arduino Nano): 
   1. __Preprozessor__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000L -E main.c  
   2. __Compiler__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -S main.c  
   3. __Assembler__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -c main.s  
@@ -340,11 +340,11 @@ drwxr-xr-x 29 anna anna  4096 Nov 20 10:06  ../
 ```
 
 ## :point_right: __Intelhex__ 
-Das Intel HEX-Format ist ein Datenformat zur Speicherung und Übertragung von binären Daten. Es wird heute hauptsächlich verwendet, um Programmierdaten für Mikrocontroller bzw. Mikroprozessoren, EPROMs und ähnliche Bausteine zu speichern. Es kann aber auch zur Speicherung von Lademodulen verwendet werden. Das HEX-Format ist das älteste Datenformat seiner Art und seit den 1970er Jahren in Gebrauch. Spätere Erweiterungen unterstützen speziell die segmentierte Adressierung der Intel-80x86-Prozessoren.
+Das **Intel HEX-Format** ist ein Datenformat zur Speicherung und Übertragung von binären Daten. Es wird heute hauptsächlich verwendet, um Programmierdaten für Mikrocontroller bzw. Mikroprozessoren, EPROMs und ähnliche Bausteine zu speichern. Es kann aber auch zur Speicherung von Lademodulen verwendet werden. Das HEX-Format ist das älteste Datenformat seiner Art und seit den 1970er Jahren in Gebrauch. Spätere Erweiterungen unterstützen speziell die segmentierte Adressierung der Intel-80x86-Prozessoren.
 
-Eine Intel HEX-Datei liegt im ASCII-Format vor. Die Bytes der kodierten Binärdaten werden jeweils als Hexadezimalzahl aus zwei ASCII-Zeichen dargestellt. HEX-Dateien können mit einem Texteditor geöffnet und modifiziert werden. Die HEX-Datei ist in etwa doppelt so groß wie die enthaltenen Binärdaten, da die Darstellung eines Bytes mit zwei Bytes in hexadezimaler Schreibweise erfolgt. Die Datensätze sind mit einer Prüfsumme versehen, so dass Übertragungsfehler erkannt werden können.
+Eine Intel HEX-Datei liegt im **ASCII-Format** vor. Die Bytes der kodierten Binärdaten werden jeweils als Hexadezimalzahl aus zwei ASCII-Zeichen dargestellt. HEX-Dateien können mit einem Texteditor geöffnet und modifiziert werden. Die HEX-Datei ist in etwa doppelt so groß wie die enthaltenen Binärdaten, da die Darstellung eines Bytes mit zwei Bytes in hexadezimaler Schreibweise erfolgt. Die Datensätze sind mit einer Prüfsumme versehen, so dass Übertragungsfehler erkannt werden können.
 
-Es gibt 6 Datensatztypen:  
+Es gibt **6 Datensatztypen**:  
 
 | Typ | Bezeichnung | Verwendung |  
 | --- | ----------- | ---------- |  
@@ -368,7 +368,7 @@ und andere Dinge.
 [:paperclip:](https://www.e-reading.club/chapter.php/129272/37/Barr_-_Programming_Embedded_Systems_in_C_and_C%2B%2B.html)
 
 ## :point_right: __Implizite Deklaration/explizite Deklaration__
-Neben der expliziten Deklaration gibt es in einigen Programmiersprachen auch die Möglichkeit einer impliziten Deklaration von Variablen: In diesem Fall führt das erste Auftreten einer Variablen zu einer automatischen Typzuordnung.
+Neben der expliziten Deklaration gibt es in einigen Programmiersprachen auch die Möglichkeit einer impliziten Deklaration von Variablen: In diesem Fall führt das erste Auftreten einer Variablen zu einer **automatischen Typzuordnung**.
 [:paperclip:](https://de.wikipedia.org/wiki/Deklaration_(Programmierung))
 
 ## :point_right: __Programmausführung__ 

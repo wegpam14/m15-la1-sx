@@ -45,7 +45,24 @@ Der schrittweise Kompiliervorgang bis zur main.elf, mithilfe der Shell, sieht da
   3. __Assembler__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -c main.s  
   4. __Linker__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000 -o main.elf main.o
 
-Beispiel aus dem Unterricht:
+### Beispiel aus dem Unterricht:
+```C
+#include <avr/io.h>
+#define F_CPU 12000000L
+#include <util/delay.h>
+
+int main()
+{
+  DDRA = 0x01;
+  while(1)
+  {
+    PORTA ^= 0x01;
+    _delay_ms(300);
+  }
+  return 0;
+}
+```
+
 
 
 ###wichtige Ausschnitte

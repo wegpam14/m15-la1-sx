@@ -200,7 +200,7 @@ int main () {
 (unsigned char*) -> Zeiger auf unsigned character  
   
 `avr-gcc -mmcu=atmega16 -Os -c main.s`**: Assemblerquelltext**  
-```C
+```
 	.file	"main.c"
 __SP_H__ = 0x3e
 __SP_L__ = 0x3d
@@ -233,5 +233,6 @@ main:
 	nop
 	rjmp .L2
 	.size	main, .-main
-	.ident	"GCC: (GNU) 5.4.0"  
-    ```
+	.ident	"GCC: (GNU) 5.4.0"   
+```  
+`avr-gcc -mmcu=atmega16 -Os main.o`**: Kompiliertes Programm ausführen**

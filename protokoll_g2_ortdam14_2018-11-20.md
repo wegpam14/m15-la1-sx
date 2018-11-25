@@ -62,6 +62,10 @@ Das Intel HEX-Format ist ein Datenformat zur Speicherung und Übertragung von bi
   
 [Quelle](https://de.wikipedia.org/wiki/Intel_HEX)  
 ## Befehle zur Inbetriebnahme  
+  
+**Generieren von Intel Hex Files**  
+Das Problem ist das eine ausführbare GNU-Datei nicht als Input-File akzeptiert wird. Es muss erst in eine .hex Fiel umgewandelt werden in der die Informationen gespeichert werden. Das GNU-Programm dafür heißt avr-objcopy.  
+
 `avr-gcc -mmcu=atmega16 -Os -E main.c | -S` Befehl um das Programm für den Atmega16 lauffähig zu machen  
   
 `avr-gcc -mmcu=atmega16 -Os -S main.c`**: Präprozessieren**  
@@ -190,3 +194,44 @@ int main () {
 
 }  
 ```  
+**Zeile:** `(*(volatile uint8_t *)((0x1B) + 0x20))`  
+
+`DDRA -> (*(unsigned char*)(0x1A)+0x20)`  
+(unsigned char*) -> Zeiger auf unsigned character  
+  
+`avr-gcc -mmcu=atmega16 -Os -c main.s`**: Assemblerquelltext**  
+```C
+	.file	"main.c"
+__SP_H__ = 0x3e
+__SP_L__ = 0x3d
+__SREG__ = 0x3f
+__tmp_reg__ = 0
+__zero_reg__ = 1
+	.section	.text.startup,"ax",@progbits
+.global	main
+	.type	main, @function
+main:
+/* prologue: function */
+/* frame size = 0 */
+/* stack size = 0 */
+.L__stack_usage = 0
+	ldi r24,lo8(1)
+	out 0x1a,r24
+	ldi r25,lo8(1)
+.L2:
+	in r24,0x1b
+	eor r24,r25
+	out 0x1b,r24
+	ldi r18,lo8(719999)
+	ldi r19,hi8(719999)
+	ldi r24,hlo8(719999)
+1:	subi r18,1
+	sbci r19,0
+	sbci r24,0
+	brne 1b
+	rjmp .
+	nop
+	rjmp .L2
+	.size	main, .-main
+	.ident	"GCC: (GNU) 5.4.0"  
+    ```

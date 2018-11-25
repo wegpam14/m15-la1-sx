@@ -61,6 +61,9 @@ Das Intel HEX-Format ist ein Datenformat zur Speicherung und Übertragung von bi
 | 05 | Start Linear Address Record | Lineare Startadresse (EIP-Register) |
   
 [Quelle](https://de.wikipedia.org/wiki/Intel_HEX)  
+  
+![Intel Hex](http://1.bp.blogspot.com/-Y_054tkII7o/Uo2sMMpjCxI/AAAAAAAAAA0/h5odn9v7pb8/s1600/hex_format.jpg)  
+[Quelle](http://1.bp.blogspot.com/-Y_054tkII7o/Uo2sMMpjCxI/AAAAAAAAAA0/h5odn9v7pb8/s1600/hex_format.jpg)  
 ## Befehle zur Inbetriebnahme  
   
 **Generieren von Intel Hex Files**  

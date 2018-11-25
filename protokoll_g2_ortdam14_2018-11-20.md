@@ -19,7 +19,7 @@ Das [Advanced Packaging Tool](https://de.wikipedia.org/wiki/Advanced_Packaging_T
 | `apt install <package_name>` | Installieren von Paketen |    
 
 
-In der Datei `/etc/apt/sources.list` stehen die sogenannten Repositories (Quellen für Pakete). Die Pakete liegen im Debian-Paketformat (.deb) vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven. 
+In der Datei `/etc/apt/sources.list` stehen die sogenannten Repositories (Quellen für Pakete). Die Pakete liegen im Debian-Paketformat (.deb) vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.  
 [Quelle](https://de.wikipedia.org/wiki/Advanced_Packaging_Tool)  
 ## Atmega 16 C-Programm  
 ```C

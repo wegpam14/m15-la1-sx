@@ -31,7 +31,7 @@ Im ersten Schritt wird die Datei `main.c` zur Objektdatei `main.o` übersetzt. I
 Im zweiten Schritt wird die Objektdatei `main.o` zur ausführbaren (*executable*) Datei `main.elf` übersetzt. Dieser Vorgang wird *Linken* genannt. Hier werden alle tatsächlichen Adressen eingetragen, wodurch das Programm ausgeführt werden kann.
 
 Der dritte Schritt wird nur benötigt, wenn das System die `main.elf` nicht ausführen kann. Die Datei `main.elf` wird zur Hex-Datei `main.hex` übersetzt. Dieser Vorgang wird *Konvertieren* genannt.
-[:paperclip:](https://de.wikipedia.org/wiki/Compiler)
+Quelle[:paperclip:](https://de.wikipedia.org/wiki/Compiler)
 
 ## :point_right: __Advanced Packaging Tool__ 
 Das Advanced Packaging Tool ist ein Paketverwaltungssystem, das im Bereich des Betriebssystems Debian entstanden ist und dpkg zur eigentlichen Paketverwaltung benutzt. Ziel ist es, eine einfache Möglichkeit zur Suche, Installation und Aktualisierung von Programmpaketen zur Verfügung zu stellen.  
@@ -40,7 +40,7 @@ APT besteht aus einer Programmbibliothek und mehreren diese Bibliothek nutzenden
 In der Datei /etc/apt/sources.list stehen die sogenannten **Repositories**, also Quellen für Pakete. Dies können entweder CDs oder DVDs, Verzeichnisse auf der Festplatte oder Verzeichnisse auf HTTP- oder FTP-Servern sein. Befindet sich das gesuchte Paket auf einem Server, so wird dieses automatisch heruntergeladen und installiert.
 Die Pakete liegen im **Debian-Paketformat** vor, in dem auch die jeweiligen Abhängigkeiten der Programmpakete untereinander abgelegt sind. So werden automatisch für ein Programm auch eventuell erforderliche Programmbibliotheken mit heruntergeladen und installiert.
 APT setzt auf **dpkg** auf. APT beschäftigt sich in erster Linie mit der Beschaffung von Paketen, dem Vergleich von verfügbaren Versionen der Pakete und der Verwaltung von Paket-Archiven.
-[:paperclip:](https://www.2daygeek.com/apt-command-examples-manage-packages-debian-ubuntu-systems/)
+Quelle[:paperclip:](https://www.2daygeek.com/apt-command-examples-manage-packages-debian-ubuntu-systems/)
 
 ### :point_right: __Kommandos__ 
 * **apt-get install paketname** installiert ein Paket und sämtliche Abhängigkeiten und in der Standardeinstellung zusätzlich empfohlene Pakete.  
@@ -52,12 +52,12 @@ APT setzt auf **dpkg** auf. APT beschäftigt sich in erster Linie mit der Bescha
 * **apt-get source paketname** holt den Quelltext des Paketes vom Debian-Server in das aktuelle Verzeichnis.  
 * **apt-cache search suchwort** sucht nach Programmen.  
 * zum Finden von Programmen oder Dateien in noch nicht installierten Paketen kann das separate Tool **apt-file** oder auch **dpkg -L** verwendet werden    
-[:paperclip:](https://wiki.ubuntuusers.de/apt/apt-Kommandos/)
+Quelle[:paperclip:](https://wiki.ubuntuusers.de/apt/apt-Kommandos/)
 
 ## :point_right: __Debian Package__ 
 dpkg ist die **Basis der Paketverwaltung** des Betriebssystems Debian und das grundlegende Programm zum Installieren und Manipulieren von **Debian-Binärpaketen**.
 Der Name dpkg ist eine Abkürzung für Debian Package. Das Debian-Software-Paket-Format wurde im Debian-Projekt entwickelt, allerdings wird dieses Paketformat und das Paketverwaltungsprogramm dpkg auch von anderen Software-Distributionen verwendet. Beispielsweise verwenden neben Debian auch das Fink-Projekt, welches Open-Source-Pakete für Mac OS X zur Verfügung stellt, und die OpenSolaris-Distribution Nexenta OS dpkg.
-[:paperclip:](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.de.html)
+Quelle[:paperclip:](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.de.html)
 
 
 ## :point_right: __Atmega16 / C-Programm__ 
@@ -72,7 +72,7 @@ Board | Sure Electronics DEM1 | Arduino NANO|
 Prozessortyp | atmega16 | atmega328p|
 Frequenz | 12000000 | 16000000|  
 
-[:paperclip:](https://www.mikrocontroller.net/articles/AVR-GCC-Tutorial)
+Quelle[:paperclip:](https://www.mikrocontroller.net/articles/AVR-GCC-Tutorial)
  
 Der schrittweise Kompiliervorgang bis zur main.elf, mithilfe der **Shell**, sieht dann wie folgt aus (verwendet wird der Arduino Nano): 
   1. __Preprozessor__: avr-gcc -Os -mmcu=atmega328p -DF_CPU=16000000L -E main.c  
@@ -356,7 +356,7 @@ Es gibt **6 Datensatztypen**:
 | 05 | Start Linear Address Record | Lineare Startadresse |  
 
 ![Bild](https://camo.githubusercontent.com/f1d9bbfc7b436e45ab52150b7153f45e4c6399c7/68747470733a2f2f7261772e6769746875622e636f6d2f4d61726b44696e672f48544d4c355f554152545f424c2f6d61737465722f696d616765732f696d6167653033342e706e67)
-[:paperclip:](https://de.wikipedia.org/wiki/Intel_HEX)
+Quelle[:paperclip:](https://de.wikipedia.org/wiki/Intel_HEX)
 
 ## :point_right: __StartupCode__ 
 Der Compiler benötigt einen Startup-Code.
@@ -365,11 +365,11 @@ der C, Pascal  oder Basic - Compiler erstellt.
 In ihm werden die Grundinitialisierungen des Prozessors ausgeführt,
 etwa die Zeitgeber - Initialisierung, festlegen des Stackbereiches
 und andere Dinge.
-[:paperclip:](https://www.e-reading.club/chapter.php/129272/37/Barr_-_Programming_Embedded_Systems_in_C_and_C%2B%2B.html)
+Quelle[:paperclip:](https://www.e-reading.club/chapter.php/129272/37/Barr_-_Programming_Embedded_Systems_in_C_and_C%2B%2B.html)
 
 ## :point_right: __Implizite Deklaration/explizite Deklaration__
 Neben der expliziten Deklaration gibt es in einigen Programmiersprachen auch die Möglichkeit einer impliziten Deklaration von Variablen: In diesem Fall führt das erste Auftreten einer Variablen zu einer **automatischen Typzuordnung**.
-[:paperclip:](https://de.wikipedia.org/wiki/Deklaration_(Programmierung))
+Quelle[:paperclip:](https://de.wikipedia.org/wiki/Deklaration_(Programmierung))
 
 ## :point_right: __Programmausführung__ 
 :zap: mögliche Probleme: Programm könnte nicht ausgeführt werden, weil Befehlstypen ähnlich sind, Befehlsmuster aber anders und dadurch nur für den Prozessor geeignet, für den es geschrieben wurde. `a out <elf-Datei>`

@@ -91,7 +91,7 @@ Das C-Programm der 1. Übung sieht wie folgt aus:</p>
         return 0;
     }  
 </code></pre>
-<p><strong>Disassembierung des Programmes:</strong></p>
+<p><strong>Disassemblierung des Programmes:</strong></p>
 <pre><code>--- N:\ftp\hooks\data-with-backup\simulated\windows\Users\Vollmaier\Alois\Shared\Documents\Atmel Studio\7.0\BoardProject1_Gcc__Uebung\Project\Debug/../src/main.c
 int main(void){
 	return 0;

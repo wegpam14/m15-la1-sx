@@ -197,7 +197,8 @@ Er wird Datenwerk genannt.</p>
 <li><strong>_Sprungoperationen</strong>:_ Ermöglichen Verzweigungen in Programmen. Es gibt zwei Arten von Sprüngen: unbedingte Sprünge und bedingte Sprünge an Adressen.</li>
 </ul>
 <p>[2.2] - <strong>Speicherarten</strong><br>
-Der Prozessor, abgekürzt auch <strong>CPU</strong> (<strong>Central Processing Unit</strong>) bezeichnet, ist das <strong>Herzstück</strong> <strong>eines jeden Computers</strong>, ohne ihn kann kein Rechner funktionieren.</p>
+Grundsätzlich unterscheiden wir aus Sicht des Programmierers Arbeitsspeicher und Programmspeicher.
+Im Programmspeicher ist das eigentliche Programm, also die Maschinenbefehle, zu finden. Der Arbeitsspeicher wird während der Ausführung des Programmes (während der Arbeit) für Variable, Rücksprungadressen, ... benötigt.
 <p>[2.2.1] - <strong>Der Flash</strong></p>
 <p>Flash-Speicher bzw. Flash-Memory kombiniert die Vorteile von Halbleiterspeicher und Festplatten. Wie jeder andere Halbleiterspeicher kommt Flash-Speicher ohne bewegliche Teile aus. Und die Daten bleiben wie bei einer Festplatte auch nach dem Abschalten der Energieversorgung erhalten.<br>
 Der Flash-Speicher hat sich aus dem EEPROM (Electrical Erasable and Programmable Read Only Memory) entwickelt.</p>

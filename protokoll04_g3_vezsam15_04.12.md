@@ -90,8 +90,6 @@ ue04 :
     clean:
 	    rm * o
 	    rm * elf
-
-
 ### Programm 3 (monitor.c)
 
     nano monitor.c

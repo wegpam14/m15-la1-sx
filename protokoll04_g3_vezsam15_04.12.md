@@ -1,11 +1,11 @@
 
-##Protokoll 4
+## Protokoll 4
 
-    **Name** Sarah Vezonik
-    **Datum, Ort:** 04. Dezember 2018, CAD Saal Kaindorf
-    **Gruppe:** 3
-    **Anwesend:** Vezonik, Vollmaier, Wegl, Wesonig, Winter M. ;
-    **Abwesend:** Winter T.
+    Name: Sarah Vezonik
+    Datum, Ort: 04. Dezember 2018, CAD Saal Kaindorf
+    Gruppe: 3
+    Anwesend: Vezonik, Vollmaier, Wegl, Wesonig, Winter M. ;
+    Abwesend: Winter T.
 
 
 ----------
@@ -52,7 +52,7 @@ Anordnung:
 
 
 ----------
-##Aufgabenstelllung
+## Aufgabenstelllung
 Es sind drei Programme zu schreiben, welche miteinander verknüpft werden. Die *main.c* ist das Hauptprogramm. Sie soll sich aus den beiden anderen Programmen, *lcd.c* und *monitor.c*  und Funktionen aus diesem Programm ausführen.
 
 
@@ -138,7 +138,7 @@ Vergisst man, das Makefile zu ergänzen, sucht der Linker nach der Funktion,welc
 ----------
 
 
-###Programm 4  ( monitor.h)
+### Programm 4  ( monitor.h)
 
     void startMonitor(int speed)
 
@@ -148,7 +148,7 @@ Die monitor.h Datei dient dazu, die Funktionen in ein Programm einzubinden,damit
 ----------
 
 
-####main.c
+#### main.c
 
     
     #include <stdio.h>
@@ -190,7 +190,7 @@ Die monitor.h Datei dient dazu, die Funktionen in ein Programm einzubinden,damit
 ----------
 
 
-##Programm 6 (lcd.h)
+## Programm 6 (lcd.h)
 
     void startLcd();
     void checkLcd (char text[]);
@@ -202,7 +202,7 @@ Makefile mit lcd.o und lcd.h ergänzen!
 ----------
 
 
-###main.c 
+### main.c 
  
     #include <stdio.h>
     #include <lcd.h>
@@ -229,7 +229,7 @@ Makefile mit lcd.o und lcd.h ergänzen!
 ----------
 
 
-###monitor.c
+### monitor.c
 
 mit 
 
@@ -244,7 +244,7 @@ erweitern.
 ----------
 
 
-###monitor.h und  lcd.h
+### monitor.h und  lcd.h
 mit 
 
     void test();
@@ -255,7 +255,7 @@ erweitern.
 ----------
 
 
-###Makefile
+### Makefile
 mit
 
     lcd.d
@@ -265,7 +265,7 @@ erweitern.
 ----------
 
 
-###lcd.h
+### lcd.h
 
     struct Lcd_Info
     {
@@ -276,7 +276,7 @@ erweitern.
 ----------
 
 
-###monitor.h
+### monitor.h
 
     #inndef MONITOR_H
     #define MONITOR_H
@@ -306,7 +306,7 @@ Mit verschieden Namen wie zb *monitor_test()* und *lcd_test()* kann dieses Probl
 ----------
 
 
-###main.c
+### main.c
 mit 
 
     printf("lcd_counter = %d\n ",lcd_counter);

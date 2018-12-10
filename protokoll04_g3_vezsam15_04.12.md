@@ -29,7 +29,7 @@
 make (englisch für machen, erstellen) ist ein Build-Management-Tool, das Kommandos in Abhängigkeit von Bedingungen ausführt.
 Genutzt wird es beispielsweise, um in Projekten, die aus vielen verschiedenen Dateien mit Quellcode bestehen, automatisiert alle Arbeitsschritte (Übersetzung, Linken, Dateien kopieren etc.) zu steuern, bis hin zum fertigen, ausführbaren Programm. make ist jedoch so flexibel ausgelegt, dass es auch beliebige andere Aufgaben steuern kann, bei denen die zeitliche Abhängigkeit von Dateien eine Rolle spielt.
 
-> Steuerdatei : 
+> Steuerdatei :   
 > Kommando **make**   
 
 
@@ -37,13 +37,13 @@ Genutzt wird es beispielsweise, um in Projekten, die aus vielen verschiedenen Da
 
 
 ##  **Makefile** 
-Anordnung:
- >Ziel: Abhängigkeiten
- >Tabulator Kommando
- > Tabulator (weitere Kommandos)
- >..
- >Ziel 2:
- >..
+Anordnung:  
+ >Ziel: Abhängigkeiten 
+ >Tabulator Kommando  
+ > Tabulator (weitere Kommandos)  
+ >..  
+ >Ziel 2: 
+ >..  
 
 
 **Wichtig!!**
@@ -282,9 +282,9 @@ erweitern.
     #define MONITOR_H
     
 damit das nicht nochmals definiert wird!
-**Wichtig!**
-jeder Datei Name darf nur einmal vorkommen. (eindeutige Namen vergeben)
-**Doppelte Namengebung**
+**Wichtig!**  
+jeder Datei Name darf nur einmal vorkommen. (eindeutige Namen vergeben)  
+**Doppelte Namengebung**  
 Als Übungszwecken erstellten wir in der monitor.c und in der lcd.c eine Funktion test(). In der main.c werden dann die Headerdateien eingebunden. Der Linker weiß dann nicht welche Funktion gemeint ist. Es wird ein Fehler ausgegeben.
 Mit verschieden Namen wie zb *monitor_test()* und *lcd_test()* kann dieses Problem gelöst werden.
 

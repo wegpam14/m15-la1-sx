@@ -10,7 +10,7 @@ Anwesenheit:
 
 | Anwesend | Abwesend|
 | ------------- |:-------------:|
-| Vezonik, Vollmaier, Wesonig, Wegl, WinterM., WinterT.    | ---- |
+| Vezonik, Vollmaier, Wesonig, Wegl, WinterM.|WinterT.|
 
 ___
 ### Themen-Übersicht

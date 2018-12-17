@@ -1,9 +1,9 @@
 ## Protokoll 5
 
-Name: Sarah Vezonik
-Datum, Ort: 11. Dezember 2018, Kaindorf
-Gruppe: 3
-Anwesend: Vezonik, Vollmaier, Wegl, Wesonig, Winter M., Winter T.;
+Name: Sarah Vezonik  
+Datum, Ort: 11. Dezember 2018, Kaindorf  
+Gruppe: 3  
+Anwesend: Vezonik, Vollmaier, Wegl, Wesonig, Winter M., Winter T.;  
 
 
 ----------
@@ -17,7 +17,7 @@ Anwesend: Vezonik, Vollmaier, Wegl, Wesonig, Winter M., Winter T.;
 ----------
 
 
-### [1]Wiederholung Makefile
+### [1] Wiederholung Makefile
 
 
 ----------
@@ -43,15 +43,15 @@ Anwesend: Vezonik, Vollmaier, Wegl, Wesonig, Winter M., Winter T.;
 
 	ue04.elf: main.o monitor.o lcd.o 
 	
-//Ziel,welches Kompiliert werden soll bzw Dateien welche zum kompilieren benötigt werden
+Ziel,welches Kompiliert werden soll bzw Dateien welche zum kompilieren benötigt werden
 
 		gcc -o ue04.elf main.o monitor.o lcd.o 
 
-//Befehle, wenn alle auf dem neuesten Stand sind,wird gelinkt
-//der Rest der Befehle warten auf den Zeitstempel, welcher aussagt ob die Dateien auf dem neuesten Stand sind oder nicht und werden dementsprechend kompiliert oder auch nicht.
+Befehle, wenn alle auf dem neuesten Stand sind,wird gelinkt
+der Rest der Befehle warten auf den Zeitstempel, welcher aussagt ob die Dateien auf dem neuesten Stand sind oder nicht und werden dementsprechend kompiliert oder auch nicht.
 
       rm *.o
-//Löschht alle Object Dateien
+Löschht alle Object Dateien
 
 **@ (mute)**:  blendet überschüssige Konsolenbefehle aus 
 
@@ -59,7 +59,7 @@ Makefile dient dazu, den Übersetzungsvorgang zu steuern. Bei Netbeans beispiels
 
 
 ----------
-## [2]Serielle Schnittstellen
+## [2] Serielle Schnittstellen
 
 
 ----------
@@ -118,7 +118,7 @@ RS-232 (Recommended Standard 232) ist ein Standard für eine bei Computern häuf
 ----------
 
 
-### [3]Feldbusse
+### [3] Feldbusse
 
 
 ----------
@@ -126,9 +126,9 @@ RS-232 (Recommended Standard 232) ist ein Standard für eine bei Computern häuf
 
 Ein Feldbus ist ein Bussystem, das in einer Anlage Feldgeräte wie Messfühler (Sensoren) und Stellglieder (Aktoren) zwecks Kommunikation mit einem Automatisierungsgerät verbindet. Wenn mehrere Kommunikationsteilnehmer ihre Nachrichten über dieselbe Leitung senden, dann muss festgelegt sein, wer (Kennung) was (Messwert, Befehl) wann (Initiative) sagt. Hierfür gibt es normierte Protokolle. 
 
-**Industrie**
-*Profibus, Powerlink,...*
-**Automobile**
+**Industrie**  
+*Profibus, Powerlink,...*  
+**Automobile**  
 *LIN,CAN,Flexray,..*
 
  - CAN ist am ältesten und wird für Motorsteuergeräte verwendet
@@ -137,10 +137,11 @@ Ein Feldbus ist ein Bussystem, das in einer Anlage Feldgeräte wie Messfühler (
  - Flexray wurde früher vor allem bei BMW eingesetzt, heute ist das der
    Standard in der Autoindustrie.
 
-**Gebäudetechnik**
-*KNX,Homematic,LON,CAN,Modbus*
-**Industrie4.0 **
-*Web Dienst, HTTP  Protokoll, REST -Server*
+**Gebäudetechnik**  
+*KNX,Homematic,LON,CAN,Modbus*    
+
+**Industrie4.0**     
+*Web Dienst, HTTP  Protokoll, REST -Server*  
 
 
 ----------
@@ -193,7 +194,7 @@ Modbus ist eigentlich ein Application-Protocol, das im OSI-Layer 7 (Application 
 ----------
 
 
-### [4]LRC
+### [4] LRC
 
 
 ----------
@@ -214,13 +215,13 @@ Beispiel: Read Coils (Coil-Address 11, Quantity=8) von Device #4
 
     0x3a 0x30 0x34 0x30 0x31 0x30 x030 0x30 0x41 0x30 0x30 0x30 0x38 0x36 0x38 0x0d 0x0a
 
-Die Summe aller roten Bytes als 8-Bit Addition ohne  Berücksichtigung des Überlaufs ergibt: 0x98
+Die Summe aller  Bytes als 8-Bit Addition ohne  Berücksichtigung des Überlaufs ergibt: 0x98
 
 Das Zweierkomplement ergibt: 0xff-0x98+1 = 0x68
 
 **Error**:
 
-Error code | 1 Byte | 0x84
+Error code | 1 Byte | 0x84  
 Exception code  | 1Byte | 01 or 02 or 03 or 04
 
 

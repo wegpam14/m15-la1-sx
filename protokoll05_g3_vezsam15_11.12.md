@@ -70,9 +70,9 @@ Makefile dient dazu, den Übersetzungsvorgang zu steuern. Bei Netbeans beispiels
 
 Die Übertragung der Daten erfolgt durch einen differenziellen, seriellen Spannungspegel zwischen den Leitungen [A] und [B]. Da Daten auf den Leitungen zwischen Sender und Empfänger übertragen werden, spricht man auch von Halbduplex oder Wechselbetrieb. Jeder Empfänger oder Sender hat einen invertierten und nicht-invertierenden Anschluss. Die Übertragung der Daten erfolgt symmetrisch. Das heißt, hat eine Leitung ein „High“-Signal, hat die andere Leitung ein „Low“-Signal. Leitung A ist somit der Komplementär von B und umgekehrt. Der Vorteil der Messung der Spannungsdifferenz zwischen A und B ist, dass Gleichtaktstörungen weitestgehend keinen Einfluss haben. Eine eventuelle Gleichtaktstörung wird auf beiden Signalleitungen annähernd gleichmäßig eingekoppelt, und durch die Differenzmessung haben sie somit keinen Einfluss auf die zu übertragenden Daten. Der Sender (Driver) erzeugt eine differenzielle Ausgangsspannung von mindestens 1,5 V an 54 Ohm Last. Der Empfänger (Receiver) hat eine Empfindlichkeit +/-200 mV.
  
- **Logischer Zustand**
- A–B < 0,25 V = Logisch 1
-A–B > 0,25 V = Logisch 0
+ **Logischer Zustand**  
+ A–B < 0,25 V = Logisch 1  
+A–B > 0,25 V = Logisch 0  
 
 **Vorteile:**
 

@@ -73,7 +73,7 @@ Man unterscheidet große 4 Bereiche:
  1.   **Industrie**
  -  Netbus (Profibus)
  - Powerlink  
- 3.   **Automotiv**
+ 3.   **Automotive**
    - LIN 
    - CAN 
    - Flexray

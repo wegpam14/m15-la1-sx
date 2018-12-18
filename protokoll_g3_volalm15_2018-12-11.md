@@ -124,7 +124,7 @@ Die Nachricht beginnt mit einem Doppelpunkt, gefolgt von der Adresse des Empfän
 |     Start     |    Adresse    |  Funktion |   Daten   |    LCR    | Ende             |
 |:-------------:|:-------------:|:---------:|:---------:|:---------:|------------------|
 | Zeichenanzahl | 2 Zeichen (:) | 2 Zeichen | n Zeichen | 2 Zeichen | 2 Zeichen (CRLF) |
-|               |               |           |           |           |                  |
+
 
 
 **Standartmäßig werden  nur 7 Daten-Bits verwendet!  
@@ -186,7 +186,7 @@ Das Ende einer jeden RTU-Nachricht wird durch eine weitere Wartezeit von **minde
 |    Start   | Adresse | Funktion | CR-Check |      Ende     |
 |:----------:|:-------:|:--------:|:--------:|:-------------:|
 | Wartezeit1 | Byte1   | Byten    | Byte2    | ByteWartezeit |
-|            |         |          |          |               |
+
 
 ___
 ### Bildung des Function Codes:

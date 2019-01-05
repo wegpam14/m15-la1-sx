@@ -20,7 +20,7 @@ Gruppe: 1
 
 ### **1.1** Aufbau
 
-![Bild: CPU Aufbau](https://github.com/HTLMechatronics/m15-la1-sx/blob/brelom15/cpu.svg)
+![Bild: CPU Aufbau](https://github.com/HTLMechatronics/m15-la1-sx/blob/brelom15/cpu.png)
 
 ### **1.2** Komponenten
 

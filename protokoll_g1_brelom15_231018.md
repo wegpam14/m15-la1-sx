@@ -8,14 +8,47 @@ Gruppe: 1
 ---
 ## Inhalte
 
-**1. Simulationen in Atmet Studio**  
-**2. Arten von Speichern**  
-**3. Ablauf der Übungseinheit**  
-**4. Assambler Befehle**  
+**1. CPU**
+**2. Simulationen in Atmet Studio**  
+**3. Arten von Speichern**  
+**4. Ablauf der Übungseinheit**  
+**5. Assambler Befehle**  
 
 --- 
 
-## 1. Simulationen in Atmet Studio
+## **1** CPU
+
+### **1.1** Aufbau
+
+![Bild: CPU Aufbau](https://github.com/HTLMechatronics/m15-la1-sx/blob/brelom15/cpu.svg)
+
+### **1.2** Komponenten
+
+**Programm Counter:** enthält die Adresse des nächsten Befehls
+
+**Befehls-Register:** speichert das Befehlsmuster welches aus dem Speicher kommt
+
+**Befehls-Decoder:** logische Funktion welche abhängt vom Befehlsmuster diverse Steuersignale richtig setzt, damit der Befehl richtig ausgeführt wird
+
+**CPU-Register:** bekommt Signal für zwei Register (z.B. R10 und R11), um diese an die ALU weiterzugeben
+
+**ALU:** bekommt Signal für eine Rechenfunktion
+
+**Status Register:** setzt und löscht verschiedenste Flags wie z.B. Zero-Flag, Carrie-Flag, Overflow-Flag
+
+**Multiplexer:** Signalweiche
+
+**Stack Pointer:** zeigt auf die aktuelle Stelle des Stacks
+
+### **1.3**  Resets
+
+**Spannungsabfall:** Wird der CPU die Spannung entzogen, bei erneuter Anlegung der Versorgungsspannung beginnt der Programm Counter wieder von 0.
+
+**Reset Pin:** Wird an einem bestimmten Pin eine Spannung angelegt wird der Programm Counter auf 0 gesetzt.
+
+**Watchdog Reset:** Der Watchdog resitiert den µC nachdem eine gewisse Zeit ein Kommando nicht ausgeführt wurde.
+
+## 2. Simulationen in Atmet Studio
 
 Atmel Studio (in der Version 6.1) ist eine IDEA welche zur Programmierung von Microcontrolern benutzt wird. Sie kann allerdings auch dazu verwendet werden um Programme mit Hilfe eines Debug Tools zu Simulieren. 
 Um dies durchzuführen muss zuerst ein neues Projekt angelegt werden, in welchem  der gewünscht Controller ausgewählt werden kann (in unserem Fallder ATmega 328). Daraufhin muss noch in den Einstellungen das "Simulator" Tool als Debugger angegeben werden.  
@@ -35,7 +68,7 @@ _Inhalt:_
 
 Möchte man nun sein geschriebenes Programm analysieren, muss man es erst compelieren und anschließend lässt sich mit der Funktion "Disassambly"  des Assembler Quelltext generrieren und einlesen. Mit Hilfe des Debuggers kann man nun Schritt für Schritt durch sein Programm gehen und beobachten wie die einzelnen Befähle die Register, Flags usw. verändern. 
 
-## 2. Arten von Speichern
+## 3. Arten von Speichern
 
 - Flash  
 Ist ein nicht-flüchtiger Speicher, welcher mithilfe des Tunneleffekts beschriben wird. Ausßerdem kann der Flash Speicher nur in Segmenten angesprochen werden.  
@@ -46,7 +79,7 @@ gehört zur Familie der flüchtigen Speicher und verliert alle gespeicherten Inh
 - EEPROM  
 Ist ein nicht flüchtiger Speicher, bei dem einzelne Bits angesprohen werden.  
 
-## 3. Ablauf der Übungseinheit
+## 4. Ablauf der Übungseinheit
 
 1. Programm
 Als erstes haben wir ein einfaches C-Programm mit einer main Funktion ohne Inhalt verfasst. Hirbei wird vom Compiler nur die wichtigsten Befehle durchgeführt damit das Programm überhaupt laufen kann(z.B.: Wird an das CPU-Register R1 eine NUll geschrieben damit das System eine zuverlässige Null hat).
@@ -60,7 +93,7 @@ Hierbei haben wir das Selbe wie im 2. Programm durchgeführt nur diesmal mit glo
 4. Programm 
 Verwirklichung von if Verzweigungen. Hierbei wird mit dem Befehl CPI die beiden Argumente verglichen. Sind diese gleich wird das Zero Flag gesetz und der Code im if Block wird ausgeführt. Ist dies nicht so wird der if Block einfach übersprungen.  
 
-## 4. Assambler Befehle 
+## 5. Assambler Befehle 
 
 RJMP --> Relativer Programmsprung (bsp.: RJMP 0x0034)  
 CLR --> löscht wert aus Register (bsp.: CLR R1 (Compiler benutzt R1 als stabile 0))  

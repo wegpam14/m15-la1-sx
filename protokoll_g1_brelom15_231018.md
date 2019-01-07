@@ -26,19 +26,19 @@ Gruppe: 1
 
 **Programm Counter:** enthält die Adresse des nächsten Befehls
 
-**Befehls-Register:** speichert das Befehlsmuster welches aus dem Speicher kommt
+**Befehls-Register:** speichert das Befehlsmuster aus dem Speicher
 
-**Befehls-Decoder:** logische Funktion welche abhängt vom Befehlsmuster diverse Steuersignale richtig setzt, damit der Befehl richtig ausgeführt wird
+**Befehls-Decoder:** logische Funktion welche passend zum Befehlsmuster diverse Steuersignale setzt  
 
-**CPU-Register:** bekommt Signal für zwei Register (z.B. R10 und R11), um diese an die ALU weiterzugeben
+**CPU-Register:** bekommt Signal für zwei Register (z.B. R10 und R11), um diese an die ALU weiterzugeben  
 
-**ALU:** bekommt Signal für eine Rechenfunktion
+**ALU:** bekommt Signal für eine Rechenfunktion, führt diese mit den angelegten Registern durch und gibt das Ergebniss wieder an das CPU-Register zurück  
 
-**Status Register:** setzt und löscht verschiedenste Flags wie z.B. Zero-Flag, Carrie-Flag, Overflow-Flag
+**Status Register:** setzt und löscht verschiedenste Flags  
 
-**Multiplexer:** Signalweiche
+**Multiplexer:** Signalweiche um Programmsprünge durchzuführen  
 
-**Stack Pointer:** zeigt auf die aktuelle Stelle des Stacks
+**Stack Pointer:** zeigt auf die Addresse welche den beginn des Stacks kennzeichnet  
 
 ### **1.3**  Resets
 
@@ -46,7 +46,7 @@ Gruppe: 1
 
 **Reset Pin:** Wird an einem bestimmten Pin eine Spannung angelegt wird der Programm Counter auf 0 gesetzt.
 
-**Watchdog Reset:** Der Watchdog resitiert den µC nachdem eine gewisse Zeit ein Kommando nicht ausgeführt wurde.
+**Watchdog Reset:** Der Watchdog resitiert den µC nachdem ein Kommando in einer gewissen Zeit nicht ausgeführt wurde.
 
 ## 2. Simulationen in Atmet Studio
 

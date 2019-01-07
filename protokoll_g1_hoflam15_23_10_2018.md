@@ -8,29 +8,70 @@
 ## Inhaltsangabe
 
  1. CPU
- 
- 2. Mikrocontroller
- 
+ 2. Mikroprozessor
  3. Allgemeines zum Atmel Studio
-
  4. Benutzung des Atmel Studios
- 
-  	2.1 Erklärung
-  
- 	 2.2 wichtige Begriffe
+  4.1 Erklärung
+  4.2 wichtige Begriffe
+
+## CPU
+#### Aufbau der CPU
+![enter image description here](https://screenshotscdn.firefoxusercontent.com/images/ceda06ce-9a71-4fdb-980c-8f7ba00734cd.png)
+
+#### Hauptbestandteile der CPU
+***Rechenwerk***
+= ALU (Arithmetic Logic Unit) ist das diegitale Schaltwerk zur Durchführung arithmetischer/logischer Befehle (addieren, subtrahieren, schieben, rotieren, NOT, AND, OR, XOR)
+
+***Das Steuerwerk***
+ist für die Abarbeitung des Programms (also Befehlskette) verantwortlich. Im Steuerwerk befindet sich der Befehlszähler (Programmcounter, Instruktionpointer) und der Befehls-Decoder.
+
+*Program Counter:* Er enthält die Adresse des nächsten Befehls.
+*Multiplexer*:  Ist die Signalweiche für einen Programmsprung.
+
+***Die Register***
+sind Speichereinheiten, die direkt mit der Recheneinheit verbunden sind. Sie beinhalten Daten, Operanden und Berechnungsergebnisse in Dualcodierung. 
+
+*Status-Register:* Dient zum Setzen und Löschen von Flags.
+*Befehls-Register:* Er speichert das Befehlsmuster.
+*Befehls-Decoder:*  Im Befehls-Decoder befinden sich Logische Funktion, abhängig vom Befehlsmuster.
+
+***Die Speicherverwaltungseinheit***
+ist für den Zugriff auf den Arbeitsspeicher zuständig. Sie ist bei großen Prozessen durch die MMU realisiert.
+
+***Reset***
+bringt die CPU in einen definierten Grundzustand. Register und Status-Flag Register werden in einen definierten Grundzustand gesetzt. Der Befehlszähler (PC) wird auf die Programmstartadresse gesetzt (meist 0).
+
+## Mikroprozessor
+#### Was ist ein Mikroprozessor?
+Der µC ist eine modernere Form eines Prozessors, bei dem alle Funktionen des Prozessors auf einem Microchip (IC) gefertigt sind.
+
+#### Speicherarten
+
+1. Flash
+ist eine besondere Bauform eines EEPROM. Das Löschen und Reprogrammieren erfolgt hier besonders schnell.
+
+2. SRAM
+= Static RAM. IDe Speicherzellenbehalten ihren Inhalt solange der Speicherbaustein mit ausreichender Spannung versorgt wird.
+
+3. EEPROM
+= Electrical Eraseable PROM. WIederprogrammierbares ROM. Kann auf elektrischer Weise gelöscht werden, zB.: durch eine höhere Spannung an einem speziellen Pin. Ein EPROM im Gegensatz konnte damals mit UV-Licht gelöscht werden.
+
+#### Arten des Resets
+1. Watchdog
+Löst bei einem Programmabsturz einen Reset aus, damit der µC seine Aufgaben wieder erledigen kann. 
+
+2. Brownout Reset
+Er bewirkt, dass ein Computerprozessor im Falle eines Brownouts zurückgesetzt (oder neu gestartet) wird
+
+3. interner Reset
+Er findet dann Verwendung, wenn zB. in einem Mikroprozessor - System ein Fehlerverhalten eines Rechnerkerns vorliegt. Dieser kann dann mit dem Reset neu gestartet werden, ohne das er andere, nicht beteiligte, Rechner stört.
 
 ## Atmel Studio
 #### Was ist das Atmel Studio?
 Das **Atmel Studio** (vor Version 6: "**AVR Studio**") ist eine kostenlose Entwicklungsumgebung ([IDE](https://www.mikrocontroller.net/articles/Editoren/IDEs "Editoren/IDEs")) für die Programmierung der AVR - Mikrocontroller und ARM-Mikrocontroller (ab Version 6) von Atmel. Sie basiert ab Version 5 auf der Visual Studio Shell von Microsoft und besteht aus einer Projektverwaltung, einem [Editor](https://www.mikrocontroller.net/articles/Editoren/IDEs#Texteditoren_f.C3.BCr_Programmierer "Editoren/IDEs"), einem [Debugger](https://www.mikrocontroller.net/articles/AVR-Studio#Debugger "AVR-Studio") und Werkzeugen zum Beschreiben der Mikrocontroller.
 Mit dem Atmel Studio kann in [Assembler](https://www.mikrocontroller.net/articles/Assembler "Assembler") sowie in [C](https://www.mikrocontroller.net/articles/C "C")/[C++](https://www.mikrocontroller.net/articles/C-Plusplus "C-Plusplus") programmiert werden.
-#### Struktur einer CPU
-![Blockdiagramm CPU](https://screenshotscdn.firefoxusercontent.com/images/ceda06ce-9a71-4fdb-980c-8f7ba00734cd.png)
-#### Erklärung des Blockdiagramms
-*Program Counter:* Er enthält die Adresse des nächsten Befehls.
-*Befehls-Register:* Er speichert das Befehlsmuster.
-*Befehls-Decoder:*  Im Befehls-Decoder befinden sich Logische Funktion, abhängig vom Befehlsmuster.
-*Multiplexer*:  Ist die Signalweiche für einen Programmsprung.
-*Status-Register:* Dient zum Setzen und Löschen von Flags.
+
+
 ## Benutzung des Atmel Studios
 #### Erklärungen
 Um mit diesem Programm arbeiten zu können muss erstmals ein Projekt unter 'New Project' angelegt werden und weiters muss man auch den µC auswählen (in unserem Fall 'Atmega328'). Auf der Benutzungsoberfläche erscheint rechts mit dem Namen 'Prozessor' in dem befand sich:
@@ -57,17 +98,8 @@ k= 0x33
 PC + k + 1
 PC + 0x34
 
-Speicherarten in AVR und megaAVR µC:
-1. Flash
-2. SRAM
-3. E²PROM
-- E²PROM: jedes Bit wird einzeln programmiert
-- Flash: kann nur in Segmenten angesprochen werden 
-- Kurze Info am Rande: 
--> SRAM wird zu IRAM in diesem Programm.
--> E²PROM wird zu EEPROM in diesem Programm.
-
 Tunneleffekt: Bei Materalien hat man Energieschwellen, dh. da können keine Teilchen durchdringen. Doch irgendwo gibt es einen Punkt wo sie es schaffen durchzukommen, das nennt man dann Tunneleffekt (Flash-Technologie).
+
 #### wichtige Begriffe
 *Zum Nachlesen:*
 - [megaAVR InstructionSetManual](http://ww1.microchip.com/downloads/en/devicedoc/atmel-0856-avr-instruction-set-manual.pdf)
@@ -120,7 +152,7 @@ Stack ist quasi wieder leer
 Stack wird als Zwischenspeicherung verwendet.
 
 `POP` 
-Somit wird die Zwischenspeierung wieder zurück geholt.
+Somit wird die Zwischenspeicherung wieder zurück geholt.
 
 `IN` 
  Holt es sich aus dem I/O Register und speichert es in die Register zurück.
@@ -130,7 +162,7 @@ Somit wird die Zwischenspeierung wieder zurück geholt.
 	r30,r31 ->z
 
 `LD`
-Additionsbefehl; Carry Flag
+Additionsbefehl; Carry Flagb
 
 ` POP R0`
 Variablen werden wieder Freigegeben.

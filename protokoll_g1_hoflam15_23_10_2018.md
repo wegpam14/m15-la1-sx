@@ -1,4 +1,4 @@
- # 1. Protokoll	
+ # 3. Protokoll	
  - Name: Lara Hofer
  - Datum, Ort: 23. Oktober 2018, AUT Labor Kaindorf
  - Gruppe: 1
@@ -7,13 +7,13 @@
 
 ## Inhaltsangabe
 
- 1. Allgemeines zum Atmel Studio
+ 1. CPU
  
-  	1.1 Struktur einer CPU
-  
- 	 1.2 Beschreibung des Blockdiagramms
-  
- 2. Benutzung des Atmel Studios
+ 2. Mikrocontroller
+ 
+ 3. Allgemeines zum Atmel Studio
+
+ 4. Benutzung des Atmel Studios
  
   	2.1 Erklärung
   

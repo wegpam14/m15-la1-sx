@@ -66,7 +66,7 @@ Er bewirkt, dass ein Computerprozessor im Falle eines Brownouts zurückgesetzt (
 3. interner Reset
 Er findet dann Verwendung, wenn zB. in einem Mikroprozessor - System ein Fehlerverhalten eines Rechnerkerns vorliegt. Dieser kann dann mit dem Reset neu gestartet werden, ohne das er andere, nicht beteiligte, Rechner stört.
 
-## Atmel Studio
+## ![enter image description here](https://micrium.com/wp-content/uploads/2012/08/Atmel-Logo.png)
 #### Was ist das Atmel Studio?
 Das **Atmel Studio** (vor Version 6: "**AVR Studio**") ist eine kostenlose Entwicklungsumgebung ([IDE](https://www.mikrocontroller.net/articles/Editoren/IDEs "Editoren/IDEs")) für die Programmierung der AVR - Mikrocontroller und ARM-Mikrocontroller (ab Version 6) von Atmel. Sie basiert ab Version 5 auf der Visual Studio Shell von Microsoft und besteht aus einer Projektverwaltung, einem [Editor](https://www.mikrocontroller.net/articles/Editoren/IDEs#Texteditoren_f.C3.BCr_Programmierer "Editoren/IDEs"), einem [Debugger](https://www.mikrocontroller.net/articles/AVR-Studio#Debugger "AVR-Studio") und Werkzeugen zum Beschreiben der Mikrocontroller.
 Mit dem Atmel Studio kann in [Assembler](https://www.mikrocontroller.net/articles/Assembler "Assembler") sowie in [C](https://www.mikrocontroller.net/articles/C "C")/[C++](https://www.mikrocontroller.net/articles/C-Plusplus "C-Plusplus") programmiert werden.
@@ -99,6 +99,8 @@ PC + k + 1
 PC + 0x34
 
 Beim erstellten Programm sieht man in der obersten Leiste ein main.c und nach dem debuggen kann man ein Disasseble Fenster auswählen, wo man dann das Programm in einzelnen Assambly Befehlen sehen kann.
+
+![enter image description here](https://microchip.wdfiles.com/local--files/mplabx:debug-disassembly-window/bothopen.png)
 
 Tunneleffekt: Bei Materalien hat man Energieschwellen, dh. da können keine Teilchen durchdringen. Doch irgendwo gibt es einen Punkt wo sie es schaffen durchzukommen, das nennt man dann Tunneleffekt (Flash-Technologie).
 

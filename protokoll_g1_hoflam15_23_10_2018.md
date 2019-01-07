@@ -8,8 +8,14 @@
 ## Inhaltsangabe
 
  1. CPU
+[1.1] Aufbau der CPU
+[1.2] Hauptbestandteile der CPU
  2. Mikroprozessor
+[2.1] Was ist ein Mikroprozessor?
+[2.2] Speicherarten
+[2.3] Arten des Resets
  3. Allgemeines zum Atmel Studio
+[3.1] Was ist ein Atmel Studio?
  4. Benutzung des Atmel Studios
   4.1 Erklärung
   4.2 wichtige Begriffe
@@ -49,12 +55,19 @@ Der µC ist eine modernere Form eines Prozessors, bei dem alle Funktionen des Pr
 
 1. Flash
 ist eine besondere Bauform eines EEPROM. Das Löschen und Reprogrammieren erfolgt hier besonders schnell.
+- Beim Atmega 328P: 32KiB
+- Beim Atmega 16: 16KiB
 
 2. SRAM
-= Static RAM. IDe Speicherzellenbehalten ihren Inhalt solange der Speicherbaustein mit ausreichender Spannung versorgt wird.
+= Static RAM. Die Speicherzellen behalten ihren Inhalt solange der Speicherbaustein mit ausreichender Spannung versorgt wird.
+- Beim Atmega 328P: 2KiB
+- Beim Atmega 16: 1KiB
+- Arbeitsspeicher
 
 3. EEPROM
 = Electrical Eraseable PROM. WIederprogrammierbares ROM. Kann auf elektrischer Weise gelöscht werden, zB.: durch eine höhere Spannung an einem speziellen Pin. Ein EPROM im Gegensatz konnte damals mit UV-Licht gelöscht werden.
+- Beim Atmega 328P: 1024 Bytes
+- Beim Atmega 16: 512 Bytes
 
 #### Arten des Resets
 1. Watchdog
@@ -74,7 +87,7 @@ Mit dem Atmel Studio kann in [Assembler](https://www.mikrocontroller.net/article
 
 ## Benutzung des Atmel Studios
 #### Erklärungen
-Um mit diesem Programm arbeiten zu können muss erstmals ein Projekt unter 'New Project' angelegt werden und weiters muss man auch den µC auswählen (in unserem Fall 'Atmega328'). Auf der Benutzungsoberfläche erscheint rechts mit dem Namen 'Prozessor' in dem befand sich:
+1. Um mit diesem Programm arbeiten zu können muss erstmals ein Projekt unter 'New Project' angelegt werden und weiters muss man auch den µC auswählen (in unserem Fall 'Atmega328'). Auf der Benutzungsoberfläche erscheint rechts mit dem Namen 'Prozessor' in dem befand sich:
 
  - der Programmcounter
  -  das X Register
@@ -98,7 +111,7 @@ k= 0x33
 PC + k + 1
 PC + 0x34
 
-Beim erstellten Programm sieht man in der obersten Leiste ein main.c und nach dem debuggen kann man ein Disasseble Fenster auswählen, wo man dann das Programm in einzelnen Assambly Befehlen sehen kann.
+2. Beim erstellten Programm sieht man in der obersten Leiste ein main.c und nach dem debuggen kann man ein Disasseble Fenster auswählen, wo man dann das Programm in einzelnen Assambly Befehlen sehen kann.
 
 ![enter image description here](https://microchip.wdfiles.com/local--files/mplabx:debug-disassembly-window/bothopen.png)
 

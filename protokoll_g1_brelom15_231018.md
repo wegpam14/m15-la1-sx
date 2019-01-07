@@ -84,21 +84,128 @@ Ist ein nicht flüchtiger Speicher, bei dem einzelne Bits angesprohen werden.
 1. Programm
 Als erstes haben wir ein einfaches C-Programm mit einer main Funktion ohne Inhalt verfasst. Hirbei wird vom Compiler nur die wichtigsten Befehle durchgeführt damit das Programm überhaupt laufen kann(z.B.: Wird an das CPU-Register R1 eine NUll geschrieben damit das System eine zuverlässige Null hat).
 
+Dazugehöriger Code: 
+```
+00000000  RJMP PC+0x0034		Relative jump
+--- ../../../../crt1/gcrt1.S ---------------------------------------------------
+00000034  CLR R1		Clear Register
+00000035  OUT 0x3F,R1		Out to I/O location
+00000036  SER R28		Set Register
+00000037  LDI R29,0x08		Load immediate
+00000038  OUT 0x3E,R29		Out to I/O location
+00000039  OUTDas 0x3D,R28		Out to I/O location
+0000003A  LDI R18,0x01		Load immediate
+0000003B  LDI R26,0x00		Load immediate
+0000003C  LDI R27,0x01		Load immediate
+0000003D  RJMP PC+0x0002		Relative jump
+0000003E  ST X+,R1		Store indirect and postincrement
+0000003F  CPI R26,0x02		Compare with immediate
+00000040  CPC R27,R18		Compare with carry
+00000041  BRNE PC-0x03		Branch if not equal
+00000042  RCALL PC+0x0003		Relative call subroutine
+
+--- D:\Documents\Atmel Studio\7.0\SXLabor_Uebung\Project\Debug/../src/main.c
+int main(void){
+	return 0;
+}
+0000003D  LDI R24,0x00		Load immediate
+0000003E  LDI R25,0x00		Load immediate
+0000003F  RET 		Subroutine return
+```
+
 2. Programm
 Anschließend haben wir zwei lokale Variablen angelegt und haben diese miteinander addiert. Die Variablen werden im Stack mit dem Befehl RECAL angelegt. Anschließend wird die Variable a mit der Variable b addiert und auf die Adresse von Variable a gespeichert. 
 
+Dazugehöriger Code(Ohne Standartkonfiguration): 
+```
+--- D:\Documents\Atmel Studio\7.0\SXLabor_Uebung\Project\Debug/../src/main.c
+int main(void){
+0000003D  PUSH R28		Push register on stack
+0000003E  PUSH R29		Push register on stack
+0000003F  RCALL PC+0x0001		Relative call subroutine
+00000040  IN R28,0x3D		In from I/O location
+00000041  IN R29,0x3E		In from I/O location
+    volatile unsigned char a = 0x10;
+00000042  LDI R24,0x10		Load immediate
+00000043  STD Y+1,R24		Store indirect with displacement
+    volatile unsigned char b = 0x20;
+00000044  LDI R24,0x20		Load immediate
+00000045  STD Y+2,R24		Store indirect with displacement
+    return a + b;
+00000046  LDD R18,Y+1		Load indirect with displacement
+00000047  LDD R24,Y+2		Load indirect with displacement
+00000048  LDI R25,0x00		Load immediate
+}
+00000049  ADD R24,R18		Add without carry
+0000004A  ADC R25,R1		Add with carry
+0000004B  POP R0		Pop register from stack
+0000004C  POP R0		Pop register from stack
+0000004D  POP R29		Pop register from stack
+0000004E  POP R28		Pop register from stack
+0000004F  RET 		Subroutine return
+```
+
 3. Programm
-Hierbei haben wir das Selbe wie im 2. Programm durchgeführt nur diesmal mit globalen Variablen. Der Unterschied zu lokalen Variablen besteht darin, dass globale Variablen nicht im Stack sonder direkt am Anfang des SRAM's gespeichert. Daher empfielt es sich globale Variablen zu verwenden wenn man nur begrenste Speichermöglichkeiten hat.  
+Hierbei haben wir das Selbe wie im 2. Programm durchgeführt nur diesmal mit globalen Variablen. Der Unterschied zu lokalen Variablen besteht darin, dass globale Variablen nicht im Stack sonder direkt am Anfang des SRAM's gespeichert werden. Daher empfielt es sich globale Variablen zu verwenden wenn man nur begrenste Speichermöglichkeiten hat.  
+
+Dazugehöriger Code(Ohne Standartkonfiguration):  
+```
+--- D: \Documents\Atmel Studio\7.0\SXLabor_Uebung\Project\Debug/../src/main.c
+int main(void){
+    a = 0x10;
+00000045  LDI R24,0x10		Load immediate
+00000046  STS 0x0101,R24		Store direct to data space
+    b = 0x20;
+00000048  LDI R24,0x20		Load immediate
+00000049  STS 0x0100,R24		Store direct to data space
+    return a + b;
+0000004B  LDS R18,0x0101		Load direct from data space
+0000004D  LDS R24,0x0100		Load direct from data space
+0000004F  LDI R25,0x00		Load immediate
+}
+00000050  ADD R24,R18		Add without carry
+00000051  ADC R25,R1		Add with carry
+00000052  RET         Subroutine return
+```
 
 4. Programm 
 Verwirklichung von if Verzweigungen. Hierbei wird mit dem Befehl CPI die beiden Argumente verglichen. Sind diese gleich wird das Zero Flag gesetz und der Code im if Block wird ausgeführt. Ist dies nicht so wird der if Block einfach übersprungen.  
+
+Dazugehöriger Code(Ohne Standartkonfiguration):  
+```
+--- D: \Documents\Atmel Studio\7.0\SXLabor_Uebung\Project\Debug/../src/main.c
+int main(void){
+    a = 0x10;
+00000045  LDI R24,0x10		Load immediate
+00000046  STS 0x0101,R24		Store direct to data space
+    if(a == 0x10){
+00000048  LDS R24,0x0101		Load direct from data space
+0000004A  CPI R24,0x10		Compare with immediate
+0000004B  BRNE PC+0x05		Branch if not equal
+        b = 0x20;
+0000004C  LDI R24,0x20		Load immediate
+0000004D  STS 0x0100,R24		Store direct to data space
+0000004F  RJMP PC+0x0004		Relative jump
+        b = 0x30;
+00000050  LDI R24,0x30		Load immediate
+00000051  STS 0x0100,R24		Store direct to data space
+    return a + b;
+00000053  LDS R18,0x0101		Load direct from data space
+00000055  LDS R24,0x0100		Load direct from data space
+00000057  LDI R25,0x00		Load immediate
+}
+00000058  ADD R24,R18		Add without carry
+00000059  ADC R25,R1		Add with carry
+0000005A  RET 		Subroutine return
+```
+
 
 ## 5. Assambler Befehle 
 
 RJMP --> Relativer Programmsprung (bsp.: RJMP 0x0034)  
 CLR --> löscht wert aus Register (bsp.: CLR R1 (Compiler benutzt R1 als stabile 0))  
 OUT —> Speichert Daten aus register x in ein IO register (bsp.: OUT 0x3F, R1)  
-SER —> set all bits in register (bsp.: SER R28)  
+SER —> setzt all bits in register (bsp.: SER R28)  
 LDI —> Lädt eine 8-Bit-Konstante direkt in Register 16 bis 31.(bsp.: LDI R29, 0x08)  
 RCALL —> ist ein relatiever jump und der stack pointer wird um 2 verringert. Wird für den Rücksprung aus einer Funktion genutzt.   
 RET —> holt die im Stack gespeicherte Adresse  

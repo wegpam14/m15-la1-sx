@@ -98,6 +98,8 @@ k= 0x33
 PC + k + 1
 PC + 0x34
 
+Beim erstellten Programm sieht man in der obersten Leiste ein main.c und nach dem debuggen kann man ein Disasseble Fenster auswählen, wo man dann das Programm in einzelnen Assambly Befehlen sehen kann.
+
 Tunneleffekt: Bei Materalien hat man Energieschwellen, dh. da können keine Teilchen durchdringen. Doch irgendwo gibt es einen Punkt wo sie es schaffen durchzukommen, das nennt man dann Tunneleffekt (Flash-Technologie).
 
 #### wichtige Begriffe

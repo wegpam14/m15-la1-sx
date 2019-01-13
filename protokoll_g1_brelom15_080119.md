@@ -60,8 +60,7 @@ Ziel(z.B.: ue03) : Abhängigkeit (z.B.:main.o)
  - Ist eine vorhanden wird dessen Zeitstempel überprüft  
  - Wenn die Quelltextdatei älter als die kompilierte ist, kann das Ziel Übersprungen werden   
  
-
-
+Tritt bei der ausführung eines Kommandos ein Fehler auf, wird der vorgang abgebrochen und die folgenden Komandos werden nicht ausgeführt. Dies kann man verhindern indem man ein "-" vor alle Kommandoes schreibt bei welchen ein fehler auftreten kann.   
 
 
 

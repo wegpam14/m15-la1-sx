@@ -38,12 +38,14 @@ Allgemein spricht man bei einem Übersetzungsverhältnis von der Erstellung eine
 ![enter image description here](https://www.tutorialspoint.com/de/compiler_design/images/language_processing_system.jpg)
 #### Was ist GNU?  
 ![GNU](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Official_gnu.svg/220px-Official_gnu.svg.png)
+
 GNU ist ein unixoides Betriebssystem. Das bedeutet, dass es eine Zusammenstellung aus vielerlei Programmen ist: Anwendungen, Bibliotheken, Extras für Entwickler, sogar Spielen. Die Entwicklung von GNU begann im Januar 1984 und ist als das *GNU-Projekt* bekannt. 
 
 Das Programm in einem unixoiden System, was Rechnerressourcen zuteilt und die Hardware anspricht, wird als _Betriebssystemkern_ bezeichnet. GNU wird häufig mit einem Systemkern namens *Linux* genutzt. Die Kombination des GNU-Systems mit dem Linux-Kern ist das *GNU/Linux-Betriebssystem*. GNU/Linux wird von Millionen genutzt, obwohl es viele fälschlicherweise _„Linux“_ nennen.
 
 #### Das GNU Projekt
 Das [GNU Projekt](https://de.wikipedia.org/wiki/GNU-Projekt) wurde von Richard Stallman mit dem Ziel gegründet, ein offenes, unixähnliches Betriebssystem zu schaffen, das sicherstellt, dass die Endbenutzer die Freiheiten haben, es verwenden, untersuchen, verbreiten (kopieren) und ändern zu dürfen. Software, deren Lizenz diese Freiheiten garantiert, wird Freie Software (Free Software) genannt, GNU ist in diesem Sinne _frei_. 
+
 ![Richard Stallman](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Richard_Stallman_at_CommonsFest_Athens_2015_2.JPG/295px-Richard_Stallman_at_CommonsFest_Athens_2015_2.JPG)
 ## Makefile
 #### Allgemeines

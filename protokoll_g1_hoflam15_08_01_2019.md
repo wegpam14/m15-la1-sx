@@ -61,7 +61,7 @@ Das Kompilieren von Quelltext-Dateien kann mit dem Programm *make* gesteuert wer
 
 Hier sehen wir eine Veranschaulichung der Verwendung von Makefiles – mehrere Dateien tragen zum kompilierten Programm bei. Quelltext-Dateien werden vom Compiler in Objektdateien bzw. Programmmodule übersetzt. Der Linker verbindet die Programmmodule zu einem Programm.
 
-![Makefiles](http://new.c-howto.de/wp-content/uploads/2017/04/Makefiles.gif)
+![Makefiles](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/makefiles.png?raw=true)
 
 #### Makefile erstellen
 

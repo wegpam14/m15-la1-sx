@@ -67,7 +67,8 @@ ___
 
 Das sogenannte "maketool" benötigt eine "Makfile" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl**``-rm *.o``** gemacht.  
 **-rm**: Es wird "gezwungen ausgeführt  
-***.o** : alle Dateien mit der Endung .o
+***.o** : alle Dateien mit der Endung .o  
+
 
 #### 3.1 Aufbau
 
@@ -102,26 +103,7 @@ ___
 ### 4. Terminal/Programme
 
 
-* **```CLR <R>```** - Alle Werte im Register werden auf 0 gesetzt
-* **```OUT <A,R>```** - Speichert Daten in das I/O-Register
-* **```IN <R,A>```** - Holt Daten aus dem I/O-Register
-* **```SER <R>```** - Alle Werte im Register werden auf 1 gesetzt
-* **```LDI <R,K>```** - Ladet eine 8 Bit Konstante in das Register
-* **```RCALL <k>```** - Speichert in den Stack
-* **```RET```** - Holt Wert aus dem Stack und speichert diesen im Programm Counter
-* **```CLI```** - Löscht das I-Flag
-* **```RJMP <k>```** -  Springt in eine Adresse (z.B.: **```RJMP PC-0x0000```** => Endlose Schleife)
-* **```PUSH <R>```** - Speichert das Register in den Stack
-* **```POP <R>```** - Gibt Variable aus dem Stack frei  
-* **```STD```** - Speichert Daten aus den Registern **X**, **Y** oder **Z**
-* **```LDD```** - Holt Daten aus den Registern **Y** oder **Z**
-* **```LDS <R,k>```** - Holt Daten aus dem SRAM
-* **```ADC <R>```** - Addiert mit C-Flag
-* **```ADD <R>```** - Addiert ohne C-Flag
-* **```MOV <R,R>```** - Kopiert in ein Register (Source-Register unverändert)
-* **```CPI <R,K>```** - Vergleicht ein Register mit einer Konstanten
-* **```STS <k,R>```** - Speichert direkt Daten aus einem Register
-* **```BRNE <R>```** - Spingt wenn kein Z-Flag gesetzt is (else)
+
 
 
 [Präprozessor]: https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor

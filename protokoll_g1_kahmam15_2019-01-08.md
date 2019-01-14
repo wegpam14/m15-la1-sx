@@ -79,9 +79,9 @@ Darunter mit echtem Tabulator->Kommando1...
 Bsp:  
 
 ![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Makefile.jpg)  
-**Ue03:** ... Target  
-**main.o LCD.o log.o** ... dependencies  
-**gcc -o Ue03 main.o LCD.o log.o** ... commands  
+**Ue03:** ... Target (Ziel)  
+**main.o LCD.o log.o** ... dependencies (Abhängigkeiten)  
+**gcc -o Ue03 main.o LCD.o log.o** ... commands (auszuführende Befehle)  
 
 #### 3.2 Maker
 
@@ -105,13 +105,15 @@ In der main.c haben wir in den ersten Zeilen die Headerdateien eingefügt. Im Ha
   
 **LCD.*:**  
 ![LCDh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/LCD_h.jpg)  
+In dieser Datei haben wir ein **```#ifndef```**, **```#define```** und **```#endif```** verwendet um zu verhindern, dass der Compiler die Struktur nicht doppelt sieht (Vermeidung einer Doppeldefiniton)!  
   
 ![LCDc](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/LCD_c.jpg)  
   
 **log.*:**  
 ![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_h.jpg) 
+Erneute Vermeidung der Doppeldefinition
   
-![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_c.jpg)  
+![logc](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_c.jpg)  
   
 
 

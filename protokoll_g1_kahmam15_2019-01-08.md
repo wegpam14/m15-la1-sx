@@ -37,7 +37,7 @@ ___
 #### 1.2 Konvertierung in Maschinen lesbares Programm
 
 * [Präprozessor]:   
-Präprozessorbefehle beginnen mit immer mit einem "#" und enden nicht mit einemSemikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "Header-Dateien" (* .h) gennant, da sie im Kopf der C-Datei stehen.  
+Präprozessorbefehle beginnen immer mit einem "**#**" und enden nicht mit einem Semikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "**Header-Dateien**" (* .h) gennant, da sie im Kopf der C-Datei stehen.  
   
 **Unterschied zwischen "" und <> bei dem #include:**  
   

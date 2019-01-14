@@ -105,6 +105,8 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 
 ![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/main_c.png)
 
+Am Anfang des main.c Programmes werden die Header Dateien eingebunden. Wir mussten auch die Dateien *lcd.h* und *log.h* einbinden, da wir im Programm die Funktionen *logMain()* (aus der Datei log.h) und *show()* (aus der Datei lcd.h) benutzten. Zusätzlich befindet sich im Hauptprogramm eine Struktur, die auch im lcd.h deklariert wurde.
+
 *log.c*
 
 ![log.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_c.png)
@@ -119,7 +121,10 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 
 *lcd.h*
 
-![lcd.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h.png)
+![lcd.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h1.png)
+
+Nicht zu vergessen: Um ein doppeltes deklarieren in einer Struktur zu vermeiden muss *#endif* am Schluss eingebunden werden. Sons tretet die Fehlermeldung *ifndef* (not defined) auf.
+
 
 ## wichtige Begriffe
 

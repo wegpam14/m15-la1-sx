@@ -44,9 +44,10 @@ Der Übersetzungsvorgang von einer c(c++) Datei:
 ![c_compilersteps]
 
 + Zuerst hat man eine Quelldatei(main.c)
-        + Beim Start wird diese Datei mit den headerdateien zusammengeführt und zu präprozessoren Quelltext.
-        + Anschließend wird diese Datei mithilfe des Compilers zu Assemblerquelltext
-        + Und zuletzt werden mithilfe vom Linker die Bibliotheksfunktionen miteingebunden und ers wird eine ausführbare Datei.
+	+ Beim Start wird diese Datei mit den headerdateien zusammengeführt und zu präprozessoren Quelltext.
+	+ Anschließend wird diese Datei mithilfe des Compilers zu Assemblerquelltext
+	+ Und zuletzt werden mithilfe vom Linker die Bibliotheksfunktionen miteingebunden und ers wird eine ausführbare Datei.
+
 
 
 Wie er kompiliert:
@@ -72,7 +73,17 @@ Probleme des Compilers:
 
 Behebungen:
 + Tunnelblick
-	+ 
+	+ Durch Expliziete deklaration in der Datei, wo die Funktion verwendet wird oder in einer eigenen header file.
++ Doppeldefinition
+	+ Hierfür gibt es eine spezielle anweisung, welche `#ifdef || #ifndef` und `'endif` zusätzich mit `#define`.
+	+ Dafür macht man am Anfang einer header file folgendes: 
+	```C
+	#infdef LOG.H
+	#define LOG.H
+	...
+	#endif
+	```
+	+ Dies hat zur folge, dasses bei der ersten Implementierung definiert wird und dann nicht mehr, weil es schon definiert worden ist.
 
 main.c
 ```C
@@ -95,6 +106,11 @@ int main () {
 	return 0;
 }
 ```
+Hier wird als erste ein LcdTyp struct erstellt, welches sich in header files befinet.
+Als nächstes bediehnt es sich an der loh.h um eine ausgabe zu machen.
+Danach kommen zwei ausgaben, welche die Daten des LCDs ausgeben.
+Danach kommt noch ein stumpfer Text.
+  
 
 lcd.c
 ```C
@@ -114,6 +130,9 @@ void show (char s[]) {
 	printf("lcd.c show %s\n", s);
 }
 ```
+Hier wird das LCD initalisiert und zurückgegeben.
+Danach noch eine LCD ausgabefunktion.
+
 lcd.h
 ```C
 #ifndef LCD_H
@@ -128,6 +147,9 @@ struct LcdTyp {
 };
 #endif
 ```
+Hier werden die Funktionen expliziet Deklariert.
+Zusätzlich wird das struct definiert.
+
 log.c
 ```C
 #include <stdio.h>
@@ -141,6 +163,8 @@ void logMain(char text[]) {
 	printf("logMain: %s\n", text);
 }
 ```
+Diese Datei ist für diverse Ausgaben zuständig.
+
 log.h
 ```C
 #ifndef LOG_H
@@ -153,9 +177,7 @@ void logMain(char text[]);
 
 #endif
 ```
-
-
-
+Diese header file macht einfach nur expliziete Deklarationen.
 
 #### Wichtige Befehle:
 `history` -> Mit diesem Befehl kann man sich seine Befehlshistory anschauen  

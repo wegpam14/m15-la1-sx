@@ -57,21 +57,11 @@ Der Assembler erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Object
 * [Linker]:  
 Übergibt die Adressen und es ergibt sich schlussendlich ein ausführbares Programm.  
 
-
-#### 2. [GNU-Projekt]
-
-
 ___
 
-### 2. 2. GNU-Projek
+### 2. [GNU-Projekt]
 
-#### 2.1 [mega AVR] μC Speicher ([ATmega328P])
 
-* [Flash] (Segmente werden angesprochen)
-  * [Floating-Gate-Transistor] um den [Tunneleffekt] zu verwenden  
-  ![FGT](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/FGMOS_Symbol.svg/330px-FGMOS_Symbol.svg.png)
-*  [EE-PROM](Einzelne Bits werden angesprochen)
-*  [SRAM](Flüchtiger Speicher)
 ___
 ### 3. Atmel Studio
 

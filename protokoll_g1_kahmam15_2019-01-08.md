@@ -10,7 +10,7 @@ ___
 
 * **1. Übersetzungsvorgang in C**  
   * *1.1 Sourcecode erstellen*
-  * *Konvertierung in Maschinen lesbares Programm*
+  * *1.2 Konvertierung in Maschinen lesbares Programm*
 * **2. GNU-Projekt**
 * **3. Makefile**
    * *2.1 mega AVR μC Speicher*  
@@ -44,7 +44,13 @@ Präprozessorbefehle beginnen mit immer mit einem "#" und enden nicht mit einemS
   
 -Hingegen sollten Sie den Dateinamen in spitze Klammern setzen, wenn Sie sich auf Header-Dateien der Standardbibliothek beziehen. In diesem Fall erfolgt die Suche in extra angegebenen include-Verzeichnissen. Die Liste der Verzeichnisse, die dabei berücksichtigt werden, muß entweder über ein Optionsmenü bekanntgegeben werden, sofern eine integrierte Entwicklungsumgebung vorliegt, oder in Form einer Umgebungsvariable verfügbar sein. Die Kommandozeilen-Versionen von C-Compilern erwarten die Angaben über include-Verzeichnisse meist in Form eines Arguments.
 
-* [Compiler] - übersetzt in Assembler (Maschinensprache)  
+* [Compiler]:  
+Der Compiler verarbeitet die Quelltextdatei in eine maschinenlesbare Sprache (Assembler).  
+Befehle für den Compiler sind:  
+* **``gcc -c``** - Erzeugt eine Objektdatei, auch Objectcode genannt -> * **``main.o``**  
+* **```gcc -S```** - Codiert die Datei in einen Assembler-Quelltext -> * **``main.s``**  
+* **``gcc -E``** -Reprozessiert die Datei -> * **``main.s``**  
+  
 * [Assembler] - erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
 * [Linker] - übergibt die Adressen damit das Programm ausgeführt werden kann
 

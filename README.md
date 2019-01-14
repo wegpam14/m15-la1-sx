@@ -13,5 +13,5 @@ Die Felder sind wie folgt zu ersetzen:
   
 [Protkoll 1 2018-10-09](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2018-10-09.md)  
 [Protkoll 2 2018-10-16](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2018-10-16.md)  
-[Protkoll 3 2018-10-23](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2018-10-23.md)
-[Protkoll 4 2019-01-08](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2019-01-08.md)
+[Protkoll 3 2018-10-23](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2018-10-23.md)  
+[Protkoll 4 2019-01-08](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/protokoll_g1_kahmam15_2019-01-08.md)  

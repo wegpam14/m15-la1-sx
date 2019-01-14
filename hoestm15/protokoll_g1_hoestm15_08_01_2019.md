@@ -53,6 +53,8 @@ In der main.c Datei werden in den ersten 3 Codelines die Headerdateien eingebund
 
 ![log.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/log.h.png)
 
+In der oberen Grafik wird in den Header-Dateien ein #ifndef und ein #endif benutzt, dies dient dazu, dass eine doppeldefinition verhindert wird. 
+
 ![lcd.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/lcd.c.png)
 
 ![lcd.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/lcd.h.png)

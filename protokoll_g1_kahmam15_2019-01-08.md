@@ -13,7 +13,7 @@ ___
   * *1.2 Konvertierung in Maschinen lesbares Programm*
 * **2. GNU-Projekt**
 * **3. Makefile**
-   * *2.1 mega AVR μC Speicher*  
+   * *3.1 Aufbau*  
 * **3. Atmel Studio**
 * **4. Assembler-Befehle**
 
@@ -63,21 +63,12 @@ ___
 
 Das [GNU-Projekt] wurde von [Richard Stallman] mit dem Ziel gegründet, ein offenes, unixähnliches Betriebssystem zu schaffen, das sicherstellt, dass die Endbenutzer die Freiheiten haben, es verwenden, untersuchen, verbreiten (kopieren) und ändern zu dürfen. Software, deren Lizenz diese Freiheiten garantiert, wird Freie Software (Free Software) genannt, GNU ist in diesem Sinne frei.
 ___
-### 3. Atmel Studio
+### 3. Makefile
 
-[Atmel Studio 7] ist eine integrierte Entwicklungsplattform (IDP) für die Entwicklung und das Debugging aller AVR®- und SAM-Mikrocontroller-Anwendungen. In unserer Laboreinheit haben wir einen ATmega328P mit folgenden Programm simuliert:  
-```C
-#include <avr/io.h>
+#### 3.1 Aufbau
 
-int main(void)
-{
+![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Makefile.jpg)
 
- volatile unsigned char a = 0x10;
- volatile unsigned char b = 0x20;  
-	
- return a + b;
-}
-```
 
 ___
 ### 4. [Assembler-Befehle]

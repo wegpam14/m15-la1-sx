@@ -47,9 +47,9 @@ Präprozessorbefehle beginnen mit immer mit einem "#" und enden nicht mit einemS
 * [Compiler]:  
 Der Compiler verarbeitet die Quelltextdatei in eine maschinenlesbare Sprache (Assembler).  
 Befehle für den Compiler sind:  
-* **``gcc -c``** - Erzeugt eine Objektdatei, auch Objectcode genannt -> * **``main.o``**  
-* **```gcc -S```** - Codiert die Datei in einen Assembler-Quelltext -> * **``main.s``**  
-* **``gcc -E``** -Reprozessiert die Datei -> * **``main.s``**  
+**``gcc -c``** - Erzeugt eine Objektdatei, auch Objectcode genannt -> **``main.o``**  
+**```gcc -S```** - Codiert die Datei in einen Assembler-Quelltext -> **``main.s``**  
+**``gcc -E``** -Reprozessiert die Datei -> **``main.s``**  
   
 * [Assembler]:  
 Der Assembler erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
@@ -58,20 +58,9 @@ Der Assembler erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Object
 Übergibt die Adressen und es ergibt sich schlussendlich ein ausführbares Programm.  
 
 
-#### 1.2 Funktionsweise
+#### 2. [GNU-Projekt]
 
-* 1.2.1 Reset - Bringt den CPU auf einen definierten Ausgangszustand
-* 1.2.2 Speicherverwaltung - Enthält die Adressen der Maschinenbefehle  
-* 1.2.3 Befehls-Register - Speichert die Adresse der Befehle mithilfe von Taktflankengesteuerten D-Flip-Flops zwischen  
-* 1.2.4 Befehls-Decoder - Decodiert die Maschinenbefehle in Assembler und gibt diese als Steuersignale weiter  
-* 1.2.5 CPU-Register - Nimmt auf Befehl Daten aus der Speicherverwaltung  
-  * 32 Bit Speicher (R00... R31)  
-  * X (R26, R27); Y (R28, R29); Z (R30, R31)  
-* 1.2.6 ALU (Arithmetic Logic Unit) - Verarbeitet die Befehle mithilfe von logischen und arithmetischen Operationen  
-* 1.2.7 Status-Register - Beinhaltet Status-Flags (Z-Flag, C-Flag, O-Flag, ...)  
-* 1.2.8 Stack-Pointer - Enthält die letzte Speicheradresse des SRAMs  
-* 1.2.9 Multiplexer - Signalweiche für einen Programmsprung  
-* 1.2.10 Program-Counter - Speichert die Adresse des nächsten Befehls
+
 ___
 
 ### 2. 2. GNU-Projek
@@ -130,3 +119,4 @@ ___
 [Compiler]: https://de.wikipedia.org/wiki/Compiler
 [Assembler]: https://de.wikipedia.org/wiki/Assembler_(Informatik)
 [Linker]: https://de.wikipedia.org/wiki/Linker_(Computerprogramm)
+[GNU-Projekt]: https://de.wikipedia.org/wiki/GNU-Projekt

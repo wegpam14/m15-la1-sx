@@ -85,6 +85,9 @@ int main () {
 	return 0;
 }
 ```
+
+In der main.c Datei werden in den ersten 3 Zeilen die Headerdateien eingebunden, danach folgt das Hauptprogtramm. In diesem befindet sich ein Struktur welche in lcd.h deklariert wurde. Außerdem befindet sich eine Funktion logMain() welche in log.h definiert wurde und eine Funktion show() welche in lcd.c deklariert wurde. Um diese Funktionen in der main.c zu benutzen müssen beide Dateien in dem Header der main.c Datei mit eingebunden werden. 
+
 **lcd.c:**
 ```
 #include <stdio.h>

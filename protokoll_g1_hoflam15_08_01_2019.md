@@ -8,15 +8,25 @@
 ## Inhaltsangabe
 
  1. Übersetzungsverhältnis in C
+ 
 [1.1] Wie funktioniert ein Übersetzungsverhältnis in C?
+
 [1.2] Konvertieren in die Maschinensprache
+
 [1.3] Was ist GNU
+
 [1.4] Das GNU Projekt
+
  2. Makefile
+ 
 [2.1] Allgemeines
+
 [2.2] Kompilieren der Quelltext Datei
+
 [2.3] Compiler und Linker
+
 [2.4] Ausschnitte der einzelnen Programme
+
  3. Wichtige Begriffe
 
 ## Übersetzungsverhältnis
@@ -36,23 +46,32 @@ Allgemein spricht man bei einem Übersetzungsverhältnis von der Erstellung eine
 	  Adressen und Programme werden jetzt in ein Ausführendes Programm umgewandelt.
 
 ![enter image description here](https://www.tutorialspoint.com/de/compiler_design/images/language_processing_system.jpg)
+
 #### Was ist GNU?  
+
 ![GNU](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Official_gnu.svg/220px-Official_gnu.svg.png)
+
 GNU ist ein unixoides Betriebssystem. Das bedeutet, dass es eine Zusammenstellung aus vielerlei Programmen ist: Anwendungen, Bibliotheken, Extras für Entwickler, sogar Spielen. Die Entwicklung von GNU begann im Januar 1984 und ist als das *GNU-Projekt* bekannt. 
 
 Das Programm in einem unixoiden System, was Rechnerressourcen zuteilt und die Hardware anspricht, wird als _Betriebssystemkern_ bezeichnet. GNU wird häufig mit einem Systemkern namens *Linux* genutzt. Die Kombination des GNU-Systems mit dem Linux-Kern ist das *GNU/Linux-Betriebssystem*. GNU/Linux wird von Millionen genutzt, obwohl es viele fälschlicherweise _„Linux“_ nennen.
 
 #### Das GNU Projekt
+
 Das [GNU Projekt](https://de.wikipedia.org/wiki/GNU-Projekt) wurde von Richard Stallman mit dem Ziel gegründet, ein offenes, unixähnliches Betriebssystem zu schaffen, das sicherstellt, dass die Endbenutzer die Freiheiten haben, es verwenden, untersuchen, verbreiten (kopieren) und ändern zu dürfen. Software, deren Lizenz diese Freiheiten garantiert, wird Freie Software (Free Software) genannt, GNU ist in diesem Sinne _frei_. 
+
 ![Richard Stallman](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Richard_Stallman_at_CommonsFest_Athens_2015_2.JPG/295px-Richard_Stallman_at_CommonsFest_Athens_2015_2.JPG)
+
 ## Makefile
+
 #### Allgemeines
+
 Makefiles sind Beschreibungsdateien für das Programm "make". Damit kann 
 man Compiler, Linker und andere Tools (Avrdude, ...) so aufrufen, dass 
 Abhängigkeiten berücksichtigt werden (zB. .c -> .o -> exe -> srec -> 
 flashtool)
 
 #### Kompilieren der Quelltext Datei
+
 Das Kompilieren von Quelltext-Dateien kann mit dem Programm *make* gesteuert werden. Dies ist vor allem dann sinnvoll, wenn es sich um ein großes Projekt handelt bei dem die Kompilierung aus vielen einzelnen Schritten und Abhängigkeiten besteht. Die einzelnen Schritte können zum Beispiel separate Kompilierungen oder andere Dateioperationen wie Kopieren und Löschen sein. Abhängigkeiten können zum Beispiel bedingte Kompilierungen sein. Diese Schritte und Abhängigkeiten werden in ein Makefile zusammengefasst, welches dann vom Programm *make* verarbeitet wird.
 
 #### Compiler und Linker
@@ -70,6 +89,7 @@ Zum nachvollziehen des obigen Beispiels erstellt man die drei Dateien *main.c*, 
 Im Makefile werden sogenannte Ziele definiert, auch *target* genannt, welche mit einem Doppelpunkt dargestellt werden. Das erste Ziel ist immer das Hauptziel, wir finden es hier in der ersten Zeile: ue03 besteht aus den Objektdateien *main.o*, *lcd.o* und *log.o*. Darunter findet mit *gcc* die Kompilierung dieser Dateien statt; die Ausgabe erfolgt in die Datei *ue03*. Darunter sind noch die benötigten Ziele für die Objektdateien, zum Beispiel wird *main.o* aus *main.c* erstellt. Der Compiler wird hierbei mit dem Parameter *-c* gestartet, d.h. es wird nur kompiliert und nicht gelinkt. Das Linken geschieht im Hauptziel.
 
 Wichtig ist hier, dass die Compiler-Aufrufe mit einem Tabulator eingerückt werden müssen.
+
 ![Makefile](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-24-51.png)
 
 Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie die Quelltext-Dateien. Ein Aufruf des Programms *make* genügt. Hier sehen wir die Bildschirmausgabe zu den folgenden Aktionen:
@@ -105,30 +125,39 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 
 
 `nano`
+
 Ein einfacher Editor, der die Bearbeitung von Dateien in einem Terminal bzw. auf der Konsole erlaubt.
 
-   `make`
+`make`
+
 Um das Programm zu kompilieren.
 
-   `make clean`
+`make clean`
+
 Das Bereinigen ist notwendig, weil make bereits kompilierte Programmteile erkennt und nicht neu kompilieren würde. Dieser Vorgang erfolgt mit make clean.
 
-   `echo $?`
+`echo $?`
+
 Gibt einen Text auf der Konsole aus. ("printf" der Shell)
 
-   `-c`
+`-c`
+
 Der Quellcode wird nur kompiliert, aber noch nicht gelinkt (neue Endung oft „.o“)
 
-   `-o`
+`-o`
+
 Bestimmt den Namen der Ausgabedatei (Standard: „a.out“)
 
-   `cd ue03`
+`cd ue03`
+
 Wechselt in das angegebene Verzeichnis, in diesem Fall ue03. ("change directory")
 
 `mkdir`
+
 Legt ein neues Verzeichnis an.
-    
-   `rm`
+
+`rm`
+
 Löscht Dateien und Verzeichnisse. ("remove")
 
 

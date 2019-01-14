@@ -15,7 +15,8 @@ ___
 * **3. Makefile**
    * *3.1 Aufbau*  
    * *3.2 Maker*  
-* **4. Terminal/Programme**
+* **4. Programme**
+* **5. neu erlernte Befehle**
 
  
 ___
@@ -115,9 +116,13 @@ In dieser Datei (LCD.h) haben wir ein **```#ifndef```**, **```#define```** und *
 Erneute Vermeidung der Doppeldefinition
   
 ![logc](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_c.jpg)  
-  
 
+___
+### 4. neu erlernte Befehle
 
+**```echo "Text"```** - Gibt einen Text im Terminal aus
+**```echo $?```** - Fragt den Rückgabewert des letzten Prozess ab
+**```make```** - Führt, falls vorhanden, eine Makefile im aktuellen Verzeichnis aus
 
 
 [Präprozessor]: https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor

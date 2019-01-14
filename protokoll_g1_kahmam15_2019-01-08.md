@@ -105,8 +105,9 @@ ___
 **log.*:**  
 ![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_h.jpg) 
 ![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_c.jpg)  
-**main.c:**
-![main](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/main_c.jpg) 
+**main.c:**  
+![main](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/main_c.jpg)  
+In der main.c haben wir in den ersten Zeilen die Headerdateien eingefügt. Im Hauptprogramm befindet sich die im LCD.h deklarierte Struktur **```struct LcdTyp```**. Eine Funktion **```logMain()```**, deklariert in log.h folgt darauf. Die letzte Funktion **```show()```** wurdde in LCD.c deklariert. Damit die main.c auch funktionieren kann müssen die Äbhangigen Headerfiles eingebunden sein!
 
 
 

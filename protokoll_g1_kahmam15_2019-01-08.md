@@ -51,8 +51,11 @@ Befehle für den Compiler sind:
 * **```gcc -S```** - Codiert die Datei in einen Assembler-Quelltext -> * **``main.s``**  
 * **``gcc -E``** -Reprozessiert die Datei -> * **``main.s``**  
   
-* [Assembler] - erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
-* [Linker] - übergibt die Adressen damit das Programm ausgeführt werden kann
+* [Assembler]:  
+Der Assembler erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Objectcode  
+  
+* [Linker]:  
+Übergibt die Adressen und es ergibt sich schlussendlich ein ausführbares Programm.  
 
 
 #### 1.2 Funktionsweise

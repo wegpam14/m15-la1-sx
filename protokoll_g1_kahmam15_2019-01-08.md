@@ -15,8 +15,7 @@ ___
 * **3. Makefile**
    * *3.1 Aufbau*  
    * *3.2 Maker*  
-* **3. Atmel Studio**
-* **4. Assembler-Befehle**
+* **4. Terminal/Programme**
 
  
 ___
@@ -66,7 +65,9 @@ Das [GNU-Projekt] wurde von [Richard Stallman] mit dem Ziel gegründet, ein offe
 ___
 ### 3. Makefile
 
-Das sogenannte "maketool" benötigt eine "Makfile" (Textdatei), dieses tool übersetzt nur das Erforderliche. 
+Das sogenannte "maketool" benötigt eine "Makfile" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl**``-rm *.o``** gemacht.  
+**-rm**: Es wird "gezwungen ausgeführt  
+***.o** : alle Dateien mit der Endung .o
 
 #### 3.1 Aufbau
 
@@ -76,7 +77,7 @@ Darunter mit echtem Tabulator->Kommando1...
   
 Bsp:  
 
-```C
+```
 Target1: dependencies  
  command1
  command2
@@ -98,7 +99,7 @@ Priorität: "Erster Target"
 
 
 ___
-### 4. [Assembler-Befehle]
+### 4. Terminal/Programme
 
 
 * **```CLR <R>```** - Alle Werte im Register werden auf 0 gesetzt

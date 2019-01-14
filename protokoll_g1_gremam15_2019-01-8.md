@@ -43,6 +43,12 @@ Um alle Kompilierten Objektdateien(.o) zu löschen, verwenden wir den zusatzpara
 Der Übersetzungsvorgang von einer c(c++) Datei:
 ![c_compilersteps]
 
++ Zuerst hat man eine Quelldatei(main.c)
+        + Beim Start wird diese Datei mit den headerdateien zusammengeführt und zu präprozessoren Quelltext.
+        + Anschließend wird diese Datei mithilfe des Compilers zu Assemblerquelltext
+        + Und zuletzt werden mithilfe vom Linker die Bibliotheksfunktionen miteingebunden und ers wird eine ausführbare Datei.
+
+
 Wie er kompiliert:
 + Als erstes wird geschaut, ob die Dateien schon existieren oder noch gar nie Kompiliert wurden. 
 + Danach wird geschaut, ob er eine `main.c` findet. Falls keine gefunden werden kann, wird eine Fehlermeldung geworfen.
@@ -63,6 +69,10 @@ Probleme des Compilers:
 + Doppeldefinitionen
 	+ Wenn eine `header file`mehr als einmal Implementiert wird kann es zu doppeldefinitionen kommen.
 	+ Bei einem `struct` hat das zur Folge, weil es ja nur einmal deiniert werden darf, selbst wenn es zweimal genau gleich aussaut, dass der Compiler sagt, dass er nicht fertig machen kann, weil das `struct` schon definiert ist.
+
+Behebungen:
++ Tunnelblick
+	+ 
 
 main.c
 ```C
@@ -144,10 +154,17 @@ void logMain(char text[]);
 #endif
 ```
 
+
+
+
 #### Wichtige Befehle:
 `history` -> Mit diesem Befehl kann man sich seine Befehlshistory anschauen  
 `echo` -> Kann einen Text im Terminal ausgeben  
 `nano` -> Öffnen einen Editor, mit welchen man z.B. c oder Makefiles schreiben kann.  
 `make` -> Wenn man diesen Befehlausführt, versucht er im derzeitem Verzeichnis eine Makefile zu finden. Falls eine Voranden ist, führt er sie aus.  
+
+
+
+
 
 [c_compilersteps]: http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg

@@ -38,7 +38,7 @@ ___
 * [Präprozessor]:   
 Präprozessorbefehle beginnen mit immer mit einem "#" und enden nicht mit einemSemikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "Header-Dateien" (* .h) gennant, da sie im Kopf der C-Datei stehen.  
   
-Unterschied zwischen "" und <> bei dem #include:  
+**Unterschied zwischen "" und <> bei dem #include:**  
   
 -Wenn die Variante mit den Anführungszeichen gewählt wird, sucht der Preprozessor die angegebene Datei zuerst im Verzeichnis der Quelldatei. Kann er die betreffende Datei dort nicht finden, dann durchsucht er anschließend all jene Verzeichnisse, die er normalerweise bei der #include-Anweisung mit spitzen Klammern berücksichtigt. Anführungszeichen um den Dateinamen finden im allgemeinen dann Verwendung, wenn Header-Dateien einzufügen sind, die der Programmierer selbst erstellt hat.  
   

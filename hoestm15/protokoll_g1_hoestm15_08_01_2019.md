@@ -40,7 +40,7 @@ Das Kompilieren von Quelltext-Dateien kann mit dem Programm **make** gesteuert w
  Im Makefile werden Zeile definiert, sogenannte **Targets**, welche mit einem Doppelpunkt dargestellt werden. Dieses Target ist immer das Hauptziel, neben den Hauptziel steht die Abhängigkeit die erfüllt sein muss, um das Ziel zu erreichen. In den Zeilen unter dem Ziel stehen die Kommandos die das Ziel zu erreichen.
  ![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/Makefile.png)
 
-Im oberen Beispiel ist das Ziel die 'ue03:' neben den Ziel stehen die Abhängigkeiten 'main.o lcd.o log.o'. Unter dem Ziel und der Abhöngigkeit steht der auszuführende Befehl, in diesem Fall 'gcc -o ue03 main.o lcd.o log.o'.
+Im oberen Beispiel ist das Ziel die 'ue03:' neben den Ziel stehen die Abhängigkeiten 'main.o lcd.o log.o'. Unter dem Ziel und der Abhängigkeit steht der auszuführende Befehl, in diesem Fall 'gcc -o ue03 main.o lcd.o log.o'.
 
 Das Makefile wird im gleichen Verzeichnis wie die Quelltext-Dateien gespeichert, der Aufruf des Befehles 'make' genügt.
 Falls keine Abhängigkeit vorhanden ist, werden die Befehle des Zieles immer ausgeführt. 

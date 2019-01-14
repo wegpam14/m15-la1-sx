@@ -70,7 +70,7 @@ Zum nachvollziehen des obigen Beispiels erstellt man die drei Dateien *main.c*, 
 Im Makefile werden sogenannte Ziele definiert, auch *target* genannt, welche mit einem Doppelpunkt dargestellt werden. Das erste Ziel ist immer das Hauptziel, wir finden es hier in der ersten Zeile: ue03 besteht aus den Objektdateien *main.o*, *lcd.o* und *log.o*. Darunter findet mit *gcc* die Kompilierung dieser Dateien statt; die Ausgabe erfolgt in die Datei *ue03*. Darunter sind noch die benötigten Ziele für die Objektdateien, zum Beispiel wird *main.o* aus *main.c* erstellt. Der Compiler wird hierbei mit dem Parameter *-c* gestartet, d.h. es wird nur kompiliert und nicht gelinkt. Das Linken geschieht im Hauptziel.
 
 Wichtig ist hier, dass die Compiler-Aufrufe mit einem Tabulator eingerückt werden müssen.
-![Makefile](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-24-51.png)
+![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/makefile1.png)
 
 Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie die Quelltext-Dateien. Ein Aufruf des Programms *make* genügt. Hier sehen wir die Bildschirmausgabe zu den folgenden Aktionen:
 

@@ -82,19 +82,19 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 
 #### Ausschnitte der einzelnen Programme
 *main.c*
-![main.c](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-24-07.png)
+![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/main_c.png)
 
 *log.c*
-![log.c](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-04-14.png)
+![log.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_c.png)
 
 *log.h*
-![log.h](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-04-31.png)
+![log.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_h.png)
 
 *lcd.c*
-![lcd.c](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-00-30.png)
+![lcd.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h.png)
 
 *lcd.h*
-![lcd.h](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2009-48-09.png)
+![lcd.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h.png)
 
 
 

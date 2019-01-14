@@ -66,7 +66,7 @@ ___
 ### 3. Makefile
 
 ![Makefiles](http://new.c-howto.de/wp-content/uploads/2017/04/Makefiles.gif)  
-Das sogenannte "[maketool]" benötigt eine "[Makfile]" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl**``-rm *.o``** gemacht.  
+Das sogenannte "[maketool]" benötigt eine "[Makefile]" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl**``-rm *.o``** gemacht.  
 **-rm**: Es wird "gezwungen ausgeführt  
 ***.o** : alle Dateien mit der Endung .o  
 

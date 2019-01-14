@@ -14,7 +14,7 @@
  ### 1.1  Vorgang
  ![ Übersetzungsvorgang](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/Uebersetzungsvorgang__c%2B%2B.jpg) 
 
-Jeder Quellcode muss von einer höheren Programmiersprache in Maschinensprache Übersetzt werden, da der Prozessor nur diese simple Sprache versteht. Diesen Vorgang nennt man Übersetzungsvorgang, dieser ist in C in 4 Bereich aufgeteilt:
+Jeder Quellcode muss von einer höheren Programmiersprache in Maschinensprache Übersetzt werden, da der Prozessor nur diese simple Sprache versteht. Diesen Vorgang nennt man Übersetzungsvorgang, dieser ist in C in 3 Bereich aufgeteilt:
 
 #### Präprozessor
 Die Präprozessorbefehle beginnen bin einem '#' und enden ohne Semikolon. Der wichtigste Befehl des Präprozessors ist #include. Damit wird der Inhalt einer Datei eingelesen und an dieser Steller platziert, als ob man sie hineinkopiert. Solche Dateien nennt man Header Dateien, da sie in dem Kopf der C_Datei stehen, deshalb auch die Endung '.h'

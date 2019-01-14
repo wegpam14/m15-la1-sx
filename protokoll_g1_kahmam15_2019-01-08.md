@@ -70,6 +70,13 @@ Das sogenannte "maketool" benötigt eine "Makfile" (Textdatei), dieses tool übe
 
 #### 3.1 Aufbau
 
+#... Kommentare(comments)  
+Ziel: Abhängigkeit  
+Darunter mit echtem Tabulator->Kommando1...  
+  
+Bsp:  
+
+
 #### 3.2 Maker
 
 **Wie arbeitet der "Maker":**  

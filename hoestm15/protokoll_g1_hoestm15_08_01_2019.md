@@ -42,6 +42,18 @@ Das Kompilieren von Quelltext-Dateien kann mit dem Programm **make** gesteuert w
 
 Im oberen Beispiel ist das Ziel die 'ue03:' neben den Ziel stehen die Abhängigkeiten 'main.o lcd.o log.o'. Unter dem Ziel und der Abhöngigkeit steht der auszuführende Befehl, in diesem Fall 'gcc -o ue03 main.o lcd.o log.o'.
 
-## 3 Befehle
+Das Makefile wird im gleichen Verzeichnis wie die Quelltext-Dateien gespeichert, der Aufruf des Befehles 'make' genügt.
+Falls keine Abhängigkeit vorhanden ist, werden die Befehle des Zieles immer ausgeführt. 
 
-d
+## 3 Befehle
+![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/main.c.png)
+
+![log.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/log.c.png)
+
+![log.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/log.h.png)
+
+![lcd.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/lcd.c.png)
+
+![lcd.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/lcd.h.png)
+
+

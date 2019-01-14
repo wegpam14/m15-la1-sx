@@ -90,7 +90,7 @@ Im Makefile werden sogenannte Ziele definiert, auch *target* genannt, welche mit
 
 Wichtig ist hier, dass die Compiler-Aufrufe mit einem Tabulator eingerückt werden müssen.
 
-![Makefile](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-24-51.png)
+![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/makefile1.png)
 
 Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie die Quelltext-Dateien. Ein Aufruf des Programms *make* genügt. Hier sehen wir die Bildschirmausgabe zu den folgenden Aktionen:
 

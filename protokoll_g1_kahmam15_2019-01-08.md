@@ -36,9 +36,11 @@ ___
 #### 1.2 Konvertierung in Maschinen lesbares Programm
 
 * [Präprozessor]:   
-Präprozessorbefehle beginnen mit immer mit einem "#" und enden nicht mit einemSemikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "Header-Dateien" (* .h) gennant, da sie im Kopf der C-Datei stehen.  
+Präprozessorbefehle beginnen mit immer mit einem "#" und enden nicht mit einemSemikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "Header-Dateien" (* .h) gennant, da sie im Kopf der C-Datei stehen.    
 Unterschied zwischen "" und <> bei dem #include:  
+  
 -Wenn die Variante mit den Anführungszeichen gewählt wird, sucht der Preprozessor die angegebene Datei zuerst im Verzeichnis der Quelldatei. Kann er die betreffende Datei dort nicht finden, dann durchsucht er anschließend all jene Verzeichnisse, die er normalerweise bei der #include-Anweisung mit spitzen Klammern berücksichtigt. Anführungszeichen um den Dateinamen finden im allgemeinen dann Verwendung, wenn Header-Dateien einzufügen sind, die der Programmierer selbst erstellt hat.  
+  
 -Hingegen sollten Sie den Dateinamen in spitze Klammern setzen, wenn Sie sich auf Header-Dateien der Standardbibliothek beziehen. In diesem Fall erfolgt die Suche in extra angegebenen include-Verzeichnissen. Die Liste der Verzeichnisse, die dabei berücksichtigt werden, muß entweder über ein Optionsmenü bekanntgegeben werden, sofern eine integrierte Entwicklungsumgebung vorliegt, oder in Form einer Umgebungsvariable verfügbar sein. Die Kommandozeilen-Versionen von C-Compilern erwarten die Angaben über include-Verzeichnisse meist in Form eines Arguments.
 
 * [Compiler] - übersetzt in Assembler (Maschinensprache)  

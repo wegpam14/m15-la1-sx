@@ -74,8 +74,8 @@ Das sogenannte "maketool" benötigt eine "Makfile" (Textdatei), dieses tool übe
 
 **Wie arbeitet der "Maker":**  
 1)Holt sich die Makfile  
-2)Wenn es ein Target gibt versucht er es zu machen (falls kein/e Target/Datei vorhanden ist gibt er eine Mitteilung an den Benutzer aus)
- 
+2)Wenn es ein Target gibt versucht er es zu machen (falls kein/e Target/Datei vorhanden ist gibt er eine Mitteilung an den 
+Benutzer aus)  
 3)Schaut ob diese Abhängigkeiten als Ziele vorhanden sind  
 4)Schaut auf den Zeitstempel: Wenn der Zeitstempel einer Datei nicht dem "alten" Zeitstempel entspricht erfordert der Maker eine Übersetzung  
   

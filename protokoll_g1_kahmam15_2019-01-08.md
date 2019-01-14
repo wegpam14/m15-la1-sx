@@ -79,9 +79,10 @@ Darunter mit echtem Tabulator->Kommando1...
 Bsp:  
 
 ![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Makefile.jpg)  
-Ue03: ... Target  
-main.o LCD.o log.o ... dependencies  
-gcc -o Ue03 main.o LCD.o log.o ... commands
+**Ue03:** ... Target  
+**main.o LCD.o log.o** ... dependencies  
+**gcc -o Ue03 main.o LCD.o log.o** ... commands  
+
 #### 3.2 Maker
 
 **Wie arbeitet der "Maker":**  
@@ -98,7 +99,14 @@ Priorität: "Erster Target"
 ___
 ### 4. Terminal/Programme
 
-
+**LCD.*:**  
+![LCDh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/LCD_h.jpg)  
+![LCDc](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/LCD_c.jpg)  
+**log.*:**  
+![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_h.jpg) 
+![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_c.jpg)  
+**main.c:**
+![main](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/main_c.jpg) 
 
 
 

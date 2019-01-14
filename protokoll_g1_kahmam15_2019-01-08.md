@@ -97,7 +97,7 @@ Priorität: "Erster Target"
 
 
 ___
-### 4. Terminal/Programme
+### 4. Programme
 
 **main.c:**  
 ![main](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/main_c.jpg)  
@@ -105,12 +105,12 @@ In der main.c haben wir in den ersten Zeilen die Headerdateien eingefügt. Im Ha
   
 **LCD.*:**  
 ![LCDh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/LCD_h.jpg)  
-In dieser Datei haben wir ein **```#ifndef```**, **```#define```** und **```#endif```** verwendet um zu verhindern, dass der Compiler die Struktur nicht doppelt sieht (Vermeidung einer Doppeldefiniton)!  
+In dieser Datei (LCD.h) haben wir ein **```#ifndef```**, **```#define```** und **```#endif```** verwendet um zu verhindern, dass der Compiler die Struktur nicht doppelt sieht (Vermeidung einer Doppeldefiniton)!  
   
 ![LCDc](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/LCD_c.jpg)  
   
 **log.*:**  
-![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_h.jpg) 
+![logh](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_h.jpg)  
 Erneute Vermeidung der Doppeldefinition
   
 ![logc](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_c.jpg)  

@@ -76,7 +76,13 @@ Darunter mit echtem Tabulator->Kommando1...
   
 Bsp:  
 
-
+```C
+Target1: dependencies  
+ command1
+ command2
+ 
+Target2...
+```
 #### 3.2 Maker
 
 **Wie arbeitet der "Maker":**  

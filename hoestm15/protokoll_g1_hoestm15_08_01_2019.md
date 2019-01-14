@@ -13,8 +13,9 @@
  
  ## 1. Übersetzungsvorgang
  ### 1.1  Vorgang
- ![ Übersetzungsvorgang](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/Uebersetzungsvorgang__c%2B%2B.jpg) 
 
+
+<img src="https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/Uebersetzungsvorgang__c%2B%2B.jpg" width="300" height="400" />
 Jeder Quellcode muss von einer höheren Programmiersprache in Maschinensprache Übersetzt werden, da der Prozessor nur diese simple Sprache versteht. Diesen Vorgang nennt man Übersetzungsvorgang, dieser ist in C in 3 Bereich aufgeteilt:
 
 #### Präprozessor
@@ -31,7 +32,8 @@ Der Compiler liest was der Präprozessor  C Datei gemacht hat und produziert ein
 
 #### Linker
 Der Linker bindet die Objektdatei, die der Compiler erzeugt hat, noch mit "statischen" Funktionsbibliotheken zusammen und erzeugt somit ein ausführbares Programm. 
-![Linker](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/1200px-Linker.svg.png)
+
+<img src="https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/1200px-Linker.svg.png" width="300" height="400" />
 
 ## 2. Makefile
 Das Kompilieren von Quelltext-Dateien kann mit dem Programm **make** gesteuert werden, dies ist sinnvoll wenn das Projekt groß ist und die Kompilierung aus mehreren Schritten und Abhängigkeiten besteht.

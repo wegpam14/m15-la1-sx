@@ -78,7 +78,8 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 2.  Aufruf von *make*
 3.  Verzeichnis-Inhalt nach *make* mit Objektdateien und Programm-Datei
 
-![Aufruf make](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-13%2023-02-34.png)
+![Aufruf make](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Bildschirmfoto%20vom%202019-01-13%2023-02-34.png)
+
 #### Ausschnitte der einzelnen Programme
 *main.c*
 ![main.c](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-24-07.png)

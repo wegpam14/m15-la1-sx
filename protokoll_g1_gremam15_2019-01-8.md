@@ -5,10 +5,10 @@ Knr: **3**
 
 
 **Inhaltsverzeichnis**
- 1. Makefile
-	 + Aufbau
-	 + Kompeliervorgang
- 2. 
+1. Makefile
+2. Kompeliervorgang
+3. Programmerklärung
+4. Wichtige Befehle
 ---
 
 ### 1.  Makefile
@@ -39,6 +39,8 @@ clean:
 
 Mithilfe von `ue03` Kompelieren wir die Dateien miteindnder.
 Um alle Kompilierten Objektdateien(.o) zu löschen, verwenden wir den zusatzparameter `clean`.
+
+### 2. Kompeliervorgang
 
 Der Übersetzungsvorgang von einer c(c++) Datei:
 ![c_compilersteps]
@@ -84,6 +86,8 @@ Behebungen:
 	#endif
 	```
 	+ Dies hat zur folge, dasses bei der ersten Implementierung definiert wird und dann nicht mehr, weil es schon definiert worden ist.
+
+### 3. Programmerklärung
 
 main.c
 ```C
@@ -179,7 +183,7 @@ void logMain(char text[]);
 ```
 Diese header file macht einfach nur expliziete Deklarationen.
 
-#### Wichtige Befehle:
+### 4. Wichtige Befehle:
 `history` -> Mit diesem Befehl kann man sich seine Befehlshistory anschauen  
 `echo` -> Kann einen Text im Terminal ausgeben  
 `nano` -> Öffnen einen Editor, mit welchen man z.B. c oder Makefiles schreiben kann.  

@@ -59,9 +59,9 @@ Der Assembler erzeugt aus der Assembler Quelltextdatei eine/n Objektdatei/Object
 
 ___
 
-### 2. [GNU-Projekt]
+### 2. GNU-Projekt
 
-
+Das [GNU-Projekt] wurde von [Richard Stallman] mit dem Ziel gegründet, ein offenes, unixähnliches Betriebssystem zu schaffen, das sicherstellt, dass die Endbenutzer die Freiheiten haben, es verwenden, untersuchen, verbreiten (kopieren) und ändern zu dürfen. Software, deren Lizenz diese Freiheiten garantiert, wird Freie Software (Free Software) genannt, GNU ist in diesem Sinne frei.
 ___
 ### 3. Atmel Studio
 
@@ -110,3 +110,4 @@ ___
 [Assembler]: https://de.wikipedia.org/wiki/Assembler_(Informatik)
 [Linker]: https://de.wikipedia.org/wiki/Linker_(Computerprogramm)
 [GNU-Projekt]: https://de.wikipedia.org/wiki/GNU-Projekt
+[Richard Stallman]:https://de.wikipedia.org/wiki/Richard_Stallman

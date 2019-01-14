@@ -78,13 +78,10 @@ Darunter mit echtem Tabulator->Kommando1...
   
 Bsp:  
 
-```
-Target1: dependencies  
- command1
- command2
- 
-Target2...
-```
+![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Makefile.jpg)  
+Ue03: ... Target  
+main.o LCD.o log.o ... dependencies  
+gcc -o Ue03 main.o LCD.o log.o ... commands
 #### 3.2 Maker
 
 **Wie arbeitet der "Maker":**  
@@ -96,7 +93,6 @@ Benutzer aus)
   
 Priorität: "Erster Target"  
 
-![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Makefile.jpg)
 
 
 ___

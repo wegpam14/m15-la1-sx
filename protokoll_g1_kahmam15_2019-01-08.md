@@ -118,7 +118,7 @@ Erneute Vermeidung der Doppeldefinition
 ![logc](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/log_c.jpg)  
 
 ___
-### 4. neu erlernte Befehle
+### 5. neu erlernte Befehle
 
 **```echo "Text"```** - Gibt einen Text im Terminal aus
 **```echo $?```** - Fragt den Rückgabewert des letzten Prozess ab

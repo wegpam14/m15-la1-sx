@@ -145,9 +145,9 @@ void logMain(char text[]);
 ```
 
 #### Wichtige Befehle:
-`history` -> Mit diesem Befehl kann man sich seine Befehlshistory anschauen
-`echo` -> Kann einen Text im Terminal ausgeben
-`nano` -> Öffnen einen Editor, mit welchen man z.B. c oder Makefiles schreiben kann.
-`make` -> Wenn man diesen Befehlausführt, versucht er im derzeitem Verzeichnis eine Makefile zu finden. Falls eine Voranden ist, führt er sie aus.
+`history` -> Mit diesem Befehl kann man sich seine Befehlshistory anschauen  
+`echo` -> Kann einen Text im Terminal ausgeben  
+`nano` -> Öffnen einen Editor, mit welchen man z.B. c oder Makefiles schreiben kann.  
+`make` -> Wenn man diesen Befehlausführt, versucht er im derzeitem Verzeichnis eine Makefile zu finden. Falls eine Voranden ist, führt er sie aus.  
 
 [c_compilersteps]: http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg

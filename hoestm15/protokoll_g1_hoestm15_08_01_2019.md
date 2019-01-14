@@ -11,7 +11,7 @@
  3. Befehle
  
  ## 1. Übersetzungsvorgang
- ### 1.1  Innerer Aufbau
+ ### 1.1  Vorgang
  ![ 
  ](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/cpu_svg.svg)
  

@@ -47,6 +47,7 @@ Falls keine Abhängigkeit vorhanden ist, werden die Befehle des Zieles immer aus
 
 ## 3 Befehle
 ![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/main.c.png)
+
 In der main.c Datei werden in den ersten 3 Codelines die Headerdateien eingebunden, danach folgt in der main das Hauptprogtramm, in diesem befindet sich ein struct der im lcd.h deklariert ist. Außerdem befindet sich eine Funktion logMain() die im log.h definiert worden ist und eine Funktion show() im Programm, die lcd.c deklariert worden ist. Um diese Funktionen in der main.c zu benutzen müssen beide Dateien in dem Header der main.c Datei mit eingebunden werden.
 ![log.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/log.c.png)
 

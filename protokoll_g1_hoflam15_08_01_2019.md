@@ -90,7 +90,7 @@ Im Makefile werden sogenannte Ziele definiert, auch *target* genannt, welche mit
 
 Wichtig ist hier, dass die Compiler-Aufrufe mit einem Tabulator eingerückt werden müssen.
 
-![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/makefile1.png)
+![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Makefile1.png)
 
 Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie die Quelltext-Dateien. Ein Aufruf des Programms *make* genügt. Hier sehen wir die Bildschirmausgabe zu den folgenden Aktionen:
 
@@ -103,21 +103,21 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 #### Ausschnitte der einzelnen Programme
 *main.c*
 
-![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/main_c.png)
+![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/main_c1.png)
 
 Am Anfang des main.c Programmes werden die Header Dateien eingebunden. Wir mussten auch die Dateien *lcd.h* und *log.h* einbinden, da wir im Programm die Funktionen *logMain()* (aus der Datei log.h) und *show()* (aus der Datei lcd.h) benutzten. Zusätzlich befindet sich im Hauptprogramm eine Struktur, die auch im lcd.h deklariert wurde.
 
 *log.c*
 
-![log.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_c.png)
+![log.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_c1.png)
 
 *log.h*
 
-![log.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_h.png)
+![log.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_h1.png)
 
 *lcd.c*
 
-![lcd.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h.png)
+![lcd.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_c1.png)
 
 *lcd.h*
 

@@ -38,14 +38,12 @@ Allgemein spricht man bei einem Übersetzungsverhältnis von der Erstellung eine
 ![enter image description here](https://www.tutorialspoint.com/de/compiler_design/images/language_processing_system.jpg)
 #### Was ist GNU?  
 ![GNU](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Official_gnu.svg/220px-Official_gnu.svg.png)
-
 GNU ist ein unixoides Betriebssystem. Das bedeutet, dass es eine Zusammenstellung aus vielerlei Programmen ist: Anwendungen, Bibliotheken, Extras für Entwickler, sogar Spielen. Die Entwicklung von GNU begann im Januar 1984 und ist als das *GNU-Projekt* bekannt. 
 
 Das Programm in einem unixoiden System, was Rechnerressourcen zuteilt und die Hardware anspricht, wird als _Betriebssystemkern_ bezeichnet. GNU wird häufig mit einem Systemkern namens *Linux* genutzt. Die Kombination des GNU-Systems mit dem Linux-Kern ist das *GNU/Linux-Betriebssystem*. GNU/Linux wird von Millionen genutzt, obwohl es viele fälschlicherweise _„Linux“_ nennen.
 
 #### Das GNU Projekt
 Das [GNU Projekt](https://de.wikipedia.org/wiki/GNU-Projekt) wurde von Richard Stallman mit dem Ziel gegründet, ein offenes, unixähnliches Betriebssystem zu schaffen, das sicherstellt, dass die Endbenutzer die Freiheiten haben, es verwenden, untersuchen, verbreiten (kopieren) und ändern zu dürfen. Software, deren Lizenz diese Freiheiten garantiert, wird Freie Software (Free Software) genannt, GNU ist in diesem Sinne _frei_. 
-
 ![Richard Stallman](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Richard_Stallman_at_CommonsFest_Athens_2015_2.JPG/295px-Richard_Stallman_at_CommonsFest_Athens_2015_2.JPG)
 ## Makefile
 #### Allgemeines
@@ -61,7 +59,9 @@ Das Kompilieren von Quelltext-Dateien kann mit dem Programm *make* gesteuert wer
 
 Hier sehen wir eine Veranschaulichung der Verwendung von Makefiles – mehrere Dateien tragen zum kompilierten Programm bei. Quelltext-Dateien werden vom Compiler in Objektdateien bzw. Programmmodule übersetzt. Der Linker verbindet die Programmmodule zu einem Programm.
 
+
 ![Makefiles](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/makefiles.png?raw=true)
+
 
 #### Makefile erstellen
 
@@ -70,7 +70,7 @@ Zum nachvollziehen des obigen Beispiels erstellt man die drei Dateien *main.c*, 
 Im Makefile werden sogenannte Ziele definiert, auch *target* genannt, welche mit einem Doppelpunkt dargestellt werden. Das erste Ziel ist immer das Hauptziel, wir finden es hier in der ersten Zeile: ue03 besteht aus den Objektdateien *main.o*, *lcd.o* und *log.o*. Darunter findet mit *gcc* die Kompilierung dieser Dateien statt; die Ausgabe erfolgt in die Datei *ue03*. Darunter sind noch die benötigten Ziele für die Objektdateien, zum Beispiel wird *main.o* aus *main.c* erstellt. Der Compiler wird hierbei mit dem Parameter *-c* gestartet, d.h. es wird nur kompiliert und nicht gelinkt. Das Linken geschieht im Hauptziel.
 
 Wichtig ist hier, dass die Compiler-Aufrufe mit einem Tabulator eingerückt werden müssen.
-![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/makefile1.png)
+![Makefile](file:///home/lara/Bilder/Bildschirmfoto%20vom%202019-01-08%2010-24-51.png)
 
 Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie die Quelltext-Dateien. Ein Aufruf des Programms *make* genügt. Hier sehen wir die Bildschirmausgabe zu den folgenden Aktionen:
 
@@ -81,7 +81,6 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 ![Aufruf make](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/make.png)
 
 #### Ausschnitte der einzelnen Programme
-
 *main.c*
 
 ![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/main_c.png)
@@ -102,8 +101,35 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 
 ![lcd.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h.png)
 
+## wichtige Begriffe
 
 
+`nano`
+Ein einfacher Editor, der die Bearbeitung von Dateien in einem Terminal bzw. auf der Konsole erlaubt.
+
+   `make`
+Um das Programm zu kompilieren.
+
+   `make clean`
+Das Bereinigen ist notwendig, weil make bereits kompilierte Programmteile erkennt und nicht neu kompilieren würde. Dieser Vorgang erfolgt mit make clean.
+
+   `echo $?`
+Gibt einen Text auf der Konsole aus. ("printf" der Shell)
+
+   `-c`
+Der Quellcode wird nur kompiliert, aber noch nicht gelinkt (neue Endung oft „.o“)
+
+   `-o`
+Bestimmt den Namen der Ausgabedatei (Standard: „a.out“)
+
+   `cd ue03`
+Wechselt in das angegebene Verzeichnis, in diesem Fall ue03. ("change directory")
+
+`mkdir`
+Legt ein neues Verzeichnis an.
+    
+   `rm`
+Löscht Dateien und Verzeichnisse. ("remove")
 
 
 

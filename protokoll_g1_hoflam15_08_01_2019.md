@@ -81,19 +81,25 @@ Das Makefile speichern wir mit dem Namen *makefile* im gleichen Verzeichnis wie 
 ![Aufruf make](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/make.png)
 
 #### Ausschnitte der einzelnen Programme
+
 *main.c*
+
 ![main.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/main_c.png)
 
 *log.c*
+
 ![log.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_c.png)
 
 *log.h*
+
 ![log.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/log_h.png)
 
 *lcd.c*
+
 ![lcd.c](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h.png)
 
 *lcd.h*
+
 ![lcd.h](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/lcd_h.png)
 
 

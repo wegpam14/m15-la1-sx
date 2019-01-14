@@ -65,7 +65,8 @@ Das [GNU-Projekt] wurde von [Richard Stallman] mit dem Ziel gegründet, ein offe
 ___
 ### 3. Makefile
 
-Das sogenannte "maketool" benötigt eine "Makfile" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl**``-rm *.o``** gemacht.  
+![Makefiles](http://new.c-howto.de/wp-content/uploads/2017/04/Makefiles.gif)  
+Das sogenannte "[maketool]" benötigt eine "[Makfile]" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl**``-rm *.o``** gemacht.  
 **-rm**: Es wird "gezwungen ausgeführt  
 ***.o** : alle Dateien mit der Endung .o  
 
@@ -125,3 +126,5 @@ Erneute Vermeidung der Doppeldefinition
 [Linker]: https://de.wikipedia.org/wiki/Linker_(Computerprogramm)
 [GNU-Projekt]: https://de.wikipedia.org/wiki/GNU-Projekt
 [Richard Stallman]:https://de.wikipedia.org/wiki/Richard_Stallman
+[maketool]:https://de.wikipedia.org/wiki/Make
+[Makefile]:http://www.c-howto.de/tutorial/makefiles/

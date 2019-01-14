@@ -14,6 +14,7 @@ ___
 * **2. GNU-Projekt**
 * **3. Makefile**
    * *3.1 Aufbau*  
+   * *3.2 Maker*  
 * **3. Atmel Studio**
 * **4. Assembler-Befehle**
 
@@ -65,7 +66,19 @@ Das [GNU-Projekt] wurde von [Richard Stallman] mit dem Ziel gegründet, ein offe
 ___
 ### 3. Makefile
 
+Das sogenannte "maketool" benötigt eine "Makfile" (Textdatei), dieses tool übersetzt nur das Erforderliche. 
+
 #### 3.1 Aufbau
+
+#### 3.2 Maker
+
+**Wie arbeitet der "Maker":**  
+1)Holt sich die Makfile  
+2)Wenn es ein Target gibt versucht er es zu machen (falls kein/e Target/Datei vorhanden ist gibt er eine Mitteilung an den Benutzer aus) 
+3)Schaut ob diese Abhängigkeiten als Ziele vorhanden sind
+4)Schaut auf den Zeitstempel: Wenn der Zeitstempel einer Datei nicht dem "alten" Zeitstempel entspricht erfordert der Maker eine Übersetzung  
+  
+Priorität: "Erster Target"  
 
 ![Makefile](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Makefile.jpg)
 

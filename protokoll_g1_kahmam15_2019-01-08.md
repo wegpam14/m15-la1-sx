@@ -120,9 +120,9 @@ Erneute Vermeidung der Doppeldefinition
 ___
 ### 5. neu erlernte Befehle
 
-**```echo "Text"```** - Gibt einen Text im Terminal aus
-**```echo $?```** - Fragt den Rückgabewert des letzten Prozess ab
-**```make```** - Führt, falls vorhanden, eine Makefile im aktuellen Verzeichnis aus
+**```echo "Text"```** - Gibt einen Text im Terminal aus  
+**```echo $?```** - Fragt den Rückgabewert des letzten Prozess ab  
+**```make```** - Führt, falls vorhanden, eine Makefile im aktuellen Verzeichnis aus  
 
 
 [Präprozessor]: https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor

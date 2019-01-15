@@ -68,7 +68,7 @@ Tritt bei der Ausführung eines Kommandos ein Fehler auf, wird der Vorgang abgeb
 In dieser Einheit sollte ein C-Programm aus mehreren Datein (.c und Headerfiles) zu einem ausführbaren Programm kompiliert werden. 
 
 **main.c:**
-```
+```c
 #include <stdio.h>
 #include "lcd.h" // lagert die explezierte Deklaration in eine externe Datei
 #include "log.h"
@@ -89,7 +89,7 @@ int main () {
 In der main.c Datei werden in den ersten 3 Zeilen die Headerdateien eingebunden, danach folgt das Hauptprogtramm. In diesem befindet sich ein Struktur welche in lcd.h deklariert wurde. Außerdem befindet sich eine Funktion logMain() welche in log.h definiert wurde und eine Funktion show() welche in lcd.c deklariert wurde. Um diese Funktionen in der main.c zu benutzen müssen beide Dateien in dem Header der main.c Datei mit eingebunden werden. 
 
 **lcd.c:**
-```
+```c
 #include <stdio.h>
 #include "lcd.h"
 #include "log.h"
@@ -107,7 +107,7 @@ void show (char s[]) {
 }
 ```
 **log.c:**
-```
+```c
 #include <stdio.h>
 #include "lcd.h"
 
@@ -122,7 +122,7 @@ void logMain(char text[]) {
 ```
 
 **lcd.h:**
-```
+```c
 #ifndef LCD_H // wenn LCD_H nicht deffiniert ist wird der code ausgeführt
 #define LCD_H // beim zweiten durchlauf wird LCD_H deffiniert und der code nicht ausgeführt
 
@@ -140,7 +140,7 @@ struct LcdTyp {
 Da eine doppeltes deklarieren einer Struktur zu einem Fehler führt, wird mit dem Befehl "#ifndef" und "#enfif" überprüft ob die lcd.h Datei schon einmal aufgerufen wurde.
 
 **log.h:**
-```
+```c
 #ifndef LOG_H
 #define LOG_H
 

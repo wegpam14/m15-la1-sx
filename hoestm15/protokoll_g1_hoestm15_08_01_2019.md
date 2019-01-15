@@ -27,7 +27,7 @@ Es gibt zwei  Varianten von 'include', einmal das einlesen einer selbstgeschrieb
 
 #### Compiler
 Der Compiler liest was der Präprozessor  C Datei gemacht hat und produziert eine Objektdatei '.o'.  Diese enthält Maschinensprache die der Linker benötigt um die verschiedenen Funktionen aus den Objektdateien zu Verknüpfen.
-![Compiling Prozess](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/c-compiling.png)
+![Compiling Prozess](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/compiling-linking.png)
 
 
 #### Linker

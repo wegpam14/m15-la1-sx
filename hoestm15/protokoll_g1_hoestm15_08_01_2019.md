@@ -69,6 +69,8 @@ Im oberen Beispiel ist das Ziel die 'ue03:' neben den Ziel stehen die Abhängigk
 Das Makefile wird im gleichen Verzeichnis wie die Quelltext-Dateien gespeichert, der Aufruf des Befehles 'make' genügt.
 Falls keine Abhängigkeit vorhanden ist, werden die Befehle des Zieles immer ausgeführt. 
 
+Auch werden beim Makefile die Zeitstempel der diversen Ziele und Abhängigkeiten verglichen, damit das erneute compiling einer berreits aktuellen Datei Verhindert wird.
+
 ## 3 Befehle
 **main.c:**
 

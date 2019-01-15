@@ -153,7 +153,7 @@ void logMain(char text[]);
 ```
 
 **Makefile:**
-```
+```make
 ue03: main.o lcd.o log.o
 	gcc -o ue03 main.o lcd.o log.o
 

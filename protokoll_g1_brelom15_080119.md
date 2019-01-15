@@ -8,8 +8,8 @@ Gruppe: 1
 ---
 ## Inhalte
 
-**1. Übersetzungsvorgang in C**  
-**2. Übersetzung mit Make**  
+[**1. Übersetzungsvorgang in C**](#übersetzung-in-c)  
+[**2. Übersetzung mit Make**](#make)  
 **3. Ablauf der Übung**  
 
 --- 

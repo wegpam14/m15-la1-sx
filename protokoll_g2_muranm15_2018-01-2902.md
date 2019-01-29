@@ -67,7 +67,81 @@ __*Anmerkung*:__ Für den Tabulator vor den Kommandos müssen echte Tabulatoren 
 
 Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Kommandos erfahren. Ist der Rückgabewert ungleich 0, so wird ein Fehler ausgegeben. In der Konsole kann der Rückgabewert des letzten Kommandors mit dem Befehle `echo $?`ausgeben werden
    #### v. Übersetzung eines Programms durch ein Makefile
-      
+   #### Makefile
+   a.out: main. o lcd.o log.o
+          gcc main.o lcd.o log.o
+          
+   lcd.o: lcd.c
+          gcc -c lcd.c
+          
+   log.o: log.c
+          gcc -c log.c
+          
+   main.o: main.c lcd.h log.h
+           gcc -c main.c
+           
+   clean:
+           -rm a.out
+           -RM +.o
+   
+   ##### main.c
+   
+   #include <stdio.h>
+   #include <lcd.h>
+   #include <log.h>
+   
+   void inti();
+   void show(char text[]);
+   
+   int main(){
+    printf("Guten Morgen\n");
+    lcd_init();
+    log_init();
+    show("Mal schauen..");
+   return 0;
+   }
+   #### log.c
+   
+   #include <stdio.h>
+   
+   struct LogRecord{
+    char src[10];
+    char message[50];
+   }
+   
+   void log_init()
+   {
+    printf("LOG: init\n");
+   }
+   
+   void log(struct LogRecord r)
+   {
+    printf("LOG: record %s: %s\n",r.src,r.message);
+   }
+   
+   #### log.h
+   
+   void log_init();
+   
+   #### lcd.c
+   
+   #include <stdio.h>
+   
+   void lcd_init(){
+    printf("LCD:init\n");
+   }
+   
+   void show(char text[])
+   {
+    printf("show: %s\n",text);
+   }
+   
+   #### lcd.h
+   
+   void init();
+   void show(char text[]);
+   
+   
     
 
 

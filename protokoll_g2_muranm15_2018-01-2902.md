@@ -66,9 +66,11 @@ __*Anmerkung*:__ Für den Tabulator vor den Kommandos müssen echte Tabulatoren 
    Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein **Fehler** auftritt. Das bedeutet, dass alle nachfolgenden Schritte nicht abgewickelt werden. Um das bei Befehlen, bei denen Fehler auftreten können, zu verhindern kann ein vor dem jeweiligen Kommando ein `-` eingefügt werden. 
 
 Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Kommandos erfahren. Ist der Rückgabewert ungleich 0, so wird ein Fehler ausgegeben. In der Konsole kann der Rückgabewert des letzten Kommandors mit dem Befehle `echo $?`ausgeben werden
-   #### v. Übersetzung eines Programms durch ein Makefile
-   #### Makefile
-   a.out: main. o lcd.o log.o
+  
+  #### v. Übersetzung eines Programms durch ein Makefile
+   #### Makefile:
+  ```C
+  a.out: main. o lcd.o log.o
           gcc main.o lcd.o log.o
           
    lcd.o: lcd.c
@@ -83,9 +85,9 @@ Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Komma
    clean:
            -rm a.out
            -RM +.o
-   
-   ##### main.c
-   
+   ```
+   ##### main.c:
+   ```C
    #include <stdio.h>
    #include <lcd.h>
    #include <log.h>
@@ -100,8 +102,9 @@ Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Komma
     show("Mal schauen..");
    return 0;
    }
-   #### log.c
-   
+   ```
+   #### log.c:
+   ```C
    #include <stdio.h>
    
    struct LogRecord{
@@ -118,13 +121,13 @@ Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Komma
    {
     printf("LOG: record %s: %s\n",r.src,r.message);
    }
-   
-   #### log.h
-   
+   ```
+   #### log.h:
+   ```C
    void log_init();
-   
-   #### lcd.c
-   
+   ```
+   #### lcd.c:
+   ```C
    #include <stdio.h>
    
    void lcd_init(){
@@ -135,12 +138,12 @@ Ob ein **Fehler** aufgetreten ist lässt sich über die Rückgabewerte der Komma
    {
     printf("show: %s\n",text);
    }
-   
-   #### lcd.h
-   
+   ```
+   #### lcd.h:
+   ```C
    void init();
    void show(char text[]);
-   
+   ```
    
     
 

@@ -34,7 +34,13 @@ Im Sprachgebrauch werden meist die Schritte des Vorgangs bis zum entstehen einer
  
 
 ### 2.Maketool
-Der gesamte Übersetzungsvorgang wird im Normalfall durch das **make-Tool** übernommen. Dieses ruft sogenannte *Makefiles*  auf.
+Der gesamte Übersetzungsvorgang wird im Normalfall durch das **make-Tool** übernommen. Dieses ruft sogenannte *Makefiles*  auf.  
+
+Wenn bei dem Aufruf des Kommandos make ein Makefile im aktuellen Verzeichnis gefunden wird beginnt das Tool automatisch das oberste Ziel im Makefile zu builden.  
+
+Um ein bestimmtes Ziel aufzurufen kann make <target> verwendet werden.
+
+Zuerst werden die Abhängigkeiten des Ziels überprüft und falls kein Ziel mit dem Namen der Abhängigkeit im Makefile vorhanden ist, wird nach einer Datei mit dem Namen gesucht. Ist eine Datei vorhanden wird der Zeitstempel mit dem darüberliegenden Ziel verglichen. Ist die Quelltextdatei älter als das Ziel, wird das Ziel ignoriert und nicht erneut kompiliert
 
 
 ### 3.Makefiles  

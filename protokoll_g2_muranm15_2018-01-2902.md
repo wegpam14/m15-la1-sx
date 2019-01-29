@@ -9,6 +9,12 @@ abwesend: -
   Definition: *Beschreibt wie ein C-Quellcode für den yC in ein ausführbares Programm übersetzt wird.*  
 
 ## Inhalt 
+#Übersetzungsvorgang  
+#Make-tool  
+#Makefiles  
+  #* Aufbau von Makefiles  
+  #* Zeitstempel  
+#Fehler  
 
  
 

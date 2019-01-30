@@ -9,7 +9,7 @@ abwesend: -
   Definition: *Beschreibt wie ein C-Quellcode für den yC in ein ausführbares Programm übersetzt wird.*  
 
 ## Inhalt 
-1. Übersetzungsvorgang [Übersetzungsvorgang](https://wiki.ubuntuusers.de/touch/)   
+1. [Übersetzungsvorgang](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2018-01-29.md#1%C3%BCbersetzungsvorgang)   
 1. Make-tool
 1. Makefiles
     1. Aufbau von Makefiles

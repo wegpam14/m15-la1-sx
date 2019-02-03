@@ -1,7 +1,8 @@
 # Protokoll 4 (29.01.2019)
 
+![](https://www.koerbler.com/neuigkeiten/wp-content/uploads/2013/03/htl-kaindorf.jpg)  
 Name: Korrenn Marwin  
-Klasse: 4ahme  
+Klasse: 4aHME  
 KNR: 7  
 Gruppe: 2
 

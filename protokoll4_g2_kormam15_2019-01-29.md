@@ -9,7 +9,7 @@ Gruppe: 2
 ## Inhalte
 
 [**1. Übersetzung mit Make**](#1-übersetzung-mit-make)  
-[**2. Ablauf der Übung**](#3-ablauf-der-übung)  
+[**2. Ablauf der Übung**](#2-ablauf-der-übung)  
 [**3. Probleme**](#3-probleme)  
 --- 
 

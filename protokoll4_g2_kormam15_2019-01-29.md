@@ -9,7 +9,7 @@ Gruppe: 2
 ## Inhalte
 
 [**1. Übersetzung mit Make**](#1-übersetzung-mit-make)  
-[**2. Ablauf der Übung**](#2-ablauf-der-übung)  
+[**2. Ablauf der Übung**](#3-ablauf-der-übung)  
 [**3. Probleme**](#3-probleme)  
 --- 
 
@@ -36,10 +36,10 @@ Ziel(z.B.: ue03) : Abhängigkeit (z.B.:main.o)
  
 Tritt bei der Ausführung eines Kommandos ein Fehler auf, wird der Vorgang abgebrochen und die folgenden Kommandos werden nicht ausgeführt. Dies kann man verhindern indem man ein "-" vor alle Kommandos schreibt bei welchen ein Fehler auftreten kann.   
 
+---
+# 2. Ablauf der Übung
 
-## 3. Ablauf der Übung
-
-In dieser Einheit sollte ein C-Programm aus mehreren Datein (.c und Headerfiles) zu einem ausführbaren Programm kompiliert werden. 
+In dieser Einheit sollte ein C-Programm aus mehreren Datein (Sourcefiles und Headerfiles) zu einem ausführbaren Programm kompiliert werden. 
 
 **main.c:**
 ```c  
@@ -127,7 +127,10 @@ clean:
 ```
 Im Makefile wird programmiert mit welchen Abhängigkeiten die verschiedenen Ziele erfüllt werden müssen.  
 
+---
+
 # 3. Probleme  
+
 Wir konnten die Warnung  
 ```cmd
 joker@joker:~/Schreibtisch/labor3$ make

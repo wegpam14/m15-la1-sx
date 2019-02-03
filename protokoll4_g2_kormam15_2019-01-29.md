@@ -8,9 +8,9 @@ Gruppe: 2
 ---
 ## Inhalte
 
-[**1. Übersetzung mit Make**](#1-Übersetzung-mit-Make)  
-[**2. Ablauf der Übung**](#3-ablauf-der-übung)  
-
+[**1. Übersetzung mit Make**](#1-übersetzung-mit-make)  
+[**2. Ablauf der Übung**](#2-ablauf-der-übung)  
+[**3. Probleme**](#3-probleme)  
 --- 
 
 
@@ -42,7 +42,7 @@ Tritt bei der Ausführung eines Kommandos ein Fehler auf, wird der Vorgang abgeb
 In dieser Einheit sollte ein C-Programm aus mehreren Datein (.c und Headerfiles) zu einem ausführbaren Programm kompiliert werden. 
 
 **main.c:**
-´´´c  
+```c  
 #include <stdio.h>
 #include "lcd.h"
 #include "log.h"
@@ -58,7 +58,7 @@ int main(){
 }
 ```
 
-In der main.c Datei werden in den ersten 3 Zeilen die Headerdateien eingebunden, danach folgt das Hauptprogtramm. In diesem befindet sich die Funktionen *lcd_init()* und *show()* welche in **lcd.c** definiert wurde und eine Funktion *log_init()* welche in *log.c* deklariert wurde. Um diese Funktionen in der main.c zu benutzen müssen beide Dateien in dem Header der main.c Datei mit eingebunden werden. 
+In der main.c Datei werden in den ersten 3 Zeilen die Headerdateien eingebunden, danach folgt das Hauptprogtramm. In diesem befindet sich die Funktionen *lcd_init()* und *show()* welche in **lcd.c** deklariert wurden und eine Funktion *log_init()* welche in *log.c* deklariert wurde. Um diese Funktionen in der main.c zu benutzen müssen beide Dateien in dem Header der main.c Datei mit eingebunden werden. 
 
 **lcd.c:**
 ```c
@@ -103,7 +103,7 @@ void log_init();
 void lcd_init();
 void show(char text[]);
 ```
-In den Headerdateien werden die Funktionen nur deklariert damit der Compiler weiß dass es die definierten Funktionen bereits gibt.  
+In den Headerdateien werden die Funktionen bekanntgegeben damit der Compiler weiß dass es die definierten Funktionen bereits gibt.  
 
 **Makefile:**
 ```make
@@ -125,3 +125,18 @@ clean:
 	-rm *.o
 #damit trotz Fehler trotzdem weiter gemacht wird
 ```
+Im Makefile wird programmiert mit welchen Abhängigkeiten die verschiedenen Ziele erfüllt werden müssen.  
+
+# 3. Probleme  
+Wir konnten die Warnung  
+```cmd
+joker@joker:~/Schreibtisch/labor3$ make
+gcc -c main.c
+gcc -c lcd.c
+gcc -c log.c
+log.c:12:6: warning: conflicting types for built-in function ‘log’ [-Wbuiltin-declaration-mismatch]
+ void log (struct LogRecord r) {
+      ^~~
+gcc main.o lcd.o log.o
+```
+nicht behandeln. (*Ursache: Der angewendete Struct im log.c*)

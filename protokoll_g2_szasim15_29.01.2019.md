@@ -2,7 +2,7 @@
 
 Name: Simon Szapacs  
 Datum: 29.01.2019  
-Klasse: 4AHME
+Klasse: 4AHME  
 Gruppe: 2  
 
 Anwesend: Jonas SKof, Nicolas Perl, Marwin Korrenn, Anna Murko, David Orthofer, Simon Szapacs  
@@ -38,6 +38,10 @@ Ziel3: Abhängigkeit(en)
   
   ### Zeitstempel  
   Der Zeitstempel gibt an zu welchem Zeitpunkt das Programm das letzte mal verändert wurde.  
+   
+  ### Befehle  
+  
+ Mit dem Befehl ```make clean ``` werden Dateien in der Shell gelöscht. Es kann aber passieren das make clean beim ausführen einen Fehler wirft. Dies unterbindet man, indem man vor den Commands ein ```-``` Zeichen schreibt. 
 
   ### main.c  
   *nano main.c*  

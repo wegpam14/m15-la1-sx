@@ -4,6 +4,13 @@ Klasse: 4AHME
 KNR: 11  
 Gruppe: 2  
 
+
+| Anwesend  | Abwesend  |
+|---|---|
+| Korrenn,Murko,Orthofer,Perl,Szapacs | -  |
+
+
+
 ## Inhalte ##  
 **1.  Wiederholung**        
 **2.  Make-Tools**        

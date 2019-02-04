@@ -82,7 +82,7 @@ Ob ein Fehler aufgetreten ist lässt sich über die Rückgabewerte der Kommandos
 
 **Main.c**
 
-```
+```c
 #include <stdio.h>
 #include "lcd.h"
 #include "log.h"
@@ -96,37 +96,74 @@ int main()
 }
 ```
 
+**Makefile**
 
+```c
+a.out: main.o lcd.o log.o
+	gcc main.o lcd.o
 
+main.o: main.c lcd.h log.h
+	gcc -c main.c
 
+lcd.o: lcd.c
+	gcc -c lcd.c
 
+log.o log.c
+	gcc -c log.c
 
+clean:
+	-rm a.out
+	-rm *.o 
 
+```
 
+**lcd.c**
 
+```c
+#include <stdio.h>
+void lcd_init()
+{
+  printf("LCD: init\n");
+}
 
+void show(char text[])
+{
+  printf("show %s\n", text);
+}
 
+```
 
+**lcd.h**
 
+```c
+void lcd_init();
+```
 
+**log.c**
+```c
+#include <stdio.h>
+struct LogRecord
+{
+  char src[10];	//Quelle und Meldungs-Strings in Feldern speichern
+  char message[50];
+};
 
+void log_init() 
+{
+  printf("LOG: init\n");
+}
 
+void log(struct LogRecord r)
+{
+  printf("LOG: record %s  : %s\n", r.src, r.message);
+}
 
+```
+**log.h**
+```c
+void log_init();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 
 

@@ -63,14 +63,14 @@ Ein Makefile besteht aus:
    *  einem Befehl
 ```   
    Ziel 1: Abhängigkeit  
-	     Befehl  
-	     Befehl  
+	     Befehl  A
+	     Befehl  B
    Ziel 2: Abhängigkeit  
-    	     Befehl 
-    	     Befehl 
+    	     Befehl  A
+    	     Befehl  B
    Ziel 3: Abhängigkeit  
-	     Befehl 
-             Befehl 
+	     Befehl  A
+             Befehl  B
 ```   
 
 In der Datei Makefile befinden sich die relevanten Informationen für eine Übersetzung.

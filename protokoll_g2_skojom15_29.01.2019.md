@@ -70,7 +70,7 @@ Zum Beispiel:
 Beim Aufruf des Makefiles wird zuerst das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei anderen Zielen als Abhängigkeit werden zuerst die abhängigen Ziele abgearbeitet. Bei Datein als Abhängigkeit wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist.
 
 ## 4.1 Zeitstempel ##
-Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde.Durch den Zeitstempel weiß der Compiler ob er ein Programm kompilieren muss oder nicht,denn eine erneute Kompilierung wäre sinnlos Mit dem Befehl touch kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
+Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde.Durch den Zeitstempel weiß der Compiler, ob er ein Programm kompilieren muss oder nicht, denn eine erneute Kompilierung wäre sinnlos.Mit dem Befehl touch kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
   
 ## 4.2 Fehler beim Ausführen der Kommandos ##
 Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein Fehler auftritt. Das bedeutet, dass alle nachfolgenden Schritte nicht abgewickelt werden. Um das bei Befehlen, bei denen Fehler auftreten können, zu verhindern kann ein vor dem jeweiligen Kommando ein - eingefügt werden.
@@ -78,20 +78,23 @@ Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein Feh
 Ob ein Fehler aufgetreten ist lässt sich über die Rückgabewerte der Kommandos erfahren. Ist der Rückgabewert ungleich 0, so wird ein Fehler ausgegeben. In der Konsole kann der Rückgabewert des letzten Kommandors mit dem Befehle echo $?ausgeben werden
 
 ***
-# 5.Übersetzung eines Programmes durch ein Makefile #
-Diese kleine C-Programm soll "Guten Morgen" ausgeben. Es wurde die Datei main.c mithilfe des nano-Befehls erstellt:
-```ruby
-#include <stdio.h>
+# 5. Fertiges Programm #
 
+**Main.c**
+
+```
+#include <stdio.h>
+#include "lcd.h"
+#include "log.h"
 int main()
 {
-printf("Guten Morgen");
-return 0;
+  printf("Guten Morgen\n");
+  log_init();
+  lcd_init();
+  show("Mal schauen...");
+  return 0;
 }
 ```
-
-
-
 
 
 

@@ -21,7 +21,7 @@ Gruppe: 2
 
 ![Kompiliervorgang in C](compiling.png) 
 
-**Präprozessieren** ==> Bearbeitung von Anweisungen wie #include oder #define. Da diese Datei im Normalfall nicht wirklich                        entsteht, gibt es auch keine eigene Endung.  
+**Präprozessieren** ==> Bearbeitung von Anweisungen wie #include oder #define. Da diese Datei im Normalfall nicht wirklich                          			    entsteht, gibt es auch keine eigene Endung.  
 **Kompilieren** ==>		Der durch den Präprozzessor bearbeitete Code wird in Assmeblercode umgewandelt    
 **Assemblieren** ==>	Der Assemblercode wird in Maschinencode übersetzt  
 **Linken** ==>	      Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm  
@@ -72,7 +72,7 @@ Zum Beispiel:
 Beim Aufruf des Makefiles wird zuerst das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei anderen Zielen als Abhängigkeit werden zuerst die abhängigen Ziele abgearbeitet. Bei Datein als Abhängigkeit wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist.
 
 ## 4.1 Zeitstempel ##
-Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde.Durch den Zeitstempel weiß der Compiler, ob er ein Programm kompilieren muss oder nicht, denn eine erneute Kompilierung wäre sinnlos.Mit dem Befehl touch kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
+Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde.Durch den Zeitstempel weiß der Compiler, ob er ein Programm kompilieren muss oder nicht, denn eine erneute Kompilierung wäre sinnlos.Dieser Vorgang spart sehr viel Zeit bei aufwändigeren Programmen.Mit dem Befehl touch kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
   
 ## 4.2 Fehler beim Ausführen der Kommandos ##
 Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein Fehler auftritt. Das bedeutet, dass alle nachfolgenden Schritte nicht abgewickelt werden. Um das bei Befehlen, bei denen Fehler auftreten können, zu verhindern kann ein vor dem jeweiligen Kommando ein - eingefügt werden.

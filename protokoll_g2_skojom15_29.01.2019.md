@@ -18,7 +18,7 @@ Gruppe: 2
 **4.  Funktionsweise von Makefiles**      
 	4.1 Zeitstempel      
 	4.2 Möglich Auftretende Fehler      
-**5.  Übersetzung eines Programmes durch ein Makefile**            
+**5.  Fertiges Programm**            
 
 ***
 
@@ -37,21 +37,20 @@ Gruppe: 2
 ***
 
 ## 2. Make-Tool ##
-**make** liest ein sogenanntes Makefile in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen erfasst sind.  Alle Schritte erfolgen unter Beachtung der Abhängigkeiten.
-Der gesamte Übersetzungsvorgang wird im Normalfall durch das make-Tool übernommen.
+**make** liest ein sogenanntes Makefile in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen erfasst sind.Also werden zeimlich alle Übersetzungsvorgänge von dem make-tool übernommen. Alle Schritte erfolgen unter Beachtung der Abhängigkeiten.
 
 **Anwendung:**
-Die Entwicklung großer Programme und Programmpakete, die aus vielen einzelnen Quelltext-Dateien bestehen und Abhängigkeiten zu separaten Bibliotheken besitzen, ist ohne make oder ähnliche Hilfsmittel kaum mehr denkbar. 
-In der Welt des Open Source ist es üblich, dass mit dem Quellcode eines Projekts auch das Makefile veröffentlicht wird, um das compilieren einer Software zu vereinfachen
+Die Entwicklung großer Programme, die aus vielen einzelnen Quelltext-Dateien bestehen, ist ohne make oder ähnliche Hilfsmittel kaum mehr denkbar. 
+In der Welt des Open Source ist es üblich, dass mit dem Quellcode eines Projekts auch das Makefile veröffentlicht wird, um das compilieren einer Software zu vereinfachen.
 ***
 # 3. Makefiles #
 Das Kompilieren von Quelltext-Dateien kann mit dem Programm make gesteuert werden. Dies ist vor allem dann sinnvoll, wenn es sich um ein großes Projekt handelt bei dem die Kompilierung aus vielen einzelnen Schritten und Abhängigkeiten besteht. 
 
 Die einzelnen Schritte können zum Beispiel separate Kompilierungen oder andere Dateioperationen wie Kopieren und Löschen sein. Abhängigkeiten können zum Beispiel bedingte Kompilierungen sein. Diese Schritte und Abhängigkeiten werden in ein Makefile zusammengefasst, welches dann vom Programm make verarbeitet wird.
 
-Das sogenannte "maketool" benötigt eine "Makefile" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl -rm *.o gemacht.
-
 Bei der C-Prpgrammierung verwendet man normalerweise für die Übersetzung des Programs eine IDE(Integrated Development Environment) wie zum Beispiel Codeblocks oder Netbeans. Diese IDE's greifen aber auch auf das Tool make zurück.
+
+Das sogenannte "maketool" benötigt eine "Makefile", dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl -rm *.o gemacht.
 
 Wird make in der Konsole aufgerufen, so wird eine Steuerdatei names Makefile ausgeführt.
 Bei richtiger Einstellung des Makefile wird nur das Nötigste gemacht und schon abgeschlossene Teile weggelassen.

@@ -77,19 +77,19 @@ In der Datei Makefile befinden sich die relevanten Informationen für eine Über
 
 Zum Beispiel:
    *  was ist das Ziel der Übersetzung?
-   *  aus welchen Dateien (Files) besteht das Projekt?
+   *  aus welchen Dateien besteht das Projekt?
    *  welche Abhängigkeiten zwischen den Dateien sind gegegeben?
-   *  welche Tools (z.b Compiler) werden wie aufgerufen?
+   *  welche Tools werden wie aufgerufen?
 
 ***
 # 4. Funktionsweise von Makefiles #
 
-Beim Aufruf des Makefiles wird zuerst das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei anderen Zielen als Abhängigkeit werden zuerst die abhängigen Ziele abgearbeitet. 
+Beim Aufruf von einer Makefiles wird das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei anderen Zielen als Abhängigkeit werden zuerst die abhängigen Ziele abgearbeitet. 
 Bei Datein als Abhängigkeit wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist.
 
 ## 4.1 Zeitstempel ##
 
-Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde.Durch den Zeitstempel weiß der Compiler, ob er ein Programm kompilieren muss oder nicht, denn eine erneute Kompilierung wäre sinnlos.Dieser Vorgang spart sehr viel Zeit bei aufwändigeren Programmen.Mit dem Befehl touch kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
+Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde. Durch den Zeitstempel weiß der Compiler, ob er ein Programm kompilieren muss oder nicht, denn eine erneute Kompilierung wäre sinnlos.Dieser Vorgang spart sehr viel Zeit bei aufwändigeren Programmen.Mit dem Befehl touch kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.
   
 ## 4.2 Möglich Auftretende Fehler ##
 

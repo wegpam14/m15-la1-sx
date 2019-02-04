@@ -25,7 +25,9 @@ Gruppe: 2
 **Kompilieren** ==>		Der durch den Präprozzessor bearbeitete Code wird in Assmeblercode umgewandelt    
 **Assemblieren** ==>	Der Assemblercode wird in Maschinencode übersetzt  
 **Linken** ==>	      Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm  
-**Umwandeln** ==>	    Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex)  
+**Umwandeln** ==>	    Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex) 
+
+***
 
 ## 2. Make-Tool ##
 make liest ein sogenanntes Makefile in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen formalisiert erfasst sind. Diese Formalisierung beschreibt, welche Quelltextdateien auf welche Weise durch den Compiler oder durch andere Programme zu welchen Objektdateien bzw. Ergebnissen verarbeitet werden, bzw. welche Objektdateien vom Linker zu Programmbibliotheken oder ausführbaren Programmen verbunden werden. Alle Schritte erfolgen unter Beachtung der im Makefile erfassten Abhängigkeiten.

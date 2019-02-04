@@ -16,8 +16,8 @@ Gruppe: 2
 **2.  Make-Tools**        
 **3.  Makefiles**       
 **4.  Funktionsweise von Makefiles**      
-**4.1 Zeitstempel**       
-**4.2 Möglich Auftretende Fehler**       
+	4.1 Zeitstempel      
+	4.2 Möglich Auftretende Fehler      
 **5.  Übersetzung eines Programmes durch ein Makefile**            
 
 ***

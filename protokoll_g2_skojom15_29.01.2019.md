@@ -32,25 +32,30 @@ Gruppe: 2
 **Kompilieren** ==>		Der durch den Präprozzessor bearbeitete Code wird in Assmeblercode umgewandelt    
 **Assemblieren** ==>	Der Assemblercode wird in Maschinencode übersetzt  
 **Linken** ==>	      Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm  
-**Umwandeln** ==>	    Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht. (z.B. Hex) 
+**Umwandeln** ==>	    Die ausführbare Datei wird in ein Format umgewandelt, das der Programmer versteht.
 
 ***
 
 ## 2. Make-Tool ##
-make liest ein sogenanntes Makefile in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen formalisiert erfasst sind. Diese Formalisierung beschreibt, welche Quelltextdateien auf welche Weise durch den Compiler oder durch andere Programme zu welchen Objektdateien bzw. Ergebnissen verarbeitet werden, bzw. welche Objektdateien vom Linker zu Programmbibliotheken oder ausführbaren Programmen verbunden werden. Alle Schritte erfolgen unter Beachtung der im Makefile erfassten Abhängigkeiten.
+**make** liest ein sogenanntes Makefile in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen erfasst sind.  Alle Schritte erfolgen unter Beachtung der Abhängigkeiten.
 Der gesamte Übersetzungsvorgang wird im Normalfall durch das make-Tool übernommen.
 
 **Anwendung:**
-Die Entwicklung großer Programme und Programmpakete, die aus vielen einzelnen Quelltext-Dateien bestehen und Abhängigkeiten zu separaten Bibliotheken besitzen, ist ohne make oder ähnliche Hilfsmittel kaum mehr denkbar. In der Welt des Open Source ist es üblich, dass mit dem Quellcode eines Projekts auch das Makefile veröffentlicht wird, um das compilieren einer Software zu vereinfachen
+Die Entwicklung großer Programme und Programmpakete, die aus vielen einzelnen Quelltext-Dateien bestehen und Abhängigkeiten zu separaten Bibliotheken besitzen, ist ohne make oder ähnliche Hilfsmittel kaum mehr denkbar. 
+In der Welt des Open Source ist es üblich, dass mit dem Quellcode eines Projekts auch das Makefile veröffentlicht wird, um das compilieren einer Software zu vereinfachen
 ***
 # 3. Makefiles #
-Das Kompilieren von Quelltext-Dateien kann mit dem Programm make gesteuert werden. Dies ist vor allem dann sinnvoll, wenn es sich um ein großes Projekt handelt bei dem die Kompilierung aus vielen einzelnen Schritten und Abhängigkeiten besteht. Die einzelnen Schritte können zum Beispiel separate Kompilierungen oder andere Dateioperationen wie Kopieren und Löschen sein. Abhängigkeiten können zum Beispiel bedingte Kompilierungen sein. Diese Schritte und Abhängigkeiten werden in ein Makefile zusammengefasst, welches dann vom Programm make verarbeitet wird.
+Das Kompilieren von Quelltext-Dateien kann mit dem Programm make gesteuert werden. Dies ist vor allem dann sinnvoll, wenn es sich um ein großes Projekt handelt bei dem die Kompilierung aus vielen einzelnen Schritten und Abhängigkeiten besteht. 
+
+Die einzelnen Schritte können zum Beispiel separate Kompilierungen oder andere Dateioperationen wie Kopieren und Löschen sein. Abhängigkeiten können zum Beispiel bedingte Kompilierungen sein. Diese Schritte und Abhängigkeiten werden in ein Makefile zusammengefasst, welches dann vom Programm make verarbeitet wird.
+
 Das sogenannte "maketool" benötigt eine "Makefile" (Textdatei), dieses tool übersetzt nur das Erforderliche. Es wird in der Makefile meist ein "Cleaner" eingebaut, der dazu dient alle vom Compiler erzeugten Datei zu löschen. Dies wird zum Beispiel mit dem Befehl -rm *.o gemacht.
 
 Bei der C-Prpgrammierung verwendet man normalerweise für die Übersetzung des Programs eine IDE(Integrated Development Environment) wie zum Beispiel Codeblocks oder Netbeans. Diese IDE's greifen aber auch auf das Tool make zurück.
 
 Wird make in der Konsole aufgerufen, so wird eine Steuerdatei names Makefile ausgeführt.
 Bei richtiger Einstellung des Makefile wird nur das Nötigste gemacht und schon abgeschlossene Teile weggelassen.
+
 Ein Makefile besteht aus:
    *  einem Ziel
    *  einer Abhängigkeit
@@ -77,7 +82,8 @@ Zum Beispiel:
 
 ***
 # 4. Funktionsweise von Makefiles #
-Beim Aufruf des Makefiles wird zuerst das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei anderen Zielen als Abhängigkeit werden zuerst die abhängigen Ziele abgearbeitet. Bei Datein als Abhängigkeit wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist.
+Beim Aufruf des Makefiles wird zuerst das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei anderen Zielen als Abhängigkeit werden zuerst die abhängigen Ziele abgearbeitet. 
+Bei Datein als Abhängigkeit wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist.
 
 ## 4.1 Zeitstempel ##
 Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde.Durch den Zeitstempel weiß der Compiler, ob er ein Programm kompilieren muss oder nicht, denn eine erneute Kompilierung wäre sinnlos.Dieser Vorgang spart sehr viel Zeit bei aufwändigeren Programmen.Mit dem Befehl touch kann dieser Zeitstempel auf Linux-Systemen aktualisiert werden.

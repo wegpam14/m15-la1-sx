@@ -28,7 +28,7 @@ Gruppe: 2
 
 ![Kompiliervorgang in C](compiling.png) 
 
-**Präprozessieren** ==> Bearbeitung von Anweisungen wie #include oder #define. Da diese Datei im Normalfall nicht wirklich                          			    entsteht, gibt es auch keine eigene Endung.  
+**Preprosecing** ==> Bearbeitung von Anweisungen wie #include oder #define. Da diese Datei im Normalfall nicht wirklich                          			    entsteht, gibt es auch keine eigene Endung.  
 **Kompilieren** ==>		Der durch den Präprozzessor bearbeitete Code wird in Assmeblercode umgewandelt    
 **Assemblieren** ==>	Der Assemblercode wird in Maschinencode übersetzt  
 **Linken** ==>	      Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm  

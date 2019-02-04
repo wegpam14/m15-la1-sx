@@ -93,9 +93,9 @@ Der Zeitstempel gibt an wann eine Datei das letzte Mal verändert wurde. Durch d
   
 ## 4.2 Möglich Auftretende Fehler ##
 
-Wenn das Makefile aufgerufen wird, läuft das Makefile soweit durch, bis ein Fehler auftritt. Das bedeutet, dass alle nachfolgenden Schritte nicht verarbeitet werden. Um das auftreten von Fehlern zu verhindern kann ein jeweiligen Kommando *-* eingefügt werden.
+Wenn das Makefile aufgerufen wird, läuft es bis zum Auftreten eines Fehlers durch. Das bedeutet, dass alle nachfolgenden Schritte nicht verarbeitet werden. Um das auftreten von Fehlern zu verhindern kann ein jeweiligen Kommando **-** eingefügt werden.
 
-Durch den Rückgabewert der Kommandos lässt sich daraus schließen ob ein Fehler aufgetreten ist. Ist der Rückgabewert ungleich 0, so wird ein Fehler ausgegeben. In der Konsole kann der Rückgabewert des letzten Kommandos mit dem Befehl echo $? ausgeben werden.
+Durch den Rückgabewert der Kommandos lässt sich daraus schließen ob ein Fehler aufgetreten ist. Ist der Rückgabewert ungleich 0, dann wird ein Fehler ausgegeben. In der Konsole kann der Rückgabewert des letzten Kommandos mit dem Befehl echo **$?** ausgeben werden.
 
 ***
 # 5. Fertiges Programm #

@@ -85,7 +85,7 @@ Zum Beispiel:
 # 4. Funktionsweise von Makefiles #
 
 Beim Aufruf von einer Makefiles wird das erste Ziel aufgerufen. Die Abhängigkeiten werden dabei zuerst auf andere Ziele und dann auf Datein untersucht. Bei anderen Zielen als Abhängigkeit werden zuerst die abhängigen Ziele abgearbeitet. 
-Bei Datein als Abhängigkeit wird der Zeitstempel von dem Ziel und der Datei verglichen um zu erfassen, ob ein neuerliches Durchführen der Kommandos überhaupt nötig ist.
+Bei Datein als Abhängigkeit wird der Zeitstempel von dem Ziel und der Datei verglichen. Dadurch wird erfasst ob ein erneutes Durchführen der Befehle überhaupt nötig ist.
 
 ## 4.1 Zeitstempel ##
 

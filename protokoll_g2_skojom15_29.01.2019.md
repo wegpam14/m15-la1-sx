@@ -28,7 +28,7 @@ Gruppe: 2
 
 ![Kompiliervorgang in C](compiling.png) 
 
-**Preprosecing** ==> Bearbeitung von Anweisungen wie #include oder #define. Da diese Datei im Normalfall nicht wirklich                          			    entsteht, gibt es auch keine eigene Endung.  
+**Preprocessing** ==> Bearbeitung von Anweisungen wie #include oder #define. Da diese Datei im Normalfall nicht wirklich                          			    entsteht, gibt es auch keine eigene Endung.  
 **Kompilieren** ==>		Der durch den Präprozzessor bearbeitete Code wird in Assmeblercode umgewandelt    
 **Assemblieren** ==>	Der Assemblercode wird in Maschinencode übersetzt  
 **Linken** ==>	      Alle Programmteile werden durch den Linker vereint. Daraus entsteht ein ausführbares Programm  
@@ -39,6 +39,7 @@ Gruppe: 2
 ## 2. Make-Tool ##
 make liest ein sogenanntes Makefile in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen formalisiert erfasst sind. Diese Formalisierung beschreibt, welche Quelltextdateien auf welche Weise durch den Compiler oder durch andere Programme zu welchen Objektdateien bzw. Ergebnissen verarbeitet werden, bzw. welche Objektdateien vom Linker zu Programmbibliotheken oder ausführbaren Programmen verbunden werden. Alle Schritte erfolgen unter Beachtung der im Makefile erfassten Abhängigkeiten.
 Der gesamte Übersetzungsvorgang wird im Normalfall durch das make-Tool übernommen.
+
 **Anwendung:**
 Die Entwicklung großer Programme und Programmpakete, die aus vielen einzelnen Quelltext-Dateien bestehen und Abhängigkeiten zu separaten Bibliotheken besitzen, ist ohne make oder ähnliche Hilfsmittel kaum mehr denkbar. In der Welt des Open Source ist es üblich, dass mit dem Quellcode eines Projekts auch das Makefile veröffentlicht wird, um das compilieren einer Software zu vereinfachen
 ***
@@ -72,7 +73,7 @@ Zum Beispiel:
    *  was ist das Ziel der Übersetzung?
    *  aus welchen Dateien (Files) besteht das Projekt?
    *  welche Abhängigkeiten zwischen den Dateien sind gegegeben?
-   *  welche Tools (Compiler, Linker, ...) werden wie und zu welchem Zeitpunkt aufgerufen?
+   *  welche Tools (z.b Compiler) werden wie aufgerufen?
 
 ***
 # 4. Funktionsweise von Makefiles #

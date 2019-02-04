@@ -5,13 +5,13 @@ KNR: 11
 Gruppe: 2  
 
 ## Inhalte ##  
-**1.Wiederholung**        
-**2.Make-Tools**        
-**3.Makefiles**       
-**4.Funktionsweise von Makefiles**      
+**1.  Wiederholung**        
+**2.  Make-Tools**        
+**3.  Makefiles**       
+**4.  Funktionsweise von Makefiles**      
 **4.1 Zeitstempel**       
 **4.2 Fehler beim Durchführen der Kommandos**       
-**5.Übersetzung eines Programmes durch ein Makefile**            
+**5.  Übersetzung eines Programmes durch ein Makefile**            
 
 ***
 

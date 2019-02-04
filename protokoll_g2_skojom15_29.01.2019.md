@@ -41,7 +41,6 @@ Gruppe: 2
 **make** liest ein sogenanntes Makefile in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen erfasst sind.Also werden zeimlich alle Übersetzungsvorgänge von dem make-tool übernommen. Alle Schritte erfolgen unter Beachtung der Abhängigkeiten.
 
 **Anwendung:**
-
 Die Entwicklung großer Programme, die aus vielen einzelnen Quelltext-Dateien bestehen, ist ohne make oder ähnliche Hilfsmittel kaum mehr denkbar. 
 In der Welt des Open Source ist es üblich, dass mit dem Quellcode eines Projekts auch das Makefile veröffentlicht wird, um das compilieren einer Software zu vereinfachen.
 ***

@@ -23,7 +23,7 @@ Gruppe: 2
 ***
 
 
-# 1.Wiederholung C-Übersetzvorgang #
+# 1.Wiederholung C-Übersetzungsvorgang #
 
 
 ![Kompiliervorgang in C](compiling.png) 

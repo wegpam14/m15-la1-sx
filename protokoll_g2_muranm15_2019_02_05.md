@@ -23,7 +23,7 @@ Eine genauere Erklärung findet man in dem [Protokoll](https://github.com/HTLMec
 Das Kernel ist die innerste Schicht eines Betriebssystems. Es ist für alles was im Betriebssystem wichtig ist, verantwortlich. Zum Beispiel für die Speicherreservierung. 
 #### i. Kernel wird erneuert
 Der Kernel wird sehr oft erneuert, da sich die Hardware auch regelmäßig verändert und so der Kernel nicht mehr mit der Hardware arbeiten könnte.
-#### i. Kernelmodul  
+#### ii. Kernelmodul  
 Das ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann.
 ###  3. Fortsetzung unsere Übungsbeispiels  
 #### i. Auszüge  

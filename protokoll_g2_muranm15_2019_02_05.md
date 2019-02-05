@@ -18,6 +18,7 @@ abwesend: -
 
 ###  1. Wiederholung Übersetzungsvorgang  
 ![Übersetzungsvorgang](https://raw.githubusercontent.com/HTLMechatronics/m15-la1-sx/muranm15/Unbenannt.GIF)
+Eine genauere Erklärung findet man in diesem [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2018-01-29.md)
 ###  2. Kernel  
 #### i. Kernelmodul  
 ###  3. Fortsetzung unsere Übungsbeispiels  

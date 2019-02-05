@@ -17,7 +17,7 @@ abwesend: -
     1. [auftretende Fehler](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2019_02_05.md#iiauftretende-fehler)  
 
 ###  1. Wiederholung Übersetzungsvorgang  
-![Übersetzungsvorgang]()
+![Übersetzungsvorgang](https://raw.githubusercontent.com/HTLMechatronics/m15-la1-sx/muranm15/Unbenannt.GIF)
 ###  2. Kernel  
 #### i. Kernelmodul  
 ###  3. Fortsetzung unsere Übungsbeispiels  

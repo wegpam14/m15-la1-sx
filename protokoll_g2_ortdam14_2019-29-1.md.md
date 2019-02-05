@@ -13,11 +13,11 @@ Folgende Schritte sind notwendig um den C-Quellcode in das Zielprogramm umzuwand
 ![Ablauf](https://github.com/ortdam14/labor/blob/master/Ablauf.png)  
 Eine genaue Beschreibung ist in einem älteren Protokoll zu finden: ![Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/ortdam14/protokoll_g2_ortdam14_2018-11-13.md)  
 ## Make Tool  
-![Make](https://de.wikipedia.org/wiki/Make) ist ein Build-Management-Tool, das Kommandos in Abhängigkeit von Bedingungen ausführt. Es wird hauptsächlich bei der Softwareentwicklung als Programmierwerkzeug eingesetzt.  
+[Make](https://de.wikipedia.org/wiki/Make) ist ein Build-Management-Tool, das Kommandos in Abhängigkeit von Bedingungen ausführt. Es wird hauptsächlich bei der Softwareentwicklung als Programmierwerkzeug eingesetzt.  
   
 Genutzt wird es beispielsweise, um in Projekten, die aus vielen verschiedenen Dateien mit Quellcode bestehen, automatisiert alle Arbeitsschritte (Übersetzung, Linken, Dateien kopieren etc.) zu steuern, bis hin zum fertigen, ausführbaren Programm. Make ist jedoch so flexibel ausgelegt, dass es auch beliebige andere Aufgaben steuern kann, bei denen die zeitliche Abhängigkeit von Dateien eine Rolle spielt.  
   
-Weitere Übersetzungstools sind "![Ant](https://de.wikipedia.org/wiki/Apache_Ant)" und "![Gradle](https://de.wikipedia.org"/wiki/Gradle).  
+Weitere Übersetzungstools sind "[Ant](https://de.wikipedia.org/wiki/Apache_Ant)" und "[Gradle](https://de.wikipedia.org/wiki/Gradle)"  
   
 Make liest ein sogenanntes Makefile, in dem die Abhängigkeiten des Übersetzungsprozesses von Programmen formalisiert erfasst sind. Diese Formalisierung beschreibt, welche Quelltextdateien auf welche Weise durch den Compiler oder durch andere Programme zu welchen Objektdateien bzw. Ergebnissen verarbeitet werden, bzw. welche Objektdateien vom Linker zu Programmbibliotheken oder ausführbaren Programmen verbunden werden. Alle Schritte erfolgen unter Beachtung der im Makefile erfassten **Abhängigkeiten**.
 

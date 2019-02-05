@@ -1,9 +1,9 @@
 # Protokoll ![](https://www.koerbler.com/neuigkeiten/wp-content/uploads/2013/03/htl-kaindorf.jpg)
 **von Anna Murko**  
-Datum: 05.02.2019
+Datum: 05.02.2019  
 Gruppe: 2  
 Betreuer: Professor Steiner  
-abwesend: -
+abwesend: -  
   
   Thema: **Übersetzungsvorgang, Kernel, Kernelmodul**  
   
@@ -17,8 +17,8 @@ abwesend: -
     1. [auftretende Fehler](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2019_02_05.md#iiauftretende-fehler)  
 
 ###  1. Wiederholung Übersetzungsvorgang  
-![Übersetzungsvorgang](https://raw.githubusercontent.com/HTLMechatronics/m15-la1-sx/muranm15/Unbenannt.GIF)
-Eine genauere Erklärung findet man in diesem [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2018-01-29.md)
+![Übersetzungsvorgang](https://raw.githubusercontent.com/HTLMechatronics/m15-la1-sx/muranm15/Unbenannt.GIF)  
+Eine genauere Erklärung findet man in dem [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2018-01-29.md) der 4.Einheit.
 ###  2. Kernel  
 #### i. Kernelmodul  
 ###  3. Fortsetzung unsere Übungsbeispiels  

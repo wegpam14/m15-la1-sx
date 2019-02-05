@@ -9,7 +9,7 @@ abwesend: -
   
 
 ## Inhalt 
-1. [Wiederholung Übersetzungsvorgang]()     
+1. [Wiederholung Übersetzungsvorgang](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2019_02_05.md#1-wiederholung-%C3%BCbersetzungsvorgang)     
 1. [Kernel]()  
     1. [Kernelmodul]()    
 1. [Fortsetzung unsere Übungsbeispiels]()  

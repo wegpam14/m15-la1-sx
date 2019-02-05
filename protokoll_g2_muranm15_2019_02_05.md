@@ -14,9 +14,10 @@ abwesend: -
     1. [Kernelmodul](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2019_02_05.md#i-kernelmodul)    
 1. [Fortsetzung unsere Übungsbeispiels](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2019_02_05.md#3-fortsetzung-unsere-%C3%BCbungsbeispiels)  
     1. [Auszüge](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2019_02_05.md#i-ausz%C3%BCge)  
-    1. [auftretende Fehler]()  
+    1. [auftretende Fehler](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2019_02_05.md#iiauftretende-fehler)  
 
 ###  1. Wiederholung Übersetzungsvorgang  
+![Übersetzungsvorgang]()
 ###  2. Kernel  
 #### i. Kernelmodul  
 ###  3. Fortsetzung unsere Übungsbeispiels  

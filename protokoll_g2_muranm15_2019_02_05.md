@@ -23,4 +23,107 @@ Eine genauere Erklärung findet man in dem [Protokoll](https://github.com/HTLMec
 #### i. Kernelmodul  
 ###  3. Fortsetzung unsere Übungsbeispiels  
 #### i. Auszüge  
+  #### Makefile:
+  ```C
+  a.out: main. o lcd.o log.o
+          gcc main.o lcd.o log.o
+          
+   lcd.o: lcd.c
+          gcc -c lcd.c
+          
+   log.o: log.c
+          gcc -c log.c
+          
+   main.o: main.c lcd.h log.h
+           gcc -c main.c
+           
+   clean:
+           -rm a.out
+           -RM +.o
+   ```
+   ##### main.c:
+   ```C
+   #include <stdio.h>
+   #include <lcd.h>
+   #include <log.h>
+   
+   void inti();
+   void show(char text[]);
+   
+   int main(){
+    printf("Guten Morgen\n");
+    lcd_init();
+    log_init();
+    struct LogRecord msg={"main.c","Start.."};
+    log_log(msg);
+    show("Mal schauen..");
+   return 0;
+   }
+   ```
+   #### log.c:
+   ```C
+   #include <stdio.h>
+   #include "log.h"
+   
+   void log_init()
+   {
+    printf("LOG: init\n");
+   }
+   
+   void log_log(struct LogRecord r)
+   {
+    printf("LOG: record %s: %s\n",r.src,r.message);
+   }
+   ```
+   #### log.h:
+   ```C
+   #ifndef LOG_H
+   #define LOG_H
+   struct LogRecord
+   {
+   char src[10];
+   char message[50];
+   };
+   
+   void log_init();
+   void log_log(strcut LogRecord r);
+    
+   #endif //LOG_H
+   ```
+   #### lcd.c:
+   ```C
+   #include <stdio.h>
+   #include "log.h"
+   
+   void lcd_init(){
+    printf("LCD:init\n");
+    structLogRecord msg={"lcd.c","init");
+    log_log(msg);
+   }
+   
+   void show(char text[])
+   {
+    printf("show: %s\n",text);
+    structLogRecord msg={"lcd.c","shows");
+    log_log(msg);
+   }
+   
+   void showLog(struct LogRecord r)
+   {
+   //...
+   }
+   ```
+   #### lcd.h:
+   ```C
+  #ifndef LCD_H
+  #define LCD_H
+  
+  #include "log.h"
+  
+  void lcd_init();
+  void show(char text[]);
+  void showLog(struct LogRecord r);
+  
+  #endif
+   ```
 #### ii.auftretende Fehler  

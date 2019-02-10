@@ -8,18 +8,18 @@ Gruppe: 2
 
 ---
 ## Inhalte
-1. [Kernel](#1.-kernel)  
-   1. [Kernelmodul](#i.-kernelmodul)   
-1. [Erweiterung der Übung](#2.-erweiterung-der-übung)  
-   1. [Dateiauszüge](#i.-dateiauszüge)  
-   1. [Resümee](#ii.-resümee)  
+1. [Kernel](#kernel)  
+   1. [Kernelmodul](#kernelmodul)   
+1. [Erweiterung der Übung](#erweiterung-der-übung)  
+   1. [Dateiauszüge](#dateiauszüge)  
+   1. [Resümee](#resümee)  
 
 
-## 1. Kernel  
+## Kernel  
 
 Der Kernel ist der wichtigste Teil des Betriebssystems und man könnte ihn auch als Programm beschreiben der die anderen Programme managed. Er wird in kurzen Abständen abgedated damit das Betriebssytem mit der Hardware aktuell bleibt. Das heißt die Treiberdateien werden aktualisiert.  
 
-### i. Kernelmodul  
+### Kernelmodul  
 > Ein Kernel-Modul (kurz „LKM“ für englisch: „loadable kernel module“) ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann.  
 Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Kernel-Modul)  
 
@@ -27,9 +27,9 @@ Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Kernel-Modul)
 Zeigt die Aufgabe des Kernels.  
 
 ---
-## 2. Erweiterung der Übung  
+## Erweiterung der Übung  
 
-### i. Auszüge  
+### Auszüge  
 **main.c:**
 ```c  
 #include <stdio.h>
@@ -141,7 +141,7 @@ clean:
 ```
 Im Makefile wird programmiert mit welchen Abhängigkeiten die verschiedenen Ziele erfüllt werden müssen.  
 
-### ii. Resümee  
+### Resümee  
 Neu gelernt haben wir die Befehle:
 ```c
 #ifndef LCD_H

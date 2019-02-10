@@ -8,14 +8,14 @@ Gruppe: 2
 
 ---
 ## Inhalte
-1. [Kernel](##kernel)
-   1. [Kernelmodul](###kernelmodul)
-1. [Erweiterung der Übung](##erweiterung-der-übung)
-   1. [Dateiauszüge](###dateiauszüge)
-   1. [Resümee](###resümee)
+[Kernel](##kernel)  
+   [Kernelmodul](###kernelmodul)   
+[Erweiterung der Übung](##erweiterung-der-übung)  
+   [Dateiauszüge](###dateiauszüge)  
+   [Resümee](###resümee)  
 
 
-## Kernel  
+## 1. Kernel  
 
 Der Kernel ist der wichtigste Teil des Betriebssystems und man könnte ihn auch als Programm beschreiben der die anderen Programme managed. Er wird in kurzen Abständen abgedated damit das Betriebssytem mit der Hardware aktuell bleibt. Das heißt die Treiberdateien werden aktualisiert.  
 
@@ -27,7 +27,7 @@ Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Kernel-Modul)
 Zeigt die Aufgabe des Kernels.  
 
 ---
-## Erweiterung der Übung  
+## 2. Erweiterung der Übung  
 
 ### i. Auszüge  
 **main.c:**

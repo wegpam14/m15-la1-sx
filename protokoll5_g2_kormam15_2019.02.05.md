@@ -29,7 +29,7 @@ Zeigt die Aufgabe des Kernels.
 ---
 ## Erweiterung der Übung  
 
-### Auszüge  
+### Dateiauszüge  
 **main.c:**
 ```c  
 #include <stdio.h>
@@ -117,7 +117,7 @@ void showLog(struct LogRecord r);
 
 #endif
 ```
-In den Headerdateien werden die Funktionen bekanntgegeben damit der Compiler weiß dass es die definierten Funktionen bereits gibt.  
+In den Headerdateien werden die Funktionen bekanntgegeben damit der Compiler weiß dass es die definierten Funktionen bereits gibt. Außerdem wird in der **log.h** Datei ein struct definiert. 
 
 **Makefile:**
 ```make

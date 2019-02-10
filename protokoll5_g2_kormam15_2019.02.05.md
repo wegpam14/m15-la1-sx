@@ -8,11 +8,11 @@ Gruppe: 2
 
 ---
 ## Inhalte
-1. [Kernel](#1.kernel)  
-   1. [Kernelmodul](#i.kernelmodul)   
+1. [Kernel](#1.-kernel)  
+   1. [Kernelmodul](#i.-kernelmodul)   
 1. [Erweiterung der Übung](#2.-erweiterung-der-übung)  
-   1. [Dateiauszüge](#i.dateiauszüge)  
-   1. [Resümee](#ii.resümee)  
+   1. [Dateiauszüge](#i.-dateiauszüge)  
+   1. [Resümee](#ii.-resümee)  
 
 
 ## 1. Kernel  

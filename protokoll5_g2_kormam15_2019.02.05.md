@@ -8,11 +8,11 @@ Gruppe: 2
 
 ---
 ## Inhalte
-1. [Kernel](##1.-kernel)  
-   1. [Kernelmodul](###i.-kernelmodul)   
-1. [Erweiterung der Übung](##2.-erweiterung-der-übung)  
-   1. [Dateiauszüge](###i.-dateiauszüge)  
-   1. [Resümee](###ii.-resümee)  
+1. [Kernel](#1.kernel)  
+   1. [Kernelmodul](#i.kernelmodul)   
+1. [Erweiterung der Übung](#2.-erweiterung-der-übung)  
+   1. [Dateiauszüge](#i.dateiauszüge)  
+   1. [Resümee](#ii.resümee)  
 
 
 ## 1. Kernel  
@@ -20,7 +20,7 @@ Gruppe: 2
 Der Kernel ist der wichtigste Teil des Betriebssystems und man könnte ihn auch als Programm beschreiben der die anderen Programme managed. Er wird in kurzen Abständen abgedated damit das Betriebssytem mit der Hardware aktuell bleibt. Das heißt die Treiberdateien werden aktualisiert.  
 
 ### i. Kernelmodul  
-*"Ein Kernel-Modul (kurz „LKM“ für englisch: „loadable kernel module“) ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann."*  
+> Ein Kernel-Modul (kurz „LKM“ für englisch: „loadable kernel module“) ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann.  
 Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Kernel-Modul)  
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Kernel_Layout.svg/1200px-Kernel_Layout.svg.png)

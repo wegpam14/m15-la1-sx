@@ -36,13 +36,12 @@ Ein Kernel ist in Schichten aufgebaut, wobei die unteren Schichten die Basis fü
 
 Folgende Schichten sind vorhanden:
 
-    Schnittstelle zur Hardware 
-    Speicherverwaltung 
-    Prozessverwaltung
-    Geräteverwaltung 
-    Dateisysteme
+    * Schnittstelle zur Hardware 
+    * Speicherverwaltung 
+    * Prozessverwaltung
+    * Geräteverwaltung 
+    * Dateisysteme
 
-Gängige Anforderungen an einen Kernel sind Parallelverarbeitung verschiedener Aufgaben (Multitasking), Einhaltung zeitkritischer Grenzen, Offenheit für unterschiedlichste Anwendungen und Erweiterungen. 
 
 ***
 # 3. Das Kernelmodul #

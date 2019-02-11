@@ -119,8 +119,9 @@ void showLog(struct LogRecord r)
 }
 ```
 
-```c
 **lcd.h**
+
+```c
 
 #ifndef LCD_H  
 #define LCD_H

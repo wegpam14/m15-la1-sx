@@ -23,6 +23,7 @@ Gruppe: 2
 # 1.Wiederholung C-Kompilierungsvorgang #
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
+Diese Grafik wurde erneut genau durchbesprochen. Siehe [4.Protokoll]():
 
 
 ***

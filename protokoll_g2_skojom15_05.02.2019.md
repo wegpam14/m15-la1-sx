@@ -13,15 +13,15 @@ Gruppe: 2
 
 
 ## Inhalte ##  
-**1. Wiederholung C-Kompilierungsvorgang **        
-**2. Der Kernel **        
-**3.  Das Kernelmodul  **       
-**4. Fertigstellen des Programms **          
+** 1. Wiederholung C-Kompilierungsvorgang **        
+** 2. Der Kernel **        
+** 3.  Das Kernelmodul  **       
+** 4. Fertigstellen des Programms **          
            
 ***
 
 # 1.Wiederholung C-Kompilierungsvorgang #
-![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
+![Kompiliervorgang in C](C-Kompilierungsvorgang.PNG) 
 
 
 

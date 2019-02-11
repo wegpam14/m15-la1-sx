@@ -26,7 +26,7 @@ Es wurde ein weiteres mal diese Grafik durchbesprochen.
 Vor allem ,warum das Kernelmodull eine große Rolle spielt.
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
-Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):
+Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):
 
 
 ***

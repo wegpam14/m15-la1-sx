@@ -42,7 +42,7 @@ Folgende Schichten sind vorhanden:
     * Geräteverwaltung 
     * Dateisysteme
 
-*Quelle:* [Kernel](https://de.wikipedia.org/wiki/Kernel_(Betriebssystem))
+*Quelle:* [hier](https://de.wikipedia.org/wiki/Kernel_(Betriebssystem))
 ***
 # 3. Das Kernelmodul #
 Ein Kernel-Modul ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann.
@@ -53,7 +53,7 @@ Kernel-Module werden üblicherweise in der Programmiersprache C geschrieben und 
 
 Ein weiterer Vorteil liegt darin, dass Erweiterungen für den Kernel integriert werden können, ohne dass das Betriebssystem neu gestartet werden muss. Denkbar wäre, dass man auf diese Weise den als Kernel-Modul realisierten Treiber einer Grafikkarte entfernt und eine neuere Version dieses Treibers in das laufende System einbindet. 
 
-*Quelle:* [Kernelmodul](https://de.wikipedia.org/wiki/Kernel-Modul)
+*Quelle:* [hier](https://de.wikipedia.org/wiki/Kernel-Modul)
 ***
 # 4. Fertigstellen des Programms #
 

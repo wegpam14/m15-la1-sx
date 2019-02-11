@@ -21,7 +21,7 @@ Gruppe: 2
 ***
 
 # 1.Wiederholung C-Kompilierungsvorgang #
-![Kompiliervorgang in C](C-Kompilierungsvorgang.PNG) 
+![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
 
 

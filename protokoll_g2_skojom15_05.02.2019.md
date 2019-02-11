@@ -23,7 +23,7 @@ Gruppe: 2
 # 1.Wiederholung C-Kompilierungsvorgang #
 
 Es wurde ein weiteres mal diese Grafik durchbesprochen.
-Vor allem ,warum das Kernelmodull eine große Rolle spielt.
+Vor allem ,warum das Kernelmodul eine große Rolle spielt.
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
 Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):
@@ -31,9 +31,18 @@ Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2
 
 ***
 ## 2. Der Kernel ##
+Ein Kernel ist der zentrale Bestandteil eines Betriebssystems. In ihm ist die Prozess- und Datenorganisation festgelegt, auf der alle weiteren Softwarebestandteile des Betriebssystems aufbauen. Er bildet die unterste Softwareschicht des Systems und hat direkten Zugriff auf die Hardware. Weitere Softwarekomponenten eines Betriebssystems liegen in der Regel in einer übergeordneten Schicht.
+Ein Kernel ist in Schichten aufgebaut, wobei die unteren Schichten die Basis für die darüberliegenden bilden. Die oberen Schichten können Funktionen der unteren Schichten aufrufen.
 
+Folgende Schichten sind vorhanden:
 
+    Schnittstelle zur Hardware 
+    Speicherverwaltung 
+    Prozessverwaltung
+    Geräteverwaltung 
+    Dateisysteme
 
+Gängige Anforderungen an einen Kernel sind Parallelverarbeitung verschiedener Aufgaben (Multitasking), Einhaltung zeitkritischer Grenzen, Offenheit für unterschiedlichste Anwendungen und Erweiterungen. 
 
 ***
 # 3. Das Kernelmodul #

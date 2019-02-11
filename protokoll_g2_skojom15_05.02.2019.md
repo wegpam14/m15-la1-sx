@@ -42,7 +42,7 @@ Folgende Schichten sind vorhanden:
     * Geräteverwaltung 
     * Dateisysteme
 
-*Quelle:* [Kernel](https://de.wikipedia.org/wiki/Kernel_(Betriebssystem)
+*Quelle:* [Kernel](https://de.wikipedia.org/wiki/Kernel_(Betriebssystem))
 ***
 # 3. Das Kernelmodul #
 Ein Kernel-Modul ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann.

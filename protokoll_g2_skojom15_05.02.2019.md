@@ -21,9 +21,12 @@ Gruppe: 2
 ***
 
 # 1.Wiederholung C-Kompilierungsvorgang #
+
+Es wurde ein weiteres mal diese Grafik durchbesprochen.
+Vor allem ,warum das Kernelmodull eine große Rolle spielt.
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
-Diese Grafik wurde erneut genau durchbesprochen. Siehe [4.Protokoll]():
+Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):
 
 
 ***
@@ -34,7 +37,7 @@ Diese Grafik wurde erneut genau durchbesprochen. Siehe [4.Protokoll]():
 
 ***
 # 3. Das Kernelmodul #
-
+Vor allem ,warum man wegen dem Kernelmodul nicht jedes mal bei Aktualisirung des Treibers den Pc neu starten muss.
 
 
 

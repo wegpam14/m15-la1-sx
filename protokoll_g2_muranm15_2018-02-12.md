@@ -10,7 +10,7 @@ abwesend: -
 
 
 ## Inhalt 
-1. [Intelligenter Sensor]()     
+1. [Intelligenter Sensor](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/protokoll_g2_muranm15_2018-02-12.md#intelligenter-sensor)     
 1. [UART]()    
 1. [Feldbusse]()  
     1. [Modbus]()  

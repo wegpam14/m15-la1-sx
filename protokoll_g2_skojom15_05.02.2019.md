@@ -24,7 +24,7 @@ Gruppe: 2
 
 Es wurde ein weiteres mal diese Grafik durchbesprochen.
 Vor allem ,warum man mit einem Kernelmodul den Kernel neu beschreiben kann, ohne das Betriebssystem neu starten zu müssen.
-In diesem Bild übernimmt das Kernelmodul, die Arbeit vom Linker.Deshalb kann bei Verwundung von einem Kernelmodul der Linker weggelassen werden.
+In diesem Bild übernimmt das Kernelmodul, die Arbeit vom Linker.Deshalb kann bei Verwendung von einem Kernelmodul der Linker weggelassen werden.
 
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 

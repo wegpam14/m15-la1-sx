@@ -94,8 +94,8 @@ Ein [Treiber](https://de.wikipedia.org/wiki/Ger%C3%A4tetreiber), häufig kurz nu
    #define LOG_H
    struct LogRecord
    {
-   char src[10];
-   char message[50];
+     char src[10];
+     char message[50];
    };
    
    void log_init();

@@ -8,7 +8,21 @@ abwesend: -
  Thema: **Temperatursensor,Feldbus**  
   
 
+
 ## Inhalt 
+1. [Intelligenter Sensor]()     
+1. [UART]()    
+1. [Feldbusse]()  
+    1. [Modbus]()  
+    1. [Wie funktioniert ein Modbus?]() 
+    1. [Arten der Datenübertragung]()  
+    1. [ASCII Transmission Mode]()
+    1. [Datenpaket]()
+    1. [Daten-Modell]()
+    1. [Function Codes]()
+    1. [Wie weiß der Modbus-Empfänger, wann beim RTU-Modus die Übertragung beendet ist?  ]()
+    
+    
 
 ### Intelligenter Sensor
 Intelligent ist der Sensor deswegen, weil er schon einen fertigen Temperaturwert zurückliefert, das heißt, er muss irgendwie einen eingebauten Prozessor haben, welcher die Werte umrechenen kann. Im Gegensatz dazu würde ein unintelligenter Sensor (zB Pt100) einfach zB eine Spannung zwischen 0 und 10 Volt zurückliefern und mann müsste sich selbst um die Auswertung kümmern
@@ -48,7 +62,7 @@ Die Datenübertragung funktioniert dabei über drei verschiedene Wege, **ASCII**
 
 
 
-### Es gibt 3 Arten der Datenübertragung
+### Arten der Datenübertragung
 
 * Modbus ASCII - Die Daten werden textuell und byteweise übertragen. Frames beginnen mit einem Doppelpunkt
 * Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)
@@ -62,7 +76,7 @@ Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/ModbusASCII.png)
 
 
-### Modbus Datenpaket
+### Datenpaket
 
 Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Unit):
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/ModbusADUPDU.png)
@@ -100,11 +114,6 @@ Function Code | Hex | Name | Typ
 16| 10 | Write Multiple Registers | 16-Bit
 
 [Mehr Infos in der Spezifikation](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)
-
-### ASCII
-hier werden die Daten als ASCII-Zeichen versendet. Die empfohlene Konfiguration der seriellen Schnittstelle ist 7E1 oder 7N2, also nur 7 Datenbits. Dies ist aber Absicht, das die ASCII-Codepage mit 7 Bit auskommt. Im Falle des Falles darf davon jedoch auch abgewichen werden. Eine Übertragung wird mit einem Doppelpunkt eingeleitet, nach Adresse und Function Code kommen bis zu 252 Zeichen, danach eine LRC-Prüfsumme und abgeschlossen wird die Transmission mit einem CR (Wagenrücklauf) und einem LF (Zeilenvorschub).  
-Beispiel einer Übertragung: `:0401000A000868<CR><LF>`  
-Hier die grafische Darstellung:  
 
 
 ### Wie weiß der Modbus-Empfänger, wann beim RTU-Modus die Übertragung beendet ist?  

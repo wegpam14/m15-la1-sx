@@ -134,7 +134,7 @@ void show(char text[])
 
 void showLog(struct LogRecord r)
 {
-  //...
+  //.....
 }
 ```
 

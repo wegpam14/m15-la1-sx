@@ -37,6 +37,7 @@ Wir verwenden Modbus, da dies ein frei verfügbarer Standard ist und nicht zu ko
 ### Modbus
 
 Das offen zugänglich Kommunikationsprotokoll Modbus wurde 1979 von Gould-Modicon ins Leben gerufen. Die Anwendungsgebiete sind die Hausautomatisierung und die Industrie. Es basiert auf dem **Server/Client** Prinzip. 
+![](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/ModbusServerClient.png)
 
 
 ### Wie funktioniert Modbus? 
@@ -58,11 +59,13 @@ Die Datenübertragung funktioniert dabei über drei verschiedene Wege, **ASCII**
 Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
 
 Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
+![](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/ModbusASCII.png)
 
 
 ### Modbus Datenpaket
 
 Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Unit):
+![](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/ModbusADUPDU.png)
 
 
 

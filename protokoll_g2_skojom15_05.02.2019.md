@@ -23,7 +23,8 @@ Gruppe: 2
 # 1.Wiederholung C-Kompilierungsvorgang #
 
 Es wurde ein weiteres mal diese Grafik durchbesprochen.
-Vor allem ,warum das Kernelmodul eine große Rolle spielt.
+Vor allem ,warum man mit einem Kernelmodul den Kernel neu beschreiben kann,  
+ohne das Betriebssystem neu starten zu müssen.
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
 Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):

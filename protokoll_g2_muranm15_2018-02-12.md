@@ -38,9 +38,14 @@ Wir verwenden Modbus, da dies ein frei verfügbarer Standard ist und nicht zu ko
 
 Das offen zugänglich Kommunikationsprotokoll Modbus wurde 1979 von Gould-Modicon ins Leben gerufen. Die Anwendungsgebiete sind die Hausautomatisierung und die Industrie. Es basiert auf dem **Server/Client** Prinzip. 
 
-In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am folgenden Bild lässt sich das gut erkennen:
 
-![Server/Client Prinzip bei Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusServerClient.png)
+### Wie funktioniert Modbus? 
+
+Die prinzipielle Funktionsweise des Protokolls ist **simpel**. Das Informationsprotokoll sorgt dafür, dass ein **Master-Gerät** (hierbei handelt es sich zumeist um einen Computer) und ein oder mehrere **Slave-Geräte** miteinander verbunden werden. So lassen sich zum Beispiel verschiedene Messgeräte durch einen Computer steuern, bzw. können Daten zurück an diesen übertragen werden. 
+
+Die Datenübertragung funktioniert dabei über drei verschiedene Wege, **ASCII**, **RTU** und **TCP**, welche sich für **unterschiedliche Zwecke** eignen. Die Übertragungssysteme können entweder **Ethernet** sein oder die etwas ältere Variante der **seriellen** **Verbindung**.
+
+
 
 ### Es gibt 3 Arten der Datenübertragung
 
@@ -53,13 +58,13 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
 
 Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
-![Modbus ASCII Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusASCII.png)
+
 
 ### Modbus Datenpaket
 
 Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Unit):
 
-![ADU/PTU Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusADUPDU.png)
+
 
 Die maximale Größe einer ADU liegt bei Modbus ASCII/RTU bei 256 Bytes und bei Modbus TCP bei 260 Bytes.
 
@@ -97,9 +102,7 @@ Function Code | Hex | Name | Typ
 hier werden die Daten als ASCII-Zeichen versendet. Die empfohlene Konfiguration der seriellen Schnittstelle ist 7E1 oder 7N2, also nur 7 Datenbits. Dies ist aber Absicht, das die ASCII-Codepage mit 7 Bit auskommt. Im Falle des Falles darf davon jedoch auch abgewichen werden. Eine Übertragung wird mit einem Doppelpunkt eingeleitet, nach Adresse und Function Code kommen bis zu 252 Zeichen, danach eine LRC-Prüfsumme und abgeschlossen wird die Transmission mit einem CR (Wagenrücklauf) und einem LF (Zeilenvorschub).  
 Beispiel einer Übertragung: `:0401000A000868<CR><LF>`  
 Hier die grafische Darstellung:  
-![ASCII](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_ascii.png)  
->aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018  
-Beispiel einer Übertragung: `:0401000A000868<CR><LF>`
+
 
 ### Wie weiß der Modbus-Empfänger, wann beim RTU-Modus die Übertragung beendet ist?  
 Da der RTU-Modus die Daten bitweise überträgt, kann man nicht so einfach feststellen, wann eine Übertragung beendet ist. Daher wurde festgelegt, dass, wenn auf der Leitung eine Pause von 3,5 Zeichen auftritt, der Empfänger die Übertragung des Pakets als abgeschlossen interpretieren soll. Dies kann jedoch zu einem Problem führen, da 3,5 Zeichen je nach Konfiguration zeitlich gesehen deutlich unter einer Millisekunde sein können und es durch das Betriebssystem des Rechners ohne weiters zu solchen Verzögerungen kommen kann. In diesem Moment würde der Empfänger (zB µC) zwei Pakete bekommen, aber anhand der Prüfsummen sehen, dass etwas nicht stimmt und beide Pakete als korrupt erkennen und verwerfen. An diesem Punkt ist die Abhilfe nur durch "pfuschen" möglich, nämlich in dem man zum Beispiel in der Konfiguration die Wartezeit von 3,5 Zeichen auf 35 oder 70 Zeichen erhöht. Außerdem darf in einer RTU-Übertragung keine Pause von mehr als 1,5 Zeichen sein, da der Empfänger das Paket dann auch verwerfen würde. Gegebenenfalls muss auch diese Zeit angepasst werden. Alternativ wäre nur der Umstieg auf eine anderes Verfahren zu nennen. Außerdem darf in einer RTU-Übertragung keine Pause von mehr als 1,5 Zeichen sein, da der Empfänger das Paket dann auch verwerfen würde. Gegebenenfalls muss auch diese Zeit angepasst werden. 

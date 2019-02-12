@@ -5,20 +5,13 @@ Gruppe: 2
 Betreuer: Professor Steiner  
 abwesend: -  
   
-  Thema: **Temperatursensor,Feldbus**  
+ Thema: **Temperatursensor,Feldbus**  
   
 
 ## Inhalt 
 
-## **Realisierung**
-
-Die grundsätzliche Struktur sieht folgendermaßen aus:
-
-![Grundstruktur als SVG](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/BildGrundstruktur.svg)
-
-Der  **Temperaturensor LM75** gibt die Messdaten an das Rechenzentrum des Mikrocontrollers über I²C weiter. Während der LM75 hier als _unintelligenter_ Sensor agiert, kann das **SURE-Board** als Ganzes durchaus als _intelligenter_ Sensor bezeichnet werden. Der Mikorcontroller gibt die Messdaten über UART weiter. Die Verbindung zwischen dem SURE-Board und dem PC (MiniUSB/USB) ist in diesem Fall ein **Feldbus**.
-
-
+###Intelligenter Sensor
+Intelligent ist der Sensor deswegen, weil er schon einen fertigen Temperaturwert zurückliefert, das heißt, er muss irgendwie einen eingebauten Prozessor haben, welcher die Werte umrechenen kann. Im Gegensatz dazu würde ein unintelligenter Sensor (zB Pt100) einfach zB eine Spannung zwischen 0 und 10 Volt zurückliefern und mann müsste sich selbst um die Auswertung kümmern
 
 ### UART
 
@@ -28,7 +21,6 @@ Der UART ist eine einfache **serielle Schnittstelle**, die in Bezug auf Datenüb
 
 
 ### Feldbusse
-
 
 Ein Feldbus ist ein Bussystem, das in einer Anlage Sensoren und Aktoren mit einem Automatisierungsgerät verbindet. Welches Bussystem sivoll ist  hängt stark von der Anwendung ab. Folgende Feldbusse sind stark verbreitet:
 
@@ -50,19 +42,20 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 
 ![Server/Client Prinzip bei Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusServerClient.png)
 
-**Es gibt 3 Arten der Datenübertragung:**
+###Es gibt 3 Arten der Datenübertragung
 
 * Modbus ASCII - Die Daten werden textuell und byteweise übertragen. Frames beginnen mit einem Doppelpunkt
 * Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)
 * Modbus TCP - Die Daten werden in TCP-Paketen übertragen. Besonderheit: Paketanfang/Paketende werden durch Pausen detektiert, was in auf nicht deterministischen Betriebssystemen wie Windows schnell zu Problemen führen kann
-**ASCII Transmission Mode**
+
+###ASCII Transmission Mode
 
 Die Übertragung der Frames erfolgt hier wie bereits bekannt als ASCII-Text. Die serielle Schnittstelle wird standardmäßig 7E1 oder 7N2 konfigueriert, also nur 7 Daten-Bits! Im Bedarfsfall darf aber auch eine davon abweichende Festlegung verwendet werden.
 
 Ein Modbus ASCII-Frame hat somit folgenden Aufbau:
 ![Modbus ASCII Frame](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusASCII.png)
 
-**Modbus Datenpaket**
+###Modbus Datenpaket
 
 Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Data** bestehen. Bei den Varianten ASCII und RTU kommen zusätzlich noch die Adresse und eine Prüfsumme dazu. Das ist bei Modbus TCP nicht notwendig, da diese Bestandteile bereits im TCP-Standard beinhaltet sind. Folgendes Bild stellt den Unterschied zwischen **ADU**(Application Data Unit) und **PTU**(Protocoll Data Unit):
 
@@ -70,16 +63,19 @@ Ein Modbus Datenpaket muss mindestens aus den Teilen **Function Code** und **Dat
 
 Die maximale Größe einer ADU liegt bei Modbus ASCII/RTU bei 256 Bytes und bei Modbus TCP bei 260 Bytes.
 
-**Daten-Modell**
+###Daten-Modell
 
-Beim Modbus Daten-Modell wird in vier verschiedene Adressräume unterschieden:
+Das Modbus-Daten-Modell unterscheidet vier verschiedene Bereiche:  
 
-* Discrete Inputs (ein einzelnes Bit, welches nur gelesen werden kann) zum Beispiel: ein Taster
-* Coils (ein Bit, welches gelesen und beschrieben werden kann) zum Beispiel: eine LED
-* Input Registers (ein 16-Bit Wert der nur gelesen werden kann) zum Beispiel: ein Temperatursensor
-* Hold-Registers (ein 16-Bit Wert der gelesen und beschrieben werden kann) zum Beispiel: die Anzeige am Sure-Board
+Name | Zweck | Beispiel
+-----|-------|---------
+Discrete Inputs | ein einzelnes Bit, welches nur lesbar ist | Taster am SHURE-Board
+Coils | les- und beschreibbares Bit | LED oder Spule (daher der Name)
+Input Registers | lesbares Register (16-Bit-Wert) | ADC, Temperatursensor
+Hold-Registers | les- und beschreibbares Register (16-Bit) | DAC, Pulsweitenmodulatormodul  
+  
 
-**Function Codes**
+###Function Codes
 
 Die  bereits oben erwähnten Function-Codes defineren ein Modbus-Frame. Für Requests sind Werte zwischen 1 und 127 zulässig. Dabei können Function Codes in den Bereichen 65-72 und 100-110 vom Benutzer selber vergeben werden. Der Großteil der restlichen Function Codes werden von der Modbus.org Community eindeutig definiert (**Public Function Codes**).
 Einige wichtigte Public Function Codes sind hier zusammengefasst:
@@ -96,5 +92,16 @@ Function Code | Hex | Name | Typ
 16| 10 | Write Multiple Registers | 16-Bit
 
 [Mehr Infos in der Spezifikation](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)
+
+###ASCII
+hier werden die Daten als ASCII-Zeichen versendet. Die empfohlene Konfiguration der seriellen Schnittstelle ist 7E1 oder 7N2, also nur 7 Datenbits. Dies ist aber Absicht, das die ASCII-Codepage mit 7 Bit auskommt. Im Falle des Falles darf davon jedoch auch abgewichen werden. Eine Übertragung wird mit einem Doppelpunkt eingeleitet, nach Adresse und Function Code kommen bis zu 252 Zeichen, danach eine LRC-Prüfsumme und abgeschlossen wird die Transmission mit einem CR (Wagenrücklauf) und einem LF (Zeilenvorschub).  
+Beispiel einer Übertragung: `:0401000A000868<CR><LF>`  
+Hier die grafische Darstellung:  
+![ASCII](https://github.com/HTLMechatronics/m14-la1-sx/blob/smumam14/smumam14/resources/modbus_ascii.png)  
+>aus dem oben genannten Modbus-Skript, abgerufen von lms.at am 14.03.2018  
+Beispiel einer Übertragung: `:0401000A000868<CR><LF>`
+
+###Wie weiß der Modbus-Empfänger, wann beim RTU-Modus die Übertragung beendet ist?  
+Da der RTU-Modus die Daten bitweise überträgt, kann man nicht so einfach feststellen, wann eine Übertragung beendet ist. Daher wurde festgelegt, dass, wenn auf der Leitung eine Pause von 3,5 Zeichen auftritt, der Empfänger die Übertragung des Pakets als abgeschlossen interpretieren soll. Dies kann jedoch zu einem Problem führen, da 3,5 Zeichen je nach Konfiguration zeitlich gesehen deutlich unter einer Millisekunde sein können und es durch das Betriebssystem des Rechners ohne weiters zu solchen Verzögerungen kommen kann. In diesem Moment würde der Empfänger (zB µC) zwei Pakete bekommen, aber anhand der Prüfsummen sehen, dass etwas nicht stimmt und beide Pakete als korrupt erkennen und verwerfen. An diesem Punkt ist die Abhilfe nur durch "pfuschen" möglich, nämlich in dem man zum Beispiel in der Konfiguration die Wartezeit von 3,5 Zeichen auf 35 oder 70 Zeichen erhöht. Außerdem darf in einer RTU-Übertragung keine Pause von mehr als 1,5 Zeichen sein, da der Empfänger das Paket dann auch verwerfen würde. Gegebenenfalls muss auch diese Zeit angepasst werden. Alternativ wäre nur der Umstieg auf eine anderes Verfahren zu nennen. Außerdem darf in einer RTU-Übertragung keine Pause von mehr als 1,5 Zeichen sein, da der Empfänger das Paket dann auch verwerfen würde. Gegebenenfalls muss auch diese Zeit angepasst werden. 
 
 

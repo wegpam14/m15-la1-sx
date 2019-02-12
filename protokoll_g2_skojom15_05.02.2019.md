@@ -158,16 +158,14 @@ void showLog(struct LogRecord r);
 **Makefile:**
 ```c
 a.out: main. o lcd.o log.o
-        gcc main.o lcd.o log.o
+        gcc main.o lcd.o log.o   
 main.o: main.c lcd.h log.h
-        gcc -c main.c     
+        gcc -c main.c            
 lcd.o: lcd.c
-        gcc -c lcd.c
-        
+        gcc -c lcd.c    
 log.o: log.c
         gcc -c log.c
          
- 
 clean:
         -rm a.out
         -rm *.o   

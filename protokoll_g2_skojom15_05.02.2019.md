@@ -49,9 +49,9 @@ Folgende Schichten sind vorhanden:
 # 3. Das Kernelmodul #
 Ein Kernel-Modul ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann.
 
-Kernel-Module werden häufig für Gerätetreiber verwendet.Kernel-Module werden üblicherweise in der Programmiersprache C geschrieben und vor ihrem Laden in den Kernel, in die Maschinensprache für die Ziel-Plattform übersetzt.
+Kernel-Module werden häufig für Gerätetreiber verwendet. Kernel-Module werden üblicherweise in der Programmiersprache C geschrieben und vor ihrem Laden in den Kernel, in Maschinensprache für die Ziel-Plattform übersetzt.
 
-Ein weiterer Vorteil liegt darin, dass Erweiterungen für den Kernel integriert werden können, ohne dass das Betriebssystem neu gestartet werden muss. Denkbar wäre, dass man auf diese Weise den als Kernel-Modul realisierten Treiber einer Grafikkarte entfernt und eine neuere Version dieses Treibers in das laufende System einbindet. 
+Ein weiterer Vorteil liegt darin, dass Erweiterungen für den Kernel integriert werden können, ohne dass das Betriebssystem neu gestartet werden muss. Denkbar wäre, dass man auf diese Weise den als Kernel-Modul realisierten Treiber zum Bespiel einer Grafikkarte entfernt und eine neuere Version dieses Treibers in das laufende System einbindet. 
 
 *Quelle:* [hier](https://de.wikipedia.org/wiki/Kernel-Modul)
 ***

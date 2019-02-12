@@ -23,8 +23,7 @@ Gruppe: 2
 # 1.Wiederholung C-Kompilierungsvorgang #
 
 Es wurde ein weiteres mal diese Grafik durchbesprochen.
-Vor allem ,warum man mit einem Kernelmodul den Kernel neu beschreiben kann,  
-ohne das Betriebssystem neu starten zu müssen.
+Vor allem ,warum man mit einem Kernelmodul den Kernel neu beschreiben kann, ohne das Betriebssystem neu starten zu müssen.
 
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 

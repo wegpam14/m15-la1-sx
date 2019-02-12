@@ -18,7 +18,6 @@ Die grundsätzliche Struktur sieht folgendermaßen aus:
 
 Der  **Temperaturensor LM75** gibt die Messdaten an das Rechenzentrum des Mikrocontrollers über I²C weiter. Während der LM75 hier als _unintelligenter_ Sensor agiert, kann das **SURE-Board** als Ganzes durchaus als _intelligenter_ Sensor bezeichnet werden. Der Mikorcontroller gibt die Messdaten über UART weiter. Die Verbindung zwischen dem SURE-Board und dem PC (MiniUSB/USB) ist in diesem Fall ein **Feldbus**.
 
-[Weitere Informationen zum LM75](http://www.franksteinberg.de/lm75.htm)
 
 
 ### UART

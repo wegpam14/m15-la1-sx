@@ -13,10 +13,10 @@ Gruppe: 2
 
 
 ## Inhalte ##  
-** 1. Wiederholung C-Kompilierungsvorgang **        
-** 2. Der Kernel **        
-** 3.  Das Kernelmodul  **       
-** 4. Fertigstellen des Programms **          
+**1. Wiederholung C-Kompilierungsvorgang**        
+**2. Der Kernel**        
+**3.  Das Kernelmodul **       
+**4. Fertigstellen des Programms**          
            
 ***
 
@@ -24,7 +24,7 @@ Gruppe: 2
 
 Es wurde ein weiteres mal diese Grafik durchbesprochen.
 Vor allem ,warum man mit einem Kernelmodul den Kernel neu beschreiben kann, ohne das Betriebssystem neu starten zu müssen.
-
+In diesem Bild übernimmt das Kernelmodul, die Arbeit vom Linker.
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
 Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):
@@ -32,7 +32,7 @@ Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2
 
 ***
 ## 2. Der Kernel ##
-Ein Kernel ist der zentrale Bestandteil eines Betriebssystems. In ihm ist die Prozess- und Datenorganisation festgelegt, auf der alle weiteren Softwarebestandteile des Betriebssystems aufbauen. Er bildet die unterste Softwareschicht des Systems und hat direkten Zugriff auf die Hardware. Weitere Softwarekomponenten eines Betriebssystems liegen in der Regel in einer übergeordneten Schicht.
+Ein Kernel ist der zentrale Bestandteil eines Betriebssystems. In ihm ist die Prozess- und Datenorganisation festgelegt, auf der alle weiteren Softwarebestandteile des Betriebssystems aufbauen. Er bildet die unterste Softwareschicht des Systems und hat direkten Zugriff auf die Hardware.Wird bei einem Rechner eine neue Hardware hinzugefügt, muss auch ein neuer Treiber installiert werden. Weitere Softwarekomponenten eines Betriebssystems liegen in der Regel in einer übergeordneten Schicht.
 Ein Kernel ist in Schichten aufgebaut, wobei die unteren Schichten die Basis für die darüberliegenden bilden.
 
 Folgende Schichten sind vorhanden:

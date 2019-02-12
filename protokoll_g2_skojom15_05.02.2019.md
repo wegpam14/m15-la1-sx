@@ -15,7 +15,7 @@ Gruppe: 2
 ## Inhalte ##  
 **1. Wiederholung C-Kompilierungsvorgang**        
 **2. Der Kernel**        
-**3.  Das Kernelmodul **       
+**3. Das Kernelmodul**       
 **4. Fertigstellen des Programms**          
            
 ***
@@ -24,7 +24,8 @@ Gruppe: 2
 
 Es wurde ein weiteres mal diese Grafik durchbesprochen.
 Vor allem ,warum man mit einem Kernelmodul den Kernel neu beschreiben kann, ohne das Betriebssystem neu starten zu müssen.
-In diesem Bild übernimmt das Kernelmodul, die Arbeit vom Linker.
+In diesem Bild übernimmt das Kernelmodul, die Arbeit vom Linker.Deshalb kann bei Verwundung von einem Kernelmodul der Linker weggelassen werden.
+
 ![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
 
 Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):

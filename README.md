@@ -5,4 +5,4 @@
 **Einheit 3**   *Krankheitsbedingt nicht anwesend*  
 **Einheit 4** 29.01.2019  [Protokoll 4](protokoll_g2_skojom15_29.01.2019.md)       
 **Einheit 5** 05.02.2019  [Protokoll 5](protokoll_g2_skojom15_05.02.2019.md)       
-**Einheit 6** 11.02.2019  [Protokoll 6](protokoll_g2_skojom15_12.02.2019.md)   
+**Einheit 6** 12.02.2019  [Protokoll 6](protokoll_g2_skojom15_12.02.2019.md)   

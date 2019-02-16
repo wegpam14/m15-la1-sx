@@ -9,162 +9,113 @@ Gruppe: 2
 |---|---|
 | Korrenn,Murko,Orthofer,Perl,Szapacs | -  |
 
+*******************************************************************************************************************************************  
+
+## Feldbus  
+Es ist ein Bussystem, das in einer Anlage Feldgeräte und Stellglieder zwecks Kommunikation mit einem Automatisierungsgerät verbindet. Es gibt nomierte Protokolle um bei mehrere Kommunikationsteilnehmer ihre Nachrichten über dieselbe Leitung senden zu wissen, wer was wann sagt.  
+
+Die erste Generation der Feldbustechnik wurde in den 1980er Jahren entwickelt, um die bis dahin übliche Parallelverdrahtung binärer Signale sowie die analoge Signalübertragung durch digitale Übertragungstechnik zu ersetzen. Heute sind viele unterschiedliche Feldbussysteme mit unterschiedlichen Eigenschaften am Markt etabliert. Seit 1999 werden Feldbusse in der Norm IEC 61158 weltweit standardisiert. Die zweite Generation der Feldbustechnik basiert auf Echtzeit-Ethernet.  
+
+Folgende Feldbusse sind zur Zeit üblich:  
+* Modbus (Industrie)  
+* Powerlink (Industrie)  
+* Profibus (Industrie)  
+* CAN (Automobilbereich)  
+* LIN (Automobilbereich)  
+* Flexray (Automobilbereich)  
+* KNX (Haustechnik)  
+
+## Modbus  
+Anfänglich wurde Modbus für die Kommunikation zwischen SPS-Geräten entwickelt, etablierte sich aber in der Industrie als De-Facto-Standard, da es sich wie bereits erwähnt um ein offenes Protokoll handelt. Seit 2007 ist die Version Modbus TCP Teil der IEC 61158. Es lassen sich sowohl RS-232-Netzwerke, sowie TCP/IP-Netzwerke aufbauen. 
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/modbus_communication_stack.png)  
+
+Mit Modbus kann ein Master mit mehreren Slaves verbunden werden. Jeder Teilnehmer des Netzwerkes ist berechtigt Daten zu übertragen, regeln tut dies der Master.  
+
+Der Ablauf der Kommunikationen erfolgt über eine Client/Server-Architektur.  
+![](https://github.com/HTLMechatronics/m14-la1-sx/blob/sacmam14/sacmam14/clientserver.png)  
+
+Die Datenübertragung wird in 3 Betriebsarten unterschieden:  
+* Modbus RTU (bniäre Übertragung von Daten)  
+* Modbus ASCII (textuelle, byteweise Übertragung von Daten)  
+* Modbus TCP (Daten werden in TCP Paketen übertragen)  
+
+### Protokollaufbau  
+
+#### RTU  
+m RTU-Modus wird der Sendebeginn durch eine Sendepause von mindestens der 3,5-fachen Zeichenlänge markiert. Die Länge der Sendepause hängt somit von der Übertragungsgeschwindigkeit ab. Das Adressfeld besteht aus acht Bit, die die Empfängeradresse darstellen. Der Slave sendet bei seiner Antwort an den Master ebendiese Adresse zurück, damit der Master die Antwort zuordnen kann. Das Funktionsfeld besteht aus 8 Bit. Hat der Slave die Anfrage des Masters korrekt empfangen, so antwortet er mit demselben Funktionscode. Ist ein Fehler aufgetreten, so verändert er den Funktionscode, indem er das höchstwertige Bit des Funktionsfeldes auf 1 setzt. Das Datenfeld enthält Hinweise, welche Register der Slave auslesen soll, und ab welcher Adresse diese beginnen. Der Slave setzt dort die ausgelesenen Daten (z. B. Messwerte) ein, um sie an den Master zu senden. Im Fehlerfall wird dort ein Fehlercode übertragen. Das Feld für die Prüfsumme, die mittels CRC ermittelt wird, beträgt 16 Bit. Das gesamte Telegramm muss in einem kontinuierlichen Datenstrom übertragen werden. Tritt zwischen zwei Zeichen eine Sendeunterbrechung auf, die länger als 1,5 Zeichen ist, so ist das Telegramm als unvollständig zu bewerten und sollte vom Empfänger verworfen werden.  
+Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus)  
+
+#### ASCII  
+Im ASCII-Modus beginnen Nachrichten mit einem vorangestellten Doppelpunkt, das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed (CRLF) markiert.  
+
+Die ersten zwei Bytes enthalten zwei ASCII-Zeichen, die die Adresse des Empfängers darstellen. Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert. Über ein Zeichen folgen die Daten. Über das gesamte Telegramm (ohne Start- und Ende-Markierung) wird zur Fehlerprüfung ein LRC ausgeführt, dessen Paritätsdatenwort in den abschließenden zwei Zeichen untergebracht wird. Tritt während der Übertragung eines Frames eine Pause von > 1s auf, wird der Frame als Fehlerfall bewertet. Der Benutzer kann ein längeres Timeout konfigurieren.  
+Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus)  
+
+#### TCP  
+Transaktionsnummer |	Protokollkennzeichen |	Zahl der noch folgenden Bytes | Adresse | Funktion | Daten  
+-------------------|-----------------------|--------------------------------|---------|----------|-------  
+2 Byte |	2 Byte (immer 0x0000) |	2 Byte (n+2) |	1 Byte |	1 Byte |	n Byte  
+
+Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus)  
+
+### Objekttypen  
+Lese- und Schreibzugriffe auf folgende Objekttypen ist möglich:  
+
+Schnittstellentyp | Objekttyp | Zugriff | Größe  
+------------------|-----------|---------|------  
+Digitaler Eingang | "Discrete Input" | Lesen | 1 bit  
+Analoger Eingang | "Input Register" | Lesen | 16 bit  
+Digitaler Ein-/Ausgang | "Coil" | Lesen & Schreiben | 1 bit  
+Analoger Ein-/Ausgang | "Holding Register" | Lesen & Schreiben | 16 bit  
+
+### Function-Codes  
+Über Function-Codes sind die Bedeutungen der Frames im Modbus-Frame definiert.  
+Für Requests und Non-Error-Responses werden folgende Codes verwendet:  
+* User defined Function Codes (65-72, 100-110, dürfen individuell verwendet werden)   
+* Reserved Function Codes (8, 9, 10, 13, 14, 41, 42, 90, 91, 125, 126, 127, Werte, welche von Unternehmen werwendet wurden)  
+* Public Function Codes (alle zwischen 1 und 127 übrigen Werte, eindeutig von der Modbus.org community festgelegt)  
+  
+An folgender Tabelle lassen sich die Bedeutungen einiger, wichtiger Public Function Codes ablesen:  
+   
+Function Code | Hex | Name | Typ  
+--------------|-----| -----| ---  
+1 | 01 | Read Coils | Bit  
+2 | 02 | Read Discrete Inputs | Bit  
+3 | 03 | Read Holding Registers | 16-Bit  
+4 | 04 | Read Input Register | 16-Bit  
+5 | 05 | Write Single Coil | Bit  
+6 | 06 | Write Single Register | 16-Bit  
+15| 0F | Write Multiple Coils |	Bit  
+16| 10 | Write Multiple Registers | 16-Bit  
+
+Für weitere, detailiertere Informationen siehe: [Modbus](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)  
+
+### Exceptions
+>Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu. Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.
 
 
-## Inhalte ##  
-**1. Wiederholung C-Kompilierungsvorgang**        
-**2. Der Kernel**        
-**3. Das Kernelmodul**       
-**4. Fertigstellen des Programms**          
-           
-***
+## Java Native Interface (JNI)  
+Java Native Interface ist eine standardisierte Anwendungsprogrammierschnittstelle (API), die die Möglichkeit schafft, aus der Programmiersprache Java heraus Plattform-spezifische Funktionen bzw. Methoden aufzurufen.  
 
-# 1.Wiederholung C-Kompilierungsvorgang #
+JNI ermöglicht es, native Methoden zu schreiben für Situationen, in denen es nicht möglich ist, ausschließlich Java als Programmiersprache einzusetzen. Dies ist der Fall, wenn beispielsweise die Standard-Java-Klassenbibliothek bestimmte Plattform-abhängige Features oder andere Programmbibliotheken nicht unterstützt. Weiterhin ist es per JNI möglich, eine weitere in einer anderen Programmiersprache programmierte Anwendung für Java zugreifbar zu machen. Viele Klassen der Java-Standardbibliothek basieren auf JNI, um beispielsweise die Datei-Ein- und Ausgabe oder Soundwiedergabe zu ermöglichen. Indem Java Leistungs- und Plattform-abhängige Implementierungen in die Standardbibliothek integriert, kann der Java-Programmierer und -Nutzer diese Features in sicherer und Plattform-unabhängiger Weise nutzen.  
+Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Java_Native_Interface)  
 
-Es wurde ein weiteres mal diese Grafik durchbesprochen.
-Vor allem ,warum man mit einem Kernelmodul den Kernel neu beschreiben kann, ohne das Betriebssystem neu starten zu müssen.
-In diesem Bild übernimmt das Kernelmodul, die Arbeit vom Linker.Deshalb kann bei Verwendung von einem Kernelmodul der Linker weggelassen werden.
+Wir benötigen das JNI um eine Kommunikationsschnittstelle zwischen unserer Java Virtual Machine und den seriellen Schnittstellen auf die unserer Betriebssystem zugreift, herzustellen.  
 
-![Kompiliervorgang in C](C-Kompilierungsvorgang.png) 
+### Programmbibliotheken  
+In unseren *AIIT-Templates* unter Netbeans finden sich [Programmbibliotheken](https://de.wikipedia.org/wiki/Programmbibliothek) für JNI.
+Jedes Betriebssystem, bzw. jede [Architektur](https://de.wikipedia.org/wiki/Rechnerarchitektur) benötigt zum Kompilieren seine/ihre eigene Bibliothek.  
 
-Für genauere Beschreibung ==> Siehe [4.Protokoll](protokoll_g2_skojom15_29.01.2019.md):
-
-
-***
-## 2. Der Kernel ##
-Ein Kernel ist der zentrale Bestandteil eines Betriebssystems. In ihm ist die Prozess- und Datenorganisation festgelegt, auf der alle weiteren Softwarebestandteile des Betriebssystems aufbauen. Er bildet die unterste Softwareschicht des Systems und hat direkten Zugriff auf die Hardware.Wird bei einem Rechner eine neue Hardware hinzugefügt, muss auch ein neuer Treiber installiert werden. Weitere Softwarekomponenten eines Betriebssystems liegen in der Regel in einer übergeordneten Schicht.
-Ein Kernel ist in Schichten aufgebaut, wobei die unteren Schichten die Basis für die darüberliegenden bilden.
-
-Folgende Schichten sind vorhanden:
-
-    * Schnittstelle zur Hardware 
-    * Speicherverwaltung 
-    * Prozessverwaltung
-    * Geräteverwaltung 
-    * Dateisysteme
-
-*Quelle:* [hier](https://de.wikipedia.org/wiki/Kernel_(Betriebssystem))
-***
-# 3. Das Kernelmodul #
-Ein Kernel-Modul ist ein spezielles Computerprogramm, das im laufenden Betrieb in den Kernel eines Betriebssystems geladen und wieder daraus entfernt werden kann.
-
-Kernel-Module werden häufig für Gerätetreiber verwendet. Kernel-Module werden üblicherweise in der Programmiersprache C geschrieben und vor ihrem Laden in den Kernel, in Maschinensprache für die Ziel-Plattform übersetzt.
-
-Ein weiterer Vorteil liegt darin, dass Erweiterungen für den Kernel integriert werden können, ohne dass das Betriebssystem neu gestartet werden muss. Denkbar wäre, dass man auf diese Weise den als Kernel-Modul realisierten Treiber zum Bespiel einer Grafikkarte entfernt und eine neuere Version dieses Treibers in das laufende System einbindet. 
-
-*Quelle:* [hier](https://de.wikipedia.org/wiki/Kernel-Modul)
-***
-# 4. Fertigstellen des Programms #
-
-**main.c**
-
-```c
-#include <stdio.h>
-#include "lcd.h"
-#include "log.h"
-
-void inti();
-void show(char text[]);
-
-int main()
-{
- printf("Guten Morgen\n");
- lcd_init();
- log_init();
- struct LogRecord msg = {"main.c","Start..."};
- log_log(msg);
- show("Mal schauen...");
- return 0;
-}
-```
-
-**log.c**
-
-```c
-#include <stdio.h>
-#include "log.h"
-
-void log_init()
-{
- printf("LOG: init\n");
-}
-                                 
-void log_log(struct LogRecord r) 
-{
- printf("LOG: record %s: %s\n",r.src,r.message);
-```
-
-**log.h**
-```c
-#ifndef LOG_H
-#define LOG_H
-
-struct LogRecord   
-{
-char src[10];
-char message[50];
-};
-
-void log_init();
-void log_log(struct LogRecord r); 
- 
-#endif 
-```
-**lcd.c**
-```c
-#include <stdio.h>
-#include "log.h"
-
-void lcd_init()
-{
- printf("LCD:init\n");
- struct LogRecord msg = {"lcd.c","init"};
- log_log(msg);
-}
-
-void show(char text[])
-{
- printf("show: %s\n",text);
- struct LogRecord msg = {"lcd.c","shows");
- log_log(msg);
-}
-
-void showLog(struct LogRecord r)
-{
-  //.....
-}
-```
-
-**lcd.h**
-
-```c
-
-#ifndef LCD_H  
-#define LCD_H
-
-#include "log.h"
-
-void lcd_init();
-void show(char text[]);
-void showLog(struct LogRecord r);
-
-#endif
-
-```
-
-**Makefile:**
-```c
-a.out: main. o lcd.o log.o
-        gcc main.o lcd.o log.o   
-main.o: main.c lcd.h log.h
-        gcc -c main.c            
-lcd.o: lcd.c
-        gcc -c lcd.c    
-log.o: log.c
-        gcc -c log.c
-         
-clean:
-        -rm a.out
-        -rm *.o   
-```
-***
+Betriebssystem | Architektur | Wortbreite | Kürzel  
+---------------|-------------|------------|-------  
+| Linux | x86 | 32 bit | `.so`    
+| Linux | x86 | 64 bit | `.so`  
+| Linux | ARM | 32 bit | `.so`  
+| macOS | x86 | 32 bit | `.jnilib`  
+| macOS | x86 | 64 bit | `.jnilib`  
+| macOS | PowerPC | 32 bit | `.jnilib`  
+| macOS | PowerPC | 64 bit | `.jnilib`  
+| Solaris | x86 | 32 bit | `.so`  
+| Solaris | x86 | 64 bit | `.so`  
+| Windows | x86 | 32 bit | `.dll`  
+| Windows | x86 | 64 bit | `.dll`  

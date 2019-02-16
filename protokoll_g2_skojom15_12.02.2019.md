@@ -39,12 +39,6 @@ Die Datenübertragung wird in 3 Betriebsarten unterschieden:
 * Modbus ASCII (textuelle, byteweise Übertragung von Daten)  
 * Modbus TCP (Daten werden in TCP Paketen übertragen)  
 
-### Protokollaufbau  
-
-#### RTU  
-m RTU-Modus wird der Sendebeginn durch eine Sendepause von mindestens der 3,5-fachen Zeichenlänge markiert. Die Länge der Sendepause hängt somit von der Übertragungsgeschwindigkeit ab. Das Adressfeld besteht aus acht Bit, die die Empfängeradresse darstellen. Der Slave sendet bei seiner Antwort an den Master ebendiese Adresse zurück, damit der Master die Antwort zuordnen kann. Das Funktionsfeld besteht aus 8 Bit. Hat der Slave die Anfrage des Masters korrekt empfangen, so antwortet er mit demselben Funktionscode. Ist ein Fehler aufgetreten, so verändert er den Funktionscode, indem er das höchstwertige Bit des Funktionsfeldes auf 1 setzt. Das Datenfeld enthält Hinweise, welche Register der Slave auslesen soll, und ab welcher Adresse diese beginnen. Der Slave setzt dort die ausgelesenen Daten (z. B. Messwerte) ein, um sie an den Master zu senden. Im Fehlerfall wird dort ein Fehlercode übertragen. Das Feld für die Prüfsumme, die mittels CRC ermittelt wird, beträgt 16 Bit. Das gesamte Telegramm muss in einem kontinuierlichen Datenstrom übertragen werden. Tritt zwischen zwei Zeichen eine Sendeunterbrechung auf, die länger als 1,5 Zeichen ist, so ist das Telegramm als unvollständig zu bewerten und sollte vom Empfänger verworfen werden.  
-Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus)  
-
 #### ASCII  
 Im ASCII-Modus beginnen Nachrichten mit einem vorangestellten Doppelpunkt, das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed (CRLF) markiert.  
 
@@ -94,28 +88,3 @@ Für weitere, detailiertere Informationen siehe: [Modbus](http://www.modbus.org/
 >Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu. Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.
 
 
-## Java Native Interface (JNI)  
-Java Native Interface ist eine standardisierte Anwendungsprogrammierschnittstelle (API), die die Möglichkeit schafft, aus der Programmiersprache Java heraus Plattform-spezifische Funktionen bzw. Methoden aufzurufen.  
-
-JNI ermöglicht es, native Methoden zu schreiben für Situationen, in denen es nicht möglich ist, ausschließlich Java als Programmiersprache einzusetzen. Dies ist der Fall, wenn beispielsweise die Standard-Java-Klassenbibliothek bestimmte Plattform-abhängige Features oder andere Programmbibliotheken nicht unterstützt. Weiterhin ist es per JNI möglich, eine weitere in einer anderen Programmiersprache programmierte Anwendung für Java zugreifbar zu machen. Viele Klassen der Java-Standardbibliothek basieren auf JNI, um beispielsweise die Datei-Ein- und Ausgabe oder Soundwiedergabe zu ermöglichen. Indem Java Leistungs- und Plattform-abhängige Implementierungen in die Standardbibliothek integriert, kann der Java-Programmierer und -Nutzer diese Features in sicherer und Plattform-unabhängiger Weise nutzen.  
-Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Java_Native_Interface)  
-
-Wir benötigen das JNI um eine Kommunikationsschnittstelle zwischen unserer Java Virtual Machine und den seriellen Schnittstellen auf die unserer Betriebssystem zugreift, herzustellen.  
-
-### Programmbibliotheken  
-In unseren *AIIT-Templates* unter Netbeans finden sich [Programmbibliotheken](https://de.wikipedia.org/wiki/Programmbibliothek) für JNI.
-Jedes Betriebssystem, bzw. jede [Architektur](https://de.wikipedia.org/wiki/Rechnerarchitektur) benötigt zum Kompilieren seine/ihre eigene Bibliothek.  
-
-Betriebssystem | Architektur | Wortbreite | Kürzel  
----------------|-------------|------------|-------  
-| Linux | x86 | 32 bit | `.so`    
-| Linux | x86 | 64 bit | `.so`  
-| Linux | ARM | 32 bit | `.so`  
-| macOS | x86 | 32 bit | `.jnilib`  
-| macOS | x86 | 64 bit | `.jnilib`  
-| macOS | PowerPC | 32 bit | `.jnilib`  
-| macOS | PowerPC | 64 bit | `.jnilib`  
-| Solaris | x86 | 32 bit | `.so`  
-| Solaris | x86 | 64 bit | `.so`  
-| Windows | x86 | 32 bit | `.dll`  
-| Windows | x86 | 64 bit | `.dll`  

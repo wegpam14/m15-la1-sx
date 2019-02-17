@@ -19,7 +19,7 @@ Gruppe: 2
     3.2. [ASCII](#ascii)    
     3.3. [TCP](#tcp)    
 **4. [Object-Types](#object-types)  
-**5. [Function Code](#function-code)    
+**5. [Function-Code](#function-code)    
 **6. [Exceptions](#exceptions)  
 
 

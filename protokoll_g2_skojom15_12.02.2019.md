@@ -10,6 +10,9 @@ Gruppe: 2
 | Korrenn,Murko,Orthofer,Perl,Szapacs | -  |
 
 *******************************************************************************************************************************************  
+## Intelligenter Sensor
+Ein intelligenter Sensor ist im Gegensatz zum unintelligenten Sensor dadurch ausgezeichnet, da er selbst Daten verarbeiten und weiter versenden kann. Das heißt das bei einem intelligenten Sensor direkt ein Temperaturwert zurückgeliefert wird. Bei einem unintelligenten Sensor hingegen eine Spannung zwischen 0 und 10 Volt (PT 100).  
+
 
 ## Feldbus  
 Es ist ein Bussystem, das in einer Anlage Feldgeräte und Stellglieder zwecks Kommunikation mit einem Automatisierungsgerät verbindet. Es gibt nomierte Protokolle um bei mehrere Kommunikationsteilnehmer ihre Nachrichten über dieselbe Leitung senden zu wissen, wer was wann sagt.  

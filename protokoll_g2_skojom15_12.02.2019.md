@@ -12,7 +12,7 @@ Gruppe: 2
 
 ## Inhalt 
 
-1. [Intelligenter Sensor](#intelligentersensor)
+1. [Intelligenter Sensor](#intelligenter-sensor)
 2. [Feldbus]( 
 3. [Modbus](
     3.1. [RTU]

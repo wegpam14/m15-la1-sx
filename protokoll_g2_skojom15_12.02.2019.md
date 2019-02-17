@@ -9,6 +9,22 @@ Gruppe: 2
 |---|---|
 | Korrenn,Murko,Orthofer,Perl,Szapacs | -  |
 
+
+## Inhalt 
+
+1. [Intelligenter Sensor](https://github.com/HTLMechatronics/m15-la1-sx/edit/skojom15/protokoll_g2_skojom15_12.02.2019.md/## Intelligenter Sensor)
+2. [Feldbus]( 
+3. [Modbus](
+    3.1. [RTU]
+    3.2. [ASCII](
+    3.3. [TCP](
+4. [Object-Types](
+5. [Function Code](
+6. [Exceptions](
+
+
+
+
 *******************************************************************************************************************************************  
 ## Intelligenter Sensor
 Ein intelligenter Sensor(z.b Sensor am µC) ist im Gegensatz zum unintelligenten Sensor dadurch ausgezeichnet, da er selbst Daten verarbeiten und weiter versenden kann. Das heißt das bei einem intelligenten Sensor direkt ein Temperaturwert zurückgeliefert wird. Bei einem unintelligenten Sensor hingegen eine Spannung zwischen 0 und 10 Volt (PT 100).  
@@ -60,7 +76,7 @@ Transaktionsnummer |	Protokollkennzeichen |	Zahl der noch folgenden Bytes | Adre
 Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus)  
 
 
-### Objekttypen  
+### Object-Types  
 Lese- und Schreibzugriffe auf folgende Objekttypen ist möglich:  
 
 Schnittstellentyp | Objekttyp | Zugriff | Größe  

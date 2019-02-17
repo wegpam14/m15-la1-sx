@@ -21,7 +21,7 @@ Gruppe: 2
  4. [Object-Types](#object-types)                                              
  5. [Function-Codes](#function-codes)                                                                                              
  6. [Request vom PC zum µC](#request-vom-pc-zum-µc)
- 7. [Response vom µC zum PC](#respose-vom-µc-zum-pc)
+ 7. [Response vom µC zum PC](#response-vom-µc-zum-pc)
  8. [Exceptions](#exceptions)
 
 *******************************************************************************************************************************************  
@@ -120,7 +120,7 @@ Bilden der **LRC-Prüfsumme**:
 ---|-------------------| --------------| ------|---------------|----|----| 
 | - | 30H+43H | 30H+34H | 30H * 7  + 31H |  |  | Summe = 600 Dezimal | 
 
---> 600-256-256= **88**                -88 ==> -88+256 = 168 ==> **A8 Hex**
+--> 600-256-256= **88**                -88 ==> -88+256 = 168 ==> **A8 Hex** ==> **LRC-Prüfsumme**
 
 
 ### Response vom µC zum PC

@@ -12,25 +12,18 @@ Gruppe: 2
 
 ## Inhalt 
 
-1. [Intelligenter Sensor](#intelligenter-sensor)
-2. [Feldbus]( 
-3. [Modbus](
-    3.1. [RTU]
-    3.2. [ASCII](
-    3.3. [TCP](
-4. [Object-Types](
-5. [Function Code](
-6. [Exceptions](
+**1. [Intelligenter Sensor](#intelligenter-sensor)  
+**2. [Feldbus](#feldbus)     
+**3. [Modbus](#modbus)
+    3.1. [RTU](#rtu)    
+    3.2. [ASCII](#ascii)    
+    3.3. [TCP](#tcp)    
+**4. [Object-Types](#object-types)  
+**5. [Function Code](#function-code)    
+**6. [Exceptions](#exceptions)  
 
 
-# Table of Contents
-1. [Example](#example)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
 
-## Example
-## Example2
-## Third Example
 
 *******************************************************************************************************************************************  
 ## Intelligenter Sensor

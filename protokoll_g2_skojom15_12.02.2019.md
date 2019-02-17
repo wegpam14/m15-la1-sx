@@ -90,9 +90,7 @@ Function Code | Hex | Name | Typ
 15| 0F | Write Multiple Coils |	Bit  
 16| 10 | Write Multiple Registers | 16-Bit  
 
-Für weitere, detailiertere Informationen siehe: [Modbus](http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf)  
-
 ### Exceptions
->Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu. Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.
+Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu. Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.
 
 

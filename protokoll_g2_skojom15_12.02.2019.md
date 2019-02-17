@@ -11,7 +11,7 @@ Gruppe: 2
 
 *******************************************************************************************************************************************  
 ## Intelligenter Sensor
-Ein intelligenter Sensor ist im Gegensatz zum unintelligenten Sensor dadurch ausgezeichnet, da er selbst Daten verarbeiten und weiter versenden kann. Das heißt das bei einem intelligenten Sensor direkt ein Temperaturwert zurückgeliefert wird. Bei einem unintelligenten Sensor hingegen eine Spannung zwischen 0 und 10 Volt (PT 100).  
+Ein intelligenter Sensor(z.b Sensor am µC) ist im Gegensatz zum unintelligenten Sensor dadurch ausgezeichnet, da er selbst Daten verarbeiten und weiter versenden kann. Das heißt das bei einem intelligenten Sensor direkt ein Temperaturwert zurückgeliefert wird. Bei einem unintelligenten Sensor hingegen eine Spannung zwischen 0 und 10 Volt (PT 100).  
 
 
 ## Feldbus  
@@ -58,6 +58,7 @@ Transaktionsnummer |	Protokollkennzeichen |	Zahl der noch folgenden Bytes | Adre
 2 Byte |	2 Byte (immer 0x0000) |	2 Byte (n+2) |	1 Byte |	1 Byte |	n Byte  
 
 Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus)  
+
 
 ### Objekttypen  
 Lese- und Schreibzugriffe auf folgende Objekttypen ist möglich:  

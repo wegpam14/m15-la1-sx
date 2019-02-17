@@ -12,15 +12,15 @@ Gruppe: 2
 
 ## Inhalt 
 
-** 1. [Intelligenter Sensor](#intelligenter-sensor)             
-** 2. [Feldbus](#feldbus)                                           
-** 3. [Modbus](#modbus) 
-    3.1. [RTU](#rtu)                                                       
-    3.2. [ASCII](#ascii)                                                
-    3.3. [TCP](#tcp)                                         
-** 4. [Object-Types](#object-types)                                              
-** 5. [Function-Codes](#function-code)                                                         
-** 6. [Exceptions](#exceptions)                                      
+1. [Intelligenter Sensor](#intelligenter-sensor)                                           
+ 2. [Feldbus](#feldbus)                                           
+ 3. [Modbus](#modbus)                                          
+       3.1. [RTU](#rtu)                                                                                              
+       3.2. [ASCII](#ascii)                                                                                   
+       3.3. [TCP](#tcp)                                         
+ 4. [Object-Types](#object-types)                                              
+ 5. [Function-Codes](#function-codes)                                                         
+ 6. [Exceptions](#exceptions)                                      
 
 
 

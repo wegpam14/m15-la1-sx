@@ -19,18 +19,17 @@ Gruppe: 2
        3.2. [ASCII](#ascii)                                                                                   
        3.3. [TCP](#tcp)                                         
  4. [Object-Types](#object-types)                                              
- 5. [Function-Codes](#function-codes)                                                         
- 6. [Exceptions](#exceptions)                                      
-
-
-
+ 5. [Function-Codes](#function-codes)                                                                                              
+ 6. [Request vom PC zum µC](#request-vom-pc-zum-µc)
+ 7. [Response vom µC zum PC](#respose-vom-µc-zum-pc)
+ 8. [Exceptions](#exceptions)
 
 *******************************************************************************************************************************************  
-## Intelligenter Sensor
+### Intelligenter Sensor
 Ein intelligenter Sensor(z.b Sensor am µC) ist im Gegensatz zum unintelligenten Sensor dadurch ausgezeichnet, da er selbst Daten verarbeiten und weiter versenden kann. Das heißt das bei einem intelligenten Sensor direkt ein Temperaturwert zurückgeliefert wird. Bei einem unintelligenten Sensor hingegen eine Spannung zwischen 0 und 10 Volt (PT 100).  
 
 
-## Feldbus  
+### Feldbus  
 Es ist ein Bussystem, das in einer Anlage Feldgeräte und Stellglieder zwecks Kommunikation mit einem Automatisierungsgerät verbindet. Es gibt nomierte Protokolle um bei mehrere Kommunikationsteilnehmer ihre Nachrichten über dieselbe Leitung senden zu wissen, wer was wann sagt.  
 
 Die erste Generation der Feldbustechnik wurde in den 1980er Jahren entwickelt, um die bis dahin übliche Parallelverdrahtung binärer Signale sowie die analoge Signalübertragung durch digitale Übertragungstechnik zu ersetzen. Heute sind viele unterschiedliche Feldbussysteme mit unterschiedlichen Eigenschaften am Markt etabliert. Seit 1999 werden Feldbusse in der Norm IEC 61158 weltweit standardisiert. Die zweite Generation der Feldbustechnik basiert auf Echtzeit-Ethernet.  
@@ -44,7 +43,7 @@ Folgende Feldbusse sind zur Zeit üblich:
 * Flexray (Automobilbereich)  
 * KNX (Haustechnik)  
 
-## Modbus  
+### Modbus  
 Anfänglich wurde Modbus für die Kommunikation zwischen SPS-Geräten entwickelt, etablierte sich aber in der Industrie als De-Facto-Standard, da es sich wie bereits erwähnt um ein offenes Protokoll handelt. Seit 2007 ist die Version Modbus TCP Teil der IEC 61158. Es lassen sich sowohl RS-232-Netzwerke, sowie TCP/IP-Netzwerke aufbauen. 
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/modbus_communication_stack.png)  
 
@@ -58,17 +57,17 @@ Die Datenübertragung wird in 3 Betriebsarten unterschieden:
 * Modbus ASCII (textuelle, byteweise Übertragung von Daten)  
 * Modbus TCP (Daten werden in TCP Paketen übertragen)  
 
-#### RTU  
+## RTU  
 m RTU-Modus wird der Sendebeginn durch eine Sendepause von mindestens der 3,5-fachen Zeichenlänge markiert. Die Länge der Sendepause hängt somit von der Übertragungsgeschwindigkeit ab. Das Adressfeld besteht aus acht Bit, die die Empfängeradresse darstellen. Der Slave sendet bei seiner Antwort an den Master ebendiese Adresse zurück, damit der Master die Antwort zuordnen kann. Das Funktionsfeld besteht aus 8 Bit. Hat der Slave die Anfrage des Masters korrekt empfangen, so antwortet er mit demselben Funktionscode. Ist ein Fehler aufgetreten, so verändert er den Funktionscode, indem er das höchstwertige Bit des Funktionsfeldes auf 1 setzt. Das Datenfeld enthält Hinweise, welche Register der Slave auslesen soll, und ab welcher Adresse diese beginnen. Der Slave setzt dort die ausgelesenen Daten (z. B. Messwerte) ein, um sie an den Master zu senden. Im Fehlerfall wird dort ein Fehlercode übertragen. Das Feld für die Prüfsumme, die mittels CRC ermittelt wird, beträgt 16 Bit. Das gesamte Telegramm muss in einem kontinuierlichen Datenstrom übertragen werden. Tritt zwischen zwei Zeichen eine Sendeunterbrechung auf, die länger als 1,5 Zeichen ist, so ist das Telegramm als unvollständig zu bewerten und sollte vom Empfänger verworfen werden.  
 Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus) 
 
-#### ASCII  
+## ASCII  
 Im ASCII-Modus beginnen Nachrichten mit einem vorangestellten Doppelpunkt, das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed (CRLF) markiert.  
 
 Die ersten zwei Bytes enthalten zwei ASCII-Zeichen, die die Adresse des Empfängers darstellen. Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert. Über ein Zeichen folgen die Daten. Über das gesamte Telegramm (ohne Start- und Ende-Markierung) wird zur Fehlerprüfung ein LRC ausgeführt, dessen Paritätsdatenwort in den abschließenden zwei Zeichen untergebracht wird. Tritt während der Übertragung eines Frames eine Pause von > 1s auf, wird der Frame als Fehlerfall bewertet. Der Benutzer kann ein längeres Timeout konfigurieren.  
 Quelle: [wikipedia.org](https://de.wikipedia.org/wiki/Modbus)  
 
-#### TCP  
+## TCP  
 Transaktionsnummer |	Protokollkennzeichen |	Zahl der noch folgenden Bytes | Adresse | Funktion | Daten  
 -------------------|-----------------------|--------------------------------|---------|----------|-------  
 2 Byte |	2 Byte (immer 0x0000) |	2 Byte (n+2) |	1 Byte |	1 Byte |	n Byte  
@@ -105,6 +104,12 @@ Function Code | Hex | Name | Typ
 6 | 06 | Write Single Register | 16-Bit  
 15| 0F | Write Multiple Coils |	Bit  
 16| 10 | Write Multiple Registers | 16-Bit  
+
+### Request vom PC zum µC
+
+
+### Response vom µC zum PC
+
 
 ### Exceptions
 Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu. Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.

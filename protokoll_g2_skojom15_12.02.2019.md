@@ -12,7 +12,7 @@ Gruppe: 2
 
 ## Inhalt 
 
-1. [Intelligenter Sensor](https://github.com/HTLMechatronics/m15-la1-sx/edit/skojom15/protokoll_g2_skojom15_12.02.2019.md/##Intelligenter Sensor)
+1. [Intelligenter Sensor](#intelligentersensor)
 2. [Feldbus]( 
 3. [Modbus](
     3.1. [RTU]
@@ -23,7 +23,14 @@ Gruppe: 2
 6. [Exceptions](
 
 
+# Table of Contents
+1. [Example](#example)
+2. [Example2](#example2)
+3. [Third Example](#third-example)
 
+## Example
+## Example2
+## Third Example
 
 *******************************************************************************************************************************************  
 ## Intelligenter Sensor

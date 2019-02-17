@@ -119,8 +119,10 @@ Bilden der **LRC-Prüfsumme**:
 | : | 0C | 04  | 0000 0001  | Prüfsumme Ergebniss   |  \r   |  \n  |
 ---|-------------------| --------------| ------|---------------|----|----| 
 | - | 30H+43H | 30H+34H | 30H * 7  + 31H |  |  | Summe = 600 Dezimal | 
+     
+--> 600-256-256= **88**
 
---> 600-256-256= **88**                -88 ==> -88+256 = 168 ==> **A8 Hex** ==> **LRC-Prüfsumme**
+-88 ==> -88+256 = 168 ==> **A8 Hex** ==> **LRC-Prüfsumme** 
 
 
 ### Response vom µC zum PC
@@ -133,5 +135,3 @@ Bilden der **LRC-Prüfsumme**:
 
 ### Exceptions
 Ist ein Request fehlerhaft, so wird in der Response das Bit-7 im Function-Code Feld gesetzt. Dadurch entsteht aus dem Function-Code 1 bis 127 ein Wert 129 bis 255. Weiters wird im Daten-Bereich ein Exception-Code gesendet. Dieser lässt Rückschlüsse auf die Art des Fehlers zu. Exceptions decken ein breites Feld von Fehlerursachen ab. Welche es genau sind, können im oben genannten Skript nachgelesen werden.
-
-

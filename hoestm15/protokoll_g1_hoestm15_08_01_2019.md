@@ -22,7 +22,7 @@ Jeder Quellcode muss von einer höheren Programmiersprache in Maschinensprache �
 Die Präprozessorbefehle beginnen bin einem '#' und enden ohne Semikolon. Der wichtigste Befehl des Präprozessors ist #include. Damit wird der Inhalt einer Datei eingelesen und an dieser Steller platziert, als ob man sie hineinkopiert. Solche Dateien nennt man Header Dateien, da sie in dem Kopf der C_Datei stehen, deshalb auch die Endung '.h'
 Es gibt zwei  Varianten von 'include', einmal das einlesen einer selbstgeschriebenen C-Datei mit '#include "..." ' und einmal das einlesen einer Systemdatei die schon in der C Bibliothek ist mit '#include <...>'. 
 
-![Includes in nano](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/%23include.png)
+![Prinzipieller Aufbau eines parralelbussystem](https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)#/media/File:Prinzipielle_Struktur_eines_parallelen_Bussystems.svg)
 
 
 #### Compiler

@@ -19,13 +19,7 @@
 [Wikipedia/UART](https://de.wikipedia.org/wiki/Universal_Asynchronous_Receiver_Transmitter)  
 
  ***********************************************************************************************************************************  
-     
-# Temperatursensor  
-Mittels, dem am Atmega 328p verbauten Temperatursensors, soll die aktuelle Temperatur über eine Java Swing Applikation angezeigt werden.  Die eigentliche Datenübertragung zwischen Sureboard und PC erfolgt mittels eines Feldbussystems, in unserem Fall MODBUS.  
-   
-## Intelligenter Sensor  
-Ein Sensor ist nur dann intelligent, wenn er ein Rechenwerk besitzt. Das heißt nun, dass wir bei einem unintelligenten Sensor nur einen Spannungswert zurückbekommen und diesen dann selbst in den richtigen Temperaturwert umrechnen müssen. Bei einem Intelligenten Sensor passiert diese Umrechnung bereits im eigenen Rechenwerk.   
-In unserem Fall ist es ein unintelligenter Sensor, jedoch in Verbindung am Atmega328p ist er intelligent.   
+
 ## Feldbussysteme  
   
 Feldbussystem | Andwendungsgebiet | Details  
@@ -62,7 +56,16 @@ Hold Registers |  ist ein 16 Bit Wert, der gelesen und beschrieben werden kann
 ## Exceptions  
 Tritt beim Request ein Fehler auf, so wird in der darauffolgenden Response das Bit-7 gesetzt. Dies hat die Funktion, dass sich der Function Code ändert und im Daten-Bereich wird ein Exception-Code generiert. Mithilfe dieses Exception-Codes, kann man den vorliegenden Fehler kategorisieren.  
  ***********************************************************************************************************************************   
- # Java Programm  
+
+     
+# Temperatursensor  
+Mittels, dem am Atmega 328p verbauten Temperatursensors, soll die aktuelle Temperatur über eine Java Swing Applikation angezeigt werden.  Die eigentliche Datenübertragung zwischen den Atmega 328p und PC erfolgt mittels eines Feldbussystems, in unserem Fall MODBUS.  
+   
+## Intelligenter Sensor  
+Ein Sensor ist nur dann intelligent, wenn er ein Rechenwerk besitzt. Das heißt nun, dass wir bei einem unintelligenten Sensor nur einen Spannungswert zurückbekommen und diesen dann selbst in den richtigen Temperaturwert umrechnen müssen. Bei einem Intelligenten Sensor passiert diese Umrechnung bereits im eigenen Rechenwerk.   
+In unserem Fall ist es ein unintelligenter Sensor, jedoch in Verbindung am Atmega328p ist er intelligent.   
+
+# Java Programm  
 
 Durch [successive Approximation](https://en.wikipedia.org/wiki/Successive_approximation_ADC) wandelt der Analog Digital Wandler eine analoge Eingagsspannung in einen 10 Bit Digitalwert, dabei entspricht der kleinste Wert GND und der maximale Wert entspricht der ausgewählten Referenzspannung minus ein LSB.
 

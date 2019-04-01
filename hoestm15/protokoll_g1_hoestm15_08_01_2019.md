@@ -1,5 +1,5 @@
 
- # Protokoll der 4. Einheit (08.01.2019)
+ # Protokoll der 5. Einheit (15.01.2019)
   Name: 		Hörmann
   Gegenstand: Labor
   Lehrer: SX
@@ -7,20 +7,12 @@
   Gruppe: 1
   ## Inhaltsverzeichnis
 
- 1. Übersetzungsvorgang
- 2. Makefile
- 3. Befehle
+ 1. Bussysteme
+ 2. Modbus konfiguration
  
- ## 1. Übersetzungsvorgang
- ### 1.1  Vorgang
-
-
-<img src="https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/Uebersetzungsvorgang__c%2B%2B.jpg" width="300" height="400" />
-Jeder Quellcode muss von einer höheren Programmiersprache in Maschinensprache Übersetzt werden, da der Prozessor nur diese simple Sprache versteht. Diesen Vorgang nennt man Übersetzungsvorgang, dieser ist in C in 3 Bereich aufgeteilt:
-
-#### Präprozessor
-Die Präprozessorbefehle beginnen bin einem '#' und enden ohne Semikolon. Der wichtigste Befehl des Präprozessors ist #include. Damit wird der Inhalt einer Datei eingelesen und an dieser Steller platziert, als ob man sie hineinkopiert. Solche Dateien nennt man Header Dateien, da sie in dem Kopf der C_Datei stehen, deshalb auch die Endung '.h'
-Es gibt zwei  Varianten von 'include', einmal das einlesen einer selbstgeschriebenen C-Datei mit '#include "..." ' und einmal das einlesen einer Systemdatei die schon in der C Bibliothek ist mit '#include <...>'. 
+ ## 1. Bussysteme
+ ### 1.1  Definition
+ Bus ist im Grunde eine Abkürzung für das „Binary Unit System“. Dieses System dient innerhalb eines Netzwerkes für die Übertragung von Daten zwischen den einzelnen Teilnehmern.
 
 ![Prinzipieller Aufbau eines parralelbussystem](https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)#/media/File:Prinzipielle_Struktur_eines_parallelen_Bussystems.svg)
 

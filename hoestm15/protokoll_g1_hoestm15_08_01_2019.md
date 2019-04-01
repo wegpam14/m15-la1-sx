@@ -14,7 +14,7 @@
  ### 1.1  Definition
  Bus ist im Grunde eine Abkürzung für das „Binary Unit System“. Dieses System dient innerhalb eines Netzwerkes für die Übertragung von Daten zwischen den einzelnen Teilnehmern.
 
-![Prinzipieller Aufbau eines parralelbussystem](https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)#/media/File:Prinzipielle_Struktur_eines_parallelen_Bussystems.svg)
+![Prinzipieller Aufbau eines parralelbussystem](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/Images/Prinzipielle_Struktur_eines_parallelen_Bussystems.svg.png)
 
 
 #### Compiler

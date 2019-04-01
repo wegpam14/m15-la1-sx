@@ -1,5 +1,5 @@
 ![HTBLA Kaindorf](https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/HTL_Kaindorf_Logo.svg/1200px-HTL_Kaindorf_Logo.svg.png)
-# 4. Protokoll (08.01.2019)
+# 5. Protokoll (15.01.2019)
 Name: Kahr Markus  
 Klasse: 4AHME  
 KNr.: 6  
@@ -8,25 +8,25 @@ ___
 
 ## Inhalte:  
 
-* **1. Übersetzungsvorgang in C**  
-  * *1.1 Sourcecode erstellen*
-  * *1.2 Konvertierung in Maschinen lesbares Programm*
-* **2. GNU-Projekt**
-* **3. Makefile**
-   * *3.1 Aufbau*  
-   * *3.2 Maker*  
+* **1. Modbus**  
+  * *1.1 Arten von Feldbussen*
+  * *1.2 Realisierung*
+  * *1.3 Server-Client System*
+* **2. Modbus over serial line**
+* **3. Telegramm**
+   * *3.1 Request*  
+   * *3.2 Response*  
 * **4. Programme**
-* **5. neu erlernte Befehle**
 
  
 ___
   
-### 1. Übersetzungsvorgang in C
+### 1. Modbus
 
   
-![Uebersetzungsvorgang](http://fbmathe.bbs-bingen.de/Informatik/C_plusplus/Uebersetzungsvorgang__c++.jpg)  
 
-#### 1.1 Sourcecode erstellen
+
+#### 1.1 Arten von Feldbussen
   
   Zu Beginn eines Programms wird ein [Quelltext] benötigt (gewöhnliche Textdatei).
   In diesem Quelltext werden Programmieranweisungen geschrieben, welche den Aufgaben des Programms entsprechen.
@@ -34,7 +34,7 @@ ___
   verbessert. Ebenfalls zur Verbesserung der Lesbarkeit halten sich Programmierer meist an eine bestimmte Quelltextformatierung
   (z. B. Einrückung von Unterabschnitten, Groß-/Kleinschreibung …). 
 
-#### 1.2 Konvertierung in Maschinen lesbares Programm
+#### 1.2 Realisierung
 
 * [Präprozessor]:   
 Präprozessorbefehle beginnen immer mit einem "**#**" und enden nicht mit einem Semikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "**Header-Dateien**" (* .h) gennant, da sie im Kopf der C-Datei stehen.  

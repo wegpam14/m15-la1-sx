@@ -67,18 +67,24 @@ In unserem Fall ist es ein unintelligenter Sensor, jedoch in Verbindung am Atmeg
 
 # Java Programm  
 
-Durch [successive Approximation](https://en.wikipedia.org/wiki/Successive_approximation_ADC) wandelt der Analog Digital Wandler eine analoge Eingagsspannung in einen 10 Bit Digitalwert, dabei entspricht der kleinste Wert GND und der maximale Wert entspricht der ausgewählten Referenzspannung minus ein LSB.
+Durch [successive Approximation](https://en.wikipedia.org/wiki/Successive_approximation_ADC) wandelt der Analog Digital Wandler eine analoge Eingagsspannung in einen 10 Bit Digitalwert, dabei entspricht der kleinste Wert GND und der maximale Wert entspricht der ausgewählten Referenzspannung minus ein LSB.  
+![enter image description here](http://www.vias.org/mikroelektronik/img/adcsukap.png)
 
 
-Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits REFS1 und REFS0 im ADMUX-Register ausgewählt werden, die Referenzspannung liegt dann auch am AVCC Pin an. Möglich sind VCC oder die interne Referenzspannung von 2,56V.
+Unser Temperatursensor hat eine Betriebsspannung von -3.0V bis 5.5V. Der Messbare Temperaturbereich geht von -55°C bis +125°C 
+Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits REFS1 und REFS0 im ADMUX-Register ausgewählt werden, die Referenzspannung liegt dann auch am AVCC Pin an.
 
-Der Analog-Digital-Wandler erzeugt ein 10-bit Ergebnis, das in den ADC Data Registern ADCH und ADCL abgelegt wird. Normalerweise wird das Ergebnis rechtsbündig in den beiden Registern abgelegt, optional kann das Ergebnis aber auch linksbündig in ADCH und ADCL geschrieben werden. Die Einstellung erfolgt mit dem ADLAR-Bit im ADMUX-Register.
+In den Registern von ADC --> ADCH & ADCL werden vom Analog-Digital-Wandler 10 bit Ergebnise erzeugt, die in diesen beiden Registern abgelegt werden.
+Normalerweise wird das Ergebnis rechtsbündig in den beiden Registern abgelegt, optional kann das Ergebnis aber auch linksbündig in ADCH und ADCL geschrieben werden. Die Einstellung erfolgt mit dem ADLAR-Bit im ADMUX-Register.
 
 Zuerst wurden diese Register des ADC’s initialisiert und der app.modbus.frameIndex auf -1 gesetzt um in einen Idle Zustand zu gehen.
 
-Im nächsten Schritt wird der linksbündige Wert des ADCH Registers in eine Zwischenvariable gespeichert und der ADC gestartet indem das ADCH Register gesetzt wird.
+Im nächsten Schritt wird der linksbündige Wert des ADCH Registers in eine Zwischenvariable gespeichert und der ADC gestartet, indem das ADCH Register gesetzt wird.
 
-Am Ende erfolgt noch die Übertragung des Temperaturwertes auf die Konsole des PC’s.
+Werte der Temperatur werden als 16Bit Werte übertragen.  
+Danach werden die werte in Festkommacodierung übertragen und sind dann links und rechts vom Komma 8 Bit. Um vom Temperaturwert mit z.B 23,5°C zum hex Wert zu kommen muss man den wert zuerst mit 256 Multiplizieren und danach in eine Hexadezimalzahl umwandeln 23,5 * 256 = 6016 => 1780hex
+
+Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies war kein großes Problem, da es sich nur um einen statischen Fehler handelte und dies konnte durch einfaches Kallibrieren behoben werden.
 
 ## app.c 
 ```

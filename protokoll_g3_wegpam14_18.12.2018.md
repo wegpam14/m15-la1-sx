@@ -74,12 +74,18 @@ Durch [successive Approximation](https://en.wikipedia.org/wiki/Successive_approx
 Unser Temperatursensor hat eine Betriebsspannung von -3.0V bis 5.5V. Der Messbare Temperaturbereich geht von -55°C bis +125°C 
 Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits REFS1 und REFS0 im ADMUX-Register ausgewählt werden, die Referenzspannung liegt dann auch am AVCC Pin an.
 
-In den Registern von ADC --> ADCH & ADCL werden vom Analog-Digital-Wandler 10 bit Ergebnise erzeugt, die in diesen beiden Registern abgelegt werden.
+ **ADC** (ADCH & ADCL)   
+Da das Ergebnis des ADC ein 10 Bit Wert ist, passt dieser Wert naturgemäß nicht in ein einzelnes Register, das ja bekanntlich nur 8 Bit breit ist. Daher wird das Ergebnis in 2 Register ADCL und ADCH abgelegt. Standardmäßig werden von den 10 Ergebnisbits die niederwertigsten 8 im Register ADCL abgelegt und die noch fehlenden 2 Bits im Register ADCH an den niederwertigsten Bitpositionen gespeichert.
+
+             ADCH                                   ADCL
+  +---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+
+  |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+  +---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+
+                            9   8       7   6   5   4   3   2   1   0
 Normalerweise wird das Ergebnis rechtsbündig in den beiden Registern abgelegt, optional kann das Ergebnis aber auch linksbündig in ADCH und ADCL geschrieben werden. Die Einstellung erfolgt mit dem ADLAR-Bit im ADMUX-Register.
 
-Zuerst wurden diese Register des ADC’s initialisiert und der app.modbus.frameIndex auf -1 gesetzt um in einen Idle Zustand zu gehen.
+In unserer Übung im Unterricht wurde der linksbündige Wert des ADCH Registers in eine Zwischenvariable gespeichtert und der ADC gestartet, indem das ADCH Register gesetzt wird.
 
-Im nächsten Schritt wird der linksbündige Wert des ADCH Registers in eine Zwischenvariable gespeichert und der ADC gestartet, indem das ADCH Register gesetzt wird.
 
 Werte der Temperatur werden als 16Bit Werte übertragen.  
 Danach werden die werte in Festkommacodierung übertragen und sind dann links und rechts vom Komma 8 Bit. Um vom Temperaturwert mit z.B 23,5°C zum hex Wert zu kommen muss man den wert zuerst mit 256 Multiplizieren und danach in eine Hexadezimalzahl umwandeln 23,5 * 256 = 6016 => 1780hex

@@ -61,7 +61,7 @@ Tritt beim Request ein Fehler auf, so wird in der darauffolgenden Response das B
 # Temperatursensor  
 Mittels, dem am Atmega 328p verbauten Temperatursensors, soll die aktuelle Temperatur über eine Java Swing Applikation angezeigt werden.  Die eigentliche Datenübertragung zwischen den Atmega 328p und PC erfolgt mittels eines Feldbussystems, in unserem Fall MODBUS.  
    
-## Intelligenter Sensor  
+ **Intelligenter Sensor**  
 Ein Sensor ist nur dann intelligent, wenn er ein Rechenwerk besitzt. Das heißt nun, dass wir bei einem unintelligenten Sensor nur einen Spannungswert zurückbekommen und diesen dann selbst in den richtigen Temperaturwert umrechnen müssen. Bei einem Intelligenten Sensor passiert diese Umrechnung bereits im eigenen Rechenwerk.   
 In unserem Fall ist es ein unintelligenter Sensor, jedoch in Verbindung am Atmega328p ist er intelligent.   
 
@@ -85,6 +85,31 @@ Werte der Temperatur werden als 16Bit Werte übertragen.
 Danach werden die werte in Festkommacodierung übertragen und sind dann links und rechts vom Komma 8 Bit. Um vom Temperaturwert mit z.B 23,5°C zum hex Wert zu kommen muss man den wert zuerst mit 256 Multiplizieren und danach in eine Hexadezimalzahl umwandeln 23,5 * 256 = 6016 => 1780hex
 
 Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies war kein großes Problem, da es sich nur um einen statischen Fehler handelte und dies konnte durch einfaches Kallibrieren behoben werden.
+
+  
+## Datenanfrage
+Um die Daten auszulesen wurde folgender Datenframe verwendet
+```
+:010400000001 _ _ <CR><LF>
+```  
+
+**Modbus ASCII Frame**  
+  
+:|01|04|0000|0001|_ _|<CR><LF>
+  
+```:``` -> Start Frame  
+```01``` -> Adresse des Geräts am Bus  
+```04``` -> Read Input Register  
+```0000``` -> Inputregister 1 für die Temperatur  
+```0001``` -> Anzahl der Gewählten Input Register  
+```_ _``` -> LRC/Prüfsumme  
+```<CR><LF>``` -> End-Frame   
+  
+**Antwort**  
+Der folgende Datenframe wurde verwendet um die Antwort des Microcontrollers zum PC zu senden.
+```
+:010402xxxx _ _ <CR><LF>
+```  
 
 ## app.c 
 ```

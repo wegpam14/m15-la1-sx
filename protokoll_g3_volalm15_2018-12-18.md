@@ -34,6 +34,11 @@ Gruppe: 3</p>
 <li>[3.4] - <em>Modbus - RTU</em></li>
 </ul>
 </li>
+<li><strong>[2]</strong> - Auslesen eines Temperatursensors
+<ul>
+<li>[2.1] - <em>Programm-Code</em></li>
+</ul>
+</li>
 </ul>
 <h2 id="modbus">[1] Modbus</h2>
 <p>Bei Modbus handelt es sich um ein Kommunikationsprotokoll, welches den <strong>Datenaustausch</strong> zwischen einem <strong>Master</strong> und <strong>mehreren Slaves</strong> ermöglicht.<br>
@@ -314,7 +319,7 @@ Beispiele: PWM-Einheit, DAC, …</li>
 </tr>
 </tbody>
 </table><p>*Anhand dieser Grundlagen kann im nächsten Schritt unser Temperatursensor auf dem Chip des Atmega 328P angesteuert und ausgelesen werden.</p>
-<h2 id="modbus-1">[2] Modbus</h2>
+<h2 id="auslesen-eines-temperatursensors">[2] Auslesen eines Temperatursensors</h2>
 <p>Nach dem erlernen der Grundlagen war das Ziel dieser Stunde, eine funktionstüchtige Temperaturmesseinheit zu realisieren. Verwendet wurde dazu der integrierte Temperatursensor des Atmega 328p des Arduino Nano Boards. Siehe <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf">Datenblatt</a></p>
 <p>Die meisten neuen AVR-Chips verfügen über einen internen Temperatursensor. Es wird nicht oft verwendet, da er nicht genau ist. Es gibt jedoch eine Reihe von Situationen, in denen dieser Sensor eingesetzt werden kann.</p>
 <p><strong>Beliebte AVR-Chips, die über einen internen Temperatursensor verfügen:</strong></p>
@@ -341,7 +346,7 @@ Laut Datenblatt kann die Temperatur um 10 Grad Celsius fallen. Aber eine Genauig
 Die Verstärkung und der Offset sind für die verschiedenen Typen unterschiedlich. Es ist auch bei älteren und neueren Chips anders.</p>
 <p>Benutzen Sie dies, um mit den ATmega328-Typen zu beginnen (Temperatur in Grad Celsius):</p>
 <p><strong>Temperatur = (ADCW - 324.31) / 1.22</strong></p>
-<h3 id="programm-code">[1.1] - <strong>Programm-Code?</strong></h3>
+<h3 id="programm-code">[2.1] - <strong>Programm-Code</strong></h3>
 <p><strong>Beschreibung des Programmes</strong><br>
 Der Analog-Digital-Wandler wandelt eine analoge Eingangsspannung durch succsessive Approximation in einen 10-bit Digitalwert. Der kleinste Wert enstpricht GND, der maximale Wert entspricht der ausgewählten Referenzspannung minus ein LSB.</p>
 <p>Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits <strong>REFS1</strong> und <strong>REFS0</strong> im <strong>ADMUX</strong>-Register ausgewählt werden, die Referenzspannung liegt dann auch am AVCC Pin an. Möglich sind VCC oder die interne Referenzspannung von <strong>2,56V</strong>.</p>
@@ -475,4 +480,3 @@ lastChar <span class="token operator">=</span> c<span class="token punctuation">
 
 <span class="token function">app_handleUartByte</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-

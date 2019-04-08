@@ -37,7 +37,7 @@ In unserem Beispiel arbeiten wir mit Modbus.
 
 ## Übungauftrag <a name="Übungauftrag"></a>
 ### Aufgabenstellung:
-Wir wollen den Temperatursensor vom Arduino Nano auslesen und damm mithilfe von Modbus an eine SPS übertragen.
+Wir wollen den Temperatursensor vom Arduino Nano auslesen und dann mithilfe von Modbus an eine SPS übertragen.
 Gründe für die Wahl von Mosbus:
 + Weil es Open-Sorce ist
 + Weil nur die Funktionen implementiert werden müssen die man braucht. Dadurch wird der Speicher von einem $\mu$C nicht unnötig voll gemacht. 
@@ -82,5 +82,6 @@ Sagt, wie viele Bytes als rückgabe verwendet werden.
 Mit dem Funktions Code `04` meinen wir, dass es sich hierbei um einen *read input register* handelt.
 
 Mit dem Quantität Bytes haben wir 2 Bytes als Rückgabewert festgelegt. Diese 2 Bytes haben wir dann auf einen Ganzzahlwert und einen Kommazahlwert aufgeteilt.
+
 Die ersten 8 Bit verwenden wir als Ganzzahlspeicher und die letzten 8 Bit als Kommazahlspeicher. Auf diese weise kann man einen Temperaturbereich von -128°C bin ~+128°C übertragen.
 

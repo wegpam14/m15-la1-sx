@@ -106,6 +106,8 @@ Das LCR kann erst beim senden berechnet werden.
 
 
 Der Response den wir in unserer Übung erstellten sah folgendermaßen aus:
+
+
 |   Startbyte   |    Adresse    |  Funktion | Quantität Bytes |     Daten     |    LCR    |    Ende    |
 |:-------------:|:-------------:|:---------:|:---------:|:---------:|:---------:|------------|
 |        :      |       10      |    04     |      02         |   .........   |     ..    |    13 10   |

@@ -15,9 +15,7 @@ ___
 * **2. [Übung](#übung)**
    * *2.1 [Request](#request)*  
    * *2.2 [Response](#response)*  
-
-
- 
+   
 ___
   <a name="modbus"></a>
 ### 1. Modbus 
@@ -52,21 +50,21 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
   * CAN  
   
 Eine Alternative zum Feldbus ist eine sogenannte **"proprietäre Schnittstelle"** (Bussystem). Proprieätar = "Eigenkreation", daher kann es nicht mit anderen Systemen verbunden werden, jedoch bezieht es geringen Aufwand.
+  
 ___
 <a name="übung"></a>
 ### 3. Übung
+Das Ziel unserer Übung war es einen Temperaturwert über die Modbus-Schnittstelle verfügbar zu machen, dazu soll der Temperatursensor an die SPS angeschlossen werden.  
 
 <a name="request"></a>
 #### 3.1 Request
+Um vom Modbus-Server eine Antwort zu erhalten muss er zuerst vom Client eine Request empfangen. Diese Request haben wir mithilfe des **ASCII Transmission Mode** versendet. Dieser Modus sendet die Bytes als ASCII-Text. Frames beginnen hier mit einem Doppelpunkt.  
 
-* [Präprozessor]:   
-Präprozessorbefehle beginnen immer mit einem "**#**" und enden nicht mit einem Semikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "**Header-Dateien**" (* .h) gennant, da sie im Kopf der C-Datei stehen.  
+
 
 <a name="response"></a>
 #### 3.2 Response
 
-* [Präprozessor]:   
-Präprozessorbefehle beginnen immer mit einem "**#**" und enden nicht mit einem Semikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "**Header-Dateien**" (* .h) gennant, da sie im Kopf der C-Datei stehen.  
     
 ___
 

@@ -138,8 +138,7 @@ Enthält die Nummer des Registers. Achtung! Register beginnen bei 1.
 Um den LCR zu berechnen werden alle Bytes nach dem Startbit bis zum LCR zusammengezähl und dann mit  -1 multipliziert.
 
 Bei dieser Request: *B9*
-|   |      |  |
-|:-------------:|:-------------:|:---------:|:---------:|:---------:|------------|
+
 | 1 | 0x31 |49|
 | 0 | 0x30 |48|
 | 0 | 0x30 |48|

@@ -1,29 +1,20 @@
 # Protokoll der 7. Einheit
 
 #### app.c
-
-volatile struct App app;
-
-
-// functions
+```
 
 void app_init (void)
 {
   memset((void *)&app, 0, sizeof(app));
-  ADMUX = (1<<REFS1) | (1<<REFS0) | (1<<ADLAR) | 0x08; //0x08.... Tempsensor
-  ADCSRA = (1<<ADEN) | 7; // durch 128 -> das ergibt eine frequenz von 125kHz (eine ADC Umwandlung benötigt 128µs)
+  ADMUX = (1<<REFS1) | (1<<REFS0) | (1<<ADLAR) | 0x08; 
+  ADCSRA = (1<<ADEN) | 7; 
   app.modbus.frameIndex = -1;
 }
 
 
-//--------------------------------------------------------
-
 void app_main (void)
 {
-/*
-  printf("ADCH= %u  \r", app.adch);
-  _delay_ms(200);
-*/
+
   printf("-----\n\r");
   printf("  frameIndex: %d\n\r",app.modbusForPrint.frameIndex);
   printf("  frameError: %d\n\r",app.modbusForPrint.frameError);
@@ -38,7 +29,6 @@ void app_main (void)
     printf("\n\r");
 }
 
-//--------------------------------------------------------
 
 void app_task_1ms (void) 
 {
@@ -96,9 +86,9 @@ void app_handleUartByte (char c)
     }
   }
 }
-
+```
 ### app.h
-
+```
 #ifndef APP_H_INCLUDED
 #define APP_H_INCLUDED
 
@@ -151,9 +141,9 @@ void app_handleUartByte(char c);
 
 #endif // APP_H_INCLUDED
 
-
+```
 ### sys.c
-
+```
 int sys_uart_getch (FILE *f)
 {
   if (f != stdin)
@@ -195,3 +185,4 @@ Sys_Event sys_isEventPending (Sys_Event event)
 {
   return (sys.eventFlag & event) != 0;
 }
+```

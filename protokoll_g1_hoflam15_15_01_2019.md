@@ -140,7 +140,7 @@ Um den LCR zu berechnen werden alle Bytes nach dem Startbit bis zum LCR zusammen
 Bei dieser Request: *B9*
 
 | 1 | 0x31 |49|
-|:-:|:----:|::|
+|:-:|:----:|:-:|
 | 0 | 0x30 |48|
 | 0 | 0x30 |48|
 | 4 | 0x34 |52|

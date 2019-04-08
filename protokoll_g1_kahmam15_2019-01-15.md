@@ -28,8 +28,9 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
 
 <a name="feldbusse"></a>
 #### 1.1 Feldbus-Systeme
-  Geräte die Aktoren, Sensoren echzeitfähig verbinden (Prozessrechner) nennt man **Geräte der Feldebene** oder **Feldbusse**.  
+  Geräte die Aktoren, Sensoren echzeitfähig verbinden (Prozessrechner) nennt man **Geräte der Feldebene** oder **Feldbusse**.   
   Ein **Datenbus** ist ein System, wo man Bausteine mit mehreren Leitungen verbindet.  
+    
   **Industrie:**  
   * Profinet/Profibus  
   * **Powerlink**  

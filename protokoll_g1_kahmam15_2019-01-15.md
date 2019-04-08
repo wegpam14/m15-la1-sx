@@ -63,6 +63,7 @@ Um vom Modbus-Server eine Antwort zu erhalten muss er zuerst vom Client eine Req
 ![ASCII-Frame](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/ASCII-Frame.png)  
   
 **Übungs-Frame**
+
 **Start Byte|Adresse|Funktions Code|Daten|LRC|Ende**
 -|-|-|-|-|-
 :|10|04|0001 0001|B9|13 10

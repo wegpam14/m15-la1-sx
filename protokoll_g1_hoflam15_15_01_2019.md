@@ -8,12 +8,19 @@
 ## Inhaltsangabe
 
 1. Feldbusse
-*[1.1] Was sind Feldbusse?
-[1.2] Feldbus Vorteile
-[1.3] Feldbus Nachteile*
+
+*[1.1] Was sind Feldbusse?*
+
+*[1.2] Feldbus Vorteile*
+
+*[1.3] Feldbus Nachteile*
+
 2. Modbus
- *[2.1] Was ist ein Modbus?
- [2.2]Was ist eine proprietäre Schnittstelle (Bussysteme)?*
+
+ *[2.1] Was ist ein Modbus?*
+ 
+ *[2.2]Was ist eine proprietäre Schnittstelle (Bussysteme)?*
+ 
 4. Übung: Temperaturwert über Modbus - Schnittstelle
 
 ## 1. Feldbusse

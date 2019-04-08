@@ -59,6 +59,7 @@ Das Ziel unserer Übung war es einen Temperaturwert über die Modbus-Schnittstel
 <a name="request"></a>
 #### 3.1 Request
 Um vom Modbus-Server eine Antwort zu erhalten muss er zuerst vom Client eine Request empfangen. Diese Request haben wir mithilfe des **ASCII Transmission Mode** versendet. Dieser Modus sendet die Bytes als ASCII-Text. Frames beginnen hier mit einem Doppelpunkt.  
+[ASCII-Frame]: https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/ASCII-Frame.png
 
 
 

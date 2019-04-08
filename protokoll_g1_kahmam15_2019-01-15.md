@@ -16,11 +16,11 @@ ___
    
 ___
   <a name="modbus"></a>
-### 1. [Modbus] 
-Das Grundkonzept hinter dem Modbus ist es über verschiedene Schnittstellen miteinander zu kommunizieren.  
+### 1. Modbus 
+Das Grundkonzept hinter dem **[Modbus]** ist es über verschiedene Schnittstellen miteinander zu kommunizieren.  
 Mögliche Schnittstellen sind:  
 * **[TCP/IP] Modbus-Port: 502**  
-* **[RS232]: UART-Schnittstelle mit anderen Spannungsniveaus (Punkt zu Punkt)**  
+* **[RS232]: UART-Schnittstelle mit anderen Spannungsniveaus ([Punkt zu Punkt])**  
 * **[RS485]: Zweidrahtleitung mit vielen Anhängen (bis zu 32)**  
   
 Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "offen" Informationen zur Verfügung stellen.
@@ -140,3 +140,4 @@ ___
 [Modbus]: https://de.wikipedia.org/wiki/Modbus
 [Datenbus]: https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)
 [Powerlink]: https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)
+[Punkt zu Punkt]: https://www.itwissen.info/Punkt-zu-Punkt-Verbindung-PzP-point-to-point-P2P.html

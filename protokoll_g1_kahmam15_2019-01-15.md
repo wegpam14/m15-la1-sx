@@ -62,14 +62,43 @@ Um vom Modbus-Server eine Antwort zu erhalten muss er zuerst vom Client eine Req
 **Basis-Frame:**  
 ![ASCII-Frame](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/ASCII-Frame.png)  
   
-**Übungs-Frame**
+**Übungs-Frame:**
 
 Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
 -|-|-|-|-|-
 :|10|04|0001 0001|B9|13 10
 
+**Start Byte**  
+Bei ASCII Transmission Mode immer ein **:**, um die Kommunkation einzuleiten
+  
+**Adresse**  
+Damit das System weiß, an wenn die Request zu senden ist**Adresse 10**
+  
+**Funktions Code**  
+Im Funktions Code wird angegeben was mit der Request gemacht werden soll-**04 für Read Input Register**
+  
+**Daten**  
+Gibt die Quantity (Anzahl der Register) und das zu lesende Register weiter-**1 Register, das Erste**
 
-
+**LCR**  
+LRC-Prüfsumme: Bytewerte werden addiert(ohne Überlauf Berücksichtigung) und der Wert wird als Zweierkomplement betrachtet und negiert
+    * 1-0x31	49
+    * 0-0x30	48
+    * 0-0x30	48
+    * 4-0x34	52
+    * 0-0x30	48
+    * 0-0x30	48
+    * 0-0x30	48
+    * 1-0x31	49
+    * 0-0x30	48
+    * 0-0x30	48
+    * 0-0x30	48
+    * 1-0x31	49
+    * Summer 583 = 0x247 => 0x47 =>negieren: -71 +255 =185 = **b9**
+  
+**Ende**
+Damit der Server weiß, dass die Request beendet wurde-**13 10**
+  
 <a name="response"></a>
 #### 3.2 Response
 

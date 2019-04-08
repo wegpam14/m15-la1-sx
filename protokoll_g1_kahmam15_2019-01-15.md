@@ -113,7 +113,7 @@ Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
 Bei ASCII Transmission Mode immer ein **:**, um die Kommunkation einzuleiten
   
 **Adresse**  
-Damit das System weiß, an wenn die Response zu senden ist**Adresse 10**
+Damit das System weiß, an wenn die Response zu senden ist-**Adresse 10**
   
 **Funktions Code**  
 Im Funktions Code wird angegeben was mit der Response gemacht werden soll-**04 für Read Input Register**
@@ -135,10 +135,3 @@ ___
 
 
 [Präprozessor]: https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor
-[Compiler]: https://de.wikipedia.org/wiki/Compiler
-[Assembler]: https://de.wikipedia.org/wiki/Assembler_(Informatik)
-[Linker]: https://de.wikipedia.org/wiki/Linker_(Computerprogramm)
-[GNU-Projekt]: https://de.wikipedia.org/wiki/GNU-Projekt
-[Richard Stallman]:https://de.wikipedia.org/wiki/Richard_Stallman
-[maketool]:https://de.wikipedia.org/wiki/Make
-[Makefile]:http://www.c-howto.de/tutorial/makefiles/

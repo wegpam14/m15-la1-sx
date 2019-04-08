@@ -80,7 +80,7 @@ Im Funktions Code wird angegeben was mit der Request gemacht werden soll-**04 f�
 **Daten**  
 Gibt die Quantity (Anzahl der Register) und das zu lesende Register weiter-**1 Register, das Erste**
 
-**LCR**  
+**LRC**  
 LRC-Prüfsumme: Bytewerte werden addiert(ohne Überlauf Berücksichtigung) und der Wert wird als Zweierkomplement betrachtet und negiert
 * 1-0x31	49  
 * 0-0x30	48  
@@ -99,10 +99,37 @@ Summe: 583 = 0x247 => 0x47 => negieren: -71 +255 =185 = **b9**
 **Ende**  
 Damit der Server weiß, dass die Request beendet wurde-**13 10**
   
+  
 <a name="response"></a>
 #### 3.2 Response
+Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispiel sollte er mit dem gemessenen Temperaturwert antworten. ame.png)
+**Übungs-Frame:**
 
-    
+Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
+-|-|-|-|-|-
+:|10|04|02 xx|xx|13 10
+
+**Start Byte**  
+Bei ASCII Transmission Mode immer ein **:**, um die Kommunkation einzuleiten
+  
+**Adresse**  
+Damit das System weiß, an wenn die Response zu senden ist**Adresse 10**
+  
+**Funktions Code**  
+Im Funktions Code wird angegeben was mit der Response gemacht werden soll-**04 für Read Input Register**
+  
+**Daten**  
+Gibt die Quantity (Anzahl der Register) und das zu lesende Register weiter-**2 Register, xx Daten**  
+* Mögliche Kodierung:  
+23,5°C -> 16Bitwert (Kodierung)[][][][][][][][]|[][][][][][][][]  
+-32768… +32767 (/256) -> komma | => Werte von 127,996°C…-128°C
+  
+**LRC**  
+LRC-Prüfsumme: Bytewerte werden addiert(ohne Überlauf Berücksichtigung) und der Wert wird als Zweierkomplement betrachtet und negiert
+  
+**Ende**  
+Damit der Client weiß, dass die Response angekommen ist-**13 10**
+  
 ___
 
 

@@ -19,7 +19,7 @@ ___
 ### 1. Modbus 
 Das Grundkonzept hinter dem **[Modbus]** ist es über verschiedene Schnittstellen miteinander zu kommunizieren.  
 Mögliche Schnittstellen sind:  
-* **[TCP/IP] Modbus-Port: 502**  
+* **[TCP/IP] Ethernet: Modbus-Port: 502**  
 * **[RS232]: UART-Schnittstelle mit anderen Spannungsniveaus ([Punkt zu Punkt])**  
 * **[RS485]: Zweidrahtleitung mit vielen Anhängen (bis zu 32)**  
   

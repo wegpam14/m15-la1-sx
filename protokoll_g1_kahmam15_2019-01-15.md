@@ -10,20 +10,18 @@ ___
 
 * **1. [Modbus](#modbus)**  
   * *1.1 [Feldbus-Systeme](#feldbusse)*
-  * *1.2 [Realisierung](#realisierung)*
-  * *1.3 [Server-Client System](#serverClient)*
 * **2. [Übung](#übung)**
    * *2.1 [Request](#request)*  
    * *2.2 [Response](#response)*  
    
 ___
   <a name="modbus"></a>
-### 1. Modbus 
+### 1. [Modbus] 
 Das Grundkonzept hinter dem Modbus ist es über verschiedene Schnittstellen miteinander zu kommunizieren.  
 Mögliche Schnittstellen sind:  
-* **TCP/IP Modbus-Port: 502**  
-* **RS232: UART-Schnittstelle mit anderen Spannungsniveaus (Punkt zu Punkt)**  
-* **RS485: Zweidrahtleitung mit vielen Anhängen (bis zu 32)**  
+* **[TCP/IP] Modbus-Port: 502**  
+* **[RS232]: UART-Schnittstelle mit anderen Spannungsniveaus (Punkt zu Punkt)**  
+* **[RS485]: Zweidrahtleitung mit vielen Anhängen (bis zu 32)**  
   
 Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "offen" Informationen zur Verfügung stellen.
   
@@ -31,7 +29,7 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
 <a name="feldbusse"></a>
 #### 1.1 Feldbus-Systeme
   Geräte die Aktoren und Sensoren echzeitfähig verbinden (Prozessrechner) nennt man **Geräte der Feldebene** oder **Feldbusse**.   
-  Ein **Datenbus** ist ein System, wo man Bausteine mit mehreren Leitungen verbindet.  
+  Ein **[Datenbus]** ist ein System, wo man Bausteine mit mehreren Leitungen verbindet.  
     
   **Industrie:**  
   * Profinet/Profibus  
@@ -45,7 +43,7 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
   
   **Hausautomatisierung:**  
   * KNX  
-  * **Modbus**  
+  * **[Modbus]**  
   * Homematic  
   * CAN  
   
@@ -102,7 +100,8 @@ Damit der Server weiß, dass die Request beendet wurde-**13 10**
   
 <a name="response"></a>
 #### 3.2 Response
-Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispiel sollte er mit dem gemessenen Temperaturwert antworten. ame.png)
+Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispiel sollte er mit dem gemessenen Temperaturwert antworten.
+  
 **Übungs-Frame:**
 
 Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
@@ -134,4 +133,8 @@ ___
 
 
 
-[Präprozessor]: https://de.wikipedia.org/wiki/C-Pr%C3%A4prozessor
+[RS232]: https://de.wikipedia.org/wiki/RS-232
+[RS485]: https://de.wikipedia.org/wiki/EIA-485
+[TCP/IP]: https://de.wikipedia.org/wiki/Transmission_Control_Protocol/Internet_Protocol
+[Modbus]: https://de.wikipedia.org/wiki/Modbus
+[Datenbus]: https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)

@@ -15,7 +15,7 @@ ___
 * **2. [Modbus over serial line](#mosl)**
 * **3. [Telegramm](#telegramm)**
    * *3.1 [Request](#request)*  
-   * *3.2 [Response](#respone)*  
+   * *3.2 [Response](#response)*  
 * **4. Programme**
 
  
@@ -28,6 +28,7 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
 
 <a name="feldbusse"></a>
 #### 1.1 Feldbus-Systeme
+  Geräte die Aktoren, Sensoren echzeitfähig verbinden (Prozessrechner) nennt man **Geräte der Feldebene** oder **Feldbusse**.  
   Ein **Datenbus** ist ein System, wo man Bausteine mit mehreren Leitungen verbindet.  
   **Industrie:**  
   * Profinet/Profibus  

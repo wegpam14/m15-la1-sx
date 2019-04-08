@@ -21,6 +21,8 @@
  
  *[2.2]Was ist eine proprietäre Schnittstelle (Bussysteme)?*
  
+ *[2.3]Serielle Schnittstelle*
+ 
 4. Übung: Temperaturwert über Modbus - Schnittstelle
 
 ## 1. Feldbusse
@@ -72,12 +74,12 @@ Die einzelnen Feldbus-Komponenten sind wesentlich teurer
 
 ## 2. Modbus
 
-### Was ist ein Modbus?
+#### Was ist ein Modbus?
 
 [Modbus - LMS Skript](https://lms.at/dotlrn/classes/htl_elektrotechnik/610437.4AHME_LA1SX.18_19/xolrn/2148F16AC6F2E.symlink?resource_id=0-333368687&m=view#167572556) 
 Theoretische Erklärungen befinden sich in diesem Skript wo man sie perfekt nachlesen kann. Ein Modbus besitzt auch eine eigene PORT - Nr.: *PORT 502*
 
-### Was ist eine proprietäre Schnittstelle (Bussysteme)?
+#### Was ist eine proprietäre Schnittstelle (Bussysteme)?
 
 Eine Schnittstelle, die nur auf einem herstellereigenen Computermodell einsetzbar ist.
 *Vorteil*: Bezieht sich genau auf meine Aufgabenstellung (es ist einfacher zu realisieren).

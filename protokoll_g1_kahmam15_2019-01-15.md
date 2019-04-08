@@ -27,12 +27,12 @@ ___
 
 <a name="feldbusse"></a>
 #### 1.1 Arten von Feldbussen
+  Wir haben 3 verschieden Arten von Feldbussen kennengelernt:
+  * Industrie: Profinet/Profibus, **Powerlink**, Interbus S  
+  * Automotive: LIN, CAN, FLEXRAY  
+  * Hausautomatisierung: KNX, **Modbus**, Homematic, CAN
   
-  Zu Beginn eines Programms wird ein [Quelltext] benötigt (gewöhnliche Textdatei).
-  In diesem Quelltext werden Programmieranweisungen geschrieben, welche den Aufgaben des Programms entsprechen.
-  Durch Syntaxhervorhebung werden Teile des Quelltextes entsprechend ihrer Funktionalität farblich hervorgehoben, was die Lesbarkeit
-  verbessert. Ebenfalls zur Verbesserung der Lesbarkeit halten sich Programmierer meist an eine bestimmte Quelltextformatierung
-  (z. B. Einrückung von Unterabschnitten, Groß-/Kleinschreibung …). 
+  
 <a name="realisierung"></a>
 #### 1.2 Realisierung
 

@@ -51,11 +51,11 @@ Eine Alternative zum Feldbus ist eine sogenannte **"proprietäre Schnittstelle"*
   
 ___
 <a name="übung"></a>
-### 3. Übung
+### 2. Übung
 Das Ziel unserer Übung war es einen Temperaturwert über die Modbus-Schnittstelle verfügbar zu machen, dazu soll der Temperatursensor an die SPS angeschlossen werden.  
 
 <a name="request"></a>
-#### 3.1 Request
+#### 2.1 Request
 Um vom Modbus-Server eine Antwort zu erhalten muss er zuerst vom Client eine Request empfangen. Diese Request haben wir mithilfe des **ASCII Transmission Mode** versendet. Dieser Modus sendet die Bytes als ASCII-Text. Frames beginnen hier mit einem Doppelpunkt.  
   
 **Basis-Frame:**  
@@ -100,7 +100,7 @@ Damit der Server weiß, dass die Request beendet wurde-**13 10**
   
   
 <a name="response"></a>
-#### 3.2 Response
+#### 2.2 Response
 Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispiel sollte er mit dem gemessenen Temperaturwert antworten.
   
 **Übungs-Frame:**

@@ -1,6 +1,66 @@
 # Protokoll der 7. Einheit
 
-#### app.c
+ **Name**:  *Patrick Wegl*  
+  **Datum:** *18.12.2018*  
+  **Uhrzeit:** *8:00-10:30*  
+  **Gruppe:** *3*  
+  
+   
+    
+ **Anwesend:** Alois Vollmaier, Patrick Wegl, Matthias Winter, Thomas Winter  
+  **Abwesend:** Sarah Vezonik, Mercedes Wesonig  
+
+***********************************************************************************************************************************     
+  
+ **ADC** (ADCH & ADCL)   
+Da das Ergebnis des ADC ein 10 Bit Wert ist, passt dieser Wert naturgemäß nicht in ein einzelnes Register, das ja bekanntlich nur 8 Bit breit ist. Daher wird das Ergebnis in 2 Register ADCL und ADCH abgelegt. Standardmäßig werden von den 10 Ergebnisbits die niederwertigsten 8 im Register ADCL abgelegt und die noch fehlenden 2 Bits im Register ADCH an den niederwertigsten Bitpositionen gespeichert.
+```
+             ADCH                                   ADCL
+  +---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+  
+  |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+  +---+---+---+---+---+---+---+---+   +---+---+---+---+---+---+---+---+  
+                            9   8       7   6   5   4   3   2   1   0  
+```
+Normalerweise wird das Ergebnis rechtsbündig in den beiden Registern abgelegt, optional kann das Ergebnis aber auch linksbündig in ADCH und ADCL geschrieben werden. Die Einstellung erfolgt mit dem ADLAR-Bit im ADMUX-Register.
+
+In unserer Übung im Unterricht wurde der linksbündige Wert des ADCH Registers in eine Zwischenvariable gespeichtert und der ADC gestartet, indem das ADCH Register gesetzt wird.
+
+
+Werte der Temperatur werden als 16Bit Werte übertragen.  
+Danach werden die werte in Festkommacodierung übertragen und sind dann links und rechts vom Komma 8 Bit. Um vom Temperaturwert mit z.B 23,5°C zum hex Wert zu kommen muss man den wert zuerst mit 256 Multiplizieren und danach in eine Hexadezimalzahl umwandeln 23,5 * 256 = 6016 => 1780hex
+
+Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies war kein großes Problem, da es sich nur um einen statischen Fehler handelte und dies konnte durch einfaches Kallibrieren behoben werden.
+
+  ***********************************************************************************************************************************       
+## Datenanfrage
+Um die Daten auszulesen wurde folgender Datenframe verwendet
+```
+:010400000001 _ _ <CR><LF>
+```  
+
+**Modbus ASCII Frame**  
+  
+:|01|04|0000|0001|_ _|<CR><LF>
+  
+```:``` -> Start Frame  
+```01``` -> Adresse des Geräts am Bus  
+```04``` -> Read Input Register  
+```0000``` -> Inputregister 1 für die Temperatur  
+```0001``` -> Anzahl der Gewählten Input Register  
+```_ _``` -> LRC/Prüfsumme  
+```<CR><LF>``` -> End-Frame   
+  
+**Antwort**  
+Der folgende Datenframe wurde verwendet um die Antwort des Microcontrollers zum PC zu senden.
+```
+:010402xxxx _ _ <CR><LF>
+```  
+
+
+
+
+
+### app.c
 ```
 
 void app_init (void)

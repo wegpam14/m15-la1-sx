@@ -99,6 +99,7 @@ Summe: 583 = 0x247 => 0x47 => negieren: -71 +255 =185 = **b9**
 Damit der Server weiß, dass die Request beendet wurde-**13 10**
   
   
+    
 <a name="response"></a>
 #### 2.2 Response
 Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispiel sollte er mit dem gemessenen Temperaturwert antworten.

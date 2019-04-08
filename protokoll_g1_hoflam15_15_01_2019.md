@@ -86,12 +86,12 @@ Eine Schnittstelle, die nur auf einem herstellereigenen Computermodell einsetzba
 #### Serielle Schnittstellen
 
 ***RS 232***
-
+![RS485](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Unbenannt3.png)
 
 
 
 ***RS 485***
-
+![RS485](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Unbenannt.png)
 
 
 

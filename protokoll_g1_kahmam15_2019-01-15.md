@@ -64,7 +64,7 @@ Um vom Modbus-Server eine Antwort zu erhalten muss er zuerst vom Client eine Req
   
 **Übungs-Frame**
 
-**Start Byte|Adresse|Funktions Code|Daten|LRC|Ende**
+Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
 -|-|-|-|-|-
 :|10|04|0001 0001|B9|13 10
 

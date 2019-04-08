@@ -9,7 +9,7 @@ ___
 ## Inhalte:  
 
 * **1. [Modbus](#modbus)**  
-  * *1.1 [Arten von Feldbussen](#feldbusse)*
+  * *1.1 [Feldbus-Systeme](#feldbusse)*
   * *1.2 [Realisierung](#realisierung)*
   * *1.3 [Server-Client System](#serverClient)*
 * **2. [Modbus over serial line](#mosl)**
@@ -22,15 +22,28 @@ ___
 ___
   <a name="modbus"></a>
 ### 1. Modbus 
-
+Das Grundkonzept hinter dem Modbus ist es über verschiedene Schnittstellen 
+Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "offen" Informationen zur Verfügung stellen.
   
 
 <a name="feldbusse"></a>
-#### 1.1 Arten von Feldbussen
-  Wir haben 3 verschieden Arten von Feldbussen kennengelernt:
-  * Industrie: Profinet/Profibus, **Powerlink**, Interbus S  
-  * Automotive: LIN, CAN, FLEXRAY  
-  * Hausautomatisierung: KNX, **Modbus**, Homematic, CAN
+#### 1.1 Feldbus-Systeme
+  Ein **Datenbus** ist ein System, wo man Bausteine mit mehreren Leitungen verbindet.
+  **Industrie:**  
+  * Profinet/Profibus  
+  * **Powerlink**  
+  * Interbus S  
+  
+  **Automotive:** 
+  * LIN  
+  * CAN  
+  * FLEXRAY  
+  
+  **Hausautomatisierung:**  
+  * KNX  
+  * **Modbus**  
+  * Homematic  
+  * CAN  
   
   
 <a name="realisierung"></a>

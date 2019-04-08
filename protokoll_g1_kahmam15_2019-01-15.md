@@ -81,20 +81,20 @@ Im Funktions Code wird angegeben was mit der Request gemacht werden soll-**04 f�
 Gibt die Quantity (Anzahl der Register) und das zu lesende Register weiter-**1 Register, das Erste**
 
 **LCR**  
-LRC-Prüfsumme: Bytewerte werden addiert(ohne Überlauf Berücksichtigung) und der Wert wird als Zweierkomplement betrachtet und negiert
-    * 1-0x31	49
-    * 0-0x30	48
-    * 0-0x30	48
-    * 4-0x34	52
-    * 0-0x30	48
-    * 0-0x30	48
-    * 0-0x30	48
-    * 1-0x31	49
-    * 0-0x30	48
-    * 0-0x30	48
-    * 0-0x30	48
-    * 1-0x31	49
-    * Summer 583 = 0x247 => 0x47 =>negieren: -71 +255 =185 = **b9**
+LRC-Prüfsumme: Bytewerte werden addiert(ohne Überlauf Berücksichtigung) und der Wert wird als Zweierkomplement betrachtet und negiert  
+* 1-0x31	49  
+* 0-0x30	48  
+* 0-0x30	48  
+* 4-0x34	52  
+* 0-0x30	48  
+* 0-0x30	48  
+* 0-0x30	48  
+* 1-0x31	49  
+* 0-0x30	48  
+* 0-0x30	48  
+* 0-0x30	48  
+* 1-0x31	49  
+Summer 583 = 0x247 => 0x47 =>negieren: -71 +255 =185 = **b9**
   
 **Ende**
 Damit der Server weiß, dass die Request beendet wurde-**13 10**

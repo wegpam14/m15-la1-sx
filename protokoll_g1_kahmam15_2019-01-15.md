@@ -52,18 +52,6 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
   * CAN  
   
 Eine Alternative zum Feldbus ist eine sogenannte **"proprietäre Schnittstelle"** (Bussystem). Proprieätar = "Eigenkreation", daher kann es nicht mit anderen Systemen verbunden werden, jedoch bezieht es geringen Aufwand.
-  
-<a name="realisierung"></a>
-#### 1.2 Realisierung
-
-
-<a name="serverClient"></a>
-#### 1.2 Server-Client System
-
-* [Präprozessor]:   
-Präprozessorbefehle beginnen immer mit einem "**#**" und enden nicht mit einem Semikolon (#include <stdio.h>, #define ...). Präprozessordateien werden "**Header-Dateien**" (* .h) gennant, da sie im Kopf der C-Datei stehen.  
-  
-
 ___
 <a name="übung"></a>
 ### 3. Übung

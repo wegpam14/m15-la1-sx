@@ -28,7 +28,7 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
 
 <a name="feldbusse"></a>
 #### 1.1 Feldbus-Systeme
-  Ein **Datenbus** ist ein System, wo man Bausteine mit mehreren Leitungen verbindet.
+  Ein **Datenbus** ist ein System, wo man Bausteine mit mehreren Leitungen verbindet.  
   **Industrie:**  
   * Profinet/Profibus  
   * **Powerlink**  
@@ -44,7 +44,7 @@ Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "
   * **Modbus**  
   * Homematic  
   * CAN  
-  
+  - Eine Alternative zum Feldbus ist eine sogenannte **"proprietäre Schnittstelle"** (Bussystem). Proprieätar = "Eigenkreation", daher kann es nicht mit anderen Systemen verbunden werden, jedoch bezieht es geringen Aufwand.
   
 <a name="realisierung"></a>
 #### 1.2 Realisierung

@@ -56,6 +56,7 @@ Der Request ist wie gefolgt aufgebaut:
 |:-------------:|:-------------:|:---------:|:---------:|:---------:|------------|
 |        :      |       2 Bytes      |    2 Bytes     |   n Bytes   |     2 Bytes    |    CR LF   |
 
+
 **Startbyte:** Besteht aus einem ':', sodass der Client weis das ein neuer Request beginnt,
 
 **Adresse:** Damit Client und Server Request zuzuordnen
@@ -69,14 +70,17 @@ Der Request ist wie gefolgt aufgebaut:
 **Ende:** Carriage return und line feed werden gesendet um mitzuteilen dass der Request zu Ende ist
 
 Der Request den wir in unserer Übung erstellten sah folgendermaßen aus:
+
 |   Startbyte   |    Adresse    |  Funktion |     Daten     |    LCR    |    Ende    |
 |:-------------:|:-------------:|:---------:|:---------:|:---------:|------------|
 |        :      |       10      |    04     |   0001 0001   |     B9    |    13 10   |
+
 
 ### 2.1 Responsedesign
 Modbus sendet nach dem erhalten der Request einen Response mit den Temperaturwerten.
 
 Die Response ist wie gefolgt aufgebaut:
+
 
 
 |   Startbyte   |    Adresse    |  Funktion | Quantität Bytes |     Daten     |    LCR    |    Ende    |

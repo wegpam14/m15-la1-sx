@@ -59,15 +59,15 @@ Der Request ist wie gefolgt aufgebaut:
 
 **Startbyte:** Besteht aus einem ':', sodass der Client weis das ein neuer Request beginnt,
 
-**Adresse:** Damit Client und Server Request zuzuordnen
+**Adresse:** Damit Client und Server Request zuzuordnen **Adresse 10**
 
-**Funktion:** Gibt an was Server mit Request machen soll
+**Funktion:** Gibt an was Server mit Request machen soll **04 - Read Input**
 
-**Daten:** Enthält Nummer des Registers
+**Daten:** Enthält Nummer des Registers **1 Register**
 
-**LCR:** Alle Bytes nach dem Startbyte werden zusammengezählt mit -1 Multipliziert
+**LCR:** Alle Bytes nach dem Startbyte werden zusammengezählt mit -1 Multipliziert **B9(Hex)**
 
-**Ende:** Carriage return und line feed werden gesendet um mitzuteilen dass der Request zu Ende ist
+**Ende:** Carriage return und line feed werden gesendet um mitzuteilen dass der Request zu Ende ist **13 10**
 
 Der Request den wir in unserer Übung erstellten sah folgendermaßen aus:
 
@@ -91,18 +91,18 @@ Die Response ist wie gefolgt aufgebaut:
 
 **Startbyte:** Besteht aus einem ':', sodass der Client weis das ein neuer Request beginnt,
 
-**Adresse:** Damit Client und Server Request zuzuordnen
+**Adresse:** Damit Client und Server Request zuzuordnen **Adresse 10**
 
-**Funktion:** Gibt an was Server mit Request machen soll
+**Funktion:** Gibt an was Server mit Request machen soll **04 - Read Input**
 
 **Quantität:** Wie viel Bytes die Response erhält, bzw. wie viele Datenbytes zurückgesendet werden 
 
-**Daten:** 16 Bits stehen für den zu versendenden Wert zur Verfügung. In unseren Beispiel werden diese Bits wie befolgt genutzt: ersten 8 Bits : °C Wert letzten 8 Bits für die Kommerzahl.
+**Daten:** 16 Bits stehen für den zu versendenden Wert zur Verfügung. In unseren Beispiel werden diese Bits wie befolgt genutzt: ersten 8 Bits : °C Wert letzten 8 Bits für die Kommerzahl. **-2 Register, xy Daten**
 
 **LCR:** Alle Bytes nach dem Startbyte werden zusammengezählt mit -1 Multipliziert
 Das LCR kann erst beim senden berechnet werden.
 
-**Ende:** Carriage return und line feed werden gesendet um mitzuteilen dass der Request zu Ende ist
+**Ende:** Carriage return und line feed werden gesendet um mitzuteilen dass der Request zu Ende ist **13 10**
 
 
 Der Response den wir in unserer Übung erstellten sah folgendermaßen aus:

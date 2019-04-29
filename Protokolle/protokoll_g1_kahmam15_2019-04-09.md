@@ -34,9 +34,7 @@ Die Aufgabe bestand daraus die Temperatur über den µC(Server) zu messen, und d
   
     
 <a name="response"></a>
-#### 1.2 Response
-Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispiel sollte er mit dem gemessenen Temperaturwert antworten.
-  
+#### 1.2 Response  
 **Aufbau im Übungs-Frame:**
 
 | Start Byte | Adresse | Funktions Code | Daten | LRC |  Ende  |

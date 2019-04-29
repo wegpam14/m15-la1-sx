@@ -10,3 +10,5 @@
   [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/protokoll_g1_hoflam15_08_01_2019.md)
 5. Protokoll (15.01.2019):
   [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/protokoll_g1_hoflam15_15_01_2019.md)
+6. Protokoll (09.04.2019):
+  [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/protokoll_g1_hoflam15_09_04_2019.md)

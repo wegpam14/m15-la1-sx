@@ -14,6 +14,7 @@ ___
 * **2. [Programm](#Programm)**  
    * *1.1 [Register Konfiguration](#Register Konfiguration)*  
    * *1.2 [Main-Programm](#Main-Programm)*  
+* **2. [Berchenung de Temperaturwerte](#Berchenung de Temperaturwerte)**  
    
 ___
   <a name="Server-client"></a>
@@ -50,7 +51,7 @@ Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.
   
 
 <a name="Register Konfiguration"></a>
-#### 1.1 Register Konfiguration  
+#### 1.1 Register Konfiguration
 
 ``` c
 ADMUX = 8;

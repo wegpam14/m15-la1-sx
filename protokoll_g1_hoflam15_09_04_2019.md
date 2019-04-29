@@ -7,11 +7,17 @@
  
 ## Inhaltsangabe
 1. Allgemeines zur Übung
+
 2. Konfiguration der Register
+
 3. Auslesen der Werte / Kalibrierung
+
  3.1 Auslesen der Werte
+ 
  3.2 Kalibrierung
+ 
  3.3 Berechnung
+ 
  3.4 Umsetzung in C
 
 ## Allgemeines zur Übung
@@ -19,6 +25,7 @@ Das Ziel unserer Übung war es den Temperatur Sensor über einen Modbus auszugeb
 //Bild
 
 Der Client sendet einen Request an den Server.
+
 **Request:**
 
     :|0|1|0|4|0|0|0|1|0|0|0|1|B|9|'\r'|'\n'
@@ -29,6 +36,7 @@ B 9 : LCR
 
 
 Der Server sendet eine Response zurück.
+
 **Resonse:**
 
     :|0|1|0|4|0|2|1|7|8|0| | |'\r'|'\n'
@@ -37,9 +45,11 @@ Kein LCR noch vorhanden, weil wir es noch berechnen müssen.
 
 
 ## Konfiguration der Register
+
 Konfiguriert werden die Register in *app_init*. Alles was zum konfigurieren ist, kann man im  [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf) nachlesen.
 
-        void app_init (void)
+```
+      void app_init (void)
     {
       memset((void *)&app, 0, sizeof(app));
       
@@ -50,6 +60,8 @@ Konfiguriert werden die Register in *app_init*. Alles was zum konfigurieren ist,
       ADCSRA = (1<<ADEN) | 7; //fADC = 125 kHz
       ADCSRB = 0;
     }
+```
+
 Der Temperatursensor hängt am ADC8 Kanal somit muss zum Aktivieren der Temperatur **ADMUX** 8 sein. Die interne 1,1-V-Spannungsreferenz muss auch für die ADC-Spannungsreferenzquelle bei der Temperatursensormessung ausgewählt werden. Dabei müssen das **REFS1** und das **REFS0** Bit auf 1 gesetzt werden. Wenn der Temperatursensor aktiviert ist, kann der ADC-Wandler im Konvertierungsmodus verwendet werden, um die Spannung über dem Temperatursensor zu messen. Die gemessene Spannung hat eine lineare Beziehung zur Temperatur. Die Spannungsempfindlichkeit beträgt ca. 1 mV/°C und die Genauigkeit der Temperaturmessung beträgt +/- 10 °C.
 
 |Temperatur °C|  Spannung mV|
@@ -65,12 +77,14 @@ Somit ist der ADC konfiguriert.
 ## Auslesen der Werte / Kalibrierung
 
 
-
 ### Auslesen der Werte
 
+```
     ADCSRA |= (1 << ADSC);
           _delay_ms(1);
           printf("ADCH=%u     ", ADCH);
+```
+
 In diesem Teil wird der Wert ausgelesen und ist auf 90°C (+/- 10%). Somit wird nun eine Kalibrierung gebraucht die man wie folgt berechnen kann.
 
 ### Kalibrierung
@@ -97,6 +111,8 @@ Aus der Tabelle können nun Gleichungen aufgestellt werden um k und d zu berechn
 Zu guter Letzt sollte man sich auf einen Wert in der Mitte einigen in unserem Fall einigten wir uns auf k=1040 und d=-96000.
 
 #### Umsetzung in C
+
+```
     void app_main (void)
     {
       
@@ -118,6 +134,8 @@ Zu guter Letzt sollte man sich auf einen Wert in der Mitte einigen in unserem Fa
       }
       printf(" REG 1 = %d \r", mbInputReg01);
     }
+```
+
 Zuerst wird die Formel konfiguriert.
 ! Wichtig: *int16_t* verwenden, da der Wert auch negativ sein kann.
 Doch die Formel kann noch nicht funktionieren da ein 32-Bit Wert vorhanden ist, somit kommt noch ein *if-else*.

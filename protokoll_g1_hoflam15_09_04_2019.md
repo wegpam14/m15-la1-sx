@@ -22,9 +22,13 @@ Der Client sendet einen Request an den Server.
 **Request:**
 
     :|0|1|0|4|0|0|0|1|0|0|0|1|B|9|'\r'|'\n'
+    
 0 1 : Gerät - Adresse
+
 0 4 : Function Code
+
 0 0 0 1 : Adresse 2 für Temperatur
+
 B 9 : LCR
 
 
@@ -33,7 +37,9 @@ Der Server sendet eine Response zurück.
 **Resonse:**
 
     :|0|1|0|4|0|2|1|7|8|0| | |'\r'|'\n'
+    
 Kein LCR noch vorhanden, weil wir es noch berechnen müssen.
+
 1 7 8 0 : steht für die Temperatur 23,5°C
 
 
@@ -81,6 +87,7 @@ Somit ist der ADC konfiguriert.
 In diesem Teil wird der Wert ausgelesen und ist auf 90°C (+/- 10%). Somit wird nun eine Kalibrierung gebraucht die man wie folgt berechnen kann.
 
 ### Kalibrierung
+
 Wie oben schon beschrieben haben die gemessene Spannung und die Temperatur ein lineares Verhältnis. So kann zur Umrechnung von den Daten des ADCH Registers in eine Temperatur eine lineare Funktion (y=k\*x+d) verwendet werden. In diesem Falle lautet die Formel: *T=k\*ADCH+d*
 
 
@@ -95,6 +102,7 @@ Aus dieser Tabelle ergibt sich das folgende Diagramm:
 ![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Daigramm.PNG)
 
 #### Berechnung
+
 Aus der Tabelle können nun Gleichungen aufgestellt werden um k und d zu berechnen.
 
  - -11520 = k \* 75 + d

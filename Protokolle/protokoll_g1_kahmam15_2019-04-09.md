@@ -92,7 +92,7 @@ void app_main (void)
 }
 ```  
 **Beschreibung**  
-Zu Beginn wird Mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gestarten. Danach wird ein Wert zur Kontrolle am Bildschirm ausgegeben. Als nächstes haben wir **k** und **d** in der Formel angepasst, um relativ gute Messwerte zu erhalten. Dann haben wir überprüft, ob der Wert sich im zulässigen Bereich befindet, falls dies nicht der Fall ist soll der Maximalwert ausgegeben werden, um dem Benutzer zu zeigen, dass es sich um einen Fehler handelt.
+Zu Beginn wird mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gestarten. Danach wird ein Wert zur Kontrolle am Bildschirm ausgegeben. Als nächstes haben wir **k** und **d** in der Formel angepasst, um relativ gute Messwerte zu erhalten. Dann haben wir überprüft, ob der Wert sich im zulässigen Bereich befindet, falls dies nicht der Fall ist soll der Maximalwert ausgegeben werden, um dem Benutzer zu zeigen, dass es sich um einen Fehler handelt.
 ___
   
 
@@ -115,7 +115,7 @@ Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Start
 |    92           |25°C      |     6400                 |
 |    107          |85°C      |    21760                 |
   
-Daraus haben wir dann mithilfe von y=k*x+d eine Funktion erstellt:
+Dannach haben wir ein Funktion nach y=kx+d erstellt um die Werte einer besseren geschätzten linearität zuweisen zu können.  
 ```Temperatur(16Bit) = 1040 * ADCH - 96000```  
   
 ___  

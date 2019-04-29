@@ -15,7 +15,7 @@
 
 ## Allgemeines zur Übung
 Das Ziel unserer Übung war es den Temperatur Sensor über einen Modbus auszugeben. 
-//Bild
+![ServerClient](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/ServerClient.png)
 
 Der Client sendet einen Request an den Server.
 

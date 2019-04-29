@@ -8,14 +8,14 @@ ___
 
 ## Inhalte:  
 
-* **1. Server-Client(#Serverclient)**  
+* **1. Server-Client(#Server-client)**  
   * *1.1 [Feldbus-Systeme](#feldbusse)*
 * **2. [Übung](#übung)**
    * *2.1 [Request](#request)*  
    * *2.2 [Response](#response)*  
    
 ___
-  <a name="Serverclient"></a>
+  <a name="Server-client"></a>
 ### 1. Server-Client 
 Das Grundkonzept hinter dem **[Modbus]** ist es über verschiedene Schnittstellen miteinander zu kommunizieren.  
 Mögliche Schnittstellen sind:  

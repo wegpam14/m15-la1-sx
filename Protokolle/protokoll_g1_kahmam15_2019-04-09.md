@@ -36,9 +36,9 @@ Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispie
 
 Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
 -|-|-|-|-|-
-:|01|04|0217 80-- |--|'\r' '\n' 
+:|01|04|02 1780 |--|'\r' '\n' 
   
-**17 80** entspricht einer Temperatur von **23,5°C**
+**1780** entspricht einer Temperatur von **23,5°C**
 ___
 
 

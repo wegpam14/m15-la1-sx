@@ -6,7 +6,7 @@
  - Abwesend: -
  
 ## Inhaltsangabe
-1. Allgemeines zur Übung
+1. [Allgemeines zur Übung](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/protokoll_g1_hoflam15_09_04_2019.md#allgemeines-zur-%C3%BCbung)
 
 2. Konfiguration der Register
 

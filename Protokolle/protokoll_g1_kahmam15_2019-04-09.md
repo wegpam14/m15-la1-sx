@@ -98,7 +98,7 @@ ___
 
 ### Berechnungen <a name="Berechnung"></a>
 
-**Gradientberechnung:**  (ADCH = Vin *256/Vref; Annahme: V<sub>ref</sub>=1,1V)
+**Gradientberechnung:**  (ADCH = Vin *256/Vref; Annahme: V<sub>ref</sub>=1,1V)  
 -45°C… 242mV => 0,242 * 256/1,1 =~56  
  25°C… 314mV => 0,314 * 256/1,1 =~73  
  85°C… 380mV => 0,380 * 256/1,1 =~88  

@@ -38,9 +38,9 @@ Beim Response antwortet der Modbus-Server auf unsere Request. In unserem Beispie
   
 **Aufbau im Übungs-Frame:**
 
-Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
--|-|-|-|-|-
-:|01|04|02 1780 |--|'\r' '\n' 
+| Start Byte | Adresse | Funktions Code | Daten | LRC |  Ende  |
+|:----------:|:-------:|:--------------:|:-----:|:---:|:------:|  
+|     :      |    01   |       04       |02 1780| --  |'\r''\n'|
   
 **1780** entspricht einer Temperatur von **23,5°C**
 ___  
@@ -91,7 +91,9 @@ void app_main (void)
   }
   printf("Versuch: %d \r",mbInputReg01);
 }
-```
+```  
+**Beschreibung**  
+Zu Beginn wird Mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gestarten. Danach wird ein Wert zur Kontrolle am Bildschirm ausgegeben. Als nächstes haben wir **k** und **d** in der Formel angepasst, um relativ gute Messwerte zu erhalten. Dann haben wir überprüft, ob der Wert sich im zulässigen Bereich befindet, falls dies nicht der Fall ist soll der Maximalwert ausgegeben werden, um dem Benutzer zu zeigen, dass es sich um einen Fehler handelt.
 ___
   
 
@@ -110,7 +112,7 @@ Damit wir die Werte besser schätzen konnten, haben wir eine Formel verwendet, u
 Daraus haben wir dann mithilfe von y=k*x+d eine Funktion erstellt:
 ```Temperatur = 1040 * ADCH - 86400```  
 
-__  
+___  
 
 
 

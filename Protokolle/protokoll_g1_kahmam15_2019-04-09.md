@@ -11,6 +11,9 @@ ___
 * **1. [Übertragung mittels Server-Client System](#Server-client)**  
    * *1.1 [Request](#request)*  
    * *1.2 [Response](#response)*  
+* **2. [Programm](#Programm)**  
+   * *1.1 [Register Konfiguration](#Register Konfiguration)*  
+   * *1.2 [Main-Programm](#Main-Programm)*  
    
 ___
   <a name="Server-client"></a>
@@ -39,14 +42,59 @@ Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
 :|01|04|02 1780 |--|'\r' '\n' 
   
 **1780** entspricht einer Temperatur von **23,5°C**
+___  
+
+<a name="Programm"></a>
+### 1. Programm
+Die Aufgabe bestand daraus die Temperatur über den µC(Server) zu messen, und diese dann jederzeit auf dem PC(Client) abrufbar zu machen. Der PC sendet zu Beginn eine Request an den µC, falls es keine Fehler dabei gab senden der µC eine Response and mit der gemmessen Temperatur zurück.  
+![Server-Client](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/rsz_server-client-modbus.png)
+  
+
+<a name="Register Konfiguration"></a>
+#### 1.1 Register Konfiguration  
+
+``` c
+ADMUX = 8;
+ADMUX |= (1<<REFS0) | (1<<REFS1);
+ADMUX |= (1<<ADLAR);
+  
+ADCSRA = (1<<ADEN) | 7;
+ADCSRB = 0;
+```
+```ADMUX = 8``` Damit setzen wir den Multiplexer ADC auf den wert 8 wo der Temperatursensor liegt.  
+```ADMUX |= (1<<REFS0) | (1<<REFS1)``` Damit setzten wir die Referenzspannung auf die internen 1.1V.  
+```ADMUX |= (1<<ADLAR)``` Damit wird das Ergebnis linksbündig ausgegeben.   
+```ADCSRA = (1<<ADEN) | 7``` Damit setzt man die Frequenz des ADC, in unserem fall auf 125kHz.  
+```ADCSRB = 0;``` Wird zur Sicherheit komplett deaktiviert. 
+  
+    
+<a name="Main-Programm"></a>
+#### 1.2 Main-Programm
+```c
+void app_main (void)
+{
+  ADCSRA |= (1<< ADSC);
+  _delay_ms(1);
+  printf("ADCH= %u  ", ADCH);
+  
+  int32_t k = 1040;
+  int32_t d = -96000;
+  int16_t mbInputReg01;
+  
+  int32_t x = k*ADCH + d;
+  if(x> 0x7fff) {
+    mbInputReg01 = 0x7fff;
+  } else if(x < -32768) {
+    mbInputReg01 = -0x8000;
+  } else {
+    mbInputReg01 = (int8_t)x;
+  }
+  printf("Versuch: %d \r",mbInputReg01);
+}
+```
 ___
 
 
 
-[RS232]: https://de.wikipedia.org/wiki/RS-232
-[RS485]: https://de.wikipedia.org/wiki/EIA-485
-[TCP/IP]: https://de.wikipedia.org/wiki/Transmission_Control_Protocol/Internet_Protocol
-[Modbus]: https://de.wikipedia.org/wiki/Modbus
-[Datenbus]: https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)
-[Powerlink]: https://de.wikipedia.org/wiki/Bus_(Datenverarbeitung)
+
 [Punkt zu Punkt]: https://www.itwissen.info/Punkt-zu-Punkt-Verbindung-PzP-point-to-point-P2P.html

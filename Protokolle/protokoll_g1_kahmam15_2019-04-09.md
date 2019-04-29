@@ -14,7 +14,7 @@ ___
 * **2. [Programm](#Programm)**  
    * *1.1 [Register Konfiguration](#Register-Konfiguration)*  
    * *1.2 [Main-Programm](#Main-Programm)*  
-* **2. [Berchenung der Temperaturwerte](#Berchenung)**  
+* **2. [Berchenung der Temperaturwerte](#Berechnung)**  
    
 ___
   <a name="Server-client"></a>
@@ -96,8 +96,7 @@ Zu Beginn wird Mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gest
 ___
   
 
-### Berechnung des Temperaturwertes <a name="Temperaturberechnung"></a>
-
+### Berechnung des Temperaturwertes <a name="Berechnung"></a>
 Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Startpunkt haben. Die Kennlinie des Temperatursensors kann man linear annehmen. Danach haben wir ein paar Werte mithilfe von dem Datenblatt geschätzt, die Temperatur mit 2^8 multipliziert und sind dann auf folgende Tabelle gekommen:
 
 | Gemessen (ADCH) |Temperatur| Umgerechnet (Temperatur) |
@@ -105,14 +104,18 @@ Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Start
 |    75           |-45°C     |    -11520                |  
 |    92           |25°C      |     6400                 |
 |    107          |85°C      |    21760                 |
-
-Damit wir die Werte besser schätzen konnten, haben wir eine Formel verwendet, um einen durchschnittliche Temperaturänderung pro mV zu berechnen: ADCH = V<sub>in</sub>*256/V<sub>ref</sub>  Generell kann man aber sagen, dass sich Wert um 1°C pro mV ändert. 
-
+  
 Daraus haben wir dann mithilfe von y=k*x+d eine Funktion erstellt:
-```Temperatur = 1040 * ADCH - 86400```  
+```Temperatur(16Bit) = 1040 * ADCH - 96000```  
 
+**Gradientberechnung:**  
+-45°C… 242mV => 0,242 * 256/1,1 =~56  
+ 25°C… 314mV => 0,314 * 256/1,1 =~73  
+ 85°C… 380mV => 0,380 * 256/1,1 =~88  
+   
+ **Gradient:** (88-56)/(85°C-(-45°C)) = **0,24/°C**   
+ Daraus folgt: Alle ~4°C ändert sich der gemessene Wert; genaues Messen der Temperatur nicht möglich
+  
 ___  
 
 
-
-[Punkt zu Punkt]: https://www.itwissen.info/Punkt-zu-Punkt-Verbindung-PzP-point-to-point-P2P.html

@@ -12,13 +12,6 @@
 
 3. Auslesen der Werte / Kalibrierung
 
- 3.1 Auslesen der Werte
- 
- 3.2 Kalibrierung
- 
- 3.3 Berechnung
- 
- 3.4 Umsetzung in C
 
 ## Allgemeines zur Übung
 Das Ziel unserer Übung war es den Temperatur Sensor über einen Modbus auszugeben. 
@@ -48,7 +41,7 @@ Kein LCR noch vorhanden, weil wir es noch berechnen müssen.
 
 Konfiguriert werden die Register in *app_init*. Alles was zum konfigurieren ist, kann man im  [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf) nachlesen.
 
-```
+```C
       void app_init (void)
     {
       memset((void *)&app, 0, sizeof(app));
@@ -79,7 +72,7 @@ Somit ist der ADC konfiguriert.
 
 ### Auslesen der Werte
 
-```
+```C
     ADCSRA |= (1 << ADSC);
           _delay_ms(1);
           printf("ADCH=%u     ", ADCH);
@@ -99,7 +92,7 @@ Wie oben schon beschrieben haben die gemessene Spannung und die Temperatur ein l
 \* geschätzt, Messung nicht möglich
 
 Aus dieser Tabelle ergibt sich das folgende Diagramm:
-//Diagramm
+![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Daigramm.PNG)
 
 #### Berechnung
 Aus der Tabelle können nun Gleichungen aufgestellt werden um k und d zu berechnen.
@@ -112,7 +105,7 @@ Zu guter Letzt sollte man sich auf einen Wert in der Mitte einigen in unserem Fa
 
 #### Umsetzung in C
 
-```
+```C
     void app_main (void)
     {
       

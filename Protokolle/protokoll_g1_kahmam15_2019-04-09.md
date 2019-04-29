@@ -12,9 +12,9 @@ ___
    * *1.1 [Request](#request)*  
    * *1.2 [Response](#response)*  
 * **2. [Programm](#Programm)**  
-   * *1.1 [Register Konfiguration](#Register-Konfiguration)*  
-   * *1.2 [Main-Programm](#Main-Programm)*  
-* **2. [Berchenungen](#Berechnung)**  
+   * *2.1 [Register Konfiguration](#Register-Konfiguration)*  
+   * *2.2 [Main-Programm](#Main-Programm)*  
+* **3. [Berchenungen](#Berechnung)**  
    
 ___
   <a name="Server-client"></a>
@@ -45,12 +45,12 @@ Die Aufgabe bestand daraus die Temperatur über den µC(Server) zu messen, und d
 ___  
 
 <a name="Programm"></a>
-### 1. Programm
+### 2. Programm
 Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.  
   
 
 <a name="Register-Konfiguration"></a>
-#### 1.1 Register Konfiguration
+#### 2.1 Register Konfiguration
 
 ``` c
 ADMUX = 8;
@@ -68,7 +68,7 @@ ADCSRB = 0;
   
     
 <a name="Main-Programm"></a>
-#### 1.2 Main-Programm
+#### 2.2 Main-Programm
 ```c
 void app_main (void)
 {
@@ -96,7 +96,7 @@ Zu Beginn wird mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gest
 ___
   
 
-### Berechnungen <a name="Berechnung"></a>
+### 3. Berechnungen <a name="Berechnung"></a>
 
 **Gradientberechnung:**  (ADCH = Vin *256/Vref; Annahme: V<sub>ref</sub>=1,1V)  
 -45°C… 242mV => 0,242 * 256/1,1 =~56  

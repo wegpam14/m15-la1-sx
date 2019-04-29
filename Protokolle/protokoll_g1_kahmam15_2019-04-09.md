@@ -14,7 +14,7 @@ ___
 * **2. [Programm](#Programm)**  
    * *2.1 [Register Konfiguration](#Register-Konfiguration)*  
    * *2.2 [Main-Programm](#Main-Programm)*  
-* **3. [Berchenungen](#Berechnung)**  
+* **3. [Berechnungen](#Berechnung)**  
    
 ___
   <a name="Server-client"></a>
@@ -95,8 +95,8 @@ void app_main (void)
 Zu Beginn wird mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gestarten. Danach wird ein Wert zur Kontrolle am Bildschirm ausgegeben. Als nächstes haben wir **k** und **d** in der Formel angepasst, um relativ gute Messwerte zu erhalten. Dann haben wir überprüft, ob der Wert sich im zulässigen Bereich befindet, falls dies nicht der Fall ist soll der Maximalwert ausgegeben werden, um dem Benutzer zu zeigen, dass es sich um einen Fehler handelt.
 ___
   
-
-### 3. Berechnungen <a name="Berechnung"></a>
+<a name="Berechnung"></a>
+### 3. Berechnungen 
 
 **Gradientberechnung:**  (ADCH = Vin *256/Vref; Annahme: V<sub>ref</sub>=1,1V)  
 -45°C… 242mV => 0,242 * 256/1,1 =~56  

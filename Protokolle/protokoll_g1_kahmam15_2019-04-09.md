@@ -12,9 +12,9 @@ ___
    * *1.1 [Request](#request)*  
    * *1.2 [Response](#response)*  
 * **2. [Programm](#Programm)**  
-   * *1.1 [Register Konfiguration](#Register Konfiguration)*  
+   * *1.1 [Register Konfiguration](#Register-Konfiguration)*  
    * *1.2 [Main-Programm](#Main-Programm)*  
-* **2. [Berchenung de Temperaturwerte](#Berchenung de Temperaturwerte)**  
+* **2. [Berchenung der Temperaturwerte](#Berchenung)**  
    
 ___
   <a name="Server-client"></a>
@@ -50,7 +50,7 @@ ___
 Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.  
   
 
-<a name="Register Konfiguration"></a>
+<a name="Register-Konfiguration"></a>
 #### 1.1 Register Konfiguration
 
 ``` c

@@ -46,8 +46,7 @@ ___
 
 <a name="Programm"></a>
 ### 1. Programm
-Die Aufgabe bestand daraus die Temperatur über den µC(Server) zu messen, und diese dann jederzeit auf dem PC(Client) abrufbar zu machen. Der PC sendet zu Beginn eine Request an den µC, falls es keine Fehler dabei gab senden der µC eine Response and mit der gemmessen Temperatur zurück.  
-![Server-Client](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/rsz_server-client-modbus.png)
+Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.  
   
 
 <a name="Register Konfiguration"></a>

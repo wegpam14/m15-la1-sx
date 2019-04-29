@@ -102,9 +102,9 @@ Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Start
 
 | Gemessen (ADCH) |Temperatur| Umgerechnet (Temperatur) |
 |:---------------:|:--------:|:------------------------:|
-|    72           |-45°C     |    -11520                |  
-|    89           |25°C      |     6400                 |
-|    104          |85°C      |    21760                 |
+|    75           |-45°C     |    -11520                |  
+|    92           |25°C      |     6400                 |
+|    107          |85°C      |    21760                 |
 
 Damit wir die Werte besser schätzen konnten, haben wir eine Formel verwendet, um einen durchschnittliche Temperaturänderung pro mV zu berechnen: ADCH = V<sub>in</sub>*256/V<sub>ref</sub>  Generell kann man aber sagen, dass sich Wert um 1°C pro mV ändert. 
 

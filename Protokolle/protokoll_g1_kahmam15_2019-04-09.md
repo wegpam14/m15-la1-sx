@@ -8,22 +8,18 @@ ___
 
 ## Inhalte:  
 
-* **1. [Modbus](#modbus)**  
+* **1. Server-Client(#Serverclient)**  
   * *1.1 [Feldbus-Systeme](#feldbusse)*
 * **2. [Übung](#übung)**
    * *2.1 [Request](#request)*  
    * *2.2 [Response](#response)*  
    
 ___
-  <a name="modbus"></a>
-### 1. Modbus 
+  <a name="Serverclient"></a>
+### 1. Server-Client 
 Das Grundkonzept hinter dem **[Modbus]** ist es über verschiedene Schnittstellen miteinander zu kommunizieren.  
 Mögliche Schnittstellen sind:  
-* **[TCP/IP] Ethernet: Modbus-Port: 502**  
-* **[RS232]: UART-Schnittstelle mit anderen Spannungsniveaus ([Punkt zu Punkt])**  
-* **[RS485]: Zweidrahtleitung mit vielen Anhängen (bis zu 32)**  
-  
-Wir wenden Modbus an, da man bei jeglichen anderen Bus-Systemen nicht wirklich "offen" Informationen zur Verfügung stellen.
+![Server-Client](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/rsz_server-client-modbus.png)
   
 
 <a name="feldbusse"></a>

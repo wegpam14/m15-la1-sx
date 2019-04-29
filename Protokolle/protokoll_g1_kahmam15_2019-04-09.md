@@ -27,9 +27,10 @@ Die Aufgabe bestand daraus die Temperatur über den µC(Server) zu messen, und d
 #### 1.1 Request  
 **Aufbau im Übungs-Frame:**
 
-Start Byte|Adresse|Funktions Code|Daten|LRC|Ende
--|-|-|-|-|-
-:|01|04|0001 0001|B9|'\r' '\n' 
+| Start Byte | Adresse | Funktions Code |  Daten  | LRC |  Ende  |
+|:----------:|:-------:|:--------------:|:-------:|:---:|:------:|  
+|     :      |    01   |       04       |0001 0001|  B9 |'\r''\n'|
+
   
     
 <a name="response"></a>

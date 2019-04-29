@@ -10,7 +10,7 @@
 
 2. [Konfiguration der Register](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/protokoll_g1_hoflam15_09_04_2019.md#konfiguration-der-register)
 
-3. Auslesen der Werte / Kalibrierung
+3. [Auslesen der Werte / Kalibrierung](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/protokoll_g1_hoflam15_09_04_2019.md#auslesen-der-werte--kalibrierung)
 
 
 ## Allgemeines zur Übung

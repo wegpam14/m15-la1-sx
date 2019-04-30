@@ -83,7 +83,7 @@ Die Daten des ADCH Registers sind noch nicht fertig formatiert, der letzte Schri
 |87      |	6400	        |
 |102     |	21760	        |
 
-Wenn man die Temperatur aus der vorherigen Tabelle mit 2^8 multipliziert, ergeben siech die Werte vom mbInputRegister. Somit verschieben sich ide Bits um 8 stellen und der µC kann eine einfache Division durhführen.
+Wenn man die Temperatur aus der vorherigen Tabelle mit 2^8 multipliziert, ergeben siech die Werte vom mbInputRegister. Somit verschieben sich die Bits um 8 stellen und der µC kann eine einfache Division durchführen.
 
 Aus diesen Werten ergibt sich für 'k' der Wert '1024' und für 'd' der Wert '-82688'.
 

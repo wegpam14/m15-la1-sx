@@ -168,6 +168,7 @@ Gemessene Werte für die lineare Funktion:
 | -45°C | 75 | -11520 |
 |25°C | 92 | 6400 |
 |85°C |107 | 21760 |
+
 (*diese Werte konnten nicht gemessen werden und wurden von uns angenommen)
 
 Mit diesen Werten haben wir dann eine Kalibrierungsgerade ausgerechnet. Dabei haben wir unsere beiden Ergebnisse gemittelt um einen *genaueren* Wert zu erhalten.

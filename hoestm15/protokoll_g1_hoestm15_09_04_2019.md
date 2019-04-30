@@ -51,7 +51,9 @@ Die Messspannung verläuft linear mit der Temperatur, wie in folgender Tabelle g
 
 ## 3. Registerkonfiguration
 Die notwendigen Register müssen konfiguriert werden. Die richtigen Konfigurationen finden Sie im Datenblatt.
+
 [Datenblatt ATmega 328P](http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf)
+
 Hinweise zur Temperaturmessung finden sie ab Kapitel 23.8 auf Seite 215.
 
 Das Bit ADMUX muss auf 8 gesetzt werden um den Multiplexer auf den Temperatursensor zu legen.

@@ -63,7 +63,7 @@ ADCSRB = 0;
 ```ADMUX = 8``` : Wir setzten den Multiplexer auf 8 für den Temperatursensor auf ADC8  
 ```ADMUX |= (1<<REFS0) | (1<<REFS1)``` Damit nehmen wir die Bandgapspannung von 1.1V als Refernz (Voraussetzung: Sensorsignal liefert Spannung zwischen 0 und 1V)  
 ```ADMUX |= (1<<ADLAR)``` Ausgabe wird linksbündig gesetzt  
-```ADCSRA = (1<<ADEN) | 7``` Die Taktfrequenz des ADC's wird auf 125kHz  
+```ADCSRA = (1<<ADEN) | 7``` Die Taktfrequenz des ADC's wird auf 125kHz gesetzt  
 ```ADCSRB = 0;``` Zur Sicherheit deaktiviert  
   
     

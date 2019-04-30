@@ -97,7 +97,7 @@ Wie oben schon beschrieben haben die gemessene Spannung und die Temperatur ein l
 |  25°C | 92°C | 25*2⁸ = 6400 |
 |  85°C | 107°C | 85*2⁸ = 21760 |
 \* geschätzt, Messung nicht möglich
-
+Multipliziert man die die Temperatur aus der Tabelle mit 2⁸, ergeben sich die Werte vom mbInputRegister. Dadurch verschieben sich die Bits um 8Stellen und der µC kann eine einfache Division durchführen.
 Aus dieser Tabelle ergibt sich das folgende Diagramm:
 ![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Daigramm.PNG)
 

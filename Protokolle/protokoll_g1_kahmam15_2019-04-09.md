@@ -109,7 +109,7 @@ ___
 **Tenmperaturberechnung:**  
 Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Startpunkt haben. Die Kennlinie des Temperatursensors kann man linear annehmen. Danach haben wir ein paar Werte mithilfe von dem Datenblatt geschätzt, die Temperatur mit 2^8 multipliziert und sind dann auf folgende Tabelle gekommen:
 
-| Gemessen (ADCH) |Temperatur| Umgerechnet (Temperatur) |
+| Geschätzt (ADCH) |Temperatur| Umgerechnet (Temperatur) |
 |:---------------:|:--------:|:------------------------:|
 |    75           |-45°C     |    -11520                |  
 |    92           |25°C      |     6400                 |

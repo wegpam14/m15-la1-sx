@@ -57,7 +57,8 @@ Als erstes wird Mithilfe des ```ADSC``` Registers der Konvertierungsprozess gest
 
 ### Berechnung des Temperaturwertes <a name="Temperaturberechnung"></a>
 
-Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Startpunkt haben. Die Kennlinie des Temperatursensors kann man linear annehmen. Danach haben wir ein paar Werte mithilfe von dem Datenblatt geschätzt, die Temperatur mit 2^8 multipliziert und sind dann auf folgende Tabelle gekommen:
+Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Startpunkt haben. Die Kennlinie des Temperatursensors kann man linear annehmen. Danach haben wir ein paar Werte mithilfe von dem Datenblatt geschätzt, die Temperatur mit 2^8 multipliziert, denn wenn dann durchdividiert wird,müssen nur die letzten 8-Bit entfernt werden und es wird weniger Leistung am µC verwendet.  
+Dann kommt man auf folgende Werte:
 
 | Gemessen (ADCH) |Temperatur| Umgerechnet (Temperatur) |
 |:---------------:|:--------:|:------------------------:|

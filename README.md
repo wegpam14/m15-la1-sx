@@ -7,3 +7,4 @@
 1. [Protokoll (23. Oktober)](https://github.com/HTLMechatronics/m15-la1-sx/blob/fismam15/protokoll_g1_fismam15_2018-10-23.md) 
 1. [Protokoll (08. Januar)](https://github.com/HTLMechatronics/m15-la1-sx/blob/fismam15/protokoll_g1_fismam15_2019-01-08.md) 
 1. [Protokoll (15. Januar)](https://github.com/HTLMechatronics/m15-la1-sx/blob/fismam15/protokoll_g1_fismam15_2019-01-15.md) 
+1. [Protokoll (08. Apruk)](https://github.com/HTLMechatronics/m15-la1-sx/blob/fismam15/protokoll_g1_fismam15_2019-04-08.md) 

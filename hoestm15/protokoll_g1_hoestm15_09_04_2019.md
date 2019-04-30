@@ -81,9 +81,9 @@ Die Daten des ADCH Registers sind noch nicht fertig formatiert, der letzte Schri
 
 |ADCH    | mbInputRegister|
 |--------|----------------|
-|68      |	-11520	      |
-|87      |	6400	        |
-|102     |	21760	        |
+|75      |	-11520	      |
+|92      |	6400	        |
+|107     |	21760	        |
 
 Wenn man die Temperatur aus der vorherigen Tabelle mit 2^8 multipliziert, ergeben siech die Werte vom mbInputRegister. Somit verschieben sich die Bits um 8 stellen und der µC kann eine einfache Division durchführen.
 

@@ -68,7 +68,7 @@ Aus den folgenden Werten ergibt sich für k der Wert 1024 und für d -82688;
 |87      |	6400	        |
 |102     |	21760	        |
 
-Die Werte im mbInputRegister ergeben sich indem man die Temperatur aus der vorherigen Tabelle mit 2^8 multipliziert.  
+Die Werte im mbInputRegister ergeben sich indem man die Temperatur aus der vorherigen Tabelle mit 2^8 multipliziert. Dies wird durchgeführt um den Wert um 8 Bit zu verschieben. Daraus ergibt sich anschließend eine einfachere Division für den µC da er dafür nur noch die letzten 8 Bit streichen muss.  
 
 Umsetzung in C:
 ```C

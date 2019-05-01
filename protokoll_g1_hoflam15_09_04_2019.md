@@ -15,7 +15,7 @@
 
 ## Allgemeines zur Übung
 Das Ziel unserer Übung war es den Temperatur Sensor über einen Modbus auszugeben. 
-![ServerClient](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/ServerClient.png)
+![ServerClient](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/data/ServerClient.png)
 
 Der Client sendet einen Request an den Server.
 
@@ -99,7 +99,7 @@ Wie oben schon beschrieben haben die gemessene Spannung und die Temperatur ein l
 \* geschätzt, Messung nicht möglich
 Multipliziert man die die Temperatur aus der Tabelle mit 2⁸, ergeben sich die Werte vom mbInputRegister. Dadurch verschieben sich die Bits um 8Stellen und der µC kann eine einfache Division durchführen.
 Aus dieser Tabelle ergibt sich das folgende Diagramm:
-![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Daigramm.PNG)
+![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/data/Diagramm.PNG)
 
 #### Berechnung
 

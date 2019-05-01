@@ -22,7 +22,7 @@
 
 ## CPU
 #### Aufbau der CPU
-![enter image description here](https://screenshotscdn.firefoxusercontent.com/images/ceda06ce-9a71-4fdb-980c-8f7ba00734cd.png)
+![Aufbau CPU](https://screenshotscdn.firefoxusercontent.com/images/ceda06ce-9a71-4fdb-980c-8f7ba00734cd.png)
 
 #### Hauptbestandteile der CPU
 ***Rechenwerk***

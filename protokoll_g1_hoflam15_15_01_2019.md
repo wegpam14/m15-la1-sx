@@ -88,12 +88,12 @@ Eine Schnittstelle, die nur auf einem herstellereigenen Computermodell einsetzba
 #### Serielle Schnittstellen
 
 ***RS 232***
-![RS485](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Unbenannt3.png)
+![RS485](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/data/Unbenannt3.png)
 
 
 
 ***RS 485***
-![RS485](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Unbenannt.png)
+![RS485](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/data/Unbenannt.png)
 
 
 
@@ -108,7 +108,7 @@ Der Modbus Client fragt nach diese Informationen.
 
 ## 3. Übung: Temperaturwert über Modbus - Schnittstelle
 In dieser Übung müssen den Temperatursensor vom Aduino Nano über einen Modbus verfügbar zu machen.
-![Temperatur](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/Temperatur.png)
+![Temperatur](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/data/Temperatur.png)
 
 #### Request Grundaufbau:
 Um eine Antwort vom Modbus - Server zu erhalten muss eine Request gesendet werden. Dabei arbeiten wir mit dem ASCII Transmission Mode.

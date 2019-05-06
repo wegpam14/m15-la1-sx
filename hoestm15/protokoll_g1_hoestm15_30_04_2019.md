@@ -1,8 +1,12 @@
  # Protokoll der 7. Einheit (30.04.2019)
-  Name: 		Hörmann
+  Name: Hörmann
+  
   Gegenstand: Labor
+  
   Lehrer: SX
+  
   Klasse: 4AHME
+  
   Gruppe: 1
   ## Inhaltsverzeichnis
 

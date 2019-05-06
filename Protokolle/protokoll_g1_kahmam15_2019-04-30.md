@@ -34,7 +34,7 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
     
 <a name="response"></a>
 #### 1.2 Lösung  
-Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und verwendeten zur Berechnung eines Offsets die genauen ADCH-Werte
+Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
 ___  
 
 <a name="Programm"></a>
@@ -96,6 +96,7 @@ void app_main (void)
 ```c
 void app_handleUartByte(char c)
 {
+  //Wenn das Startbit ":" empfangen wird, soll gespeichert werden
   if(c == ':')
   {
     app.bufferIndex = 0;
@@ -118,6 +119,7 @@ void app_handleUartByte(char c)
 struct App
 {
   uint8_t flags_u8;
+  //Modbusbuffer für 32 Zeichen erstellen
   char mudbusBuffer[32];
   uint8_t bufferIndex;
 };

@@ -36,7 +36,7 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
 #### 1.2 Lösung  
 Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
   
-**1)** Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von linearer Interpolation den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
+**1)** Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linearer Interpolation] den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
 
 | Temperatur (°C) | Spannung (mV) | ADCH | MRT |  
 |:---------------:|:-------------:|:----:|:---:|  
@@ -47,6 +47,7 @@ Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden au
   
 **MRT = Modbusregister-Wert**  
   
+  
 **2)** Dann haben wir 3 Gleichungen aufgestellt um unser **k** und **d** neu zu berechnen:  
 **Gleichung1**: -11520=k*56,79+d  
 **Gleichung2**: -6400=k*73,08+d  
@@ -56,7 +57,20 @@ Aus **Gl1** und **Gl2**: 6400-k*73,08  = -11520-k*56,79
 Daraus ergibt sich: **k = 1100,06 | d = -73992,3848**  
   
 Aus **Gl2** und **Gl3**: 6400-k*73,08 = 21760-k*88,4  
-Daraus ergibt sich: **k = 1002,61 | d = -66870,724** 
+Daraus ergibt sich: **k = 1002,61 | d = -66870,724**  
+  
+  
+**3)** Als nächstes haben wir den **Korrekturfaktor** berechnet um bei einem ADCH=87 auf den Modbusregister-Wert 5632 zu kommen:  
+**Gl4**: *5632 = 1100,06 * 87 + d* daraus ergibt sich **d = -90073,22**  
+**Gl5**: *5632 = 1002.61 * 87 + d* daraus ergibt sich **d = -81595,07**  
+  
+Aus dem **d** von **Gl1 + Gl2 und Gl4** folgt:  
+**Korrekturfaktor** = -90073,22 + 73992,3848 = **-16080,82**  
+  
+Aus dem **d** von **Gl2 + Gl3 und Gl5** folgt:  
+**Korrekturfaktor** = -81595,07 + 66870,724 = **-14724,346**  
+  
+* **Korrekturfaktor = Offset**  
 
 
 ___  
@@ -178,4 +192,4 @@ Dannach haben wir ein Funktion nach y=kx+d erstellt um die Werte einer besseren 
   
 ___  
 
-
+[linearer Interpolation]:https://www.bauformeln.de/mathematik/lineare-interpolation/

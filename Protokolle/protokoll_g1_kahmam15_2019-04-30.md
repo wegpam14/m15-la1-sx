@@ -36,6 +36,7 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
 #### 1.1 Lösung  
 Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf (Gerade1: -45°C... 22°C; Gerade2: 22°C... 85°C) und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
   
+___
 **1)** Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linearer Interpolation] den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
 
 | Temperatur (°C) | Spannung (mV) | ADCH | MRT |  

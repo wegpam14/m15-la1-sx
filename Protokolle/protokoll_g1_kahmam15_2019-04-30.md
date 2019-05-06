@@ -1,5 +1,5 @@
 ![HTBLA Kaindorf](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/rsz_htl_kaindorf_logosvg.png)
-# 6. Protokoll (09.04.2019)
+# 6. Protokoll (30.04.2019)
 Name: Kahr Markus  
 Klasse: 4AHME  
 KNr.: 6  

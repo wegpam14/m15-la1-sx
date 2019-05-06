@@ -36,13 +36,29 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
 #### 1.2 Lösung  
 Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
   
-Zuerst haben wir die genau Werte für den **ADCH** entnommen:  
+**1)** Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von linearer Interpolation den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
 
-| Temperatur (°C) | Spannung (mV) | ADCH |  
-|:---------------:|:-------------:|:----:|  
-|-45 |242 |56,79 |
-|25  |314 |73,08 |
-|85  |380 |88,4  |
+| Temperatur (°C) | Spannung (mV) | ADCH | MRT |  
+|:---------------:|:-------------:|:----:|:---:|  
+|-45 |242 |56,79 |-11520 |
+|22  |??? |**72,38** | 5632 |
+|25  |314 |73,08 |6400 |
+|85  |380 |88,4  |21760 |  
+  
+**MRT = Modbusregister-Wert**  
+  
+**2)** Dann haben wir 3 Gleichungen aufgestellt um unser **k** und **d** neu zu berechnen:  
+**Gleichung1**: -11520=k*56,79+d  
+**Gleichung2**: -6400=k*73,08+d  
+**Gleichung3**: -21760=k*88,4+d  
+
+Aus **Gl1** und **Gl2**: 6400-k*73,08  = -11520-k*56,79  
+Daraus ergibt sich: **k = 1100,06 | d = -73992,3848**  
+  
+Aus **Gl2** und **Gl3**: 6400-k*73,08 = 21760-k*88,4  
+Daraus ergibt sich: **k = 1002,61 | d = -66870,724** 
+
+
 ___  
 
 <a name="Programm"></a>

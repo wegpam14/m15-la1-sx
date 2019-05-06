@@ -10,18 +10,16 @@ ___
 
 * **1. [Problem](#Server-client)**  
    * *1.1 [Lösung](#response)*  
-   * * *1.1.1 [Schritt1](#1)*
 * **2. [Programm](#Programm)**  
    * *2.1 [app_main](#Main-Programm)* 
    * *2.2 [app_handleUartByte](#Register-Konfiguration)*  
-   * *2.3 [app.h](#header)*  
-* **3. [Berechnungen](#Berechnung)**  
+   * *2.3 [app.h](#header)*   
    
 ___
   <a name="Server-client"></a>
 ### 1. Problem
 In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich große Abweichungen vom eigentlichen Temperaturwert haben. 
-Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt haben, konnten wir erkennen, dass es die Linie einen Knick hat und zwei verschiedene Geraden beschriebt.  
+Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt haben, konnten wir erkennen, dass die Linie einen Knick hat und zwei verschiedene Geraden beschriebt.  
 
 | Temperatur (°C) | Spannung (mV) |  
 |:---------------:|:--------------|  
@@ -35,11 +33,9 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
     
 <a name="response"></a>
 #### 1.2 Lösung  
-Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
+Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf (Gerade1: -45°C... 22°C; Gerade2: 22°C... 85°C) und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
   
-<a name="1"></a>
-#### 1.1.1 Schritt1
-Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linearer Interpolation] den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
+**1)** Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linearer Interpolation] den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
 
 | Temperatur (°C) | Spannung (mV) | ADCH | MRT |  
 |:---------------:|:-------------:|:----:|:---:|  
@@ -50,7 +46,7 @@ Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linea
   
 **MRT = Modbusregister-Wert**  
   
-  
+___
 **2)** Dann haben wir 3 Gleichungen aufgestellt um unser **k** und **d** neu zu berechnen:  
 **Gleichung1**: -11520=k*56,79+d  
 **Gleichung2**: -6400=k*73,08+d  
@@ -62,7 +58,7 @@ Daraus ergibt sich: **k = 1100,06 | d = -73992,3848**
 Aus **Gl2** und **Gl3**: 6400-k*73,08 = 21760-k*88,4  
 Daraus ergibt sich: **k = 1002,61 | d = -66870,724**  
   
-  
+___
 **3)** Als nächstes haben wir den **Korrekturfaktor** berechnet um bei einem ADCH=87 auf den Modbusregister-Wert 5632 zu kommen:  
 **Gl4**: *5632 = 1100,06 * 87 + d* daraus ergibt sich **d = -90073,22**  
 **Gl5**: *5632 = 1002.61 * 87 + d* daraus ergibt sich **d = -81595,07**  
@@ -79,8 +75,7 @@ Aus dem **d** von **Gl2 + Gl3 und Gl5** folgt:
 ___  
 
 <a name="Programm"></a>
-### 2. Programm
-Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.    
+### 2. Programm   
     
 <a name="Main-Programm"></a>
 #### 2.2 app_main

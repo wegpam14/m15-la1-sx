@@ -11,8 +11,9 @@ ___
 * **1. [Problem](#Server-client)**  
    * *1.2 [Lösung](#response)*  
 * **2. [Programm](#Programm)**  
-   * *2.1 [Register Konfiguration](#Register-Konfiguration)*  
-   * *2.2 [Main-Programm](#Main-Programm)*  
+   * *2.1 [app_main](#Main-Programm)* 
+   * *2.2 [app_handleUartByte](#Register-Konfiguration)*  
+   * *2.3 [app.h](#header)*  
 * **3. [Berechnungen](#Berechnung)**  
    
 ___
@@ -41,7 +42,7 @@ ___
 Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.    
     
 <a name="Main-Programm"></a>
-#### 2.2 Main-Programm
+#### 2.2 app_main
 ```c
 void app_main (void)
 {
@@ -89,6 +90,39 @@ void app_main (void)
 
 }
 ```  
+<a name="Register-Konfiguration"></a>
+#### 2.2 app_handleUartyByte
+
+```c
+void app_handleUartByte(char c)
+{
+  if(c == ':')
+  {
+    app.bufferIndex = 0;
+    app.mudbusBuffer[app.bufferIndex] = c;
+    app.bufferIndex = 1;
+  } else
+  {
+    if(app.bufferIndex > 0)
+    {
+      app.mudbusBuffer[app.bufferIndex++] = c;
+    }
+  }
+}
+```  
+
+<a name="header"></a>
+#### 2.2 app.h  
+
+```c
+struct App
+{
+  uint8_t flags_u8;
+  char mudbusBuffer[32];
+  uint8_t bufferIndex;
+};
+```
+
 **Beschreibung**  
 Zu Beginn wird mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gestarten. Danach wird ein Wert zur Kontrolle am Bildschirm ausgegeben. Als nächstes haben wir **k** und **d** in der Formel angepasst, um relativ gute Messwerte zu erhalten. Dann haben wir überprüft, ob der Wert sich im zulässigen Bereich befindet, falls dies nicht der Fall ist soll der Maximalwert ausgegeben werden, um dem Benutzer zu zeigen, dass es sich um einen Fehler handelt.
 ___

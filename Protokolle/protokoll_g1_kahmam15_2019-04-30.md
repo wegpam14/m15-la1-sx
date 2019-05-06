@@ -51,14 +51,14 @@ ___
   
 ___
 **2)** Dann haben wir 3 Gleichungen aufgestellt um unser **k** und **d** neu zu berechnen:  
-**Gleichung1**: -11520=k*56,79+d  
-**Gleichung2**: -6400=k*73,08+d  
-**Gleichung3**: -21760=k*88,4+d  
+**Gleichung1**: -11520=k * 56,79+d  
+**Gleichung2**: -6400=k * 73,08+d  
+**Gleichung3**: -21760=k * 88,4+d  
 
-Aus **Gl1** und **Gl2**: 6400-k*73,08  = -11520-k*56,79  
+Aus **Gl1** und **Gl2**: 6400-k * 73,08  = -11520-k * 56,79  
 Daraus ergibt sich: **k = 1100,06 | d = -73992,3848**  
   
-Aus **Gl2** und **Gl3**: 6400-k*73,08 = 21760-k*88,4  
+Aus **Gl2** und **Gl3**: 6400-k * 73,08 = 21760-k * 88,4  
 Daraus ergibt sich: **k = 1002,61 | d = -66870,724**  
   
 ___

@@ -148,7 +148,8 @@ Unsere Realisierung erfolgte über die erste Möglichkeit:
    
    uint8_t vk = mbInputRegister / 256;
    uint8_t nk = ((mbInputRegister & 0xff) * 10) /256;
-   
+    
+    //Auslesen der Empfangenen Request
    int c = fgetc(stdin);
    if(c != EOF) {
      printf("\n %02x\r\n", (uint16_t)c);
@@ -158,8 +159,23 @@ Unsere Realisierung erfolgte über die erste Möglichkeit:
 ```
 
 ```C
+void app_handleUartByte(char c){
+//Ausewrtung der Empfangenen Daten
+   if(c == ':') { //Warten auf Startbyte ':', sobalt dies eintrifft werden Daten im Buffer gespeichert
+      app.modbusBuffer[0] =c; 
+      app.bufferIndex = 1;
+   } else {
+      if(app.bufferIndex > 0){
+	 app.modbusBuffer[app.bufferIndex++] = c;
+      }
+   }
+}
+```
+```C
 struct App
 {
+//Buffer in Headerdatei erstellen
+
   uint8_t flags_u8;
   char modbusBuffer[32];
   uint8_t bufferindex;

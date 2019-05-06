@@ -17,11 +17,11 @@ Um die Daten aus dem ADCH Register in eine Temperatur um zu rechen, wird eine Fo
 Da diese einen linearen Zusammenhand besitzen, kann dessen Grundform "y = k*x + d" verwendet werden.  
 --> T = ADCH * k + d
 
-|   | Temp | Spannung | ADCH | Temp*256 |  
-|---|------|----------|------|----------|
-|A: | -45°C|  242mV   | 56,79| -11520   |  
-|B: |  25° |  314mV   | 73,08|   6400   |  
-|C: |  85° |  380mV   | 88,4 |  21760   |  
+|   | Temp | Spannung | ADCH | ModBusRegister   |  
+|---|------|----------|------|------------------|
+|A: | -45°C|  242mV   | 56,79| -45*256 = -11520 |  
+|B: |  25° |  314mV   | 73,08|  25*256 = 6400   |  
+|C: |  85° |  380mV   | 88,4 |  85*256 = 21760  |  
 
 Bei genauer Betrachtung fällt auf, dass die Gerade aus dem Datenblatt einen Knick hat.  
 Lösung: Zerlegung in zwei Geraden, wobei anschließend die Werte zur passenden Gerade zugeteilt werden müssen.  

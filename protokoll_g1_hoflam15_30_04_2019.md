@@ -9,9 +9,9 @@
 ## Inhaltsangabe
 1. Problembehebung
 
-[1.1]  Berechnung
+	*[1.1]  Berechnung*
 
-[1.2] Fehler ausgleichen
+	*[1.2] Fehler ausgleichen*
 
 2. Start der Übertragung
 
@@ -24,14 +24,15 @@ Mit der linearen Formel *T = ADCH \* k + d* kann man die Daten aus dem ADCH Regi
 
 **Lösung:** Man zerlegt die Gerade in zwei Geraden. Mit einem "if-else" kann man die Werte dann der jeweiligen Geraden zuteilen. 
 
-||T (aus dem [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf))| Vin (aus dem [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf)) | ADCH\* | Modbus Register Wert (MRT)
-|:--:|:--:|:--:|:--:|:--:|--|
-|A| -45°C | 242 mV | 56,79 | -45 \* 2⁸ = -11520 |
-|B|  25°C | 314 mV | 73,08 |  25 \* 2⁸ =   6400 |
-|C|  85°C | 380 mV | 88,4  |  85 \* 2⁸ =  21760 |
-
+|   |T (aus dem Datenblatt)| Vin (aus dem Datenblatt)| ADCH\* | Modbus Register Wert (MRT)
+|:-:|:--------------------:|:-----------------------:|:------:|:-------------------------:|
+| A |         -45°C        |           242 mV        |  56,79 |     -45 \* 2⁸ = -11520    |
+| B |          25°C        |           314 mV        |  73,08 |      25 \* 2⁸ =   6400    |
+| C |          85°C        |           380 mV        |  88,4  |      85 \* 2⁸ =  21760    |
+  
 
 \* Der ADCH Wert errechnet sich aus der Formel A*DCH = Vin \* 256/Vref.*
+
 Vref = 1,1V (aus dem Datenblatt entnommen)
 
 Multipliziert man die die Temperatur aus der Tabelle mit 2⁸, ergeben sich die Werte vom mbInputRegister. Dadurch verschieben sich die Bits um 8Stellen und der µC kann eine einfache Division durchführen.
@@ -47,7 +48,9 @@ Die Gerade 1 kann man sich aus den Werten von A & B aufstellen:
     2.)  6400 =  k * 73,08 + d
 
 Aus diesen beiden Gleichungen kann man sich dann k & d ausrechnen. 
+
 - k = 1100,06 
+
 - d = -73992,49
 
 Die Gerade 2 kann man sich aus den Werten B & C aufstellen:
@@ -57,6 +60,7 @@ Die Gerade 2 kann man sich aus den Werten B & C aufstellen:
     2.) 21760 = k * 88,4 + d
 
 - k = 1002,61
+
 - d = -66870,809
 
 Somit kann man jetzt die 2 Gleichungen aufstellen:
@@ -71,6 +75,7 @@ Beim letzten Mal haben wir für k & d einfach den Mittelwert angenommen, somit w
 Startet man das Programm vom letzten Mal so wird unterschiedlich vom Chip, aufgrund der Prozessvariation, die Temperatursensorausgangsspannung anders ausgegeben. Bei meinem war der ADCH Wert 88. 
 
 Umsetzung in C:
+
 ```C
 void app_main (void) {
    ADCSRA |= (1 << ADSC);
@@ -102,7 +107,9 @@ void app_main (void) {
 Wie oben erwähnt ist die Ausgabe des ADCH Wertes von Chip zu Chip unterschiedlich. Somit liegt noch ein Fehler vor. 
 
 Eine Möglichkeit den Fehler zu korrigieren wäre den Offset hinauf oder hinab zu verschieben.
+
 Als mittlere Temperatur nahmen wir 22°C an und berechneten den ADCH Wert durch einsetzten in G1. Somit ergibt sich ein Wert von *72,3815.* Aus *22°C \* 2⁸* ergibt sich der *MRT Wert = 5632*.  Diese MRT Wert muss jetzt für alle ADCH Werte, Chip - unabhängig, ausgegeben werden. Um das zu erreichen, muss ein Korrekturfaktor "o" eingebaut werden. Diesen kann man aus **Einsetzen in die Gleichung 5632 =  1100,06 * 72,3815 - 73992,49 - o**  ermitteln.
+
 ! Wichtig ist noch: 
 - Wenn der Wert kleiner ADCH = 88 ist, wird die G1 verwendet.
 - Ist er größer als ADCH = 88, wird G2 verwendet.

@@ -33,9 +33,9 @@ In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich gr
 
 | Temperatur (°C) | Spannung (mV) |  
 |:---------------:|:--------------|  
-|       -45       |      242      |
-|        25       |      314      |
-|        85       |      380      |
+|-45 |242 |
+|25  |314 |
+|85  |380 |
 
   
 **1780** entspricht einer Temperatur von **23,5°C**

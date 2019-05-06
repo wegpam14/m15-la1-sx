@@ -10,6 +10,7 @@ ___
 
 * **1. [Problem](#Server-client)**  
    * *1.1 [Lösung](#response)*  
+* **2. [
 * **2. [Programm](#Programm)**  
    * *2.1 [app_main](#Main-Programm)* 
    * *2.2 [app_handleUartByte](#Register-Konfiguration)*  
@@ -32,7 +33,7 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
 *Die blaue Linie  zeigt die wahre Linie (Es ist eine kleine Abweichung zu erkennen)*
     
 <a name="response"></a>
-#### 1.2 Lösung  
+#### 1.1 Lösung  
 Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf (Gerade1: -45°C... 22°C; Gerade2: 22°C... 85°C) und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
   
 **1)** Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linearer Interpolation] den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
@@ -44,7 +45,7 @@ Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden au
 |25  |314 |73,08 |6400 |
 |85  |380 |88,4  |21760 |  
   
-**MRT = Modbusregister-Wert**  
+**MRT = Modbusregister-Wert = k * ADCH + d**  
   
 ___
 **2)** Dann haben wir 3 Gleichungen aufgestellt um unser **k** und **d** neu zu berechnen:  
@@ -78,7 +79,7 @@ ___
 ### 2. Programm   
     
 <a name="Main-Programm"></a>
-#### 2.2 app_main
+#### 2.1 app_main
 ```c
 void app_main (void)
 {
@@ -149,7 +150,7 @@ void app_handleUartByte(char c)
 ```  
 
 <a name="header"></a>
-#### 2.2 app.h  
+#### 2.3 app.h  
 
 ```c
 struct App
@@ -160,9 +161,6 @@ struct App
   uint8_t bufferIndex;
 };
 ```
-
-**Beschreibung**  
-Zu Beginn wird mithilfe des ```ADSC``` Registers die Verbindung mit dem ADC gestarten. Danach wird ein Wert zur Kontrolle am Bildschirm ausgegeben. Als nächstes haben wir **k** und **d** in der Formel angepasst, um relativ gute Messwerte zu erhalten. Dann haben wir überprüft, ob der Wert sich im zulässigen Bereich befindet, falls dies nicht der Fall ist soll der Maximalwert ausgegeben werden, um dem Benutzer zu zeigen, dass es sich um einen Fehler handelt.
 ___
   
 <a name="Berechnung"></a>

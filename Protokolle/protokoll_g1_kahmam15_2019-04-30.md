@@ -8,9 +8,9 @@ ___
 
 ## Inhalte:  
 
-* **1. [Übertragung mittels Server-Client System](#Server-client)**  
-   * *1.1 [Request](#request)*  
-   * *1.2 [Response](#response)*  
+* **1. [Problem](#Server-client)**  
+   * *1.1 [Darstellung des Problems](#request)*  
+   * *1.2 [Lösung](#response)*  
 * **2. [Programm](#Programm)**  
    * *2.1 [Register Konfiguration](#Register-Konfiguration)*  
    * *2.2 [Main-Programm](#Main-Programm)*  
@@ -18,23 +18,18 @@ ___
    
 ___
   <a name="Server-client"></a>
-### 1. Übertragung mittels Server-Client System
-Die Aufgabe bestand daraus die Temperatur über den µC(Server) zu messen, und diese dann jederzeit auf dem PC(Client) abrufbar zu machen. Der PC sendet zu Beginn eine Request an den µC, falls es keine Fehler dabei gab senden der µC eine Response and mit der gemmessen Temperatur zurück.  
-![Server-Client](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/rsz_server-client-modbus.png)
+### 1. Problem
+In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich große Abweichungen vom eigentlichen Temperaturwert haben.
   
 
 <a name="request"></a>
-#### 1.1 Request  
+#### 1.1 Darstellung des Problems  
 **Aufbau im Übungs-Frame:**
-
-| Start Byte | Adresse | Funktions Code |  Daten  | LRC |  Ende  |
-|:----------:|:-------:|:--------------:|:-------:|:---:|:------:|  
-|     :      |    01   |       04       |0001 0001|  B9 |'\r''\n'|
-
+![Diagramm](
   
     
 <a name="response"></a>
-#### 1.2 Response  
+#### 1.2 Lösung  
 **Aufbau im Übungs-Frame:**
 
 | Start Byte | Adresse | Funktions Code | Daten | LRC |  Ende  |

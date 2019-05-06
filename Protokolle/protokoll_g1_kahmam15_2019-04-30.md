@@ -9,7 +9,8 @@ ___
 ## Inhalte:  
 
 * **1. [Problem](#Server-client)**  
-   * *1.2 [Lösung](#response)*  
+   * *1.1 [Lösung](#response)*  
+   * * *1.1.1 [Schritt1](#1)*
 * **2. [Programm](#Programm)**  
    * *2.1 [app_main](#Main-Programm)* 
    * *2.2 [app_handleUartByte](#Register-Konfiguration)*  
@@ -36,7 +37,9 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
 #### 1.2 Lösung  
 Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
   
-**1)** Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linearer Interpolation] den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
+<a name="1"></a>
+#### 1.1.1 Schritt1
+Zuerst haben wir die genau Werte für den ADCH entnommen und mithilfe von [linearer Interpolation] den ADCH-Wert für unsere Raumtemperatur (22°C) ermittelt:  
 
 | Temperatur (°C) | Spannung (mV) | ADCH | MRT |  
 |:---------------:|:-------------:|:----:|:---:|  

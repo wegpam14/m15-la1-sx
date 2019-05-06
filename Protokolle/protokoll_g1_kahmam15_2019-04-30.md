@@ -35,6 +35,14 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
 <a name="response"></a>
 #### 1.2 Lösung  
 Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und fragten dann im Programm mithilfe einer *if-Schleife* ab, ob sich der gemessene Wert auf der oberen oder unteren Gerade befindet.  
+  
+Zuerst haben wir die genau Werte für den **ADCH** entnommen:  
+
+| Temperatur (°C) | Spannung (mV) | ADCH |  
+|:---------------:|:-------------:|:----:|  
+|-45 |242 |56,79 |
+|25  |314 |73,08 |
+|85  |380 |88,4  |
 ___  
 
 <a name="Programm"></a>

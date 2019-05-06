@@ -6,3 +6,4 @@
   4. Einheit(08.01.2019):       [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/protokoll_g1_hoestm15_08_01_2019.md)
   5. Einheit(15.01.2019):       [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/protokoll_g1_hoestm15_08_01_2019.md)
   6. Einheit(09.04.2019):       [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/protokoll_g1_hoestm15_09_04_2019.md)
+  7. Einheit(30.04.2019):       [Protokoll](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoestm15/hoestm15/protokoll_g1_hoestm15_30_04_2019.md)

@@ -108,7 +108,7 @@ Wie oben erwähnt ist die Ausgabe des ADCH Wertes von Chip zu Chip unterschiedli
 
 Eine Möglichkeit den Fehler zu korrigieren wäre den Offset hinauf oder hinab zu verschieben.
 
-Als mittlere Temperatur nahmen wir 22°C an und berechneten den ADCH Wert durch einsetzten in G1. Somit ergibt sich ein Wert von *72,3815.* Aus *22°C \* 2⁸* ergibt sich der *MRT Wert = 5632*.  Diese MRT Wert muss jetzt für alle ADCH Werte, Chip - unabhängig, ausgegeben werden. Um das zu erreichen, muss ein Korrekturfaktor "o" eingebaut werden. Diesen kann man aus **Einsetzen in die Gleichung 5632 =  1100,06 * 72,3815 - 73992,49 - o**  ermitteln.
+Als mittlere Temperatur nahmen wir 22°C (entspricht ungefähr der Raumtemperatur) an und berechneten den ADCH Wert durch einsetzten in G1. Somit ergibt sich ein Wert von *72,3815.* Aus *22°C \* 2⁸* ergibt sich der *MRT Wert = 5632*.  Diese MRT Wert muss jetzt für alle ADCH Werte, Chip - unabhängig, ausgegeben werden. Um das zu erreichen, muss ein Korrekturfaktor "o" eingebaut werden. Diesen kann man aus **Einsetzen in die Gleichung 5632 =  1100,06 * 72,3815 - 73992,49 - o**  ermitteln.
 
 ! Wichtig ist noch: 
 - Wenn der Wert kleiner ADCH = 88 ist, wird die G1 verwendet.

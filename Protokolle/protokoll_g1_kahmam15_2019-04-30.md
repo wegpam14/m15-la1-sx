@@ -25,7 +25,7 @@ In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich gr
 <a name="request"></a>
 #### 1.1 Darstellung des Problems  
 **Aufbau im Übungs-Frame:**
-![Diagramm](
+![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Diagramm.PNG)
   
     
 <a name="response"></a>

@@ -10,11 +10,11 @@ ___
 
 * **1. [Problem](#Server-client)**  
    * *1.1 [Lösung](#response)*  
-* **2. [
 * **2. [Programm](#Programm)**  
    * *2.1 [app_main](#Main-Programm)* 
    * *2.2 [app_handleUartByte](#Register-Konfiguration)*  
    * *2.3 [app.h](#header)*   
+* **3. [Uart-Übertragung](#Imple)*
    
 ___
   <a name="Server-client"></a>
@@ -165,29 +165,18 @@ struct App
 ```
 ___
   
-<a name="Berechnung"></a>
-### 3. Berechnungen 
-
-**Gradientberechnung:**  (ADCH = Vin *256/Vref; Annahme: V<sub>ref</sub>=1,1V)  
--45°C… 242mV => 0,242 * 256/1,1 =~56  
- 25°C… 314mV => 0,314 * 256/1,1 =~73  
- 85°C… 380mV => 0,380 * 256/1,1 =~88  
-   
- **Gradient:** (88-56)/(85°C-(-45°C)) = **0,24/°C**   
- Daraus folgt: Alle ~4°C ändert sich der gemessene Wert; genaues Messen der Temperatur nicht möglich  
-   
-**Tenmperaturberechnung:**  
-Als erstes haben wir den Wert der Umgebung genommen, damit wir einen fixen Startpunkt haben. Die Kennlinie des Temperatursensors kann man linear annehmen. Danach haben wir ein paar Werte mithilfe von dem Datenblatt geschätzt, die Temperatur mit 2^8 multipliziert und sind dann auf folgende Tabelle gekommen:
-
-| Geschätzt (ADCH) |Temperatur| Umgerechnet (Temperatur) |
-|:---------------:|:--------:|:------------------------:|
-|    75           |-45°C     |    -11520                |  
-|    92           |25°C      |     6400                 |
-|    107          |85°C      |    21760                 |
+<a name="Imple"></a>
+### 3. Uart-Übertragung
+Zuerst wird die Request mithilfe der Standard-Bibliotheksfunktion `fgetc` ausgelesen. Die Register und Funktionen zum Senden und Empfangen der Daten wurden bereits in der `sys.c` definiert. Wir hatten nun 2 Möglichkeiten eine Modbus-Schnittstelle zu realisieren: 
   
-Dannach haben wir ein Funktion nach y=kx+d erstellt um die Werte einer besseren geschätzten linearität zuweisen zu können.  
-```Temperatur(16Bit) = 1040 * ADCH - 96000```  
+**1)** Anwendung der Bibliotheksfunktion  
+* **Vorteil**: Falls er nicht schnell genung arbeitet geht nichts schief; Die `sys.c` bleibt unverändert  
+* **Nachteil**: Es sind 2 Buffer notwendig: Einen für das System und einen für das Modbuspacket  
   
+**2)** Umgehen der Bibliotheksfunktion
+* **Vorteil**: Es wird nur 1 Buffer benötigt; Mehr Speicherplatz  
+* **Nachteil**: Die `sys.c` wird verändert  
+
 ___  
 
 [linearer Interpolation]:https://www.bauformeln.de/mathematik/lineare-interpolation/

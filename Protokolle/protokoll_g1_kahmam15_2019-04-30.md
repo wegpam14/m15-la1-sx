@@ -9,7 +9,6 @@ ___
 ## Inhalte:  
 
 * **1. [Problem](#Server-client)**  
-   * *1.1 [Diagramm](#request)*  
    * *1.2 [Lösung](#response)*  
 * **2. [Programm](#Programm)**  
    * *2.1 [Register Konfiguration](#Register-Konfiguration)*  
@@ -19,17 +18,8 @@ ___
 ___
   <a name="Server-client"></a>
 ### 1. Problem
-In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich große Abweichungen vom eigentlichen Temperaturwert haben. Deshalb haben wir die 3 Werte nochmals aus dem Datenblatt entnomme 
-
-<a name="request"></a>
-#### 1.1 Diagramm
-**Aufbau im Übungs-Frame:**
-![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Diagramm.PNG)
-  
-    
-<a name="response"></a>
-#### 1.2 Lösung  
-**Aufbau im Übungs-Frame:**
+In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich große Abweichungen vom eigentlichen Temperaturwert haben. 
+Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt haben, konnten wir erkennen, dass es die Linie einen Knick hat und zwei verschiedene Geraden beschriebt.  
 
 | Temperatur (°C) | Spannung (mV) |  
 |:---------------:|:--------------|  
@@ -37,6 +27,13 @@ In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich gr
 |25  |314 |
 |85  |380 |
 
+![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Diagramm.PNG)  
+*Die rote Gerade zeigt die zuerst erwartete Linie.*  
+*Die blaue Linie  zeigt die wahre Linie (Es ist eine kleine Abweichung zu erkennen)*
+    
+<a name="response"></a>
+#### 1.2 Lösung  
+**Aufbau im Übungs-Frame:**
   
 **1780** entspricht einer Temperatur von **23,5°C**
 ___  

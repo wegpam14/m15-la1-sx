@@ -9,7 +9,7 @@ ___
 ## Inhalte:  
 
 * **1. [Problem](#Server-client)**  
-   * *1.1 [Darstellung des Problems](#request)*  
+   * *1.1 [Diagramm](#request)*  
    * *1.2 [Lösung](#response)*  
 * **2. [Programm](#Programm)**  
    * *2.1 [Register Konfiguration](#Register-Konfiguration)*  
@@ -19,11 +19,10 @@ ___
 ___
   <a name="Server-client"></a>
 ### 1. Problem
-In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich große Abweichungen vom eigentlichen Temperaturwert haben.
-  
+In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich große Abweichungen vom eigentlichen Temperaturwert haben. Deshalb haben wir die 3 Werte nochmals aus dem Datenblatt entnomme 
 
 <a name="request"></a>
-#### 1.1 Darstellung des Problems  
+#### 1.1 Diagramm
 **Aufbau im Übungs-Frame:**
 ![Diagramm](https://github.com/HTLMechatronics/m15-la1-sx/blob/kahmam15/Diagramm.PNG)
   
@@ -32,9 +31,12 @@ In dieser Einheit haben wir festgestellt, dass unsere Systeme unterschiedlich gr
 #### 1.2 Lösung  
 **Aufbau im Übungs-Frame:**
 
-| Start Byte | Adresse | Funktions Code | Daten | LRC |  Ende  |
-|:----------:|:-------:|:--------------:|:-----:|:---:|:------:|  
-|     :      |    01   |       04       |02 1780| --  |'\r''\n'|
+| Temperatur (°C) | Spannung (mV) |  
+|:---------------:|:--------------|  
+|       -45       |      242      |
+|        25       |      314      |
+|        85       |      380      |
+
   
 **1780** entspricht einer Temperatur von **23,5°C**
 ___  

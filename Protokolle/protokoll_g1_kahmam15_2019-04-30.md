@@ -33,56 +33,60 @@ Als wir die aus dem Datenblatt entnommen Werte in einem Diagramm dargestellt hab
     
 <a name="response"></a>
 #### 1.2 Lösung  
-**Aufbau im Übungs-Frame:**
-  
-**1780** entspricht einer Temperatur von **23,5°C**
+Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden auf und verwendeten zur Berechnung eines Offsets die genauen ADCH-Werte
 ___  
 
 <a name="Programm"></a>
 ### 2. Programm
-Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.  
-  
-
-<a name="Register-Konfiguration"></a>
-#### 2.1 Register Konfiguration
-
-``` c
-ADMUX = 8;
-ADMUX |= (1<<REFS0) | (1<<REFS1);
-ADMUX |= (1<<ADLAR);
-  
-ADCSRA = (1<<ADEN) | 7;
-ADCSRB = 0;
-```
-```ADMUX = 8``` : Wir setzten den Multiplexer auf 8 für den Temperatursensor auf ADC8  
-```ADMUX |= (1<<REFS0) | (1<<REFS1)``` Damit nehmen wir die Bandgapspannung von 1.1V als Refernz (Voraussetzung: Sensorsignal liefert Spannung zwischen 0 und 1V)  
-```ADMUX |= (1<<ADLAR)``` Ausgabe wird linksbündig gesetzt  
-```ADCSRA = (1<<ADEN) | 7``` Die Taktfrequenz des ADC's wird auf 125kHz gesetzt  
-```ADCSRB = 0;``` Zur Sicherheit deaktiviert  
-  
+Als nächstes fingen wir an die Aufgabenstellung in einem C-Programm umzusetzen.    
     
 <a name="Main-Programm"></a>
 #### 2.2 Main-Programm
 ```c
 void app_main (void)
 {
-  ADCSRA |= (1<< ADSC);
+  ADCSRA |= (1 << ADSC);
   _delay_ms(1);
-  printf("ADCH= %u  ", ADCH);
-  
-  int32_t k = 1040;
-  int32_t d = -96000;
-  int16_t mbInputReg01;
-  
-  int32_t x = k*ADCH + d;
-  if(x> 0x7fff) {
-    mbInputReg01 = 0x7fff;
-  } else if(x < -32768) {
-    mbInputReg01 = -0x8000;
-  } else {
-    mbInputReg01 = (int8_t)x;
+  uint8_t adch = ADCH;
+  //printf("ADCH ist %u", adch);
+
+  //Gerade ModbusRegister = kADCH + d
+  //aus Datenblatt: 
+  //-45°C -> 242mV -> ADCH=56,79  - MBR = -45256+ (-11520)
+  //22°C -> ...mV -> ADCH=72,38  - MBR = 22256+ 5632
+  //25°C -> 314mV -> ADCH=73,08  - MBR = 25256+ 6400
+  //85°C -> 380mV -> ADCH=88,4  - MBR = 85*256+ 21760
+  //daraus ergibt sich:
+  // <= 25°C -> MBR = k1 *ADCH+d1
+  // > 25°C -> MBR = k2 *ADCH+d2
+
+  float k1 = 1100.06, d1 = -73992.3848;
+  float k2 = 1002.61, d2 = -66870.724;
+
+  //reale Messung bei 22°C ->ADCH=87
+  //offsetkorrektur, um bei ADCH=87 auf den ModbusRegisterWert(MRT) 5632 zu kommen
+  float off1 = -16080.82;
+  float off2 = -14724.346;
+
+  float mbr;
+  if (adch <= 87)
+  {
+    mbr = k1 * adch + d1 + off1;
+  }  else
+    {
+      mbr = k2 * adch + d2 + off2;
+    }
+  uint16_t mbInputReg01 = (uint16_t) mbr;
+  int8_t vk = mbInputReg01/256;
+  uint8_t nk = (mbInputReg01 & 0xff) 100/256;
+
+  int c = fgetc(stdin);
+  if(c != EOF)
+  {
+    printf("\r\n %02x\r\n", (uint8_t) c);
+
   }
-  printf("Versuch: %d \r",mbInputReg01);
+
 }
 ```  
 **Beschreibung**  

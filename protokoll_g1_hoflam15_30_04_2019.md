@@ -19,12 +19,13 @@
 Mit der linearen Formel *T = ADCH \* k + d* kann man die Daten aus dem ADCH Register in eine Temperatur umrechnen. 
 
 **Problem:** Die Werte im Datenblatt stimmen nicht zu einer genauen Gerade überein. Die Gerade hat einen leichten Knick von 10%.
-[protokoll_g1_hoflam15_23_10_2018.md](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/protokoll_g1_hoflam15_23_10_2018.md "protokoll_g1_hoflam15_23_10_2018.md")
+
+![Skizze](https://github.com/HTLMechatronics/m15-la1-sx/blob/hoflam15/data/Skizze.svg)
 
 **Lösung:** Man zerlegt die Gerade in zwei Geraden. Mit einem "if-else" kann man die Werte dann der jeweiligen Geraden zuteilen. 
 
-| |T (aus dem [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf))| Vin (aus dem [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf)) | ADCH\* | Modbus Register Wert (MRT)
---|--|--|--|--|--|
+||T (aus dem [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf))| Vin (aus dem [Datenblatt](https://www.sparkfun.com/datasheets/Components/SMD/ATMega328.pdf)) | ADCH\* | Modbus Register Wert (MRT)
+|||||||
 |A| -45°C | 242 mV | 56,79 | -45 \* 2⁸ = -11520 |
 |B|  25°C | 314 mV | 73,08 |  25 \* 2⁸ =   6400 |
 |C|  85°C | 380 mV | 88,4  |  85 \* 2⁸ =  21760 |

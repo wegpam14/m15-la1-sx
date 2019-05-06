@@ -45,6 +45,7 @@ Um dieses Problem zu lösen, teilten wir die Linie beim Knick in zwei Geraden au
 |25  |314 |73,08 |6400 |
 |85  |380 |88,4  |21760 |  
   
+**ADCH = Vin * 256/Vref | Annahme: Vref = 1,1V**  
 **MRT = Modbusregister-Wert = k * ADCH + d**  
   
 ___

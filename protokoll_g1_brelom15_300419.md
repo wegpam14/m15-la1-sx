@@ -109,7 +109,7 @@ Als erstes muss die empfangene Request ausgelesen werden. Diese wird über UART 
 
 ```C
 int c = fgetc(stdin);
-   if (c != EOF){ // End Of File
+   if (c != EOF){ // End Of File (-1)
       printf("\r\n %02x \r\n", (uint8_t)c);
       app_handleUartByte((char)c);
 ```

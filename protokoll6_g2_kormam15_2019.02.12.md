@@ -102,16 +102,17 @@ Für Requests und Non-Error-Responses werden folgende Codes verwendet:
 * Public Function Codes (alle zwischen 1 und 127 übrigen Werte, eindeutig von der Modbus.org community festgelegt)  
 
 Hier sind einige wichtige Public Function Codes aufgeführt:  
-Function Code | Hex | Name | Typ
---------------- | --------- | --------- | ---
-1 | 01 | Read Coils | Bit
-2 | 02 | Read Discrete Inputs | Bit
-3 | 03 | Read Holding Registers | 16-Bit
-4 | 04 | Read Input Register | 16-Bit
-5 | 05 | Write Single Coil | Bit
-6 | 06 | Write Single Register | 16-Bit 
-15| 0F | Write Multiple Coils |	Bit
-16| 10 | Write Multiple Registers | 16-Bit
+
+ Function-Code | Hex | Name | Typ
+ --------------- | --------- | --------- | ---
+ 1 | 01 | Read Coils | Bit
+ 2 | 02 | Read Discrete Inputs | Bit
+ 3 | 03 | Read Holding Registers | 16-Bit 
+ 4 | 04 | Read Input Register | 16-Bit 
+ 5 | 05 | Write Single Coil | Bit 
+ 6 | 06 | Write Single Register | 16-Bit  
+ 15 | 0F | Write Multiple Coils |	Bit 
+ 16 | 10 | Write Multiple Registers | 16-Bit  
   
 ---
   

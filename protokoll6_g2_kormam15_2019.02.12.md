@@ -11,16 +11,16 @@ Gruppe: 2
 ## Inhalt 
 1. [Intelligenter Sensor](#intelligenter-sensor)  
 1. [Feldbus](#feldbus)  
-  1. [Modbus](#modbus)  
-    1. [RTU](#rtu)  
-    1. [ASCII](#ascii)  
-    1. [TCP](#TCP)  
-  1. [Datenmodel](#datenmodel)  
-  1. [Funktion-Code](#funktion-code)  
-  1. [Protokoll-definition](#protokoll-definition)  
-  1. [Request vom PC zum µC](#request-vom-pc-zum-µc)  
-  1. [Response vom µC zum PC](#response-vom-µc-zum-pc)  
-  1. [Exceptions](#exceptions)  
+   1. [Modbus](#modbus)  
+      1. [RTU](#rtu)  
+      1. [ASCII](#ascii)  
+      1. [TCP](#TCP)  
+   1. [Datenmodel](#datenmodel)  
+   1. [Funktion-Code](#funktion-code)  
+   1. [Protokoll-definition](#protokoll-definition)  
+   1. [Request vom PC zum µC](#request-vom-pc-zum-µc)  
+   1. [Response vom µC zum PC](#response-vom-µc-zum-pc)  
+   1. [Exceptions](#exceptions)  
   
 ---
   

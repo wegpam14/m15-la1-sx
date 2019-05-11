@@ -81,31 +81,84 @@ Der TCP Modus ist dem [RTU](#rtu) Modus sehr ähnlich, allerdings werden TCP/IP-
   
 
 ### Datenmodell  
-  
-  
+Es wird zwischen vier Adressräumen unterschieden:
+
+Adressraum | Beschreibung | Beispiel
+----------- | ------------ | ------------------------
+Input Registers | Ein Input-Register ist ein 16-Bit Wert der nur gelesen werden kann | Temperatursensor
+Discrete Input | Ein Discrete Input ist ein einzelnes Bit, das nur gelesen werden kann | Taster
+Coils (Spulen) | Eine Coil ist ein Bit das gelesen und beschrieben werden kann | LED
+Hold-Registers | Ein Hold-Register ist ein 16-Bit Wert der gelesen und beschrieben werden kann | 7-Segment-Anzeige
+
+In Modbus kann jeder Adressraum Adresswerte von 1 bis 65536 verwenden. Dies jedoch koräliert nicht mit der Protocol Data Unit die Werte zwischen 0 und 65535 annehmen kann.
+
 ---
   
 ### Funktion Code  
-  
+Über Function-Codes sind die Bedeutungen der Frames im Modbus-Frame definiert.  
+Für Requests und Non-Error-Responses werden folgende Codes verwendet:  
+* User defined Function Codes (65-72, 100-110, dürfen individuell verwendet werden)   
+* Reserved Function Codes (8, 9, 10, 13, 14, 41, 42, 90, 91, 125, 126, 127, Werte, welche von Unternehmen werwendet wurden)  
+* Public Function Codes (alle zwischen 1 und 127 übrigen Werte, eindeutig von der Modbus.org community festgelegt)  
+
+Hier sind einige wichtige Public Function Codes aufgeführt:  
+Function Code | Hex | Name | Typ
+--------------- | --------- | --------- | ---
+1 | 01 | Read Coils | Bit
+2 | 02 | Read Discrete Inputs | Bit
+3 | 03 | Read Holding Registers | 16-Bit
+4 | 04 | Read Input Register | 16-Bit
+5 | 05 | Write Single Coil | Bit
+6 | 06 | Write Single Register | 16-Bit 
+15| 0F | Write Multiple Coils |	Bit
+16| 10 | Write Multiple Registers | 16-Bit
   
 ---
   
 ### Protokoll-definition
-  
-  
+Mit dem Modbus-Gateway können verschiedene Modbus-Varianten miternander verbunden werden.  
+
+> Das Modbus Application Layer Protocol definiert dabei als Frame sogenannte Protocol Data Units (PDU). Diese enthalten noch kein Adressierungsschema, da unterschiedliche Varianten (UART, TCP, ...) auch unterschiedliche Adressierungsarten verwenden. 
+Die zusätzlichen Spezifikationen für die jeweiligen Varianten definieren dann auch zusätzliche Frame-Felder für die Adressierung und Fehlererkennung, wodurch dann die Application Data Unit (ADU) entsteht.  
+
+> Die maximale Größe einer ADU liegt bei Modbus ASCII/RTU bei 256 Bytes und bei Modbus TCP bei 260 Bytes. 
+
+> Der *Socket* ist der sog. Modbusserver. Er besitzt die Portnummer 502. Erst über die IP-Adresse und die Portnummer (Socket) kann der Rechner etwas mit der Information anfangen. Aufgrund der IP-Adresse und der Prüfsumme (Checksum) ist keine Adresse und kein Errorcheck nötig.  
+[Quelle modbus.org](http://modbus.org/)
+
 ---
   
 ### Request vom PC zum µC  
-  
+Aufbau von einem Modbus Serial Line ASCII Frame:
+
+3a | Beliebige Adresse | Function Code | Daten | LRC-Prüfsumme | CR | LF |  
+---|-------------------| --------------| ------|---------------|----|----|  
+| : | 0C | 04  | 0000 0001  | A8   |  \r   |  \n  |
+   
+Bei jedem neuen Packet wird mit einem **:** begonnen.
+
+Bilden der **LRC-Prüfsumme**:
+
+| : | 0C | 04  | 0000 0001  | Prüfsumme Ergebniss   |  \r   |  \n  |
+---|-------------------| --------------| ------|---------------|----|----| 
+| - | 30H+43H | 30H+34H | 30H * 7  + 31H |  |  | Summe = 600 Dezimal | 
+     
+--> 600-256-256= **88**
+
+-88 ==> -88+256 = 168 ==> **A8 Hex** ==> **LRC-Prüfsumme**  
   
 ---
   
 ### Response vom µC zum PC  
-  
-  
+3a | Beliebige Adresse | Function Code | Anzahl der Bytes | Temperatur | LRC-Prüfsumme | CR |  LF | 
+---|-------------------| --------------| ------|---------------|----|----|------|  
+| : | 0C | 04  | 02  | 1752   | F8   |  \r  |   \n   |
+   
 ---
   
 ### Exceptions  
-  
+Ist bei einer Übertragung ein fehler aufgetreten wird das Bit 7 im function Code Feld gesetzt.  
+Einige wichtigen Fehlermeldungen sind:  
+![](https://screenshotscdn.firefoxusercontent.com/images/8c40bbe9-eade-4673-8aca-8950b3511bba.png)
   
 ---

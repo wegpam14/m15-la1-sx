@@ -1,5 +1,5 @@
 # Protokoll 6  
-Name: Simon Szapacs  +
+Name: Simon Szapacs  
 Klasse 4AHME  
 KNR: 12  
 Gruppe: 2  

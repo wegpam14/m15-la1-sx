@@ -23,4 +23,20 @@ Gruppe: 2
 Dieser Sensor ist intelligent, weil er schon einen Temperaturwert zurückliefert. Er besitzt eine digitale Elektronik, deswegen kann er selbst Informationen verarbeiten. Diese Informationen liefert er direkt auf einen Schnittstelle. Zum Beispiel ist der Temperatursensor auf unserm µC intelligent. 
 
 ## Feldbus  
- Dies ist ein Bussystem, das Sensoren und Aktoren mit einem Automatisierungsgerät verbindet. 
+Dies ist ein Bussystem, das Sensoren und Aktoren mit einem Automatisierungsgerät verbindet. Wenn mehrere Teilnehmer ihr Nachrichten über die selbe Leitung senden wollen, muss festgelegt sein wer was wann sagt. 
+Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Feldbus)  
+
+Diese Bussysteme sind weit verbreitet:  
+* Powerlink  
+* LIN  
+* CAN  
+* Flexray  
+* Profibus  
+* KNX  
+* Modbus  
+
+## Modbus 
+
+
+
+

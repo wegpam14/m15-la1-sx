@@ -38,7 +38,7 @@ Diese Bussysteme sind weit verbreitet:
 ## Modbus  
 Das Modbus-Protokoll ist ein Kommunikationsprotokoll, das auf einer Master/Slave- bzw. Client/Server-Architektur basiert. Es wurde 1979 von Gould-Modicon für die Kommunikation mit seinen speicherprogrammierbaren Steuerungen ins Leben gerufen. In der Industrie hat sich der Modbus zu einem De-facto-Standard entwickelt, da es sich um ein offenes Protokoll handelt. Seit 2007 ist die Version Modbus TCP Teil der Norm IEC 61158.  
 Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Modbus)  
-
+![](https://github.com/HTLMechatronics/m15-la1-sx/blob/szasim15/Modbus.PNG)  
 
 
 

@@ -100,9 +100,9 @@ Bei jedem neuen Packet wird mit einem **:** begonnen.
 
 #### Bilden der LCR Prüfsumme:
   
-:|0C|04|0000 0001|Prüfsumme Ergebniss|\r|\n|
--|--|--|---------|-------------------|--|--| 
--|30H+43H|30H+34H|30H * 7  + 31H| | |Summe = 600 Dezimal| 
+:|0C|04|0000 0001|Prüfsumme Ergebniss|\r|\n  
+-|--|--|---------|-------------------|--|--  
+-|30H+43H|30H+34H|30H * 7  + 31H| | |Summe = 600 Dezimal  
      
 ---------> 600 - 256 - 256 = 88
   
@@ -110,6 +110,6 @@ Bei jedem neuen Packet wird mit einem **:** begonnen.
   
 ### Response vom µC zum PC  
   
-3a | Beliebige Adresse | Function Code | Anzahl der Bytes | Temperatur | LRC-Prüfsumme | CR |  LF | 
----|-------------------| --------------| ------|---------------|----|----|------|  
-| : | 0C | 04  | 02  | 1752   | F8   |  \r  |   \n   |
+3a| Beliebige Adresse|Function Code|Anzahl der Bytes|Temperatur|LRC-Prüfsumme|CR|LF  
+--|------------------|-------------|----------------|----------|-------------|--|--  
+ |:|0C|04|02|1752|F8|\r|\n  

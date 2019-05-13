@@ -11,11 +11,9 @@ Gruppe: 2
   3.1 RTU  
   3.2 ASCII  
   3.3 TCP  
-4. Objekt Types  
-5. Function Codes  
+4. Objekt Types    
 6. Request PC zum µC  
 7. Response µC zum PC  
-8. Exceptions  
 
 
 ## Intellignter Sensor  
@@ -69,9 +67,26 @@ Digitaler Eingang | "Discrete Input" | Lesen | 1 bit
 Digitaler Ein-/Ausgang | "Coil" | Lesen & Schreiben | 1 bit  
 Analoger Ein-/Ausgang | "Holding Register" | Lesen & Schreiben | 16 bit  
 
+## Request PC zum µC  
+
+Aufbau Modbus Serial Line ASCII Frame:  
+
+3a | Beliebige Adresse | Function Code | Daten | LRC-Prüfsumme | CR | LF |  
+---|-------------------| --------------| ------|---------------|----|----|  
+| : | 0C | 04  | 0000 0001  | A8   |  \r   |  \n  |
+
+Bilden der LRC Prüfsumme:  
+
+| : | 0C | 04  | 0000 0001  | Prüfsumme Ergebniss   |  \r   |  \n  |
+---|-------------------| --------------| ------|---------------|----|----| 
+| - | 30H+43H | 30H+34H | 30H * 7  + 31H |  |  | Summe = 600 Dezimal |  
 
 
+## Response µC zum PC  
 
+3a | Beliebige Adresse | Function Code | Anzahl der Bytes | Temperatur | LRC-Prüfsumme | CR |  LF | 
+---|-------------------| --------------| ------|---------------|----|----|------|  
+| : | 0C | 04  | 02  | 1752   | F8   |  \r  |   \n   |
 
 
 

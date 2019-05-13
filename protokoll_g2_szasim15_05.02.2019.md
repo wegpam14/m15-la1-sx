@@ -40,6 +40,36 @@ Das Modbus-Protokoll ist ein Kommunikationsprotokoll, das auf einer Master/Slave
 Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Modbus)  
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/szasim15/Modbus.PNG)  
 
+### RTU  
+Im RTU-Modus wird der Sendebeginn durch eine Sendepause von mindestens der 3,5-fachen Zeichenlänge markiert. Ein Zeichen besitzt abhängig von der verwendeten Betriebsart des UARTs eine Länge von 10 bis 12 Bit (je nach Anzahl der Stopbits und dem Vorhandensein eines Paritätsbits). Die Länge der Sendepause hängt somit von der Übertragungsgeschwindigkeit ab. Dies muss bei niedrigen Baudraten exakt eingehalten werden. Ab 19200 Baud kann eine feste Pausenzeit von 2 ms verwendet werden. Das Adressfeld besteht aus acht Bit, die die Empfängeradresse darstellen. Der Slave sendet bei seiner Antwort an den Master ebendiese Adresse zurück, damit der Master die Antwort zuordnen kann. Das Funktionsfeld besteht aus 8 Bit. Hat der Slave die Anfrage des Masters korrekt empfangen, so antwortet er mit demselben Funktionscode. Ist ein Fehler aufgetreten, so verändert er den Funktionscode, indem er das höchstwertige Bit des Funktionsfeldes auf 1 setzt. Das Datenfeld enthält Hinweise, welche Register der Slave auslesen soll, und ab welcher Adresse diese beginnen. Der Slave setzt dort die ausgelesenen Daten (z. B. Messwerte) ein, um sie an den Master zu senden. Im Fehlerfall wird dort ein Fehlercode übertragen. Das Feld für die Prüfsumme, die mittels CRC ermittelt wird, beträgt 16 Bit. Das gesamte Telegramm muss in einem kontinuierlichen Datenstrom übertragen werden. Tritt zwischen zwei Zeichen eine Sendeunterbrechung auf, die länger als 1,5 Zeichen ist, so ist das Telegramm als unvollständig zu bewerten und sollte vom Empfänger verworfen werden.  
+Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Modbus)  
+
+### ASCII  
+Im ASCII-Modus beginnen Nachrichten mit einem vorangestellten Doppelpunkt, das Ende der Nachricht wird durch die Zeichenfolge Carriage return – Line feed (CRLF) markiert.
+Die ersten zwei Bytes enthalten zwei ASCII-Zeichen, die die Adresse des Empfängers darstellen. Der auszuführende Befehl ist auf den nächsten zwei Bytes codiert. Über weitere n Zeichen folgen die Daten. Über das gesamte Telegramm (ohne Start- und Ende-Markierung) wird zur Fehlerprüfung ein LRC ausgeführt, dessen Paritätsdatenwort in den abschließenden zwei Zeichen untergebracht wird. Tritt während der Übertragung eines Frames eine Pause von > 1s auf, wird der Frame als Fehlerfall bewertet. Der Benutzer kann ein längeres Timeout konfigurieren.  
+Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Modbus)  
+
+### TCP  
+Modbus/TCP ist RTU sehr ähnlich, allerdings werden TCP/IP-Pakete verwendet, um die Daten zu übermitteln. Der TCP-Port 502 ist für Modbus/TCP reserviert. Modbus/TCP ist seit 2007 in der Norm IEC 61158 festgelegt und wird in IEC 61784-2 als CPF 15/1 referenziert.  
+
+Transaktionsnummer |	Protokollkennzeichen |	Zahl der noch folgenden Bytes | Adresse | Funktion | Daten  
+-------------------|-----------------------|--------------------------------|---------|----------|-------  
+2 Byte |	2 Byte (immer 0x0000) |	2 Byte (n+2) |	1 Byte |	1 Byte |	n Byte    
+
+
+Quelle: [Wikepedia](https://de.wikipedia.org/wiki/Modbus)  
+
+
+## Objekt Types  
+
+Schnittstellentyp | Objekttyp | Zugriff | Größe  
+------------------|-----------|---------|------  
+Analoger Eingang | "Input Register" | Lesen | 16 bit  
+Digitaler Eingang | "Discrete Input" | Lesen | 1 bit  
+Digitaler Ein-/Ausgang | "Coil" | Lesen & Schreiben | 1 bit  
+Analoger Ein-/Ausgang | "Holding Register" | Lesen & Schreiben | 16 bit  
+
+
 
 
 

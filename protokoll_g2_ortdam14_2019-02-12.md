@@ -87,3 +87,29 @@ Function Code | Hex | Name | Typ
 16| 10 | Write Multiple Registers | 16-Bit  
   
 [Weitere Informationen zu Modbus](https://de.wikipedia.org/wiki/Modbus)
+  
+## Modbus ASCII Beispiel  
+### Request vom PC zum µC
+Aufbau des Serial Line ASCII Frame:
+
+3a|Beliebige Adresse|Function Code|Daten|LRC-Prüfsumme|CR|LF  
+--|-----------------| ------------|-----|-------------|--|--  
+:|0C|04|0000 0001|A8|\r|\n  
+   
+Bei jedem neuen Packet wird mit einem **:** begonnen.
+
+#### Bilden der LCR Prüfsumme:
+  
+:|0C|04|0000 0001|Prüfsumme Ergebniss|\r|\n|
+-|--|--|---------|-------------------|--|--| 
+-|30H+43H|30H+34H|30H * 7  + 31H| | |Summe = 600 Dezimal| 
+     
+---------> 600 - 256 - 256 = 88
+  
+---------> -88 + 256 = 168 ---------> A8 Hex -> **LRC-Prüfsumme** 
+  
+### Response vom µC zum PC  
+  
+3a | Beliebige Adresse | Function Code | Anzahl der Bytes | Temperatur | LRC-Prüfsumme | CR |  LF | 
+---|-------------------| --------------| ------|---------------|----|----|------|  
+| : | 0C | 04  | 02  | 1752   | F8   |  \r  |   \n   |

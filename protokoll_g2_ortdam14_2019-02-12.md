@@ -38,6 +38,8 @@ Feldbus ist der Oberbegriff für verschiedene physikalisch ausgeprägte Bussyste
   
 Wir verwenden Modbus da es nicht zu komplex ist.  
   
+[Weiteren Informationen zu Feldbusse](https://de.wikipedia.org/wiki/Feldbus)
+  
 ## Modbus Arten der Datenübertragung  
 * Modbus ASCII - Die Daten werden textuell und byteweise übertragen. Frames beginnen mit einem Doppelpunkt
 * Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)

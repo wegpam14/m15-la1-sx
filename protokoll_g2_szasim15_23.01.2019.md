@@ -7,7 +7,7 @@ KNR: 12
 Gruppe 2   
 
 1. [Konfiguration der Register](#konfiguration-der-register)  
-2. [Konfiguration-des-ADC](#konfiguration-des.adc)  
+2. [Konfiguration des ADC](#konfiguration-des-adc)  
 3. [Auslesen des Temperatursensors](#auslesen-des-temperatursensors)
 
 ## Konfiguration der Register  

@@ -19,8 +19,13 @@ Gruppe: 2
 
 ## **1** Die RS-485 Schnittstelle
 
+**Aufbau:**
+* 2 Busleitungen => Spannungsdifferenzen
+* bis zu 32 Teilnehmer
+* Baudrate, Datenbits, Paritybits und Stopbits
 
 
+![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/RS485.svg)  
 
 
 

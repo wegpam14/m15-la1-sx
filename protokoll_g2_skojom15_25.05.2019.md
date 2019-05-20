@@ -12,10 +12,10 @@ Gruppe: 2
 
 ## Inhalt 
 
-1. [Die RS-485 Schnittstelle](#rs485)
-2. [Temperaturwert des ADC auslesen](#temperaturwert-des-adc-auslesen)     
-   2.1. [Konfiguration des ADC](#konfiguration-des-adc)           
-   2.2. [Auslesen des Temperatursensors](#auslesen-des-temperatursensors)                                                                                        
+1. [Die RS-485 Schnittstelle](#rs485)        
+2. [Temperaturwert des ADC auslesen](#temp)             
+   2.1. [Konfiguration des ADC](#config)                
+   2.2. [Auslesen des Temperatursensors](#auslesen)                                                                                        
 
 ## **1** Die RS-485 Schnittstelle <a name="rs485"> </a>
 
@@ -39,14 +39,14 @@ um die Welle zu eliminieren.
 
 
 
-## **2** Temperaturwert des ADC auslesen
+## **2** Temperaturwert des ADC auslesen <a name="temp"> </a>
 
 Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen
 können müssen wir den ADC zuerst einmal konfigurieren. Alle wichtigen
 Register die bei der Konfiguration zum Einsatz kommen, können in der
 Dokumentation des Atmega328P nachgeschlagen werde.
 
-### **2.1** Konfiguration des ADC
+### **2.1** Konfiguration des ADC <a name="config"> </a>
 
 Um den ADC zu konfigurieren müssen einige Bits gesetzt werden. In der
 unserer Übung haben wir in der `app.c` folgende Bits gesetzt.
@@ -92,7 +92,7 @@ auf **125kHz**(16MHz / 128 = 125kHz) betrieben wird.
 **(der ADC sollte zwischen 50MHz und 200MHz betrieben werden, da sich in
 dieser Spannweite ein optimales Messergebnis ergibt)*
 
-### **2.2** Auslesen des Temperatursensors
+### **2.2** Auslesen des Temperatursensors <a name="auslesen"> </a>
 
 **Vin** wird mit einer Referenzspannung **Vref** verglichen und dann im ADC Register abgelegt.
 Da wir bei der Konfiguration des ADC die Bandgap Spannung ausgewählt haben hat Vref 1.1V.

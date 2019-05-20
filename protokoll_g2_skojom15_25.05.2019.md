@@ -35,17 +35,18 @@ Um den ADC zu konfigurieren müssen einige Bits gesetzt werden. In der
 unserer Übung haben wir in der `app.c` folgende Bits gesetzt.
 
 ```c
-void app_init (void) {
-  memset((void *) &app, 0, sizeof (app));
-
-  ADMUX = 8; // Multiplexer ADC8 = Temperature (1000)
-  ADMUX |= (1 << REFS0) + (1 << REFS1); // Nutzt die interne Referenzspannung VRef = 1.1V
-  ADMUX |= (1 << ADLAR); // Left Adj, -> Result in ADCH
-
-  ADCSRA = (1 << ADEN); //Enable the adc
-  ADCSRA |= 7; // fADC = 125 kHz
-
-  ADCSRB = 0; // Sicherheitshalber
+void app_main (void)
+{
+  ADCSRA = 7; // Prescaler
+  ADMUX |= (1 << REFS1) | (1<< REFS0); // VREF 
+  ADMUX |= 8; // multiplexer Temperatur
+  ADCSRA |=(1<< ADEN); // adc enable
+  ADCSRA |= (1<< ADSC);  //adc start
+  
+  printf("%d\r",ADC);
+  //EEprom auslesen adresse 0,1,2,3,4,5,6,7
+  //und ausgeben
+  
 }
 ```
 

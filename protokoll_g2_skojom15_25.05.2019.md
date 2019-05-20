@@ -12,10 +12,10 @@ Gruppe: 2
 
 ## Inhalt 
 
-1. [Die RS-485 Schnittstelle](#Die RS-485 Schnittstelle)                                           
- 2. [Temperaturwert des ADC auslesen](#temperaturwert-des-adc-auslesen) 
-   2.1. [Konfiguration des ADC](#Konfiguration des ADC)       
-   2.2. [Auslesen des Temperatursensors](#Auslesen des Temperatursensors)                                                                                   
+1. [Die RS-485 Schnittstelle](#die-rs-485-schnittstelle)                                               
+ 2. [Temperaturwert des ADC auslesen](#temperaturwert-des-adc-auslesen)     
+   2.1. [Konfiguration des ADC](#konfiguration-des-adc)           
+   2.2. [Auslesen des Temperatursensors](#auslesen-des-temperatursensors)                                                                                        
 
 ## **1** Die RS-485 Schnittstelle
 

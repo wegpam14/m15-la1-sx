@@ -24,7 +24,7 @@ Gruppe: 2
 * bis zu 32 Teilnehmer
 * Baudrate, Datenbits, Paritybits und Stopbits
 
-**Vorteile**
+**Vorteile:**
 * einfach
 * hohe Kompatibilität
 * geringer Energiebedarf

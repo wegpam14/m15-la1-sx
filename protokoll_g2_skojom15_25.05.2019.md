@@ -24,10 +24,13 @@ Gruppe: 2
 * bis zu 32 Teilnehmer
 * Baudrate, Datenbits, Paritybits und Stopbits
 
+**Vorteile**
+* einfach
+* hohe Kompatibilität
+* geringer Energiebedarf
 
+RS-485 mit drei Teilnehmer:
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/RS485.svg)  
-
-
 
 
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/Wellenwiderstand.png)  

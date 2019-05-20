@@ -1,24 +1,63 @@
-# Protokoll 6 (13.02.2019)
+# Protokoll 7 (14.05.2019)
 
 ![](https://www.koerbler.com/neuigkeiten/wp-content/uploads/2013/03/htl-kaindorf.jpg)![](https://www.htl-kaindorf.at/images/startpage/logoMecha.png)   
 Name: Korrenn Marwin  
 Klasse: 4aHME  
 KNR: 7  
 Gruppe: 2
+Abwesend: Orthofer D, Murko A
 
 ---
 
 ## Inhalt 
 1. [Übung](#übung)  
+   1. [ADMUX](#admux)  
+   1. [ADCSRA](#adcsra)  
 1. [Aufgabe](#aufgabe)  
 
 ---
 ### Übung  
-Um die Kommunikation mit Modbus am Arduino328P zu starten müssen folgende Bits gesetzt werden:  
+Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen können müssen wir den ADC zuerst einmal konfigurieren. Alle wichtigen Register die bei der Konfiguration zum Einsatz kommen, können in der Dokumentation des Atmega328P nachgeschlagen werde.  
 
+Um die Kommunikation mit Modbus am Arduino328P zu starten und die Temperatur auszulesen müssen folgende Bits gesetzt werden:  
+```c
+void app_init (void) {
+  memset((void *) &app, 0, sizeof (app));
+
+  ADMUX = 8; // Multiplexer ADC8 = Temperature (1000)
+  ADMUX |= (1 << REFS0) + (1 << REFS1); // Nutzt die interne Referenzspannung VRef = 1.1V
+  ADMUX |= (1 << ADLAR); // Left Adj, -> Result in ADCH
+
+  ADCSRA = (1 << ADEN); //Enable the adc
+  ADCSRA |= 7; // fADC = 125 kHz
+
+  ADCSRB = 0; // Sicherheitshalber
+}
+```  
+#### Grobe Erklärung der verwendeten Register:
+
+### ADMUX 
+
+Registername | Aufgabe | unsere einstellung  
+------ | ------------------------------------------------------------- | ------------------------------------------
+MUX | legt fest welchen PIN der ADC verwenden soll | 1000 für den Temperatursensor
+REFS | legt fest welche Referenzspannung verwendet werden soll | 11 = für Bandgabspannung von ca. genau 1.1V
+ADLAR | legt fest ob das Messergebniss links oder rechts ausgerichtet werden soll | 1 für links
+
+---
+
+### ADCSRA
+
+Registername | Aufgabe | unsere einstellung
+------ | ------------------------------------------------------------- | ------------------------------------------
+ADEN | aktiviert den ADC | ----------------
+ADPS | legt den Prescaler divisor fest | 111 (128) weil 16MHz/128 = 125kHz
 
 ---
 ### Aufgabe  
+
+Als Aufgabe sollten wir herrausfinden wie man den EEPROM ausließt:
+
 ```c
 /*
  * EEPROM Read

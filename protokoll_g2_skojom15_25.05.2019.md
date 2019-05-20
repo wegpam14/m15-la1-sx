@@ -106,3 +106,9 @@ Wichtig:
 - Gradgenaue Messung nicht möglich, da der Gradient zu gering ist
 
 ## **3** Programm
+
+
+
+
+
+

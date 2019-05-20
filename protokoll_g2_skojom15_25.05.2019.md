@@ -12,9 +12,24 @@ Gruppe: 2
 
 ## Inhalt 
 
-1. [Temperaturwert des ADC auslesen](#temperaturwert-des-adc-auslesen)                                           
- 2. [Feldbus](#feldbus) 
- 3. [Programm](#programm)
+1. [Die RS-485 Schnittstelle](#Die RS-485 Schnittstelle)                                           
+ 2. [Temperaturwert des ADC auslesen](#temperaturwert-des-adc-auslesen) 
+   2.1. [Konfiguration des ADC](#Konfiguration des ADC)       
+   2.2. [Auslesen des Temperatursensors](#Auslesen des Temperatursensors)                                                                                   
+
+## **1** Die RS-485 Schnittstelle
+
+
+
+
+
+
+
+![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/Wellenwiderstand.png)  
+Im gezeigten Bild wird beschrieben, wie man die Wellenreflexion unterdrückt. Es wird ein Widerstand an das Ende der Leitung geschalten
+um die Welle zu eliminieren.
+
+
 
 ## **2** Temperaturwert des ADC auslesen
 
@@ -22,12 +37,6 @@ Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen
 können müssen wir den ADC zuerst einmal konfigurieren. Alle wichtigen
 Register die bei der Konfiguration zum Einsatz kommen, können in der
 Dokumentation des Atmega328P nachgeschlagen werde.
-
-**Kleiner Tipp aus dem Unterricht:**
-
-Arduino Language ist umgangssprachlich gesprochen*dreck*. Man sollte
-sich bei low-level-programmierung selber um alle Dinge kümmern und
-sollte keine abstrakte Sprache verwenden.
 
 ### **2.1** Konfiguration des ADC
 
@@ -37,21 +46,17 @@ unserer Übung haben wir in der `app.c` folgende Bits gesetzt.
 ```c
 void app_main (void)
 {
-  ADCSRA = 7; // Prescaler
-  ADMUX |= (1 << REFS1) | (1<< REFS0); // VREF 
+  ADCSRA = 7; // Prescaler 
+  ADMUX |= (1 << REFS1) | (1<< REFS0); // VREF Nutzt die interne Referenzspannung VRef = 1.1V 
   ADMUX |= 8; // multiplexer Temperatur
   ADCSRA |=(1<< ADEN); // adc enable
   ADCSRA |= (1<< ADSC);  //adc start
   
   printf("%d\r",ADC);
-  //EEprom auslesen adresse 0,1,2,3,4,5,6,7
-  //und ausgeben
-  
 }
 ```
 
-Die Dokumentation der Register kann man sich im Datenblatt des ATmega328 ansehen. (Seite 262)
-TODO: LINK
+Die Dokumentation der Register kann man sich im Datenblatt des ATmega328 ansehen.
 Eine kleine Übersicht über die Funktion der Register:
 
 **ADMUX:**
@@ -90,15 +95,10 @@ Nach der konvertierung befindet sich das Ergebnis im 16 bit ADC Register (ADCL +
 
 `ADCH = Vin * (256 / Vref)`
 
-|    Temperatur   |    Strom    |    ADCH    |
-|:-----------:|:-----------:|:-----------:|
-| -45°C | 242mV | 56.32 |
-|25°C | 314mV | 73.08 |
-|85°C |380mV | 88.44 |
+|    Temperatur   |    Strom    |
+|:-----------:|:-----------:|
+| -45°C | 242mV |
+|25°C | 314mV |
+|85°C |380mV |
 
-**Gradient**: (88 - 56) / (85 - (-45)) = 0.24338 pro °C
-
-Wichtig:
-- Ergebniswert ändert den Wert nur alle 4 Grad
-- Gradgenaue Messung nicht möglich, da der Gradient zu gering ist
 

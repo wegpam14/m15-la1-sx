@@ -63,10 +63,6 @@ Das Register **REFS** legt fest, welche Referenzspannung der ADC
 verwverwenden soll. *(In unserem Fall: 11 für die innere Bandgap
 Spannung von 1.1V)*
 
-Das Register **ADLAR** legt fest, ob das Messergebniss im Datenregister
-links oder rechts ausgerichtet abgelegt werden soll. *(In unserem Fall:
-1 für links ausgerichtet)*
-
 Da wir in unserem Fall das ADLAR auf 1 setzten und somit das Ergebnis
 links ausgerichtet wird, können wir die obsteren 8 Bits unseres 10 Bits
 Arduino Nano ADCs im ADCH auslesen. Die untersten 2 Bits sind nicht zu
@@ -105,11 +101,4 @@ Nach der konvertierung befindet sich das Ergebnis im 16 bit ADC Register (ADCL +
 Wichtig:
 - Ergebniswert ändert den Wert nur alle 4 Grad
 - Gradgenaue Messung nicht möglich, da der Gradient zu gering ist
-
-## **3** Programm
-
-
-
-
-
 

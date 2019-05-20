@@ -57,7 +57,9 @@ void app_init (void) {
 }
 ```  
 
-## Auslesen des Temperatursensors 
+## Auslesen des Temperatursensors  
+
+Vin wird mit Vref verglichen und dieses Ergebnis wird dann im ADC Register abgelegt. Da wird für die Spannung Vref einen Wert deklariert haben beträgt dieser 1.1V. 
 
 Hier gibt es zwei wichtige Formeln:  
 

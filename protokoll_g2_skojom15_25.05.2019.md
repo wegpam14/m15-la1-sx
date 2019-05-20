@@ -101,9 +101,9 @@ Da wir bei der Konfiguration des ADC die Bandgap Spannung ausgewählt haben hat 
   
 `ADC = (Vin * 1024) / Vref`
 
-`ADC = (314 * 1024) / 1100 = 292`
+`ADC = (314mA * 1024) / 1100mA = 292mV`
 
-`ADC = (314 * 1024) / 1072,3 = 300`
+`ADC = (314mA * 1024) / 1072,3mA = 300mV`
 
 Nach der konvertierung befindet sich das Ergebnis im 16 bit ADC Register (ADCL + ADCH).
 

@@ -7,7 +7,7 @@ Gruppe: 2
 
 | Anwesend  | Abwesend  |
 |---|---|
-| Korrenn,Perl,Szapacs | Murko,Orthofer  |
+| Korrenn,Perl,Skof,Szapacs | Murko,Orthofer  |
 
 
 ## Inhalt 
@@ -93,12 +93,8 @@ Da wir bei der Konfiguration des ADC die Bandgap Spannung ausgewählt haben hat 
 
 Nach der konvertierung befindet sich das Ergebnis im 16 bit ADC Register (ADCL + ADCH).
 
-`ADCH = Vin * (256 / Vref)`
-
 |    Temperatur   |    Strom    |
 |:-----------:|:-----------:|
 | -45°C | 242mV |
 |25°C | 314mV |
 |85°C |380mV |
-
-

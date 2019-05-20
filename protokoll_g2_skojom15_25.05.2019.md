@@ -29,6 +29,8 @@ Gruppe: 2
 * hohe Kompatibilität
 * geringer Energiebedarf
 
+___
+
 RS-485 mit drei Teilnehmer:
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/RS485.svg)  
 

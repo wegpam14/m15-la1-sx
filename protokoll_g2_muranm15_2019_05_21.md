@@ -27,7 +27,7 @@ Thema: **Modbus, RS458, Übung Temperatursensor**
 
 In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am folgenden Bild lässt sich das gut erkennen:
 
-![Server/Client Prinzip bei Modbus](https://github.com/HTLMechatronics/m14-la1-sx/blob/rufflm14/rufflm14/ModbusServerClient.png)
+![Server/Client Prinzip bei Modbus](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/ModbusServerClient.png)
 
 **Es gibt 3 Arten der Datenübertragung:**
 

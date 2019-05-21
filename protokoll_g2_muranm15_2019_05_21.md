@@ -132,7 +132,8 @@ Mit diesen Werten kann man sich die Regressionsgerade berechnen:
 
 gemittelte Werte:
 
-k = 1040
+k = 1040  
 d = -96000
 
+Funktion: T() = ADCH * 1040 - 96000
   

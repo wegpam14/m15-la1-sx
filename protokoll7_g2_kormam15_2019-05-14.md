@@ -50,7 +50,7 @@ ADLAR | legt fest ob das Messergebniss links oder rechts ausgerichtet werden sol
 
 Registername | Aufgabe | unsere einstellung
 ------ | ------------------------------------------------------------- | ------------------------------------------
-ADEN | aktiviert den ADC | ----------------
+ADEN | aktiviert den ADC | 1 um den ADC zu aktivieren
 ADPS | legt den Prescaler divisor fest | 111 (128) weil 16MHz/128 = 125kHz
 
 ---

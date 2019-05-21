@@ -61,7 +61,7 @@ ___
 
 * textuelle, byteweise Übertragung von Daten 
 
-*Kodierung* 
+*Kodierung:* 
 
 |0 .. 9|	A .. F	|:|	\r | \n |
 |-------|---------|-|----|----|

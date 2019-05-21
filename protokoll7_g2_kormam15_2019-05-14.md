@@ -4,7 +4,7 @@
 Name: Korrenn Marwin  
 Klasse: 4aHME  
 KNR: 7  
-Gruppe: 2
+Gruppe: 2  
 Abwesend: Orthofer D, Murko A
 
 ---

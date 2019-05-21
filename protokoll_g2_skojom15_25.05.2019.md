@@ -107,11 +107,6 @@ Das Register **REFS** legt fest, welche Referenzspannung der ADC
 verwverwenden soll. *(In unserem Fall: 11 für die innere Bandgap
 Spannung von 1.1V)*
 
-Da wir in unserem Fall das ADLAR auf 1 setzten und somit das Ergebnis
-links ausgerichtet wird, können wir die obsteren 8 Bits unseres 10 Bits
-Arduino Nano ADCs im ADCH auslesen. Die untersten 2 Bits sind nicht zu
-gebrauchen da diese 2 Bits sehr schwanken.
-
 **ADCSRA:**
 
 Das Register **ADEN** aktiviert den ADC.

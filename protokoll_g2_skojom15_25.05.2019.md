@@ -75,7 +75,7 @@ Weitere Details siehe: [Protokoll Nr.6](https://github.com/HTLMechatronics/m15-l
 Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen
 können müssen wir den ADC zuerst einmal konfigurieren. Alle wichtigen
 Register die bei der Konfiguration zum Einsatz kommen, können in der
-Dokumentation des Atmega328P nachgeschlagen werde.
+Dokumentation des Atmega328P nachgeschlagen werden.
 
 ### **3.1** Konfiguration des ADC <a name="config"> </a>
 

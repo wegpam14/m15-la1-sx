@@ -36,7 +36,8 @@ ___
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/RS485.svg)  
 
 
-![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/Wellenwiderstand.png)  
+![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/Wellenwiderstand.png) 
+
 **Wellenwiderstand**
 Im gezeigten Bild breitet sich das elekatromagnetische Feld mit Lichtgeschwindigkeit aus.Dadurch kann es vorkommen
 das die Elektronen am Ende wieder zurückschwappen.
@@ -51,14 +52,14 @@ ___
 ## **2.** Modbus <a name="modbus"> </a>
 **Modbus RTU**  
 
-*bniäre Übertragung von Daten 
+* bniäre Übertragung von Daten 
 
 3,5 mal eine Bitzeit = neues Paket beginnt  
 1,5 mal eine Bitzeit = Paketende  
 
 **Modbus ASCII**  
 
-*textuelle, byteweise Übertragung von Daten 
+* textuelle, byteweise Übertragung von Daten 
 
 *Kodierung* 
 

@@ -42,7 +42,7 @@ Registername | Aufgabe | unsere einstellung
 ------ | ------------------------------------------------------------- | ------------------------------------------
 MUX | legt fest welchen PIN der ADC verwenden soll | 1000 für den Temperatursensor
 REFS | legt fest welche Referenzspannung verwendet werden soll | 11 = für Bandgabspannung von ca. genau 1.1V
-ADLAR | legt fest ob das Messergebniss links oder rechts ausgerichtet werden soll | 1 für links
+ADLAR | legt fest ob das Messergebniss links oder rechts ausgerichtet werden soll | 1 für links (*noch nicht gemacht*)
 
 ---
 

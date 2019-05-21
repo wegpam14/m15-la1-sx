@@ -53,5 +53,5 @@ Da diese einen linearen Zusammenhand besitzen, kann dessen Grundform "y = k*x + 
 <img src="https://github.com/HTLMechatronics/m15-la1-sx/blob/brelom15/data/Temperaturverlauf.png" alt="drawing" width="500"/>
 
 Aus den vorliegenden Werten ergeben sich nun folgenden Gleichungen:  
-G1.  A - B  mrb1 = ADCH * 1100,06 - 73992,486  
-G2. B - C   mrb2 = ADCH * 1002,61 - 66870,80  
+G1.  A - B  y1 = ADCH * 1100,06 - 73992,486  
+G2.  B - C  y2 = ADCH * 1002,61 - 66870,80  

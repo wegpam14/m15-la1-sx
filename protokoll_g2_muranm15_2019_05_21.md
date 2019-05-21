@@ -88,12 +88,11 @@ Das Register **ADPS** legt den sogenannten Prescaler des ADCs fest.
 
 ### Auslesen des Temperatursensors
 
-**Vin** wird mit einer Referenzspannung **Vref** verglichen und dann im ADC Register abgelegt.
-Da wir bei der Konfiguration des ADC die Bandgap Spannung ausgewählt haben hat Vref 1.1V.
+**Vin** wird mit der Referenzspannung **Vref** verglichen und dann im ADC Register abgelegt.
   
 `ADC = (Vin * 1024) / Vref`
 
-Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register (ADCL + ADCH).
+Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register.
 
 `ADCH = Vin * (256 / Vref)`
 

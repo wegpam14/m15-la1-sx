@@ -13,9 +13,10 @@ Gruppe: 2
 ## Inhalt 
 
 1.[Die RS-485 Schnittstelle](#rs485)  
-2.[Temperaturwert des ADC auslesen](#temp)               
-  2.1. [Konfiguration des ADC](#config)                 
-  2.2. [Auslesen des Temperatursensors](#auslesen)                                                                                          
+2.[Modbus](#modbus)
+3.[Temperaturwert des ADC auslesen](#temp)               
+  3.1.[Konfiguration des ADC](#config)                 
+  3.2.[Auslesen des Temperatursensors](#auslesen)                                                                                          
 
 ## **1.** Die RS-485 Schnittstelle <a name="rs485"> </a>
 
@@ -45,15 +46,36 @@ das die Elektronen am Ende wieder zurückschwappen.
 * Nur bei langen Leitungen nötig
 * Bei höheren Frequenzen wie bei Ethernet nötig,aber bei UART gibt es kein Problem
 
+___
 
-## **2.** Temperaturwert des ADC auslesen <a name="temp"> </a>
+## **2.** Modbus <a name="modbus"> </a>
+**Modbus RTU**
+*bniäre Übertragung von Daten
+
+
+3,5 mal eine Bitzeit = neues Paket beginnt
+1,5 mal eine Bitzeit = Paketende
+
+**Modbus ASCII**
+*textuelle, byteweise Übertragung von Daten
+
+|0 ... 9|	A ... F	|:|	\r	|\n|
+|:-----:|:-------:|:|:---:|::|
+|48 ... 57	|65 ... 70	|58|	13| 10|
+
+|    Temperatur   |    Strom    |
+|:-----------:|:-----------:|
+| -45°C | 242mV |
+|25°C | 314mV |
+|85°C |380mV |
+## **3.** Temperaturwert des ADC auslesen <a name="temp"> </a>
 
 Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen
 können müssen wir den ADC zuerst einmal konfigurieren. Alle wichtigen
 Register die bei der Konfiguration zum Einsatz kommen, können in der
 Dokumentation des Atmega328P nachgeschlagen werde.
 
-### **2.1** Konfiguration des ADC <a name="config"> </a>
+### **3.1** Konfiguration des ADC <a name="config"> </a>
 
 Um den ADC zu konfigurieren müssen einige Bits gesetzt werden. In der
 unserer Übung haben wir in der `app.c` folgende Bits gesetzt.
@@ -99,7 +121,7 @@ auf **125kHz**(16MHz / 128 = 125kHz) betrieben wird.
 **(der ADC sollte zwischen 50MHz und 200MHz betrieben werden, da sich in
 dieser Spannweite ein optimales Messergebnis ergibt)*
 
-### **2.2** Auslesen des Temperatursensors <a name="auslesen"> </a>
+### **3.2** Auslesen des Temperatursensors <a name="auslesen"> </a>
 
 **Vin** wird mit einer Referenzspannung **Vref** verglichen und dann im ADC Register abgelegt.
 Da wir bei der Konfiguration des ADC die Bandgap Spannung ausgewählt haben hat Vref 1.1V.

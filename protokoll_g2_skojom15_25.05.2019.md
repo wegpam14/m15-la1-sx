@@ -17,7 +17,7 @@ Gruppe: 2
   2.1. [Konfiguration des ADC](#config)                
   2.2. [Auslesen des Temperatursensors](#auslesen)                                                                                        
 
-## **1** Die RS-485 Schnittstelle <a name="rs485"> </a>
+## **1.** Die RS-485 Schnittstelle <a name="rs485"> </a>
 
 **Aufbau:**
 * 2 Busleitungen => Spannungsdifferenzen
@@ -46,7 +46,7 @@ das die Elektronen am Ende wieder zurückschwappen.
 * Bei höheren Frequenzen wie bei Ethernet nötig,aber bei UART gibt es kein Problem
 
 
-## **2** Temperaturwert des ADC auslesen <a name="temp"> </a>
+## **2.** Temperaturwert des ADC auslesen <a name="temp"> </a>
 
 Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen
 können müssen wir den ADC zuerst einmal konfigurieren. Alle wichtigen

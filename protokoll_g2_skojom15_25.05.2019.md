@@ -13,7 +13,7 @@ Gruppe: 2
 ## Inhalt 
 
 1.[Die RS-485 Schnittstelle](#rs485)  
-2.[Modbus](#modbus)
+2.[Modbus](#modbus)     
 3.[Temperaturwert des ADC auslesen](#temp)               
   3.1.[Konfiguration des ADC](#config)                 
   3.2.[Auslesen des Temperatursensors](#auslesen)                                                                                          
@@ -50,12 +50,14 @@ ___
 
 ## **2.** Modbus <a name="modbus"> </a>
 **Modbus RTU**  
+
 *bniäre Übertragung von Daten 
 
 3,5 mal eine Bitzeit = neues Paket beginnt  
 1,5 mal eine Bitzeit = Paketende  
 
 **Modbus ASCII**  
+
 *textuelle, byteweise Übertragung von Daten 
 
 *Kodierung* 

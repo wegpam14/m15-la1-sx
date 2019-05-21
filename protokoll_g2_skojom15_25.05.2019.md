@@ -49,25 +49,24 @@ das die Elektronen am Ende wieder zurückschwappen.
 ___
 
 ## **2.** Modbus <a name="modbus"> </a>
-**Modbus RTU**
-*bniäre Übertragung von Daten
+**Modbus RTU**  
+*bniäre Übertragung von Daten 
+
+3,5 mal eine Bitzeit = neues Paket beginnt  
+1,5 mal eine Bitzeit = Paketende  
+
+**Modbus ASCII**  
+*textuelle, byteweise Übertragung von Daten 
+
+*Kodierung* 
+
+|0 .. 9|	A .. F	|:|	\r | \n |
+|-------|---------|-|----|----|
+| 48 ... 57	| 65 ... 70	| 58 | 13 | 10 |
+
+Weitere Details siehe: [Protokoll Nr.6](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/protokoll_g2_skojom15_12.02.2019.md)
 
 
-3,5 mal eine Bitzeit = neues Paket beginnt
-1,5 mal eine Bitzeit = Paketende
-
-**Modbus ASCII**
-*textuelle, byteweise Übertragung von Daten
-
-|0 ... 9|	A ... F	|:|	\r	|\n|
-|:-----:|:-------:|:|:---:|::|
-|48 ... 57	|65 ... 70	|58|	13| 10|
-
-|    Temperatur   |    Strom    |
-|:-----------:|:-----------:|
-| -45°C | 242mV |
-|25°C | 314mV |
-|85°C |380mV |
 ## **3.** Temperaturwert des ADC auslesen <a name="temp"> </a>
 
 Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen

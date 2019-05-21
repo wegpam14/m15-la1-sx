@@ -12,10 +12,10 @@ Gruppe: 2
 
 ## Inhalt 
 
-1. [Die RS-485 Schnittstelle](#rs485)        
-2. [Temperaturwert des ADC auslesen](#temp)             
-  2.1. [Konfiguration des ADC](#config)                
-  2.2. [Auslesen des Temperatursensors](#auslesen)                                                                                        
+1.[Die RS-485 Schnittstelle](#rs485)  
+2.[Temperaturwert des ADC auslesen](#temp)               
+  2.1. [Konfiguration des ADC](#config)                 
+  2.2. [Auslesen des Temperatursensors](#auslesen)                                                                                          
 
 ## **1.** Die RS-485 Schnittstelle <a name="rs485"> </a>
 

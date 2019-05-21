@@ -117,7 +117,7 @@ Das Register **ADCSRA** legt den sogenannten Prescaler des ADCs fest. In
 unserem Fall passt der Wert 128 als Prescaler sehr gut*, da der ADC so
 auf **125kHz**(16MHz / 128 = 125kHz) betrieben wird.
 
-**(der ADC sollte zwischen 50MHz und 200MHz betrieben werden, da sich in
+**(der ADC sollte zwischen 50kHz und 200kHz betrieben werden, da sich in
 dieser Spannweite ein optimales Messergebnis ergibt)*
 
 ### **3.2** Auslesen des Temperatursensors <a name="auslesen"> </a>

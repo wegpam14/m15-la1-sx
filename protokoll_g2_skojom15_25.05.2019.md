@@ -104,7 +104,7 @@ Das Register **MUX** legt fest, welchen Sensor, bzw. welchen Pin der ADC
 verwenden soll. *(In unserem Fall: 1000 für den Temperatursensor)*
 
 Das Register **REFS** legt fest, welche Referenzspannung der ADC
-verwverwenden soll. *(In unserem Fall: 11 für die innere Bandgap
+verwenden soll. *(In unserem Fall: 11 für die innere Bandgap
 Spannung von 1.1V)*
 
 **ADCSRA:**

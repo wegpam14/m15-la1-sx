@@ -111,7 +111,7 @@ Spannung von 1.1V)*
 
 Das Register **ADEN** aktiviert den ADC.
 
-Das Register **ADPS** legt den sogenannten Prescaler des ADCs fest. In
+Das Register **ADCSRA** legt den sogenannten Prescaler des ADCs fest. In
 unserem Fall passt der Wert 128 als Prescaler sehr gut*, da der ADC so
 auf **125kHz**(16MHz / 128 = 125kHz) betrieben wird.
 

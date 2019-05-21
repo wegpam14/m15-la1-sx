@@ -52,7 +52,7 @@ ___
 ## **2.** Modbus <a name="modbus"> </a>
 **Modbus RTU**  
 
-* bniäre Übertragung von Daten 
+* binäre Übertragung von Daten 
 
 3,5 mal eine Bitzeit = neues Paket beginnt  
 1,5 mal eine Bitzeit = Paketende  

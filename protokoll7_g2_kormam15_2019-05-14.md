@@ -17,7 +17,7 @@ Abwesend: Orthofer D, Murko A
 
 ---
 ### Übung  
-Bevor wir irgendwelche Werte aus dem ADC des Arduino Nanos auslesen können müssen wir den ADC zuerst einmal konfigurieren. Alle wichtigen Register die bei der Konfiguration zum Einsatz kommen, können in der Dokumentation des Atmega328P nachgeschlagen werde.  
+Bevor wir Werte aus dem ADC des Arduino Nanos auslesen können müssen wir den ADC konfigurieren. Alle wichtigen Register die bei der Konfiguration zum Einsatz kommen, können in der Dokumentation des Atmega328P nachgeschlagen werde.  
 
 Um die Kommunikation mit Modbus am Arduino328P zu starten und die Temperatur auszulesen müssen folgende Bits gesetzt werden:  
 ```c

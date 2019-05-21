@@ -14,8 +14,8 @@ Gruppe: 2
 
 1. [Die RS-485 Schnittstelle](#rs485)        
 2. [Temperaturwert des ADC auslesen](#temp)             
-   2.1. [Konfiguration des ADC](#config)                
-   2.2. [Auslesen des Temperatursensors](#auslesen)                                                                                        
+  2.1. [Konfiguration des ADC](#config)                
+  2.2. [Auslesen des Temperatursensors](#auslesen)                                                                                        
 
 ## **1** Die RS-485 Schnittstelle <a name="rs485"> </a>
 
@@ -31,14 +31,19 @@ Gruppe: 2
 
 ___
 
-RS-485 mit drei Teilnehmer:
+*RS-485 mit drei Teilnehmer:*
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/RS485.svg)  
 
 
 ![](https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/Wellenwiderstand.png)  
-Im gezeigten Bild wird beschrieben, wie man die Wellenreflexion unterdrückt. Es wird ein Widerstand an das Ende der Leitung geschalten
-um die Welle zu eliminieren.
+**Wellenwiderstand**
+Im gezeigten Bild breitet sich das elekatromagnetische Feld mit Lichtgeschwindigkeit aus.Dadurch kann es vorkommen
+das die Elektronen am Ende wieder zurückschwappen.
 
+==>Durch einen Wellenwiderstand kann die Welle auslaufen und wird durch den Widerstand in Wärme umgewandelt.
+
+* Nur bei langen Leitungen nötig
+* Bei höheren Frequenzen wie bei Ethernet nötig,aber bei UART gibt es kein Problem
 
 
 ## **2** Temperaturwert des ADC auslesen <a name="temp"> </a>
@@ -104,6 +109,8 @@ Da wir bei der Konfiguration des ADC die Bandgap Spannung ausgewählt haben hat 
 `ADC = (314mA * 1024) / 1100mA = 292mV`
 
 `ADC = (314mA * 1024) / 1072,3mA = 300mV`
+
+Diese Abweichungen kommen durch die Ungenauigkeit der Referenzspannung zustande.
 
 Nach der konvertierung befindet sich das Ergebnis im 16 bit ADC Register (ADCL + ADCH).
 

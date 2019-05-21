@@ -19,11 +19,11 @@ Thema: **Modbus, RS458, Übung Temperatursensor**
 #Inhalt
 1.  [Modebus]()
 1.  [RS485]()
-  1.  [Wellenwiderstand]()
+    1.  [Wellenwiderstand]()
 1.  [Temperatursensor]()
-  1.  [Konfiguration des ADC]()
-  1.  [Auslesen des Temperatursensors]()
-  1.  [Kalibrieren des ADC]()
+    1.  [Konfiguration des ADC]()
+    1.  [Auslesen des Temperatursensors]()
+    1.  [Kalibrieren des ADC]()
   
  
  ## Modebus

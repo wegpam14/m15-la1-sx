@@ -17,12 +17,13 @@ Thema: **Modbus, RS458, Übung Temperatursensor**
  
 
 #Inhalt
-1. [Modebus]
-1. [RS485]
-1. [Temperatursensor]
-  1. [Konfiguration des ADC]
-  1. [Auslesen des Temperatursensors]
-  1. [Kalibrieren des ADC]
+1. [Modebus]()
+1. [RS485]()
+  1. [Wellenwiderstand]()
+1. [Temperatursensor]()
+  1. [Konfiguration des ADC]()
+  1. [Auslesen des Temperatursensors]()
+  1. [Kalibrieren des ADC]()
   
  
  ## Modebus
@@ -38,6 +39,7 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 * Modbus RTU - Die Daten werden byteweise übertragen (= Remote Terminal Unit)
 * Modbus TCP - Die Daten werden in TCP-Paketen übertragen. 
 
+ 
  ## RS485
 - einfach  
 - skalierbar mit µC betreibbar  
@@ -46,6 +48,7 @@ In unserem Fall stellt das SURE-Board den Server und der PC den Client dar. Am f
 
 ### Wellenwiderstand
 Das elektrische Feld breitet sich in den Leitungen mit Lichtgeschwindigkeit aus, dadurch schwappen Elektronen am Ende der Leitung wieder zurück. Mit einem Wellenwiderstand kann man dies verhindern.
+
 
 ## Temperatursensor  
   

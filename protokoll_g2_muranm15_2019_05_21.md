@@ -116,11 +116,12 @@ Die einfachste Art der Kalibrierung besteht darin eine **lineare Funktion** (2 P
 
 Gemessene Werte für die lineare Funktion:
 
-|    Temperatur   |    Gemessener Wert    |    Wert der Funktion     |
-|:-----------:|:-----------:|:-----------:|
-| -45°C | 75 | -11520 |
-|25°C | 92 | 6400 |
-|85°C |107 | 21760 |
+|   | Temp | Spannung | ADCH | ModBusRegister   |  
+|---|------|----------|------|------------------|
+|A: | -45°C|  242mV   | 56,79| -45*256 = -11520 |  
+|B: |  25° |  314mV   | 73,08|  25*256 = 6400   |  
+|C: |  85° |  380mV   | 88,4 |  85*256 = 21760  |
+
 
 
 Mit diesen Werten kann man sich die Regressionsgerade berechnen:

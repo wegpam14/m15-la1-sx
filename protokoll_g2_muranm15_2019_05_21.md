@@ -107,6 +107,9 @@ Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register.
 
 ### Kalibrieren des ADC
 
+**Kalibrieren** :Kalibrieren bedeutet im Allgemeinen, Geräte oder eine Software genauer einzustellen. Dabei wird oft ein Messgerät auf einen Ausgangswert eingerichtet. Dafür wird eine Messung durchgeführt, um die Abweichung zum richtigen Wert zu erkennen und zu dokumentieren. Anschließend ist es sinnvoll, das Gerät neu zu justieren, bis die gemessenen Werte wieder im Toleranzbereich liegen. Kurz gesagt bringt eine Kalibrierung dem Gerät Standardwerte bei und macht Vorgänge genauer.
+Eichen:
+
 Da das Programm einen falschen Wert ausgibt, ist eine Kalibrierung erforderlich.
 
 Die einfachste Art der Kalibrierung besteht darin eine **lineare Funktion** (2 Parameter, Offset und Steigung) auf die Ausgangswerte anzuwenden.

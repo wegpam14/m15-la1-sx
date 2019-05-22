@@ -107,8 +107,9 @@ Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register.
 
 ### Kalibrieren des ADC
 
-**Kalibrieren** :Kalibrieren bedeutet im Allgemeinen, Geräte oder eine Software genauer einzustellen. Dabei wird oft ein Messgerät auf einen Ausgangswert eingerichtet. Dafür wird eine Messung durchgeführt, um die Abweichung zum richtigen Wert zu erkennen und zu dokumentieren. Anschließend ist es sinnvoll, das Gerät neu zu justieren, bis die gemessenen Werte wieder im Toleranzbereich liegen. Kurz gesagt bringt eine Kalibrierung dem Gerät Standardwerte bei und macht Vorgänge genauer.
-Eichen:
+**Kalibrieren**: Kalibrieren bedeutet im Allgemeinen, Geräte oder eine Software genauer einzustellen. Dabei wird oft ein Messgerät auf einen Ausgangswert eingerichtet. Dafür wird eine Messung durchgeführt, um die Abweichung zum richtigen Wert zu erkennen und zu dokumentieren. Anschließend ist es sinnvoll, das Gerät neu zu justieren, bis die gemessenen Werte wieder im Toleranzbereich liegen. Kurz gesagt bringt eine Kalibrierung dem Gerät Standardwerte bei und macht Vorgänge genauer.  
+
+**Eichen**: Das Eichen umfasst die Qualitätsprüfung und Kennzeichnung nach den Eichvorschriften, ist also ein gesetzlich geregelter Bereich. Eichungen sind unter anderem vorgeschrieben bei Messmitteln für die Preisfindung (Ladenwaagen, Tanksäulen) und bei Medizinprodukten, wie dem Fieberthermometer. Das Eichen wird von den Eichämtern durchgeführt und darf nicht mit dem Begriff Kalibrieren verwechselt werden. 
 
 Da das Programm einen falschen Wert ausgibt, ist eine Kalibrierung erforderlich.
 

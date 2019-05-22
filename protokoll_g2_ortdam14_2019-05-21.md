@@ -1,4 +1,4 @@
-#Protokoll
+# Protokoll  
 **von David Orthofer**  
 **Datum:** 21.05.2019  
 **Gruppe:** 2  
@@ -79,6 +79,24 @@ Das Register **ADCSRA** legt den sogenannten Prescaler des ADCs fest. In
 unserem Fall passt der Wert 128 als Prescaler sehr gut*, da der ADC so
 auf **125kHz**(16MHz / 128 = 125kHz) betrieben wird.
 
-**(der ADC sollte zwischen 50kHz und 200kHz betrieben werden, da sich in
-dieser Spannweite ein optimales Messergebnis ergibt)**  
+(der ADC sollte zwischen 50kHz und 200kHz betrieben werden, da sich in
+dieser Spannweite ein optimales Messergebnis ergibt)  
   
+### Auslesen des Temperatursensors
+
+**Vin** wird mit der Referenzspannung **Vref** verglichen und dann im ADC Register abgelegt.
+  
+`V = ADC * (Vref/1024) => 
+ADC = (Vin * 1024) / Vref`
+
+Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register.
+
+`ADCH = Vin * (256 / Vref)`
+
+|Temperatur|Strom|ADCH|
+|:--------:|:---:|:--:|
+|-45°C|242mV|56.32|
+|25°C|314mV|73.08|
+|85°C|380mV|88.44|
+
+**Gradient**: (88 - 56) / (85 - (-45)) = 0.24338 pro °C

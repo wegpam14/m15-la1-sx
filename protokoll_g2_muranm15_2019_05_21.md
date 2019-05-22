@@ -122,7 +122,7 @@ Gemessene Werte für die lineare Funktion:
 |B: |  25° |  314mV   | 73,08|  25*256 = 6400   |  
 |C: |  85° |  380mV   | 88,4 |  85*256 = 21760  |
 
-
+![Temperaturverlauf](https://github.com/HTLMechatronics/m15-la1-sx/blob/muranm15/Temperaturverlauf.png)
 
 Mit diesen Werten kann man sich die Regressionsgerade berechnen:
 

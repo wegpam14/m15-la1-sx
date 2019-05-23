@@ -100,3 +100,29 @@ Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register.
 |85°C|380mV|88.44|
 
 **Gradient**: (88 - 56) / (85 - (-45)) = 0.24338 pro °C
+  
+### Kalibrierung des ADC  
+**Kalibrieren**  
+Unter Kalibrieren versteht man das Feststellen und Dokumentieren der Abweichung der Anzeige eines Messgerätes oder einer Steuereinheit vom richtigen Wert der Messgröße.  
+Beim Kalibrieren eines Messgerätes wird unter vorgegebenen Bedingungen der Zusammenhang zwischen Eingangs- und Ausgangsgröße ermittelt und dokumentiert. Eingangsgröße ist die zu messende physikalische Größe. Ausgangsgröße ist oft das elektrische Ausgangssignal des Messgeräts, es kann aber auch ein Ablesewert sein.  
+  
+**Eichen**  
+Das Eichen umfasst die Qualitätsprüfung und Kennzeichnung nach den Eichvorschriften, ist also ein gesetzlich geregelter Bereich. Eichungen sind unter anderem vorgeschrieben bei Messmitteln für die Preisfindung (Ladenwaagen, Tanksäulen) und bei Medizinprodukten, wie dem Fieberthermometer. Das Eichen wird von den Eichämtern durchgeführt und darf nicht mit dem Begriff Kalibrieren verwechselt werden.  
+  
+**Da das Programm einen falschen Wert ausgibt, ist eine Kalibrierung erforderlich.**  
+  
+In unserem Fall kann nur ein Offsetfehler kalibriert werden da zu wenig Messpunkte vorhanden sind.  
+  
+Die einfachste Art der Kalibrierung besteht darin eine lineare Funktion (2 Parameter, Offset und Steigung) auf die Ausgangswerte anzuwenden.  
+  
+**y = kx + d**  
+**Temperatur in °C = k * ADCH + d**  
+  
+Gemessene Werte für die lineare Funktion:  
+  
+|   | Temp | Spannung | ADCH | ModBusRegister   |  
+|---|------|----------|------|------------------|
+|A: | -45°C|  242mV   | 56,79| -45 * 256 = -11520|  
+|B: |  25° |  314mV   | 73,08|  25 * 256 = 6400  |  
+|C: |  85° |  380mV   | 88,4 |  85 * 256 = 21760 |  
+  

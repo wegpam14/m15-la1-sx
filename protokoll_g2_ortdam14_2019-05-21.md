@@ -6,9 +6,9 @@
 **abwesend:** -  
   
 # Inhalt  
-1. Modbus[]()  
-1. RS485[]() 
-1. Temperatursensor[]()  
+1. [Modbus]()  
+1. [RS485]() 
+1. [Temperatursensor]()  
 
 ## Modbus  
 Das Modbus-Protokoll ist ein Kommunikationsprotokoll, das auf einer Master/Slave- bzw. Client/Server-Architektur basiert. n der Industrie hat sich der Modbus zu einem De-facto-Standard entwickelt, da es sich um ein offenes Protokoll handelt. Seit 2007 ist die Version Modbus TCP Teil der Norm IEC 61158.  

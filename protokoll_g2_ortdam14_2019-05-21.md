@@ -126,3 +126,4 @@ Gemessene Werte für die lineare Funktion:
 |B: |  25° |  314mV   | 73,08|  25 * 256 = 6400  |  
 |C: |  85° |  380mV   | 88,4 |  85 * 256 = 21760 |  
   
+![](https://github.com/ortdam14/labor/blob/master/DiagrammKalibrierung.PNG)  

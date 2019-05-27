@@ -8,7 +8,7 @@ Gruppe: 2
 
 | Anwesend  | Abwesend  |
 |---|---|
-| Murko,Orthofer,Korrenn,Perl,Skof,Szapacs |   |
+| Murko,Orthofer,Korrenn,Perl,Skof,Szapacs |  -- |
 
 ## Inhalt 
 1. [EEPROM auslesen](#eeprom-auslesen)  
@@ -42,7 +42,7 @@ Um die innere Bandgabspannung zu messen muss man nur am Arduino die Spannungdiff
 Avref = 1,074V  
    
 Um die Daten aus dem ADCH Register in eine Temperatur um zu rechen, wird eine Formel benötigt.  
-Da diese einen linearen Zusammenhand besitzen, kann dessen Grundform "y = k*x + d" verwendet werden.  
+Da diese einen linearen Zusammenhang besitzen, kann diese Grundform "y = k*x + d" verwendet werden.  
   
 --> T = ADCH * k + d
 

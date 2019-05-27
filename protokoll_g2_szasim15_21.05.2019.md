@@ -50,5 +50,18 @@ Bevor das geschiet mussten wir eine Headerdatei einfühgen:
   1,0229T = 55.5725  
   T = 54.3283°C  
   
-  Wie man sieht ist unser Ergebnis weit weg vom Istwert, dieser beträgt ca. 25°C. Um den korrekten Wert zu erhalten, muss man den Sensor kalibrieren. 
+  Wie man sieht ist unser Ergebnis weit weg vom Istwert, dieser beträgt ca. 25°C. Um den korrekten Wert zu erhalten, muss man den   Sensor kalibrieren.  
+  Grundsätzlich geht man davon aus das dies ein Offsetfehler ist.  
+  
+  Datenblatt:  
+  
+|   |T (aus dem Datenblatt)| Vin (aus dem Datenblatt)| ADCH   | Modbus Register Wert (MRT)|  ADC  |
+|:-:|:--------------------:|:-----------------------:|:------:|:-------------------------:|:-----:|
+| A |         -45°C        |           242 mV        |  56,79 |     -11520                |242,2402|
+| B |          25°C        |           314 mV        |  73,08 |      6400                 |314,3376|
+| C |          85°C        |           380 mV        |  88,4  |      21760                |380,4086|
+  
+  
+  
+  
   

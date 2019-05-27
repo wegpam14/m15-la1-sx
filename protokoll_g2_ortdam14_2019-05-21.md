@@ -120,10 +120,10 @@ Die einfachste Art der Kalibrierung besteht darin eine lineare Funktion (2 Param
   
 Gemessene Werte für die lineare Funktion:  
   
-|   | Temp | Spannung | ADCH | ModBusRegister   |  
+|   | Temp | Spannung | ADCH | Modbus Register   |  
 |---|------|----------|------|------------------|
-|A: | -45°C|  242mV   | 57.347| -45 * 256 = -11520|  
-|B: |  25° |  314mV   | 74.409|  25 * 256 = 6400  |  
-|C: |  85° |  380mV   | 90.049 |  85 * 256 = 21760 |  
+|A: | -45°C|  242mV   | 57.347 | -45 * 256 = -11520|  
+|B: |  25°C |  314mV   | 74.409 |  25 * 256 = 6400  |  
+|C: |  85°C |  380mV   | 90.049 |  85 * 256 = 21760 |  
   
 ![](https://github.com/ortdam14/labor/blob/master/DiagrammKalibrierung.PNG)  

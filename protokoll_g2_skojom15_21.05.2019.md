@@ -12,11 +12,11 @@ Gruppe: 2
 
 ## Inhalt 
 1. [EEPROM auslesen](#eeprom)  
-1. [Kalibrieren des Sensors](#sensor)
-1.1 [Berechnung](#berechnung)
+1. [Kalibrieren des Sensors](#sensor)   
+2.1 [Berechnung](#berechnung)
 
 ---
-### 1. EEPROM auslesen <a name="eeeprom"> </a>
+### 1. EEPROM auslesen <a name="eeprom"> </a>
 
 Um den EEPROM auszulesen muss die Bibliothek "avr/eeprom.h" inkludiert werden damit wir die Fuktion "eeprom_read_byte()" zur Verfügung haben die das auslesen erledigt.  
  

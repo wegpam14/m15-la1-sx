@@ -6,9 +6,10 @@
 **abwesend:** -  
   
 # Inhalt  
-1. [Modbus]()  
-1. [RS485]() 
-1. [Temperatursensor]()  
+1. Modbus  
+1. RS485  
+1. Temperatursensor  
+1. Aufgabe  
 
 ## Modbus  
 Das Modbus-Protokoll ist ein Kommunikationsprotokoll, das auf einer Master/Slave- bzw. Client/Server-Architektur basiert. n der Industrie hat sich der Modbus zu einem De-facto-Standard entwickelt, da es sich um ein offenes Protokoll handelt. Seit 2007 ist die Version Modbus TCP Teil der Norm IEC 61158.  
@@ -99,7 +100,7 @@ Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register.
 |25°C|314mV|74,409|297,636|
 |85°C|380mV|90,049|360,196|
 
-**Gradient**: (88 - 56) / (85 - (-45)) = 0.24338 pro °C
+**Gradient**: (90,049 - 57,347) / (85 - (-45)) = 0.251 pro °C
   
 ### Kalibrierung des ADC  
 **Kalibrieren**  
@@ -127,3 +128,31 @@ Gemessene Werte für die lineare Funktion:
 |C: |  85°C |  380mV   | 90.049 |360,196|  85 * 256 = 21760 |  
   
 ![](https://github.com/ortdam14/labor/blob/master/DiagrammKalibrierung.PNG)  
+
+## Aufgabe
+  
+Aufgabe ist es, die nötigen 2 Parameter zu berechnen, um die lineare Funktion zu beschreiben. Allgemein geltet die Formel MRT = k * ADCH + d. Somit kann man jetzt die Geradengleichungen aufstellen.  
+Die Gerade 1 kann man sich aus den Werten von A & B aufstellen: 
+
+    1.) -11520 = k * 57,347 + d
+    
+    2.)  6400 =  k * 74,409 + d 
+
+- k = 1050,287 
+
+- d = -71750,819
+
+Die Gerade 2 kann man sich aus den Werten B & C aufstellen:
+
+    1.) 6400 = k * 74,409 + d
+    
+    2.) 21760 = k * 90,049 + d
+
+- k = 982,097
+
+- d = -66676,87  
+  
+Mit diesen Werten kann man folgende Gleichungen aufstellen:
+
+    G1 : MRT = 1050,287 \* ADCH - 71750,819
+    G2 : MRT = 982,097 \* ADCH - 66676,87

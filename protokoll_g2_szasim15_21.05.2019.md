@@ -7,7 +7,7 @@ Klasse: 4AHME
 
 1. [EEPROM auslesen](#eeprom-auslesen)  
 2. [Sensorkalibrierung](#sensorkalibrierung)
-3. [Aufgabe](#aufgabe)  
+3. [Berechnug](#berechnung)  
 
 
 ## EEPROM auslesen
@@ -62,6 +62,28 @@ Bevor das geschiet mussten wir eine Headerdatei einfühgen:
 | C |          85°C        |           380 mV        |  88,4  |      21760                |380,4086|
   
   
+  ## Berechnug  
+  
+  Normalerweise gilt die Formel: y = k * ADCH + d. Daraus ergibt sich die Gereadengleichung
+  
+  -11520 = k * 56,79 + d  
+  6400 = k * 73,08 + d  
+  
+  k = 1100,06  
+  d = -73992,49  
+  
+  6400 = k * 73,08 + d  
+  21760 = k * 88,4 + d  
+  
+  **k = 1002,61**  
+  **d = -66870,809**   
+  
+  Dadurch ergeben sich folgende Gleichnugen:  
+  
+  ```  
+  G1: y1 = 1100,06 /* ADCH - 73992,49  
+  G2: y2 = 1002,61 /* ADCH - 66870,809  
+  ``` 
   
   
   

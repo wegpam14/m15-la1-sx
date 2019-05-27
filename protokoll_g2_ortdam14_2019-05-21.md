@@ -154,5 +154,5 @@ Die Gerade 2 kann man sich aus den Werten B & C aufstellen:
   
 Mit diesen Werten kann man folgende Gleichungen aufstellen:
 
-    G1 : MRT = 1050,287 \* ADCH - 71750,819
-    G2 : MRT = 982,097 \* ADCH - 66676,87
+    G1 : MRT = 1050,287 * ADCH - 71750,819
+    G2 : MRT = 982,097 * ADCH - 66676,87

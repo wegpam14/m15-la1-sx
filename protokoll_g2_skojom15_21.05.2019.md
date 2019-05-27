@@ -8,7 +8,7 @@ Gruppe: 2
 
 | Anwesend  | Abwesend  |
 |---|---|
-| Murko,Orthofer,Korrenn,Perl,Skof,Szapacs |  -- |
+| Korrenn, Murko, Orthofer, Perl, Skof, Szapacs |  -- |
 
 ## Inhalt 
 1. [EEPROM auslesen](#eeprom)  

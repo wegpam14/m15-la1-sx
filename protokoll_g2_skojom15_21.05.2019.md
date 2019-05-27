@@ -70,26 +70,26 @@ ergeben sich die Werte vom Modbus Register.
 
 ####  2.1 Berechnung
 
-Allgemein gilt die Formel *y = k  \* ADCH + d*. Somit kann man jetzt die Geradengleichungen aufstellen.
+Allgemein gilt die Formel *y = k  \* ADCH + d*. Somit kann man jetzt die Geradengleichungen aufstellen.  
 
-Die erste lineare Funktion kann man sich aus den Werten von A & B aufstellen: 
- -11520 = k * 56,79 + d
-  6400 =  k * 73,08 + d
+ Die erste lineare Funktion kann man sich aus den Werten von A & B aufstellen:
+ -11520 = k * 56,79 + d  
+  6400 =  k * 73,08 + d   
 
-Die zweite lineare Funktion kann aus den Werten B & C aufgestellt werden:
-  k = 1100,06 
-  d = -73992,49
+Die zweite lineare Funktion kann aus den Werten B & C aufgestellt werden: 
+  k = 1100,06   
+  d = -73992,49   
 
-Aus diesen beiden linearen Funktionen kann k & d ausgerechnet werden:
+Aus diesen beiden linearen Funktionen kann k & d ausgerechnet werden:  
 
-  6400 = k * 73,08 + d
-  21760 = k * 88,4 + d
+  6400 = k * 73,08 + d  
+  21760 = k * 88,4 + d  
 
-**k = 1002,61**
+**k = 1002,61**  
 
 **d = -66870,809**
-
-Aus den vorliegenden Werten ergeben sich nun folgenden Gleichungen: 
+  
+Aus den vorliegenden Werten ergeben sich nun folgenden Gleichungen:   
 
     G1 :  y1 = 1100,06 \* ADCH - 73992,49
     G2 :  y2 = 1002,61 \* ADCH - 66870,809

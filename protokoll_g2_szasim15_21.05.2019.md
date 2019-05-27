@@ -7,7 +7,7 @@ Klasse: 4AHME
 
 1. [EEPROM auslesen](#eeprom-auslesen)  
 2. [Sensorkalibrierung](#sensorkalibrierung)
-3. [Berechnug](#berechnung)  
+3. [Berechnung](#berechnung)  
 
 
 ## EEPROM auslesen
@@ -62,7 +62,7 @@ Bevor das geschiet mussten wir eine Headerdatei einfühgen:
 | C |          85°C        |           380 mV        |  88,4  |      21760                |380,4086|
   
   
-  ## Berechnug  
+  ## Berechnung  
   
   Normalerweise gilt die Formel: y = k * ADCH + d. Daraus ergibt sich die Gereadengleichung
   

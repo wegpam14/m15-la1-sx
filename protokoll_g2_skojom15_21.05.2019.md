@@ -56,7 +56,7 @@ bild
 
 Um dieses Problem zu lösen wurde die Gerade aus der ersten Einheit in zwei unabhängige lineare Funktionen (y = k * ADCH +d) zerlegt.
 
-|   |T (aus dem Datenblatt)| Vin (aus dem Datenblatt)| ADCH\* | Modbus Register Wert (MRT)|  ADC  |
+|   |T (aus dem Datenblatt)| Vin (aus dem Datenblatt)| ADCH\* |   Modbus Register Wert    |  ADC  |
 |:-:|:--------------------:|:-----------------------:|:------:|:-------------------------:|:-----:|
 | A |         -45°C        |           242 mV        |  56,79 |     -45 \* 2⁸ = -11520    | 230,73|
 | B |          25°C        |           314 mV        |  73,08 |      25 \* 2⁸ =   6400    | 299,38|
@@ -98,5 +98,5 @@ Aus diesen beiden linearen Funktionen kann k & d ausgerechnet werden:
   
 Aus den vorliegenden Werten ergeben sich nun folgenden Gleichungen:   
 
-    G1 :  y1 = 1100,06 \* ADCH - 73992,49
-    G2 :  y2 = 1002,61 \* ADCH - 66870,809
+    G1 :  y1 = 1100,06 * ADCH - 73992,49
+    G2 :  y2 = 1002,61 * ADCH - 66870,809

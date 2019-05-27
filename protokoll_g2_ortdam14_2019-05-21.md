@@ -60,7 +60,7 @@ void app_init (void) {
   
 Die Dokumentation der Register ist im Datenblatt ersichtlich.
   
-**Beschreibung des Programmes**  
+### Beschreibung des Programmes  
   
 **ADMUX:**
 

@@ -40,6 +40,7 @@ void app_init (void)
 ---
 ###  2. Kalibrieren des Sensors   <a name="sensor"> </a>
 **Messen der Inneren Bandgabspannung:**  
+
 Um die innere Bandgabspannung zu messen muss man nur am Arduino die Spannungdifferenz zwischen den PINs *REF* und *GND* mit einem Multimeter messen.  
 
 ==> Vref = 1,0830V  

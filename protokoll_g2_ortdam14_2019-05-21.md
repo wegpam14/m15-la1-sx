@@ -131,7 +131,7 @@ Gemessene Werte für die lineare Funktion:
 
 ## Aufgabe
   
-Aufgabe ist es, die nötigen 2 Parameter zu berechnen, um die lineare Funktion zu beschreiben. Allgemein geltet die Formel MRT = k * ADCH + d. Somit kann man jetzt die Geradengleichungen aufstellen.  
+Aufgabe ist es, die nötigen 2 Parameter zu berechnen, um die lineare Funktion zu beschreiben. Allgemein geltet die Formel **MRT = k * ADCH + d**. Somit kann man jetzt die Geradengleichungen aufstellen.  
 Die Gerade 1 kann man sich aus den Werten von A & B aufstellen: 
 
     1.) -11520 = k * 57,347 + d

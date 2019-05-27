@@ -93,11 +93,11 @@ Nach der Konvertierung befindet sich das Ergebnis im 16 bit ADC Register.
 
 `ADCH = Vin * (256 / Vref)`
 
-|Temperatur|Strom|ADCH|
+|Temperatur|Spannung|ADCH|
 |:--------:|:---:|:--:|
-|-45°C|242mV|56.32|
-|25°C|314mV|73.08|
-|85°C|380mV|88.44|
+|-45°C|242mV|57.347|
+|25°C|314mV|74,409|
+|85°C|380mV|90,049|
 
 **Gradient**: (88 - 56) / (85 - (-45)) = 0.24338 pro °C
   
@@ -122,8 +122,8 @@ Gemessene Werte für die lineare Funktion:
   
 |   | Temp | Spannung | ADCH | ModBusRegister   |  
 |---|------|----------|------|------------------|
-|A: | -45°C|  242mV   | 56,79| -45 * 256 = -11520|  
-|B: |  25° |  314mV   | 73,08|  25 * 256 = 6400  |  
-|C: |  85° |  380mV   | 88,4 |  85 * 256 = 21760 |  
+|A: | -45°C|  242mV   | 57.347| -45 * 256 = -11520|  
+|B: |  25° |  314mV   | 74.409|  25 * 256 = 6400  |  
+|C: |  85° |  380mV   | 90.049 |  85 * 256 = 21760 |  
   
 ![](https://github.com/ortdam14/labor/blob/master/DiagrammKalibrierung.PNG)  

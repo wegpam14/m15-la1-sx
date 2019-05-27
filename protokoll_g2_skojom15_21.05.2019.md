@@ -70,6 +70,8 @@ Vref = 1.1V (da wir die Bandgapspannung als Referenzspannung verwenden)
 Multipliziert man die die Temperatur aus der Tabelle mit 2⁸, 
 ergeben sich die Werte vom Modbus Register. 
 
+---
+
 ###  2.1 Berechnung  <a name="berechnung"> </a>
 
 Allgemein gilt die Formel *y = k  \* ADCH + d*. Somit kann man jetzt die Geradengleichungen aufstellen.  

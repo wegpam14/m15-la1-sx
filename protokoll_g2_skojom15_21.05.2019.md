@@ -15,7 +15,7 @@ Gruppe: 2
 1. [Kalibrieren des Sensors](#kalibrieren-des-sensors)  
 
 ---
-### 1.EEPROM auslesen  
+### 1. EEPROM auslesen  
 
 Um den EEPROM auszulesen muss die Bibliothek "avr/eeprom.h" inkludiert werden damit wir die Fuktion "eeprom_read_byte()" zur Verfügung haben die das auslesen erledigt.  
  
@@ -37,7 +37,7 @@ void app_init (void)
 ```
 
 ---
-###  2.Kalibrieren des Sensors  
+###  2. Kalibrieren des Sensors  
 **Messen der Inneren Bandgabspannung:**  
 Um die innere Bandgabspannung zu messen muss man nur am Arduino die Spannungdifferenz zwischen den PINs *REF* und *GND* mit einem Multimeter messen.  
 
@@ -68,7 +68,7 @@ Vref = 1.1V (da wir die Bandgapspannung als Referenzspannung verwenden)
 Multipliziert man die die Temperatur aus der Tabelle mit 2⁸, 
 ergeben sich die Werte vom Modbus Register. 
 
-####  2.1 Berechnung
+###  2.1 Berechnung
 
 Allgemein gilt die Formel *y = k  \* ADCH + d*. Somit kann man jetzt die Geradengleichungen aufstellen.  
 

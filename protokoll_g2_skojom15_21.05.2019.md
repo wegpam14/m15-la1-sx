@@ -50,10 +50,6 @@ Da diese einen linearen Zusammenhang besitzt, kann man zur Brechnung diese Grund
   
 --> T = ADCH * k + d
 
-
-bild
-
-
 Um dieses Problem zu lösen wurde die Gerade aus der ersten Einheit in zwei unabhängige lineare Funktionen (y = k * ADCH +d) zerlegt.
 
 |   |T (aus dem Datenblatt)| Vin (aus dem Datenblatt)| ADCH\* |   Modbus Register Wert    |  ADC  |
@@ -62,6 +58,8 @@ Um dieses Problem zu lösen wurde die Gerade aus der ersten Einheit in zwei unab
 | B |          25°C        |           314 mV        |  73,08 |      25 \* 2⁸ =   6400    | 299,38|
 | C |          85°C        |           380 mV        |  88,4  |      85 \* 2⁸ =  21760    | 362,31|
   
+
+<img href"" >
 
 \* Der ADCH Wert errechnet sich aus der Formel ADC = Vin \*1024/Vref.*
 

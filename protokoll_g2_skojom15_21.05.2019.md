@@ -59,7 +59,7 @@ Um dieses Problem zu lösen wurde die Gerade aus der ersten Einheit in zwei unab
 | C |          85°C        |           380 mV        |  88,4  |      85 \* 2⁸ =  21760    | 362,31|
   
 
-<img src="https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/Temperatursensor.png" alt="drawing" width="500"/>
+<img src="https://github.com/HTLMechatronics/m15-la1-sx/blob/skojom15/Temperatursensor.PNG" alt="drawing" width="500"/>
 
 \* Der ADCH Wert errechnet sich aus der Formel ADC = Vin \*1024/Vref.*
 

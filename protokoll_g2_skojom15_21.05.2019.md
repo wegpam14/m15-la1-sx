@@ -18,7 +18,7 @@ Gruppe: 2
 ---
 ### 1. EEPROM auslesen <a name="eeprom"> </a>
 
-Um den EEPROM auszulesen muss die Bibliothek "avr/eeprom.h" inkludiert werden damit wir die Fuktion "eeprom_read_byte()" zur Verfügung haben die das auslesen erledigt.  
+Um den EEPROM auszulesen muss die Bibliothek "avr/eeprom.h" eingebunden werden damit wir die Funktion "eeprom_read_byte()" zur Verfügung haben die das auslesen erledigt.  
  
 ```c 
 #include "avr/eeprom.h"

@@ -6,5 +6,5 @@
 1. [Protokoll 4 (29.01.2019)](protokoll_g2_szasim15_29.01.2019.md)  
 1. [Protokoll 5 (05.02.2019)](protokoll_g2_szasim15_06.02.2019.md) 
 1. [Protokoll 6 (12.02.2019)](protokoll_g2_szasim15_05.02.2019.md)  
-1. [Protokoll 7 (23.05.2019)](protokoll_g2_szasim15_23.01.2019.md) 
-1. [Protokoll 8 (21.05.2019)](protokoll_g2_szasim15_23.01.2019.md) 
+1. [Protokoll 7 (14.05.2019)](protokoll_g2_szasim15_23.01.2019.md) 
+1. [Protokoll 8 (21.05.2019)](protokoll_g2_szasim15_21.05.2019.md	) 

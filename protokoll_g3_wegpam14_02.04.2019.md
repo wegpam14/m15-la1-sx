@@ -31,7 +31,9 @@ Danach werden die werte in Festkommacodierung übertragen und sind dann links un
 
 Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies war kein großes Problem, da es sich nur um einen statischen Fehler handelte und dies konnte durch einfaches Kallibrieren behoben werden.
 
-  ***********************************************************************************************************************************    # Temperatursensor  
+***********************************************************************************************************************************     
+  
+ # Temperatursensor  
 Mittels, dem am Atmega 328p verbauten Temperatursensors, soll die aktuelle Temperatur über eine Java Swing Applikation angezeigt werden.  Die eigentliche Datenübertragung zwischen den Atmega 328p und PC erfolgt mittels eines Feldbussystems, in unserem Fall MODBUS.  
    
  **Intelligenter Sensor**  

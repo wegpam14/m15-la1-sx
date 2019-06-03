@@ -56,7 +56,7 @@ In dieser Einheit war das Ziel einen Temperatursensor, welcher am Microcontrolle
 
 
 ## 4. Quelltextzeilen zur Auswertung vom Temperatursensor
-Im nächsten Punkt werden einige wichtige Zeilen aus dem Quelltext zur **Auswertung vom Temperatursensor** gezeigt. Wichtig dabei ist, dass wir eine **Programmiervorlage** verwendet haben! Somit war die Programmierung unkomplizierter, da die grundlegenden Teile eines Programms schon vorhanden waren. Für uns waren nur die Dateien: **app.c**, **app.h** von Interesse, welche auch in den Punkten 4.1 sowie 4.2 genauer erklärt werden.
+Im nächsten Punkt werden einige wichtige Zeilen aus dem Quelltext zur **Auswertung vom Temperatursensor** gezeigt. Wichtig dabei ist, dass wir eine **Programmiervorlage** verwendet haben! Somit war die Programmierung unkomplizierter, da die grundlegenden Teile eines Programms schon vorhanden waren. Die Vorlage Level 3, welche wir verwenden, besteht aus **sieben vorgefertigten Dateien**, app.h, sys.h, global.h, app.c, sys.c, main.c sowie dem Makefile. Jedoch steht der Großteil von dem von uns geschriebenen Quelltext in den Dateien **app.c** und **app.h**, welche auch in den Punkten 4.1 sowie 4.2 genauer erklärt werden.
 
 
 ### 4.1 app.c

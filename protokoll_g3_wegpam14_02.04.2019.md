@@ -31,7 +31,17 @@ Danach werden die werte in Festkommacodierung übertragen und sind dann links un
 
 Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies war kein großes Problem, da es sich nur um einen statischen Fehler handelte und dies konnte durch einfaches Kallibrieren behoben werden.
 
-  ***********************************************************************************************************************************       
+  ***********************************************************************************************************************************    # Temperatursensor  
+Mittels, dem am Atmega 328p verbauten Temperatursensors, soll die aktuelle Temperatur über eine Java Swing Applikation angezeigt werden.  Die eigentliche Datenübertragung zwischen den Atmega 328p und PC erfolgt mittels eines Feldbussystems, in unserem Fall MODBUS.  
+   
+ **Intelligenter Sensor**  
+Ein Sensor ist nur dann intelligent, wenn er ein Rechenwerk besitzt. Das heißt nun, dass wir bei einem unintelligenten Sensor nur einen Spannungswert zurückbekommen und diesen dann selbst in den richtigen Temperaturwert umrechnen müssen. Bei einem Intelligenten Sensor passiert diese Umrechnung bereits im eigenen Rechenwerk.   
+In unserem Fall ist es ein unintelligenter Sensor, jedoch in Verbindung am Atmega328p ist er intelligent.   
+
+# Java Programm  
+Unser Temperatursensor hat eine Betriebsspannung von -3.0V bis 5.5V. Der Messbare Temperaturbereich geht von -55°C bis +125°C 
+Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits REFS1 und REFS0 im ADMUX-Register ausgewählt werden, die Referenzspannung liegt dann auch am AVCC Pin an.
+
 ## Datenanfrage
 Um die Daten auszulesen wurde folgender Datenframe verwendet
 ```

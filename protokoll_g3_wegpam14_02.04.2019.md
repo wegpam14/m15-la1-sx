@@ -11,8 +11,44 @@
   **Abwesend:** Sarah Vezonik, Mercedes Wesonig  
 
 ***********************************************************************************************************************************     
+ 
+ # Aufgabenstellung  
+In dieser Einheit war es Ziel einen Modbusfähigen Temperatursensor einzurichten und diesen dann auf dem PC im Terminal ausgeben.
   
- **ADC** (ADCH & ADCL)   
+***********************************************************************************************************************************     
+  
+ # Temperatursensor  
+Mittels, dem am Atmega 328p verbauten Temperatursensors, soll die aktuelle Temperatur über eine Java Swing Applikation angezeigt werden.  Die eigentliche Datenübertragung zwischen den Atmega 328p und PC erfolgt mittels eines Feldbussystems, in unserem Fall MODBUS.  
+
+### Modbus  
+Das Feldbusprotokoll Modbus wurde 1979 für die Kommunikation zwischen zwei SPS Geräten entwickelt. Heutzutage wird es gerne in der Haustechnik und in der Industrie verwendet, da es ein offenes Protokoll ist und sich Lösungen mit RS232-, RS482- und TCP/IP- Verbindungen realisieren lassen.  
+  
+Modbus arbeitet nach dem einfachen Prinzip **Server/Client(Request/Response)**. In unserem Fall arbeitet der PC als Client und fragt nach der Temperatur und das Sureboard arbeitet als Server, welcher die Anfragen bearbeitet und zurückübermittelt.  
+![Server/Client](https://github.com/HTLMechatronics/m14-la1-sx/blob/reibem14/reibem14/modbus.png)    
+#### Modbus Gateway  
+![Modusse](https://github.com/HTLMechatronics/m14-la1-sx/blob/reibem14/reibem14/modi.PNG)  
+Wie im Bild ersichtlich, gibt es zwei unterschiedliche Varianten der Pakete. Die PDU besteht immer aus *Function Code* und *Data*. Bei der ADU kommen noch zusätzlich *Adresse* und ein *Fehler-Check* hinzu. Bei Modbus TCP fällt dies weg, da Adresse und Prüfsumme schon im TCP/IP Paket enthalten sind. Die Maximalgröße der ADU-Pakte bei *RS232 / RS485 = 256 Bytes* und bei *TCP = 260 Bytes*.
+
+Es gibt drei unterschiedliche Übertragungsvarianten:  
+* **Modbus ASCII** Die Übertragung findet textuell byteweise Datenpakete statt.   
+* **Modbus RTU** Hier findet die Datenübertragung binär byteweise statt.  
+* **Modbus TCP** Hier werden die Daten über ein TCP Pakete übertragen.  
+## Modbus-Daten-Modell  
+Das Modbus-Daten-Modell unterscheidet sich in vier Bereiche:    
+
+Name | Funktion  
+---- | --------   
+Discrete Inputs |  ist ein einzelnes Bit, das nur gelesen werden kann  
+Coils |  ist ein Bit, das gelesen und beschrieben werden kann; Coil bedeutet soviel wie Relais  
+Input Registers |  ist ein 16 Bit Wert, der nur gelesen werden kann  
+Hold Registers |  ist ein 16 Bit Wert, der gelesen und beschrieben werden kann    
+
+## Exceptions  
+Tritt beim Request ein Fehler auf, so wird in der darauffolgenden Response das Bit-7 gesetzt. Dies hat die Funktion, dass sich der Function Code ändert und im Daten-Bereich wird ein Exception-Code generiert. Mithilfe dieses Exception-Codes, kann man den vorliegenden Fehler kategorisieren.  
+
+
+
+**ADC** (ADCH & ADCL)   
 Da das Ergebnis des ADC ein 10 Bit Wert ist, passt dieser Wert naturgemäß nicht in ein einzelnes Register, das ja bekanntlich nur 8 Bit breit ist. Daher wird das Ergebnis in 2 Register ADCL und ADCH abgelegt. Standardmäßig werden von den 10 Ergebnisbits die niederwertigsten 8 im Register ADCL abgelegt und die noch fehlenden 2 Bits im Register ADCH an den niederwertigsten Bitpositionen gespeichert.
 ```
              ADCH                                   ADCL
@@ -24,25 +60,21 @@ Da das Ergebnis des ADC ein 10 Bit Wert ist, passt dieser Wert naturgemäß nich
 Normalerweise wird das Ergebnis rechtsbündig in den beiden Registern abgelegt, optional kann das Ergebnis aber auch linksbündig in ADCH und ADCL geschrieben werden. Die Einstellung erfolgt mit dem ADLAR-Bit im ADMUX-Register.
 
 In unserer Übung im Unterricht wurde der linksbündige Wert des ADCH Registers in eine Zwischenvariable gespeichtert und der ADC gestartet, indem das ADCH Register gesetzt wird.
-
+ 
+ **Intelligenter Sensor**  
+Ein Sensor ist nur dann intelligent, wenn er ein Rechenwerk besitzt. Das heißt nun, dass wir bei einem unintelligenten Sensor nur einen Spannungswert zurückbekommen und diesen dann selbst in den richtigen Temperaturwert umrechnen müssen. Bei einem Intelligenten Sensor passiert diese Umrechnung bereits im eigenen Rechenwerk.   
+In unserem Fall ist es ein unintelligenter Sensor, jedoch in Verbindung am Atmega328p ist er intelligent.   
+  
+***********************************************************************************************************************************     
+  
+# Java Programm  
+Unser Temperatursensor hat eine Betriebsspannung von -3.0V bis 5.5V. Der Messbare Temperaturbereich geht von -55°C bis +125°C 
+Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits REFS1 und REFS0 im ADMUX-Register ausgewählt werden, die Referenzspannung liegt dann auch am AVCC Pin an.
 
 Werte der Temperatur werden als 16Bit Werte übertragen.  
 Danach werden die werte in Festkommacodierung übertragen und sind dann links und rechts vom Komma 8 Bit. Um vom Temperaturwert mit z.B 23,5°C zum hex Wert zu kommen muss man den wert zuerst mit 256 Multiplizieren und danach in eine Hexadezimalzahl umwandeln 23,5 * 256 = 6016 => 1780hex
 
 Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies war kein großes Problem, da es sich nur um einen statischen Fehler handelte und dies konnte durch einfaches Kallibrieren behoben werden.
-
-***********************************************************************************************************************************     
-  
- # Temperatursensor  
-Mittels, dem am Atmega 328p verbauten Temperatursensors, soll die aktuelle Temperatur über eine Java Swing Applikation angezeigt werden.  Die eigentliche Datenübertragung zwischen den Atmega 328p und PC erfolgt mittels eines Feldbussystems, in unserem Fall MODBUS.  
-   
- **Intelligenter Sensor**  
-Ein Sensor ist nur dann intelligent, wenn er ein Rechenwerk besitzt. Das heißt nun, dass wir bei einem unintelligenten Sensor nur einen Spannungswert zurückbekommen und diesen dann selbst in den richtigen Temperaturwert umrechnen müssen. Bei einem Intelligenten Sensor passiert diese Umrechnung bereits im eigenen Rechenwerk.   
-In unserem Fall ist es ein unintelligenter Sensor, jedoch in Verbindung am Atmega328p ist er intelligent.   
-
-# Java Programm  
-Unser Temperatursensor hat eine Betriebsspannung von -3.0V bis 5.5V. Der Messbare Temperaturbereich geht von -55°C bis +125°C 
-Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits REFS1 und REFS0 im ADMUX-Register ausgewählt werden, die Referenzspannung liegt dann auch am AVCC Pin an.
 
 ## Datenanfrage
 Um die Daten auszulesen wurde folgender Datenframe verwendet

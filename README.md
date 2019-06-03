@@ -5,4 +5,5 @@
 [Protokoll 3](https://github.com/winmam14/Protokoll-3) vom 03.10.2018  
 [Protokoll 4](https://github.com/winmam14/Protokoll_4/blob/master/README.md) vom 04.12.2018  
 [Protokoll 5](https://github.com/winmam14/Protokoll-5) vom 11.12.2018  
-[Protokoll 6](https://github.com/winmam14/Protokoll-6/blob/master/README.md) vom 18.12.2018
+[Protokoll 6](https://github.com/winmam14/Protokoll-6/blob/master/README.md) vom 18.12.2018  
+[Protokoll 7]() vom 02.04.2019

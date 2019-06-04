@@ -2,9 +2,9 @@
 
 Übungsdatum: **02.04.2019**  
 Name: Vollmaier Alois    
-KNr.: 15   
+KNr.: 14
 Klasse: 4AHME    
-Gruppe:   
+Gruppe: 3
 
 Anwesenheit:
 

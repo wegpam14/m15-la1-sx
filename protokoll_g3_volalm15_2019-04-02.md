@@ -175,43 +175,40 @@ void app_parseModbusFrame(){
   app.modbusForPrint = app.modbus;
   sys_setEvent(APP_EVENT_MODBUS);
 }
-void app_handleUartByte (char c)
-{
-  struct Modbus *p = &app.modbus;
-  
-  if (p ->frameIndex <0){
-    if(c==':'){
-      p->frameIndex =0;
-      p->frameError =0;
+void app_handleUartByte (char c) {
+    struct Modbus *p = (struct Modbus *)&app.modbus;
+    
+    if (p->frameIndex < 0) {
+        
+        if (c == ':') {
+            p->frameIndex = 0;
+            p->frameError = 0;
+        } else {
+            if (p->invalidByteCnt < 0xffff) {
+                p->invalidByteCnt++;
+            }
+        }
+        
     } else {
-      if(p -> invalidByteCount < 0xffff){
-        p->invalidByteCount++;
-      }
+        if (c == ':') {
+            p->frameIndex = 0;
+            p->frameError = 0;
+            if (p->errCnt < 0xffff) {
+                p->errCnt++;
+            }
+        } else {
+            if (p->frameIndex < sizeof p->frame) {
+                p->frame[p->frameIndex++] = c;
+            } else {
+                p->frameError = 1;
+            }
+            if (c == '\n') {
+                app_parseModbusFrame();
+                p->frameIndex = -1;
+                p->frameError = 0;
+            }
+        }
     }
-    
-  } else {
-    if(c==':'){
-      p->frameIndex=0;
-      p->frameError = 0; 
-      if(p->errorcounter < 0xffff)
-        p->errorcounter++;
-      
-    } else {
-    
-    //in buffer speichern
-    if (p->frameIndex < sizeof p->frame)
-    p->frame [p->frameIndex++] = c;
-    
-    else {
-      p-> frameError = 1;
-    }
-    if(c== '\n')
-      app_parseModbusFrame();
-      p->frameIndex = -1;
-      p->frameError = 0; 
-    }
-  }
-}
 ```
 ___
 [2.2] - **Quellcode app.h**

@@ -15,7 +15,7 @@ Anwesenheit:
 
 ### Themen-Übersicht
 
--   **[1]**-Grundlagen
+-   **[1]** - Grundlagen
     -   [1.1] -  _Konfiguration des ADC genauer beschrieben_  
         – [1.1.1] -  _Grundlagen Temperaturauswertung_
        -   [1.2] -  _Wiederholung Modbus ASCII_  

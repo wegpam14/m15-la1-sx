@@ -74,7 +74,7 @@ Die Referenzspannung für den Analog-Digital-Wandler kann durch die Bits REFS1 u
 Werte der Temperatur werden als 16Bit Werte übertragen.  
 Danach werden die werte in Festkommacodierung übertragen und sind dann links und rechts vom Komma 8 Bit. Um vom Temperaturwert mit z.B 23,5°C zum hex Wert zu kommen muss man den wert zuerst mit 256 Multiplizieren und danach in eine Hexadezimalzahl umwandeln 23,5 * 256 = 6016 => 1780hex
 
-Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies war kein großes Problem, da es sich nur um einen statischen Fehler handelte und dies konnte durch einfaches Kallibrieren behoben werden.
+Als das Programm lauffähig war, bemerkten wir, dass falsche Werte in der Konsole ausgegeben werden, aber dies ist kein Problem, da es sich nur um einen statischen Fehler handelt und dies kann durch einfaches Kalibrieren behoben werden.
 
 ## Datenanfrage
 Um die Daten auszulesen wurde folgender Datenframe verwendet
